@@ -8427,6 +8427,10 @@ pngjs@^3.0.0, pngjs@^3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.3.3.tgz#85173703bde3edac8998757b96e5821d0966a21b"
 
+polished@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-2.0.3.tgz#54bb5f474bebe149e760d4015ed04207817fd38e"
+
 portfinder@^1.0.9:
   version "1.0.13"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.13.tgz#bb32ecd87c27104ae6ee44b5a3ccbf0ebb1aede9"
@@ -10771,6 +10775,10 @@ styled-components@^3.4.5:
     stylis "^3.5.0"
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
+
+styled-reset@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/styled-reset/-/styled-reset-1.4.0.tgz#e1ae072b1d37eb321ec6cb1690db139aec353ecc"
 
 stylehacks@^2.3.2:
   version "2.3.2"
