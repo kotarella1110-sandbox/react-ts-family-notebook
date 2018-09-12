@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/kotarella1110/react-ts-boilerplate.svg?branch=master)](https://travis-ci.org/kotarella1110/react-ts-boilerplate)
+[![Build Status](https://travis-ci.org/kotarella1110/react-ts-family-notebook.svg?branch=master)](https://travis-ci.org/kotarella1110/react-ts-boilerplate)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
