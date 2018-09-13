@@ -7,7 +7,9 @@ export interface Props {
   isRight?: boolean;
 }
 
-const ArrowButton: React.SFC<Props> = props => {
+const ArrowButton: React.SFC<
+  Props & React.AnchorHTMLAttributes<HTMLAnchorElement>
+> = props => {
   return (
     <Wrapper {...props}>
       <Icon icon="arrow" />

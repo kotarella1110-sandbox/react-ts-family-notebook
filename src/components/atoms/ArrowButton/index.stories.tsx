@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-// import { action } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
@@ -18,6 +18,10 @@ storiesOf('Atoms/ArrowButton', module)
   .addDecorator(withSmartKnobs)
   .addDecorator(withKnobs)
   .addWithJSX('default', withNotes(``)(() => <ArrowButton />))
+  .addWithJSX(
+    'props onClick',
+    withNotes(``)(() => <ArrowButton onClick={action('onClick')} />)
+  )
   .addWithJSX(
     'props isPrimary is true',
     withNotes(``)(() => <ArrowButton isPrimary={true} />)

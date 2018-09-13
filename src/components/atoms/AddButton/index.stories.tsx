@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-// import { action } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
@@ -17,4 +17,8 @@ storiesOf('Atoms/AddButton', module)
   )
   .addDecorator(withSmartKnobs)
   .addDecorator(withKnobs)
-  .addWithJSX('default', withNotes(``)(() => <AddButton>Text</AddButton>));
+  .addWithJSX('default', withNotes(``)(() => <AddButton>Text</AddButton>))
+  .addWithJSX(
+    'props onClick',
+    withNotes(``)(() => <AddButton onClick={action('onClick')}>Text</AddButton>)
+  );

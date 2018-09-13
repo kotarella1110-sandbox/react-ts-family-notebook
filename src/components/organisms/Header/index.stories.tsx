@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-// import { action } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
@@ -32,15 +32,18 @@ storiesOf('Organisms/Header', module)
   .addWithJSX(
     'props right is AddButton',
     withNotes(``)(() => (
-      <Header right={<AddButton>追加</AddButton>} title="Title" />
+      <Header
+        right={<AddButton onClick={action('onClick')}>追加</AddButton>}
+        title="Title"
+      />
     ))
   )
   .addWithJSX(
     'props left is ArrowBtton and right is AddButton',
     withNotes(``)(() => (
       <Header
-        left={<ArrowBtton isPrimary={true} />}
-        right={<AddButton>追加</AddButton>}
+        left={<ArrowBtton isPrimary={true} onClick={action('onClick')} />}
+        right={<AddButton onClick={action('onClick')}>追加</AddButton>}
         title="Title"
       />
     ))

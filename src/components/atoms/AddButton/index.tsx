@@ -2,9 +2,12 @@ import * as React from 'react';
 import styled from 'styled';
 import Icon from 'components/atoms/Icon';
 
-const AddButton: React.SFC<{}> = ({ children }) => {
+const AddButton: React.SFC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
+  children,
+  ...props
+}) => {
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <Icon icon="add" />
       <span>{children}</span>
     </Wrapper>
