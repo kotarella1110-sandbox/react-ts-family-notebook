@@ -11,6 +11,8 @@
     "styled-normalize": "^8.0.0"
   },
   "scripts": {
+    "predeploy": "yarn build-storybook",
+    "deploy": "gh-pages -d storybook-static",
     "start": "react-app-rewired start --scripts-version react-scripts-ts",
     "build": "react-app-rewired build --scripts-version react-scripts-ts",
     "test": "react-app-rewired test --scripts-version react-scripts-ts --env=jsdom",
@@ -59,6 +61,7 @@
     "concurrently": "^4.0.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "gh-pages": "^1.2.0",
     "husky": "^1.0.0-rc.13",
     "jest-specific-snapshot": "^1.0.0",
     "jest-styled-components": "^6.2.0",
