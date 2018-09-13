@@ -2,16 +2,21 @@ import * as React from 'react';
 import styled from 'styled';
 import Icon from 'components/atoms/Icon';
 
-const AddButton: React.SFC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
-  children,
-  ...props
-}) => {
+export interface Props {
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+}
+
+const AddButton: React.SFC<Props> = ({ onClick, children }) => {
   return (
-    <Wrapper {...props}>
+    <Wrapper onClick={onClick}>
       <Icon icon="add" />
       <span>{children}</span>
     </Wrapper>
   );
+};
+
+AddButton.defaultProps = {
+  onClick: e => null,
 };
 
 const Wrapper = styled.a`

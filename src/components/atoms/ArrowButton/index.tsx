@@ -5,11 +5,10 @@ import Icon from 'components/atoms/Icon';
 export interface Props {
   isPrimary?: boolean;
   isRight?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const ArrowButton: React.SFC<
-  Props & React.AnchorHTMLAttributes<HTMLAnchorElement>
-> = props => {
+const ArrowButton: React.SFC<Props> = props => {
   return (
     <Wrapper {...props}>
       <Icon icon="arrow" />
@@ -20,9 +19,10 @@ const ArrowButton: React.SFC<
 ArrowButton.defaultProps = {
   isPrimary: false,
   isRight: false,
+  onClick: e => null,
 };
 
-const Wrapper = styled<{ isPrimary?: boolean; isRight?: boolean }, 'a'>('a')`
+const Wrapper = styled<Props, 'a'>('a')`
   display: block;
   line-height: 0;
 

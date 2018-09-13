@@ -191,3 +191,353 @@ exports[`Storyshots Organisms/Header props left 1`] = `
   </h2>
 </div>
 `;
+
+exports[`Storyshots Organisms/Header props left is ArrowBtton and right is AddButton 1`] = `
+.c3 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c3 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #007f48;
+  padding: 8px;
+}
+
+.c5 svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  margin: 0 6px 0 0;
+}
+
+.c5 svg > circle {
+  fill: #fff !important;
+}
+
+.c5 svg > line {
+  stroke: #007f48 !important;
+}
+
+.c5 span {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.c2 {
+  display: block;
+  line-height: 0;
+}
+
+.c2 svg {
+  width: 8px * 3;
+  height: 8px * 3;
+}
+
+.c2 svg path {
+  fill: #007f48 !important;
+}
+
+.c6 {
+  font-size: 5vw;
+  font-weight: bold;
+  color: #007f48;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 calc(8px * 2);
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.c1 {
+  max-width: calc(8px * 9);
+  display: block;
+  line-height: 1em;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.c4 {
+  max-width: calc(8px * 9);
+  display: block;
+  line-height: 1em;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  text-align: right;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 calc(8px * 2);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #FFFBE8;
+  height: calc(8px * 6);
+  width: 100%;
+  border-bottom: solid 2px #babfbd;
+}
+
+.c0 a {
+  color: #007f48;
+  display: inline-block;
+}
+
+@media (min-width:380px) {
+  .c6 {
+    font-size: 20px;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      onClick={[Function]}
+    >
+      <span
+        className="c3"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": Object {
+              "default": "test-file-stub",
+            },
+          }
+        }
+      />
+    </a>
+  </div>
+  <div
+    className="c4"
+  >
+    <a
+      className="c5"
+      onClick={[Function]}
+    >
+      <span
+        className="c3"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": Object {
+              "default": "test-file-stub",
+            },
+          }
+        }
+      />
+      <span>
+        追加
+      </span>
+    </a>
+  </div>
+  <h2
+    className="c6"
+  >
+    Title
+  </h2>
+</div>
+`;
+
+exports[`Storyshots Organisms/Header props right is AddButton 1`] = `
+.c4 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c4 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #007f48;
+  padding: 8px;
+}
+
+.c3 svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  margin: 0 6px 0 0;
+}
+
+.c3 svg > circle {
+  fill: #fff !important;
+}
+
+.c3 svg > line {
+  stroke: #007f48 !important;
+}
+
+.c3 span {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.c5 {
+  font-size: 5vw;
+  font-weight: bold;
+  color: #007f48;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 calc(8px * 2);
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.c1 {
+  max-width: calc(8px * 9);
+  display: block;
+  line-height: 1em;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.c2 {
+  max-width: calc(8px * 9);
+  display: block;
+  line-height: 1em;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  text-align: right;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 calc(8px * 2);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #FFFBE8;
+  height: calc(8px * 6);
+  width: 100%;
+  border-bottom: solid 2px #babfbd;
+}
+
+.c0 a {
+  color: #007f48;
+  display: inline-block;
+}
+
+@media (min-width:380px) {
+  .c5 {
+    font-size: 20px;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  >
+    <a
+      className="c3"
+      onClick={[Function]}
+    >
+      <span
+        className="c4"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": Object {
+              "default": "test-file-stub",
+            },
+          }
+        }
+      />
+      <span>
+        追加
+      </span>
+    </a>
+  </div>
+  <h2
+    className="c5"
+  >
+    Title
+  </h2>
+</div>
+`;
