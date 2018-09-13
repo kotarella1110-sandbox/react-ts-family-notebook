@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Atoms/Icon add 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+<span
+  className="c0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": Object {
+        "default": "test-file-stub",
+      },
+    }
+  }
+/>
+`;
+
+exports[`Storyshots Atoms/Icon arrow 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+<span
+  className="c0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": Object {
+        "default": "test-file-stub",
+      },
+    }
+  }
+/>
+`;
+
+exports[`Storyshots Atoms/Icon carereceiver 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+<span
+  className="c0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": Object {
+        "default": "test-file-stub",
+      },
+    }
+  }
+/>
+`;
+
+exports[`Storyshots Atoms/Icon carereceiver-info 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+<span
+  className="c0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": Object {
+        "default": "test-file-stub",
+      },
+    }
+  }
+/>
+`;
+
+exports[`Storyshots Atoms/Icon carereceiver-info-detail 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+<span
+  className="c0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": Object {
+        "default": "test-file-stub",
+      },
+    }
+  }
+/>
+`;

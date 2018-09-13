@@ -64,6 +64,7 @@
     "jest-styled-components": "^6.2.0",
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.7",
+    "raw-loader": "^0.5.1",
     "react-app-rewire-styled-components": "^3.0.2",
     "react-app-rewire-styled-components-typescript": "^1.0.1",
     "react-app-rewired": "^1.6.2",
