@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import Header from 'components/organisms/Header';
+import Header from '.';
 
 const setup = () => {
   const props = {

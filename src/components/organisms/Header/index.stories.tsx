@@ -5,7 +5,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import { withInfo } from '@storybook/addon-info';
-import Header from 'components/organisms/Header';
+import Header from '.';
 
 storiesOf('Organisms/Header', module)
   .addDecorator((story, context) =>
