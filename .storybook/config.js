@@ -5,6 +5,7 @@ import '@storybook/addon-console';
 import { setOptions } from '@storybook/addon-options/preview';
 import JSXAddon from 'storybook-addon-jsx';
 import { ThemeProvider } from 'styled';
+import globalStyle from 'components/globalStyle';
 import theme from 'components/theme';
 
 setStubbingMode(true);
@@ -14,6 +15,8 @@ setOptions({
 });
 
 setAddon(JSXAddon);
+
+globalStyle(theme);
 
 addDecorator(story => (
   <ThemeProvider theme={theme}>{story()}</ThemeProvider>

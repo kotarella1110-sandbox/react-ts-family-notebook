@@ -1,14 +1,9 @@
 import * as React from 'react';
-import { injectGlobal, ThemeProvider } from 'styled';
-import reset from 'styled-reset';
+import { ThemeProvider } from 'styled';
+import globalStyle from './globalStyle';
 import theme from './theme';
 
-injectGlobal`
-  ${reset}
-  body {
-    font-family: ${theme.fontFamily};
-  }
-`;
+globalStyle(theme);
 
 const App: React.SFC<{}> = () => <ThemeProvider theme={theme} />;
 
