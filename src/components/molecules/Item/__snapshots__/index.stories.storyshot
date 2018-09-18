@@ -1,0 +1,309 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Molecules/Item default 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+<a
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className=""
+  >
+    <span
+      className="c0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+    />
+  </div>
+  <h4
+    className=""
+  >
+    Title
+  </h4>
+</a>
+`;
+
+exports[`Storyshots Molecules/Item props onClick 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+<a
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className=""
+  >
+    <span
+      className="c0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+    />
+  </div>
+  <h4
+    className=""
+  >
+    Title
+  </h4>
+</a>
+`;
+
+exports[`Storyshots Molecules/Item props right 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+<a
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className=""
+  >
+    <span
+      className="c0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+    />
+  </div>
+  <h4
+    className=""
+  >
+    Title
+  </h4>
+  <div
+    className=""
+  >
+    <p>
+      Right
+    </p>
+  </div>
+</a>
+`;
+
+exports[`Storyshots Molecules/Item props text 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+<a
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className=""
+  >
+    <span
+      className="c0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+    />
+  </div>
+  <h4
+    className=""
+  >
+    Title
+  </h4>
+  <p
+    className=""
+  >
+    Text
+  </p>
+</a>
+`;
+
+exports[`Storyshots Molecules/Item props text and right is ArrowButton 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.c1 {
+  display: block;
+  line-height: 0;
+}
+
+.c1 svg {
+  width: 8px * 3;
+  height: 8px * 3;
+}
+
+<a
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className=""
+  >
+    <span
+      className="c0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+    />
+  </div>
+  <h4
+    className=""
+  >
+    Title
+  </h4>
+  <p
+    className=""
+  >
+    Text
+  </p>
+  <div
+    className=""
+  >
+    <a
+      className="c1"
+      onClick={[Function]}
+    >
+      <span
+        className="c0"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": Object {
+              "default": "test-file-stub",
+            },
+          }
+        }
+      />
+    </a>
+  </div>
+</a>
+`;
+
+exports[`Storyshots Molecules/Item props text and right is ArrowButton and onClick 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.c1 {
+  display: block;
+  line-height: 0;
+}
+
+.c1 svg {
+  width: 8px * 3;
+  height: 8px * 3;
+}
+
+<a
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className=""
+  >
+    <span
+      className="c0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+    />
+  </div>
+  <h4
+    className=""
+  >
+    Title
+  </h4>
+  <p
+    className=""
+  >
+    Text
+  </p>
+  <div
+    className=""
+  >
+    <a
+      className="c1"
+      onClick={[Function]}
+    >
+      <span
+        className="c0"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": Object {
+              "default": "test-file-stub",
+            },
+          }
+        }
+      />
+    </a>
+  </div>
+</a>
+`;
