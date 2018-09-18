@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Molecules/CareReceiverItem default 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+<a
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className=""
+  >
+    <span
+      className="c0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+    />
+  </div>
+  <h4
+    className=""
+  >
+    左藤太郎
+  </h4>
+  <p
+    className=""
+  >
+    76歳 1941年1月15日生
+  </p>
+</a>
+`;
