@@ -88,10 +88,6 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   color: #007f48;
   overflow: hidden;
   white-space: nowrap;
-  text-align: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   padding: 0 calc(8px * 2);
   -webkit-order: 2;
   -ms-flex-order: 2;
@@ -99,7 +95,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
 }
 
 .c1 {
-  max-width: calc(8px * 9);
+  width: calc(8px * 10);
   display: block;
   line-height: 1em;
   -webkit-order: 1;
@@ -108,7 +104,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
 }
 
 .c2 {
-  max-width: calc(8px * 9);
+  width: calc(8px * 10);
   display: block;
   line-height: 1em;
   -webkit-order: 1;
@@ -134,8 +130,6 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
   z-index: 1000;
   background-color: #FFFBE8;
   height: calc(8px * 6);

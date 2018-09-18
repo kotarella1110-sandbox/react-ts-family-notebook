@@ -25,8 +25,6 @@ const Title = styled.h2`
   color: ${props => props.theme.brandPrimary};
   overflow: hidden;
   white-space: nowrap;
-  text-align: center;
-  flex: 1;
   padding: 0 calc(${props => props.theme.sizeBase} * 2);
   order: 2;
 
@@ -36,7 +34,7 @@ const Title = styled.h2`
 `;
 
 const mixin = css`
-  max-width: calc(${props => props.theme.sizeBase} * 9);
+  width: calc(${props => props.theme.sizeBase} * 10);
   display: block;
   line-height: 1em;
   order: 1;
@@ -57,8 +55,6 @@ const Wrapper = styled.div`
   padding: 0 calc(${props => props.theme.sizeBase} * 2);
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
   z-index: 1000;
   background-color: ${props => props.theme.headerColor};
   height: calc(${props => props.theme.sizeBase} * 6);
