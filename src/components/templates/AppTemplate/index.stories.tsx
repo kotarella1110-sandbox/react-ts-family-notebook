@@ -35,7 +35,7 @@ storiesOf('Templates/AppTemplate', module)
           />
         }>
         <CareReceiverInfoList
-          folders={[{ id: 0, title: 'Title1' }, { id: 1, title: 'Title2' }]}
+          folders={[{ id: 0, name: 'Title1' }, { id: 1, name: 'Title2' }]}
           onClick={action('onClick')}
         />
       </AppTemplate>

@@ -4,7 +4,7 @@ import CareReceiverInfoList, { Props } from '.';
 
 const setup = (propOverrides = {}) => {
   const props: Props = {
-    folders: [{ id: 0, title: 'Title1' }, { id: 1, title: 'Title2' }],
+    folders: [{ id: 0, name: 'Title1' }, { id: 1, name: 'Title2' }],
     ...propOverrides,
   };
 
@@ -24,19 +24,6 @@ describe('CareReceiverInfoList', () => {
 
   it('CareReceiverInfoItem コンポーネントがレンダリングされていること', () => {
     const {
-      props: { folders },
-      wrapper,
-    } = setup();
-    expect(wrapper.children().length).toBe(2);
-
-    wrapper.children().forEach((CareReceiverInfoItem, index) => {
-      expect(Number(CareReceiverInfoItem.key())).toBe(folders[index].id);
-      expect(CareReceiverInfoItem.prop('title')).toBe(folders[index].title);
-    });
-  });
-
-  it('CareReceiverInfoItem コンポーネントがレンダリングされていること', () => {
-    const {
       props: { folders, onClick },
       wrapper,
     } = setup({ onClick: jest.fn() });
@@ -44,7 +31,7 @@ describe('CareReceiverInfoList', () => {
 
     wrapper.children().forEach((CareReceiverInfoItem, index) => {
       expect(Number(CareReceiverInfoItem.key())).toBe(folders[index].id);
-      expect(CareReceiverInfoItem.prop('title')).toBe(folders[index].title);
+      expect(CareReceiverInfoItem.prop('folder')).toEqual(folders[index]);
       expect(CareReceiverInfoItem.prop('onClick')).toBe(onClick);
     });
   });

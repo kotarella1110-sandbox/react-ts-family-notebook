@@ -4,15 +4,18 @@ import ArrowButton from '../../atoms/ArrowButton';
 import Item from '../Item';
 
 export interface Props {
-  title: string;
+  folder: { name: string };
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const CareReceiverInfoItem: React.SFC<Props> = ({ title, onClick }) => {
+const CareReceiverInfoItem: React.SFC<Props> = ({
+  folder: { name },
+  onClick,
+}) => {
   return (
     <Item
       icon={<Icon icon="carereceiver-info" />}
-      title={title}
+      title={name}
       right={<ArrowButton isRight={true} />}
       onClick={onClick}
     />

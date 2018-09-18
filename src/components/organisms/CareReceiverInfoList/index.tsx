@@ -3,7 +3,7 @@ import styled from 'styled';
 import CareReceiverInfoItem from '../../molecules/CareReceiverInfoItem';
 
 export interface Props {
-  folders: { id: number; title: string }[];
+  folders: { id: number; name: string }[];
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
@@ -13,7 +13,7 @@ const CareReceiverInfoList: React.SFC<Props> = ({ folders, onClick }) => {
       {folders.map(folder => (
         <CareReceiverInfoItem
           key={folder.id}
-          title={folder.title}
+          folder={folder}
           onClick={onClick}
         />
       ))}

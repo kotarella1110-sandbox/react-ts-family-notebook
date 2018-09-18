@@ -5,7 +5,9 @@ import Item from '../Item';
 
 const setup = (propOverrides = {}) => {
   const props: Props = {
-    title: 'Title',
+    folder: {
+      name: 'Name',
+    },
     ...propOverrides,
   };
 
@@ -19,9 +21,12 @@ const setup = (propOverrides = {}) => {
 
 describe('CareReceiverInfoItem', () => {
   it('コンポーネントがレンダリングされていること', () => {
-    const { wrapper } = setup();
+    const {
+      props: { folder },
+      wrapper,
+    } = setup();
     expect(wrapper.type()).toBe(Item);
-    expect(wrapper.prop('title')).toBe('Title');
+    expect(wrapper.prop('title')).toBe(folder.name);
   });
 
   it('Item コンポーネントの click で props.onClick が呼ばれること', () => {
