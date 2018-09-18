@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.c1 {
+  display: block;
+  line-height: 0;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.c1 svg {
+  width: 8px * 3;
+  height: 8px * 3;
+}
+
+<a
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className=""
+  >
+    <span
+      className="c0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+    />
+  </div>
+  <h4
+    className=""
+  >
+    Title
+  </h4>
+  <div
+    className=""
+  >
+    <a
+      className="c1"
+      onClick={[Function]}
+    >
+      <span
+        className="c0"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": Object {
+              "default": "test-file-stub",
+            },
+          }
+        }
+      />
+    </a>
+  </div>
+</a>
+`;
+
+exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c0 > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.c1 {
+  display: block;
+  line-height: 0;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.c1 svg {
+  width: 8px * 3;
+  height: 8px * 3;
+}
+
+<a
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className=""
+  >
+    <span
+      className="c0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+    />
+  </div>
+  <h4
+    className=""
+  >
+    Title
+  </h4>
+  <div
+    className=""
+  >
+    <a
+      className="c1"
+      onClick={[Function]}
+    >
+      <span
+        className="c0"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": Object {
+              "default": "test-file-stub",
+            },
+          }
+        }
+      />
+    </a>
+  </div>
+</a>
+`;
