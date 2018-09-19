@@ -195,35 +195,15 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
     <ul
       className=""
     >
-      <a
+      <li
         className=""
-        onClick={[Function]}
       >
-        <div
+        <a
           className=""
+          onClick={[Function]}
         >
-          <span
-            className="c4"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": Object {
-                  "default": "test-file-stub",
-                },
-              }
-            }
-          />
-        </div>
-        <h4
-          className=""
-        >
-          Title1
-        </h4>
-        <div
-          className=""
-        >
-          <a
-            className="c6"
-            onClick={[Function]}
+          <div
+            className=""
           >
             <span
               className="c4"
@@ -235,38 +215,42 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
                 }
               }
             />
-          </a>
-        </div>
-      </a>
-      <a
+          </div>
+          <h4
+            className=""
+          >
+            Title1
+          </h4>
+          <div
+            className=""
+          >
+            <a
+              className="c6"
+              onClick={[Function]}
+            >
+              <span
+                className="c4"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": Object {
+                      "default": "test-file-stub",
+                    },
+                  }
+                }
+              />
+            </a>
+          </div>
+        </a>
+      </li>
+      <li
         className=""
-        onClick={[Function]}
       >
-        <div
+        <a
           className=""
+          onClick={[Function]}
         >
-          <span
-            className="c4"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": Object {
-                  "default": "test-file-stub",
-                },
-              }
-            }
-          />
-        </div>
-        <h4
-          className=""
-        >
-          Title2
-        </h4>
-        <div
-          className=""
-        >
-          <a
-            className="c6"
-            onClick={[Function]}
+          <div
+            className=""
           >
             <span
               className="c4"
@@ -278,9 +262,33 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
                 }
               }
             />
-          </a>
-        </div>
-      </a>
+          </div>
+          <h4
+            className=""
+          >
+            Title2
+          </h4>
+          <div
+            className=""
+          >
+            <a
+              className="c6"
+              onClick={[Function]}
+            >
+              <span
+                className="c4"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": Object {
+                      "default": "test-file-stub",
+                    },
+                  }
+                }
+              />
+            </a>
+          </div>
+        </a>
+      </li>
     </ul>
   </main>
 </div>

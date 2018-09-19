@@ -28,35 +28,15 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
 <ul
   className=""
 >
-  <a
+  <li
     className=""
-    onClick={[Function]}
   >
-    <div
+    <a
       className=""
+      onClick={[Function]}
     >
-      <span
-        className="c0"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": Object {
-              "default": "test-file-stub",
-            },
-          }
-        }
-      />
-    </div>
-    <h4
-      className=""
-    >
-      Title1
-    </h4>
-    <div
-      className=""
-    >
-      <a
-        className="c1"
-        onClick={[Function]}
+      <div
+        className=""
       >
         <span
           className="c0"
@@ -68,38 +48,42 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
             }
           }
         />
-      </a>
-    </div>
-  </a>
-  <a
+      </div>
+      <h4
+        className=""
+      >
+        Title1
+      </h4>
+      <div
+        className=""
+      >
+        <a
+          className="c1"
+          onClick={[Function]}
+        >
+          <span
+            className="c0"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": Object {
+                  "default": "test-file-stub",
+                },
+              }
+            }
+          />
+        </a>
+      </div>
+    </a>
+  </li>
+  <li
     className=""
-    onClick={[Function]}
   >
-    <div
+    <a
       className=""
+      onClick={[Function]}
     >
-      <span
-        className="c0"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": Object {
-              "default": "test-file-stub",
-            },
-          }
-        }
-      />
-    </div>
-    <h4
-      className=""
-    >
-      Title2
-    </h4>
-    <div
-      className=""
-    >
-      <a
-        className="c1"
-        onClick={[Function]}
+      <div
+        className=""
       >
         <span
           className="c0"
@@ -111,9 +95,33 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
             }
           }
         />
-      </a>
-    </div>
-  </a>
+      </div>
+      <h4
+        className=""
+      >
+        Title2
+      </h4>
+      <div
+        className=""
+      >
+        <a
+          className="c1"
+          onClick={[Function]}
+        >
+          <span
+            className="c0"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": Object {
+                  "default": "test-file-stub",
+                },
+              }
+            }
+          />
+        </a>
+      </div>
+    </a>
+  </li>
 </ul>
 `;
 
@@ -145,35 +153,15 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
 <ul
   className=""
 >
-  <a
+  <li
     className=""
-    onClick={[Function]}
   >
-    <div
+    <a
       className=""
+      onClick={[Function]}
     >
-      <span
-        className="c0"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": Object {
-              "default": "test-file-stub",
-            },
-          }
-        }
-      />
-    </div>
-    <h4
-      className=""
-    >
-      Title1
-    </h4>
-    <div
-      className=""
-    >
-      <a
-        className="c1"
-        onClick={[Function]}
+      <div
+        className=""
       >
         <span
           className="c0"
@@ -185,38 +173,42 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
             }
           }
         />
-      </a>
-    </div>
-  </a>
-  <a
+      </div>
+      <h4
+        className=""
+      >
+        Title1
+      </h4>
+      <div
+        className=""
+      >
+        <a
+          className="c1"
+          onClick={[Function]}
+        >
+          <span
+            className="c0"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": Object {
+                  "default": "test-file-stub",
+                },
+              }
+            }
+          />
+        </a>
+      </div>
+    </a>
+  </li>
+  <li
     className=""
-    onClick={[Function]}
   >
-    <div
+    <a
       className=""
+      onClick={[Function]}
     >
-      <span
-        className="c0"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": Object {
-              "default": "test-file-stub",
-            },
-          }
-        }
-      />
-    </div>
-    <h4
-      className=""
-    >
-      Title2
-    </h4>
-    <div
-      className=""
-    >
-      <a
-        className="c1"
-        onClick={[Function]}
+      <div
+        className=""
       >
         <span
           className="c0"
@@ -228,8 +220,32 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
             }
           }
         />
-      </a>
-    </div>
-  </a>
+      </div>
+      <h4
+        className=""
+      >
+        Title2
+      </h4>
+      <div
+        className=""
+      >
+        <a
+          className="c1"
+          onClick={[Function]}
+        >
+          <span
+            className="c0"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": Object {
+                  "default": "test-file-stub",
+                },
+              }
+            }
+          />
+        </a>
+      </div>
+    </a>
+  </li>
 </ul>
 `;

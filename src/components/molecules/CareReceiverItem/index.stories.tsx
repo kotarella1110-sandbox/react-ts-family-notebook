@@ -30,6 +30,7 @@ storiesOf('Molecules/CareReceiverItem', module)
           id: 0,
           name: '左藤太郎',
           birth: '76歳 1941年1月15日生',
+          folders: [],
         }}
       />
     ))

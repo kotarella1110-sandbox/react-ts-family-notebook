@@ -22,15 +22,16 @@ describe('CareReceiverInfoList', () => {
     expect(wrapper.dive().type()).toBe('ul');
   });
 
-  it('CareReceiverInfoItem コンポーネントがレンダリングされていること', () => {
+  it('LI、CareReceiverInfoItem コンポーネントがレンダリングされていること', () => {
     const {
       props: { folders, onClick },
       wrapper,
     } = setup({ onClick: jest.fn() });
     expect(wrapper.children().length).toBe(2);
 
-    wrapper.children().forEach((CareReceiverInfoItem, index) => {
-      expect(Number(CareReceiverInfoItem.key())).toBe(folders[index].id);
+    wrapper.children().forEach((LI, index) => {
+      const CareReceiverInfoItem = LI.find('CareReceiverInfoItem');
+      expect(Number(LI.key())).toBe(folders[index].id);
       expect(CareReceiverInfoItem.prop('folder')).toEqual(folders[index]);
       expect(CareReceiverInfoItem.prop('onClick')).toBe(onClick);
     });

@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { Folder } from 'models';
 import Icon from '../../atoms/Icon';
 import ArrowButton from '../../atoms/ArrowButton';
 import Item from '../Item';
 
 export interface Props {
-  folder: { name: string };
+  folder: Folder;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 

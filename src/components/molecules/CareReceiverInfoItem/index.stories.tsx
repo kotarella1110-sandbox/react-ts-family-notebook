@@ -11,7 +11,7 @@ storiesOf('Molecules/CareReceiverInfoItem', module)
   .addDecorator((story, context) =>
     withInfo(`
       ~~~js
-      <CareReceiverInfoItem folder={{ name: 'Title' }} />
+      <CareReceiverInfoItem folder={{ id: 0, name: 'Title' }} />
       ~~~
     `)(story)(context)
   )
@@ -19,13 +19,15 @@ storiesOf('Molecules/CareReceiverInfoItem', module)
   .addDecorator(withKnobs)
   .addWithJSX(
     'default',
-    withNotes(``)(() => <CareReceiverInfoItem folder={{ name: 'Title' }} />)
+    withNotes(``)(() => (
+      <CareReceiverInfoItem folder={{ id: 0, name: 'Title' }} />
+    ))
   )
   .addWithJSX(
     'props onClick',
     withNotes(``)(() => (
       <CareReceiverInfoItem
-        folder={{ name: 'Title' }}
+        folder={{ id: 0, name: 'Title' }}
         onClick={action('onClick')}
       />
     ))

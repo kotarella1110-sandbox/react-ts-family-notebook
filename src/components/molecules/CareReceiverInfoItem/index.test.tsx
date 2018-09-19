@@ -6,6 +6,7 @@ import Item from '../Item';
 const setup = (propOverrides = {}) => {
   const props: Props = {
     folder: {
+      id: 0,
       name: 'Name',
     },
     ...propOverrides,

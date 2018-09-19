@@ -1,9 +1,10 @@
 import * as React from 'react';
+import { CareReceiver } from 'models';
 import Icon from '../../atoms/Icon';
 import Item from '../Item';
 
 export interface Props {
-  careReceiver: { id: number; name: string; birth: string };
+  careReceiver: CareReceiver;
 }
 
 const CareReceiverItem: React.SFC<Props> = ({ careReceiver }) => {
