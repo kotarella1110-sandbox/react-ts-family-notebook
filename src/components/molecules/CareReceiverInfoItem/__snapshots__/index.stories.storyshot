@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
-.c0 {
+.c2 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c0 > svg {
+.c2 > svg {
   width: 100%;
   height: 100%;
 }
 
-.c1 {
+.c5 {
   display: block;
   line-height: 0;
   -webkit-transform: rotateY(180deg);
@@ -20,20 +20,54 @@ exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
   transform: rotateY(180deg);
 }
 
-.c1 svg {
-  width: 8px * 3;
-  height: 8px * 3;
+.c5 svg {
+  width: 24px;
+  height: 24px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 16px;
+  color: $gray-dark;
+  min-height: 48px;
+  background-color: #fff;
+}
+
+.c1 {
+  margin: 0 8px 0 0;
+}
+
+.c1 svg,
+.c1 div {
+  width: 36px;
+  height: 36px;
+}
+
+.c3 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c4 {
+  margin: 0 0 0 auto;
 }
 
 <a
-  className=""
+  className="c0"
   onClick={[Function]}
 >
   <div
-    className=""
+    className="c1"
   >
     <span
-      className="c0"
+      className="c2"
       dangerouslySetInnerHTML={
         Object {
           "__html": Object {
@@ -43,20 +77,24 @@ exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
       }
     />
   </div>
-  <h4
-    className=""
-  >
-    Title
-  </h4>
   <div
     className=""
   >
+    <h4
+      className="c3"
+    >
+      Title
+    </h4>
+  </div>
+  <div
+    className="c4"
+  >
     <a
-      className="c1"
+      className="c5"
       onClick={[Function]}
     >
       <span
-        className="c0"
+        className="c2"
         dangerouslySetInnerHTML={
           Object {
             "__html": Object {
@@ -71,18 +109,18 @@ exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
 `;
 
 exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
-.c0 {
+.c2 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c0 > svg {
+.c2 > svg {
   width: 100%;
   height: 100%;
 }
 
-.c1 {
+.c5 {
   display: block;
   line-height: 0;
   -webkit-transform: rotateY(180deg);
@@ -90,20 +128,54 @@ exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
   transform: rotateY(180deg);
 }
 
-.c1 svg {
-  width: 8px * 3;
-  height: 8px * 3;
+.c5 svg {
+  width: 24px;
+  height: 24px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 16px;
+  color: $gray-dark;
+  min-height: 48px;
+  background-color: #fff;
+}
+
+.c1 {
+  margin: 0 8px 0 0;
+}
+
+.c1 svg,
+.c1 div {
+  width: 36px;
+  height: 36px;
+}
+
+.c3 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c4 {
+  margin: 0 0 0 auto;
 }
 
 <a
-  className=""
+  className="c0"
   onClick={[Function]}
 >
   <div
-    className=""
+    className="c1"
   >
     <span
-      className="c0"
+      className="c2"
       dangerouslySetInnerHTML={
         Object {
           "__html": Object {
@@ -113,20 +185,24 @@ exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
       }
     />
   </div>
-  <h4
-    className=""
-  >
-    Title
-  </h4>
   <div
     className=""
   >
+    <h4
+      className="c3"
+    >
+      Title
+    </h4>
+  </div>
+  <div
+    className="c4"
+  >
     <a
-      className="c1"
+      className="c5"
       onClick={[Function]}
     >
       <span
-        className="c0"
+        className="c2"
         dangerouslySetInnerHTML={
           Object {
             "__html": Object {

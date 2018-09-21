@@ -24,8 +24,18 @@ CareReceiverInfoList.defaultProps = {
   onClick: e => null,
 };
 
-const List = styled<{}, 'ul'>('ul')``;
+const List = styled<{}, 'ul'>('ul')`
+  list-style: none;
+  padding: 0;
+`;
 
-const Item = styled<{}, 'li'>('li')``;
+const Item = styled<{}, 'li'>('li')`
+  border-top: solid 1px ${props => props.theme.borderColor};
+  border-bottom: solid 1px ${props => props.theme.borderColor};
+
+  & + & {
+    border-top: 0;
+  }
+`;
 
 export default CareReceiverInfoList;

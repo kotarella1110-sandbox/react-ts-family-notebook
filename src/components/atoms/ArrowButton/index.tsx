@@ -27,8 +27,8 @@ const Wrapper = styled<Props, 'a'>('a')`
   line-height: 0;
 
   svg {
-    width: ${props => props.theme.sizeBase} * 3;
-    height: ${props => props.theme.sizeBase} * 3;
+    width: 24px;
+    height: 24px;
   }
 
   ${props =>

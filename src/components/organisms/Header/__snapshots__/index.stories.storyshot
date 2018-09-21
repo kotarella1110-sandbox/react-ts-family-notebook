@@ -238,8 +238,8 @@ exports[`Storyshots Organisms/Header props left is ArrowBtton and right is AddBu
 }
 
 .c2 svg {
-  width: 8px * 3;
-  height: 8px * 3;
+  width: 24px;
+  height: 24px;
 }
 
 .c2 svg path {

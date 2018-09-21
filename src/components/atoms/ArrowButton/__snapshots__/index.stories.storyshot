@@ -18,8 +18,8 @@ exports[`Storyshots Atoms/ArrowButton default 1`] = `
 }
 
 .c0 svg {
-  width: 8px * 3;
-  height: 8px * 3;
+  width: 24px;
+  height: 24px;
 }
 
 <a
@@ -57,8 +57,8 @@ exports[`Storyshots Atoms/ArrowButton props isPrimary is true 1`] = `
 }
 
 .c0 svg {
-  width: 8px * 3;
-  height: 8px * 3;
+  width: 24px;
+  height: 24px;
 }
 
 .c0 svg path {
@@ -103,8 +103,8 @@ exports[`Storyshots Atoms/ArrowButton props isPrimary is true and isRight is tru
 }
 
 .c0 svg {
-  width: 8px * 3;
-  height: 8px * 3;
+  width: 24px;
+  height: 24px;
 }
 
 .c0 svg path {
@@ -149,8 +149,8 @@ exports[`Storyshots Atoms/ArrowButton props isRight is true 1`] = `
 }
 
 .c0 svg {
-  width: 8px * 3;
-  height: 8px * 3;
+  width: 24px;
+  height: 24px;
 }
 
 <a
@@ -188,8 +188,8 @@ exports[`Storyshots Atoms/ArrowButton props onClick 1`] = `
 }
 
 .c0 svg {
-  width: 8px * 3;
-  height: 8px * 3;
+  width: 24px;
+  height: 24px;
 }
 
 <a

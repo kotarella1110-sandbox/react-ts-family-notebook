@@ -69,7 +69,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   line-height: 1em;
 }
 
-.c6 {
+.c12 {
   display: block;
   line-height: 0;
   -webkit-transform: rotateY(180deg);
@@ -77,9 +77,57 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   transform: rotateY(180deg);
 }
 
-.c6 svg {
-  width: 8px * 3;
-  height: 8px * 3;
+.c12 svg {
+  width: 24px;
+  height: 24px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 16px;
+  color: $gray-dark;
+  min-height: 48px;
+  background-color: #fff;
+}
+
+.c9 {
+  margin: 0 8px 0 0;
+}
+
+.c9 svg,
+.c9 div {
+  width: 36px;
+  height: 36px;
+}
+
+.c10 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c11 {
+  margin: 0 0 0 auto;
+}
+
+.c6 {
+  list-style: none;
+  padding: 0;
+}
+
+.c7 {
+  border-top: solid 1px #c8c8c8;
+  border-bottom: solid 1px #c8c8c8;
+}
+
+.c7 + .c7 {
+  border-top: 0;
 }
 
 .c5 {
@@ -193,17 +241,17 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
     className=""
   >
     <ul
-      className=""
+      className="c6"
     >
       <li
-        className=""
+        className="c7"
       >
         <a
-          className=""
+          className="c8"
           onClick={[Function]}
         >
           <div
-            className=""
+            className="c9"
           >
             <span
               className="c4"
@@ -216,16 +264,20 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
               }
             />
           </div>
-          <h4
-            className=""
-          >
-            Title1
-          </h4>
           <div
             className=""
           >
+            <h4
+              className="c10"
+            >
+              Title1
+            </h4>
+          </div>
+          <div
+            className="c11"
+          >
             <a
-              className="c6"
+              className="c12"
               onClick={[Function]}
             >
               <span
@@ -243,14 +295,14 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
         </a>
       </li>
       <li
-        className=""
+        className="c7"
       >
         <a
-          className=""
+          className="c8"
           onClick={[Function]}
         >
           <div
-            className=""
+            className="c9"
           >
             <span
               className="c4"
@@ -263,16 +315,20 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
               }
             />
           </div>
-          <h4
-            className=""
-          >
-            Title2
-          </h4>
           <div
             className=""
           >
+            <h4
+              className="c10"
+            >
+              Title2
+            </h4>
+          </div>
+          <div
+            className="c11"
+          >
             <a
-              className="c6"
+              className="c12"
               onClick={[Function]}
             >
               <span

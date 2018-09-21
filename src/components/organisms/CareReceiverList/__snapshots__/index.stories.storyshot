@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Organisms/CareReceiverList default 1`] = `
-.c0 {
+.c3 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c0 > svg {
+.c3 > svg {
   width: 100%;
   height: 100%;
 }
 
-.c1 {
+.c9 {
   display: block;
   line-height: 0;
   -webkit-transform: rotateY(180deg);
@@ -20,26 +20,84 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
   transform: rotateY(180deg);
 }
 
-.c1 svg {
-  width: 8px * 3;
-  height: 8px * 3;
+.c9 svg {
+  width: 24px;
+  height: 24px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 16px;
+  color: $gray-dark;
+  min-height: 48px;
+  background-color: #fff;
+}
+
+.c2 {
+  margin: 0 8px 0 0;
+}
+
+.c2 svg,
+.c2 div {
+  width: 36px;
+  height: 36px;
+}
+
+.c4 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c5 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c8 {
+  margin: 0 0 0 auto;
+}
+
+.c6 {
+  list-style: none;
+  padding: 0;
+}
+
+.c7 {
+  border-top: solid 1px #c8c8c8;
+  border-bottom: solid 1px #c8c8c8;
+}
+
+.c7 + .c7 {
+  border-top: 0;
+}
+
+.c0 {
+  list-style: none;
+  padding: 0;
 }
 
 <ul
-  className=""
+  className="c0"
 >
   <li
     className=""
   >
     <a
-      className=""
+      className="c1"
       onClick={[Function]}
     >
       <div
-        className=""
+        className="c2"
       >
         <span
-          className="c0"
+          className="c3"
           dangerouslySetInnerHTML={
             Object {
               "__html": Object {
@@ -49,32 +107,36 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
           }
         />
       </div>
-      <h4
+      <div
         className=""
       >
-        左藤太郎
-      </h4>
-      <p
-        className=""
-      >
-        76歳 1941年1月15日生
-      </p>
+        <h4
+          className="c4"
+        >
+          左藤太郎
+        </h4>
+        <p
+          className="c5"
+        >
+          76歳 1941年1月15日生
+        </p>
+      </div>
     </a>
     <ul
-      className=""
+      className="c6"
     >
       <li
-        className=""
+        className="c7"
       >
         <a
-          className=""
+          className="c1"
           onClick={[Function]}
         >
           <div
-            className=""
+            className="c2"
           >
             <span
-              className="c0"
+              className="c3"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -84,20 +146,24 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
               }
             />
           </div>
-          <h4
-            className=""
-          >
-            Title1
-          </h4>
           <div
             className=""
           >
+            <h4
+              className="c4"
+            >
+              Title1
+            </h4>
+          </div>
+          <div
+            className="c8"
+          >
             <a
-              className="c1"
+              className="c9"
               onClick={[Function]}
             >
               <span
-                className="c0"
+                className="c3"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -111,17 +177,17 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
         </a>
       </li>
       <li
-        className=""
+        className="c7"
       >
         <a
-          className=""
+          className="c1"
           onClick={[Function]}
         >
           <div
-            className=""
+            className="c2"
           >
             <span
-              className="c0"
+              className="c3"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -131,20 +197,24 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
               }
             />
           </div>
-          <h4
-            className=""
-          >
-            Title2
-          </h4>
           <div
             className=""
           >
+            <h4
+              className="c4"
+            >
+              Title2
+            </h4>
+          </div>
+          <div
+            className="c8"
+          >
             <a
-              className="c1"
+              className="c9"
               onClick={[Function]}
             >
               <span
-                className="c0"
+                className="c3"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -163,14 +233,14 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
     className=""
   >
     <a
-      className=""
+      className="c1"
       onClick={[Function]}
     >
       <div
-        className=""
+        className="c2"
       >
         <span
-          className="c0"
+          className="c3"
           dangerouslySetInnerHTML={
             Object {
               "__html": Object {
@@ -180,32 +250,36 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
           }
         />
       </div>
-      <h4
+      <div
         className=""
       >
-        左藤二郎
-      </h4>
-      <p
-        className=""
-      >
-        76歳 1941年2月13日生
-      </p>
+        <h4
+          className="c4"
+        >
+          左藤二郎
+        </h4>
+        <p
+          className="c5"
+        >
+          76歳 1941年2月13日生
+        </p>
+      </div>
     </a>
     <ul
-      className=""
+      className="c6"
     >
       <li
-        className=""
+        className="c7"
       >
         <a
-          className=""
+          className="c1"
           onClick={[Function]}
         >
           <div
-            className=""
+            className="c2"
           >
             <span
-              className="c0"
+              className="c3"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -215,20 +289,24 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
               }
             />
           </div>
-          <h4
-            className=""
-          >
-            Title1
-          </h4>
           <div
             className=""
           >
+            <h4
+              className="c4"
+            >
+              Title1
+            </h4>
+          </div>
+          <div
+            className="c8"
+          >
             <a
-              className="c1"
+              className="c9"
               onClick={[Function]}
             >
               <span
-                className="c0"
+                className="c3"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -242,17 +320,17 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
         </a>
       </li>
       <li
-        className=""
+        className="c7"
       >
         <a
-          className=""
+          className="c1"
           onClick={[Function]}
         >
           <div
-            className=""
+            className="c2"
           >
             <span
-              className="c0"
+              className="c3"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -262,20 +340,24 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
               }
             />
           </div>
-          <h4
-            className=""
-          >
-            Title2
-          </h4>
           <div
             className=""
           >
+            <h4
+              className="c4"
+            >
+              Title2
+            </h4>
+          </div>
+          <div
+            className="c8"
+          >
             <a
-              className="c1"
+              className="c9"
               onClick={[Function]}
             >
               <span
-                className="c0"
+                className="c3"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {

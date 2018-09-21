@@ -29,7 +29,10 @@ CareReceiverList.defaultProps = {
   onClick: e => null,
 };
 
-const List = styled<{}, 'ul'>('ul')``;
+const List = styled<{}, 'ul'>('ul')`
+  list-style: none;
+  padding: 0;
+`;
 
 const Item = styled<{}, 'li'>('li')``;
 
