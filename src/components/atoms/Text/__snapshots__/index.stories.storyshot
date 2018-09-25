@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Atoms/Text default 1`] = `
+.c0 {
+  display: block;
+  border: solid 1px #fff;
+  border-radius: 4px;
+  font-size: 20px;
+  color: $gray;
+  line-height: 1em;
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+<input
+  className="c0"
+  type="text"
+/>
+`;
