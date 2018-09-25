@@ -189,128 +189,102 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   }
 }
 
-<div
-  className=""
->
-  <header
+<div>
+  <div
     className=""
   >
-    <div
-      className="c0"
+    <header
+      className=""
     >
       <div
-        className="c1"
-      />
-      <div
-        className="c2"
+        className="c0"
       >
-        <a
-          className="c3"
-          onClick={[Function]}
+        <div
+          className="c1"
+        />
+        <div
+          className="c2"
         >
-          <span
-            className="c4"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": Object {
-                  "default": "test-file-stub",
-                },
+          <a
+            className="c3"
+            onClick={[Function]}
+          >
+            <span
+              className="c4"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": Object {
+                    "default": "test-file-stub",
+                  },
+                }
               }
-            }
-          />
-          <span>
-            追加
-          </span>
-        </a>
+            />
+            <span>
+              追加
+            </span>
+          </a>
+        </div>
+        <h2
+          className="c5"
+        >
+          本人情報
+        </h2>
       </div>
-      <h2
-        className="c5"
-      >
-        本人情報
-      </h2>
-    </div>
-  </header>
-  <main
-    className=""
-  >
-    <ul
-      className="c6"
+    </header>
+    <main
+      className=""
     >
-      <li
-        className=""
+      <ul
+        className="c6"
       >
-        <a
-          className="c7"
-          onClick={[Function]}
+        <li
+          className=""
         >
-          <div
-            className="c8"
+          <a
+            className="c7"
+            onClick={[Function]}
           >
-            <span
-              className="c4"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": Object {
-                    "default": "test-file-stub",
-                  },
+            <div
+              className="c8"
+            >
+              <span
+                className="c4"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": Object {
+                      "default": "test-file-stub",
+                    },
+                  }
                 }
-              }
-            />
-          </div>
-          <div
-            className=""
+              />
+            </div>
+            <div
+              className=""
+            >
+              <h4
+                className="c9"
+              >
+                左藤太郎
+              </h4>
+              <p
+                className="c10"
+              >
+                76歳 1941年1月15日生
+              </p>
+            </div>
+          </a>
+          <ul
+            className="c11"
           >
-            <h4
-              className="c9"
+            <li
+              className="c12"
             >
-              左藤太郎
-            </h4>
-            <p
-              className="c10"
-            >
-              76歳 1941年1月15日生
-            </p>
-          </div>
-        </a>
-        <ul
-          className="c11"
-        >
-          <li
-            className="c12"
-          >
-            <a
-              className="c7"
-              onClick={[Function]}
-            >
-              <div
-                className="c8"
+              <a
+                className="c7"
+                onClick={[Function]}
               >
-                <span
-                  className="c4"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": Object {
-                        "default": "test-file-stub",
-                      },
-                    }
-                  }
-                />
-              </div>
-              <div
-                className=""
-              >
-                <h4
-                  className="c9"
-                >
-                  Title1
-                </h4>
-              </div>
-              <div
-                className="c13"
-              >
-                <a
-                  className="c14"
-                  onClick={[Function]}
+                <div
+                  className="c8"
                 >
                   <span
                     className="c4"
@@ -322,46 +296,46 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                       }
                     }
                   />
-                </a>
-              </div>
-            </a>
-          </li>
-          <li
-            className="c12"
-          >
-            <a
-              className="c7"
-              onClick={[Function]}
-            >
-              <div
-                className="c8"
-              >
-                <span
-                  className="c4"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": Object {
-                        "default": "test-file-stub",
-                      },
-                    }
-                  }
-                />
-              </div>
-              <div
-                className=""
-              >
-                <h4
-                  className="c9"
+                </div>
+                <div
+                  className=""
                 >
-                  Title2
-                </h4>
-              </div>
-              <div
-                className="c13"
+                  <h4
+                    className="c9"
+                  >
+                    Title1
+                  </h4>
+                </div>
+                <div
+                  className="c13"
+                >
+                  <a
+                    className="c14"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="c4"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": Object {
+                            "default": "test-file-stub",
+                          },
+                        }
+                      }
+                    />
+                  </a>
+                </div>
+              </a>
+            </li>
+            <li
+              className="c12"
+            >
+              <a
+                className="c7"
+                onClick={[Function]}
               >
-                <a
-                  className="c14"
-                  onClick={[Function]}
+                <div
+                  className="c8"
                 >
                   <span
                     className="c4"
@@ -373,87 +347,87 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                       }
                     }
                   />
-                </a>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li
-        className=""
-      >
-        <a
-          className="c7"
-          onClick={[Function]}
+                </div>
+                <div
+                  className=""
+                >
+                  <h4
+                    className="c9"
+                  >
+                    Title2
+                  </h4>
+                </div>
+                <div
+                  className="c13"
+                >
+                  <a
+                    className="c14"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="c4"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": Object {
+                            "default": "test-file-stub",
+                          },
+                        }
+                      }
+                    />
+                  </a>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li
+          className=""
         >
-          <div
-            className="c8"
+          <a
+            className="c7"
+            onClick={[Function]}
           >
-            <span
-              className="c4"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": Object {
-                    "default": "test-file-stub",
-                  },
+            <div
+              className="c8"
+            >
+              <span
+                className="c4"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": Object {
+                      "default": "test-file-stub",
+                    },
+                  }
                 }
-              }
-            />
-          </div>
-          <div
-            className=""
+              />
+            </div>
+            <div
+              className=""
+            >
+              <h4
+                className="c9"
+              >
+                左藤二郎
+              </h4>
+              <p
+                className="c10"
+              >
+                76歳 1941年2月13日生
+              </p>
+            </div>
+          </a>
+          <ul
+            className="c11"
           >
-            <h4
-              className="c9"
+            <li
+              className="c12"
             >
-              左藤二郎
-            </h4>
-            <p
-              className="c10"
-            >
-              76歳 1941年2月13日生
-            </p>
-          </div>
-        </a>
-        <ul
-          className="c11"
-        >
-          <li
-            className="c12"
-          >
-            <a
-              className="c7"
-              onClick={[Function]}
-            >
-              <div
-                className="c8"
+              <a
+                className="c7"
+                onClick={[Function]}
               >
-                <span
-                  className="c4"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": Object {
-                        "default": "test-file-stub",
-                      },
-                    }
-                  }
-                />
-              </div>
-              <div
-                className=""
-              >
-                <h4
-                  className="c9"
-                >
-                  Title1
-                </h4>
-              </div>
-              <div
-                className="c13"
-              >
-                <a
-                  className="c14"
-                  onClick={[Function]}
+                <div
+                  className="c8"
                 >
                   <span
                     className="c4"
@@ -465,46 +439,46 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                       }
                     }
                   />
-                </a>
-              </div>
-            </a>
-          </li>
-          <li
-            className="c12"
-          >
-            <a
-              className="c7"
-              onClick={[Function]}
-            >
-              <div
-                className="c8"
-              >
-                <span
-                  className="c4"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": Object {
-                        "default": "test-file-stub",
-                      },
-                    }
-                  }
-                />
-              </div>
-              <div
-                className=""
-              >
-                <h4
-                  className="c9"
+                </div>
+                <div
+                  className=""
                 >
-                  Title2
-                </h4>
-              </div>
-              <div
-                className="c13"
+                  <h4
+                    className="c9"
+                  >
+                    Title1
+                  </h4>
+                </div>
+                <div
+                  className="c13"
+                >
+                  <a
+                    className="c14"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="c4"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": Object {
+                            "default": "test-file-stub",
+                          },
+                        }
+                      }
+                    />
+                  </a>
+                </div>
+              </a>
+            </li>
+            <li
+              className="c12"
+            >
+              <a
+                className="c7"
+                onClick={[Function]}
               >
-                <a
-                  className="c14"
-                  onClick={[Function]}
+                <div
+                  className="c8"
                 >
                   <span
                     className="c4"
@@ -516,13 +490,41 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                       }
                     }
                   />
-                </a>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </main>
+                </div>
+                <div
+                  className=""
+                >
+                  <h4
+                    className="c9"
+                  >
+                    Title2
+                  </h4>
+                </div>
+                <div
+                  className="c13"
+                >
+                  <a
+                    className="c14"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="c4"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": Object {
+                            "default": "test-file-stub",
+                          },
+                        }
+                      }
+                    />
+                  </a>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </main>
+  </div>
 </div>
 `;
