@@ -1,9 +1,10 @@
 import * as React from 'react';
 import styled from 'styled';
+import Button from 'components/atoms/Button';
 import Icon from 'components/atoms/Icon';
 
 export interface Props {
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const AddButton: React.SFC<Props> = ({ onClick, children }) => {
@@ -19,7 +20,7 @@ AddButton.defaultProps = {
   onClick: e => null,
 };
 
-const Wrapper = styled.a`
+const Wrapper = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;

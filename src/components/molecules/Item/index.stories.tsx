@@ -44,7 +44,7 @@ storiesOf('Molecules/Item', module)
     withNotes(``)(() => (
       <Item
         icon={<Icon icon="add" />}
-        right={<ArrowButton />}
+        right={<ArrowButton isRight={true} />}
         onClick={action('onClick')}>
         Item
       </Item>

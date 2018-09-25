@@ -1,6 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Organisms/CareReceiverList default 1`] = `
+.c11 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .c3 {
   display: inline-block;
   margin: 0.1em;
@@ -165,8 +182,8 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
           <div
             className="c9"
           >
-            <a
-              className="c10"
+            <button
+              className="c10 c11"
               onClick={[Function]}
             >
               <span
@@ -179,7 +196,7 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                   }
                 }
               />
-            </a>
+            </button>
           </div>
         </a>
       </li>
@@ -216,8 +233,8 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
           <div
             className="c9"
           >
-            <a
-              className="c10"
+            <button
+              className="c10 c11"
               onClick={[Function]}
             >
               <span
@@ -230,7 +247,7 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                   }
                 }
               />
-            </a>
+            </button>
           </div>
         </a>
       </li>
@@ -310,8 +327,8 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
           <div
             className="c9"
           >
-            <a
-              className="c10"
+            <button
+              className="c10 c11"
               onClick={[Function]}
             >
               <span
@@ -324,7 +341,7 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                   }
                 }
               />
-            </a>
+            </button>
           </div>
         </a>
       </li>
@@ -361,8 +378,8 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
           <div
             className="c9"
           >
-            <a
-              className="c10"
+            <button
+              className="c10 c11"
               onClick={[Function]}
             >
               <span
@@ -375,7 +392,7 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                   }
                 }
               />
-            </a>
+            </button>
           </div>
         </a>
       </li>

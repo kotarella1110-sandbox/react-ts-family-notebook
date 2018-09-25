@@ -201,6 +201,23 @@ exports[`Storyshots Molecules/Item props right 1`] = `
 `;
 
 exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = `
+.c5 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .c2 {
   display: inline-block;
   margin: 0.1em;
@@ -215,6 +232,9 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
 .c4 {
   display: block;
   line-height: 0;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .c4 svg {
@@ -277,8 +297,8 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
   <div
     className="c3"
   >
-    <a
-      className="c4"
+    <button
+      className="c4 c5"
       onClick={[Function]}
     >
       <span
@@ -291,7 +311,7 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
           }
         }
       />
-    </a>
+    </button>
   </div>
 </a>
 `;

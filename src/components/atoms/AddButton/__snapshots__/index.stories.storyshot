@@ -2,12 +2,29 @@
 
 exports[`Storyshots Atoms/AddButton default 1`] = `
 .c1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c2 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c1 > svg {
+.c2 > svg {
   width: 100%;
   height: 100%;
 }
@@ -52,12 +69,12 @@ exports[`Storyshots Atoms/AddButton default 1`] = `
   line-height: 1em;
 }
 
-<a
-  className="c0"
+<button
+  className="c0 c1"
   onClick={[Function]}
 >
   <span
-    className="c1"
+    className="c2"
     dangerouslySetInnerHTML={
       Object {
         "__html": Object {
@@ -69,17 +86,34 @@ exports[`Storyshots Atoms/AddButton default 1`] = `
   <span>
     Text
   </span>
-</a>
+</button>
 `;
 
 exports[`Storyshots Atoms/AddButton props onClick 1`] = `
 .c1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c2 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c1 > svg {
+.c2 > svg {
   width: 100%;
   height: 100%;
 }
@@ -124,12 +158,12 @@ exports[`Storyshots Atoms/AddButton props onClick 1`] = `
   line-height: 1em;
 }
 
-<a
-  className="c0"
+<button
+  className="c0 c1"
   onClick={[Function]}
 >
   <span
-    className="c1"
+    className="c2"
     dangerouslySetInnerHTML={
       Object {
         "__html": Object {
@@ -141,5 +175,5 @@ exports[`Storyshots Atoms/AddButton props onClick 1`] = `
   <span>
     Text
   </span>
-</a>
+</button>
 `;

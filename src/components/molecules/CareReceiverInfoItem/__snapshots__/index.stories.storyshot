@@ -1,6 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
+.c6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .c2 {
   display: inline-block;
   margin: 0.1em;
@@ -89,8 +106,8 @@ exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
   <div
     className="c4"
   >
-    <a
-      className="c5"
+    <button
+      className="c5 c6"
       onClick={[Function]}
     >
       <span
@@ -103,12 +120,29 @@ exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
           }
         }
       />
-    </a>
+    </button>
   </div>
 </a>
 `;
 
 exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
+.c6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .c2 {
   display: inline-block;
   margin: 0.1em;
@@ -197,8 +231,8 @@ exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
   <div
     className="c4"
   >
-    <a
-      className="c5"
+    <button
+      className="c5 c6"
       onClick={[Function]}
     >
       <span
@@ -211,7 +245,7 @@ exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
           }
         }
       />
-    </a>
+    </button>
   </div>
 </a>
 `;

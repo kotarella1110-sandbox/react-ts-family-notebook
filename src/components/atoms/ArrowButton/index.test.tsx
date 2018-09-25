@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import ArrowButton from '.';
+import Button from 'components/atoms/Button';
 
 const setup = () => {
   const props = {};
@@ -15,6 +16,6 @@ const setup = () => {
 describe('ArrowButton', () => {
   it('コンポーネントがレンダリングされていること', () => {
     const { wrapper } = setup();
-    expect(wrapper.dive().type()).toBe('a');
+    expect(wrapper.dive().type()).toBe(Button);
   });
 });

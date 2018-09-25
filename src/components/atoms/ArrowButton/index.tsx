@@ -1,11 +1,12 @@
 import * as React from 'react';
 import styled, { css } from 'styled';
+import Button from 'components/atoms/Button';
 import Icon from 'components/atoms/Icon';
 
 export interface Props {
   isPrimary?: boolean;
   isRight?: boolean;
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const ArrowButton: React.SFC<Props> = props => {
@@ -22,7 +23,7 @@ ArrowButton.defaultProps = {
   onClick: e => null,
 };
 
-const Wrapper = styled<Props, 'a'>('a')`
+const Wrapper = styled<Props>(Button)`
   display: block;
   line-height: 0;
 

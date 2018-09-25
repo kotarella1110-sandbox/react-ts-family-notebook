@@ -19,12 +19,29 @@ exports[`Storyshots Templates/AppTemplate default 1`] = `
 
 exports[`Storyshots Templates/AppTemplate props header is Header and main is CareReceiverInfoList 1`] = `
 .c4 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c5 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c4 > svg {
+.c5 > svg {
   width: 100%;
   height: 100%;
 }
@@ -69,7 +86,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   line-height: 1em;
 }
 
-.c12 {
+.c13 {
   display: block;
   line-height: 0;
   -webkit-transform: rotateY(180deg);
@@ -77,12 +94,12 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   transform: rotateY(180deg);
 }
 
-.c12 svg {
+.c13 svg {
   width: 24px;
   height: 24px;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -97,40 +114,40 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   background-color: #fff;
 }
 
-.c9 {
+.c10 {
   margin: 0 8px 0 0;
 }
 
-.c9 svg,
-.c9 div {
+.c10 svg,
+.c10 div {
   width: 36px;
   height: 36px;
 }
 
-.c11 {
+.c12 {
   margin: 0 0 0 auto;
 }
 
-.c10 {
+.c11 {
   margin: 0;
   line-height: 1.5em;
 }
 
-.c6 {
+.c7 {
   list-style: none;
   padding: 0;
 }
 
-.c7 {
+.c8 {
   border-top: solid 1px #c8c8c8;
   border-bottom: solid 1px #c8c8c8;
 }
 
-.c7 + .c7 {
+.c8 + .c8 {
   border-top: 0;
 }
 
-.c5 {
+.c6 {
   font-size: 5vw;
   font-weight: bold;
   color: #007f48;
@@ -191,7 +208,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
 }
 
 @media (min-width:380px) {
-  .c5 {
+  .c6 {
     font-size: 20px;
   }
 }
@@ -211,12 +228,12 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
       <div
         className="c2"
       >
-        <a
-          className="c3"
+        <button
+          className="c3 c4"
           onClick={[Function]}
         >
           <span
-            className="c4"
+            className="c5"
             dangerouslySetInnerHTML={
               Object {
                 "__html": Object {
@@ -228,10 +245,10 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
           <span>
             追加
           </span>
-        </a>
+        </button>
       </div>
       <h2
-        className="c5"
+        className="c6"
       >
         Title
       </h2>
@@ -241,20 +258,20 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
     className=""
   >
     <ul
-      className="c6"
+      className="c7"
     >
       <li
-        className="c7"
+        className="c8"
       >
         <a
-          className="c8"
+          className="c9"
           onClick={[Function]}
         >
           <div
-            className="c9"
+            className="c10"
           >
             <span
-              className="c4"
+              className="c5"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -268,20 +285,20 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
             className=""
           >
             <h4
-              className="c10"
+              className="c11"
             >
               Title1
             </h4>
           </div>
           <div
-            className="c11"
+            className="c12"
           >
-            <a
-              className="c12"
+            <button
+              className="c13 c4"
               onClick={[Function]}
             >
               <span
-                className="c4"
+                className="c5"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -290,22 +307,22 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
                   }
                 }
               />
-            </a>
+            </button>
           </div>
         </a>
       </li>
       <li
-        className="c7"
+        className="c8"
       >
         <a
-          className="c8"
+          className="c9"
           onClick={[Function]}
         >
           <div
-            className="c9"
+            className="c10"
           >
             <span
-              className="c4"
+              className="c5"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -319,20 +336,20 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
             className=""
           >
             <h4
-              className="c10"
+              className="c11"
             >
               Title2
             </h4>
           </div>
           <div
-            className="c11"
+            className="c12"
           >
-            <a
-              className="c12"
+            <button
+              className="c13 c4"
               onClick={[Function]}
             >
               <span
-                className="c4"
+                className="c5"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -341,7 +358,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
                   }
                 }
               />
-            </a>
+            </button>
           </div>
         </a>
       </li>

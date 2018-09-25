@@ -2,12 +2,29 @@
 
 exports[`Storyshots Pages/CareReceiverPage default 1`] = `
 .c4 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c5 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c4 > svg {
+.c5 > svg {
   width: 100%;
   height: 100%;
 }
@@ -52,7 +69,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   line-height: 1em;
 }
 
-.c15 {
+.c16 {
   display: block;
   line-height: 0;
   -webkit-transform: rotateY(180deg);
@@ -60,12 +77,12 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   transform: rotateY(180deg);
 }
 
-.c15 svg {
+.c16 svg {
   width: 24px;
   height: 24px;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -80,26 +97,21 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   background-color: #fff;
 }
 
-.c8 {
+.c9 {
   margin: 0 8px 0 0;
 }
 
-.c8 svg,
-.c8 div {
+.c9 svg,
+.c9 div {
   width: 36px;
   height: 36px;
 }
 
-.c14 {
+.c15 {
   margin: 0 0 0 auto;
 }
 
-.c13 {
-  margin: 0;
-  line-height: 1.5em;
-}
-
-.c9 {
+.c14 {
   margin: 0;
   line-height: 1.5em;
 }
@@ -110,25 +122,30 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
 }
 
 .c11 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c12 {
   list-style: none;
   padding: 0;
 }
 
-.c12 {
+.c13 {
   border-top: solid 1px #c8c8c8;
   border-bottom: solid 1px #c8c8c8;
 }
 
-.c12 + .c12 {
+.c13 + .c13 {
   border-top: 0;
 }
 
-.c6 {
+.c7 {
   list-style: none;
   padding: 0;
 }
 
-.c5 {
+.c6 {
   font-size: 5vw;
   font-weight: bold;
   color: #007f48;
@@ -189,7 +206,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
 }
 
 @media (min-width:380px) {
-  .c5 {
+  .c6 {
     font-size: 20px;
   }
 }
@@ -210,12 +227,12 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
         <div
           className="c2"
         >
-          <a
-            className="c3"
+          <button
+            className="c3 c4"
             onClick={[Function]}
           >
             <span
-              className="c4"
+              className="c5"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -227,10 +244,10 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
             <span>
               追加
             </span>
-          </a>
+          </button>
         </div>
         <h2
-          className="c5"
+          className="c6"
         >
           本人情報
         </h2>
@@ -240,20 +257,20 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
       className=""
     >
       <ul
-        className="c6"
+        className="c7"
       >
         <li
           className=""
         >
           <a
-            className="c7"
+            className="c8"
             onClick={[Function]}
           >
             <div
-              className="c8"
+              className="c9"
             >
               <span
-                className="c4"
+                className="c5"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -268,12 +285,12 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
             >
               <div>
                 <h4
-                  className="c9"
+                  className="c10"
                 >
                   左藤太郎
                 </h4>
                 <p
-                  className="c10"
+                  className="c11"
                 >
                   76歳 1941年1月15日生
                 </p>
@@ -281,20 +298,20 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
             </div>
           </a>
           <ul
-            className="c11"
+            className="c12"
           >
             <li
-              className="c12"
+              className="c13"
             >
               <a
-                className="c7"
+                className="c8"
                 onClick={[Function]}
               >
                 <div
-                  className="c8"
+                  className="c9"
                 >
                   <span
-                    className="c4"
+                    className="c5"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": Object {
@@ -308,20 +325,20 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   className=""
                 >
                   <h4
-                    className="c13"
+                    className="c14"
                   >
                     Title1
                   </h4>
                 </div>
                 <div
-                  className="c14"
+                  className="c15"
                 >
-                  <a
-                    className="c15"
+                  <button
+                    className="c16 c4"
                     onClick={[Function]}
                   >
                     <span
-                      className="c4"
+                      className="c5"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": Object {
@@ -330,22 +347,22 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                         }
                       }
                     />
-                  </a>
+                  </button>
                 </div>
               </a>
             </li>
             <li
-              className="c12"
+              className="c13"
             >
               <a
-                className="c7"
+                className="c8"
                 onClick={[Function]}
               >
                 <div
-                  className="c8"
+                  className="c9"
                 >
                   <span
-                    className="c4"
+                    className="c5"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": Object {
@@ -359,20 +376,20 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   className=""
                 >
                   <h4
-                    className="c13"
+                    className="c14"
                   >
                     Title2
                   </h4>
                 </div>
                 <div
-                  className="c14"
+                  className="c15"
                 >
-                  <a
-                    className="c15"
+                  <button
+                    className="c16 c4"
                     onClick={[Function]}
                   >
                     <span
-                      className="c4"
+                      className="c5"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": Object {
@@ -381,7 +398,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                         }
                       }
                     />
-                  </a>
+                  </button>
                 </div>
               </a>
             </li>
@@ -391,14 +408,14 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
           className=""
         >
           <a
-            className="c7"
+            className="c8"
             onClick={[Function]}
           >
             <div
-              className="c8"
+              className="c9"
             >
               <span
-                className="c4"
+                className="c5"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -413,12 +430,12 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
             >
               <div>
                 <h4
-                  className="c9"
+                  className="c10"
                 >
                   左藤二郎
                 </h4>
                 <p
-                  className="c10"
+                  className="c11"
                 >
                   76歳 1941年2月13日生
                 </p>
@@ -426,20 +443,20 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
             </div>
           </a>
           <ul
-            className="c11"
+            className="c12"
           >
             <li
-              className="c12"
+              className="c13"
             >
               <a
-                className="c7"
+                className="c8"
                 onClick={[Function]}
               >
                 <div
-                  className="c8"
+                  className="c9"
                 >
                   <span
-                    className="c4"
+                    className="c5"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": Object {
@@ -453,20 +470,20 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   className=""
                 >
                   <h4
-                    className="c13"
+                    className="c14"
                   >
                     Title1
                   </h4>
                 </div>
                 <div
-                  className="c14"
+                  className="c15"
                 >
-                  <a
-                    className="c15"
+                  <button
+                    className="c16 c4"
                     onClick={[Function]}
                   >
                     <span
-                      className="c4"
+                      className="c5"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": Object {
@@ -475,22 +492,22 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                         }
                       }
                     />
-                  </a>
+                  </button>
                 </div>
               </a>
             </li>
             <li
-              className="c12"
+              className="c13"
             >
               <a
-                className="c7"
+                className="c8"
                 onClick={[Function]}
               >
                 <div
-                  className="c8"
+                  className="c9"
                 >
                   <span
-                    className="c4"
+                    className="c5"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": Object {
@@ -504,20 +521,20 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   className=""
                 >
                   <h4
-                    className="c13"
+                    className="c14"
                   >
                     Title2
                   </h4>
                 </div>
                 <div
-                  className="c14"
+                  className="c15"
                 >
-                  <a
-                    className="c15"
+                  <button
+                    className="c16 c4"
                     onClick={[Function]}
                   >
                     <span
-                      className="c4"
+                      className="c5"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": Object {
@@ -526,7 +543,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                         }
                       }
                     />
-                  </a>
+                  </button>
                 </div>
               </a>
             </li>
