@@ -11,4 +11,7 @@ jest.mock('@storybook/addon-info', () => ({
   setDefaults: () => {},
 }));
 
+// https://github.com/storybooks/storybook/issues/2822
+jest.mock('react-modal', () => props => (props.isOpen ? props.children : null));
+
 enzyme.configure({ adapter: new Adapter() });
