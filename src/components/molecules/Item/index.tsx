@@ -2,28 +2,23 @@ import * as React from 'react';
 import styled from 'styled';
 
 export interface Props {
-  title: string;
-  text?: string;
+  icon: JSX.Element;
+  children: React.ReactNode;
   right?: React.ReactNode;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
-  icon: JSX.Element;
 }
 
-const Item: React.SFC<Props> = ({ icon, title, text, right, onClick }) => {
+const Item: React.SFC<Props> = ({ icon, children, right, onClick }) => {
   return (
     <Wrapper onClick={onClick}>
-      <Left>{icon}</Left>
-      <Center>
-        <Title>{title}</Title>
-        {text && <Text>{text}</Text>}
-      </Center>
+      <Icon>{icon}</Icon>
+      <Contents>{children}</Contents>
       {right && <Right>{right}</Right>}
     </Wrapper>
   );
 };
 
 Item.defaultProps = {
-  text: undefined,
   right: null,
   onClick: e => null,
 };
@@ -37,7 +32,7 @@ const Wrapper = styled<{}, 'a'>('a')`
   background-color: ${props => props.theme.white};
 `;
 
-const Left = styled<{}, 'div'>('div')`
+const Icon = styled<{}, 'div'>('div')`
   margin: 0 8px 0 0;
   svg,
   div {
@@ -46,17 +41,7 @@ const Left = styled<{}, 'div'>('div')`
   }
 `;
 
-const Center = styled<{}, 'div'>('div')``;
-
-const Title = styled<{}, 'h4'>('h4')`
-  margin: 0;
-  line-height: 1.5em;
-`;
-
-const Text = styled<{}, 'p'>('p')`
-  margin: 0;
-  line-height: 1.5em;
-`;
+const Contents = styled<{}, 'div'>('div')``;
 
 const Right = styled<{}, 'div'>('div')`
   margin: 0 0 0 auto;

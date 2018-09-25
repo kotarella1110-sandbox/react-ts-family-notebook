@@ -29,7 +29,13 @@ describe('CareReceiverItem', () => {
       wrapper,
     } = setup();
     expect(wrapper.type()).toBe(Item);
-    expect(wrapper.prop('title')).toBe(careReceiver.name);
-    expect(wrapper.prop('text')).toBe(careReceiver.birth);
+
+    const Name = wrapper.find('Name');
+    expect(Name.dive().type()).toBe('h4');
+    expect(Name.dive().text()).toBe(careReceiver.name);
+
+    const Birth = wrapper.find('Birth');
+    expect(Birth.dive().type()).toBe('p');
+    expect(Birth.dive().text()).toBe(careReceiver.birth);
   });
 });

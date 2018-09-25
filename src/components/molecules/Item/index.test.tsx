@@ -5,7 +5,7 @@ import Icon from '../../atoms/Icon';
 
 const setup = (propOverrides = {}) => {
   const props: Props = {
-    title: 'Title',
+    children: 'Title',
     icon: <Icon icon="add" />,
     ...propOverrides,
   };
@@ -23,22 +23,15 @@ describe('Item', () => {
     const { wrapper } = setup();
     expect(wrapper.dive().type()).toBe('a');
 
-    const Title = wrapper.find('Title');
-    expect(Title.dive().type()).toBe('h4');
-    expect(Title.dive().text()).toBe('Title');
+    const Contents = wrapper.find('Contents');
+    expect(Contents.dive().type()).toBe('div');
+    expect(Contents.dive().prop('children')).toBe('Title');
 
     const Text = wrapper.find('Text');
     expect(Text.exists()).toBeFalsy();
 
     const Right = wrapper.find('Right');
     expect(Right.exists()).toBeFalsy();
-  });
-
-  it('props.text を渡した際に Text コンポーネントがレンダリングされていること', () => {
-    const { wrapper } = setup({ text: 'Text' });
-    const Text = wrapper.find('Text');
-    expect(Text.dive().type()).toBe('p');
-    expect(Text.dive().text()).toBe('Text');
   });
 
   it('props.right を渡した際に Right コンポーネントがレンダリングされていること', () => {

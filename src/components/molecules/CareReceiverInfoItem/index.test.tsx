@@ -27,7 +27,10 @@ describe('CareReceiverInfoItem', () => {
       wrapper,
     } = setup();
     expect(wrapper.type()).toBe(Item);
-    expect(wrapper.prop('title')).toBe(folder.name);
+
+    const Title = wrapper.find('Title');
+    expect(Title.dive().type()).toBe('h4');
+    expect(Title.dive().text()).toBe(folder.name);
   });
 
   it('Item コンポーネントの click で props.onClick が呼ばれること', () => {

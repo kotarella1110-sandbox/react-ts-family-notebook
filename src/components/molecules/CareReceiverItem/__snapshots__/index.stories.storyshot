@@ -68,16 +68,18 @@ exports[`Storyshots Molecules/CareReceiverItem default 1`] = `
   <div
     className=""
   >
-    <h4
-      className="c3"
-    >
-      左藤太郎
-    </h4>
-    <p
-      className="c4"
-    >
-      76歳 1941年1月15日生
-    </p>
+    <div>
+      <h4
+        className="c3"
+      >
+        左藤太郎
+      </h4>
+      <p
+        className="c4"
+      >
+        76歳 1941年1月15日生
+      </p>
+    </div>
   </div>
 </a>
 `;

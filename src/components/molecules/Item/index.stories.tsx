@@ -13,7 +13,7 @@ storiesOf('Molecules/Item', module)
   .addDecorator((story, context) =>
     withInfo(`
       ~~~js
-      <Item icon=<Icon icon="add" /> title="Title" />
+      <Item icon={<Icon icon="add" />}>Item</Item>
       ~~~
     `)(story)(context)
   )
@@ -21,50 +21,32 @@ storiesOf('Molecules/Item', module)
   .addDecorator(withKnobs)
   .addWithJSX(
     'default',
-    withNotes(``)(() => <Item icon={<Icon icon="add" />} title="Title" />)
-  )
-  .addWithJSX(
-    'props text',
-    withNotes(``)(() => (
-      <Item icon={<Icon icon="add" />} title="Title" text="Text" />
-    ))
+    withNotes(``)(() => <Item icon={<Icon icon="add" />}>Item</Item>)
   )
   .addWithJSX(
     'props right',
     withNotes(``)(() => (
-      <Item icon={<Icon icon="add" />} title="Title" right={<p>Right</p>} />
+      <Item icon={<Icon icon="add" />} right={<p>Right</p>}>
+        Item
+      </Item>
     ))
   )
   .addWithJSX(
     'props onClick',
     withNotes(``)(() => (
-      <Item
-        icon={<Icon icon="add" />}
-        title="Title"
-        onClick={action('onClick')}
-      />
+      <Item icon={<Icon icon="add" />} onClick={action('onClick')}>
+        Item
+      </Item>
     ))
   )
   .addWithJSX(
-    'props text and right is ArrowButton',
+    'props right is ArrowButton and onClick',
     withNotes(``)(() => (
       <Item
         icon={<Icon icon="add" />}
-        title="Title"
-        text="Text"
         right={<ArrowButton />}
-      />
-    ))
-  )
-  .addWithJSX(
-    'props text and right is ArrowButton and onClick',
-    withNotes(``)(() => (
-      <Item
-        icon={<Icon icon="add" />}
-        title="Title"
-        text="Text"
-        right={<ArrowButton />}
-        onClick={action('onClick')}
-      />
+        onClick={action('onClick')}>
+        Item
+      </Item>
     ))
   );

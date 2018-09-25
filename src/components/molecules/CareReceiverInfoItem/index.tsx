@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styled from 'styled';
 import { Folder } from 'models';
 import Icon from '../../atoms/Icon';
 import ArrowButton from '../../atoms/ArrowButton';
@@ -16,12 +17,17 @@ const CareReceiverInfoItem: React.SFC<Props> = ({
   return (
     <Item
       icon={<Icon icon="carereceiver-info" />}
-      title={name}
       right={<ArrowButton isRight={true} />}
-      onClick={onClick}
-    />
+      onClick={onClick}>
+      <Title>{name}</Title>
+    </Item>
   );
 };
+
+const Title = styled<{}, 'h4'>('h4')`
+  margin: 0;
+  line-height: 1.5em;
+`;
 
 CareReceiverInfoItem.defaultProps = {
   onClick: e => null,

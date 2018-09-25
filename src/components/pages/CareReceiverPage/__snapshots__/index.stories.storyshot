@@ -52,7 +52,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   line-height: 1em;
 }
 
-.c14 {
+.c15 {
   display: block;
   line-height: 0;
   -webkit-transform: rotateY(180deg);
@@ -60,7 +60,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   transform: rotateY(180deg);
 }
 
-.c14 svg {
+.c15 svg {
   width: 24px;
   height: 24px;
 }
@@ -90,6 +90,15 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   height: 36px;
 }
 
+.c14 {
+  margin: 0 0 0 auto;
+}
+
+.c13 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
 .c9 {
   margin: 0;
   line-height: 1.5em;
@@ -98,10 +107,6 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
 .c10 {
   margin: 0;
   line-height: 1.5em;
-}
-
-.c13 {
-  margin: 0 0 0 auto;
 }
 
 .c11 {
@@ -261,16 +266,18 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
             <div
               className=""
             >
-              <h4
-                className="c9"
-              >
-                左藤太郎
-              </h4>
-              <p
-                className="c10"
-              >
-                76歳 1941年1月15日生
-              </p>
+              <div>
+                <h4
+                  className="c9"
+                >
+                  左藤太郎
+                </h4>
+                <p
+                  className="c10"
+                >
+                  76歳 1941年1月15日生
+                </p>
+              </div>
             </div>
           </a>
           <ul
@@ -301,16 +308,16 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   className=""
                 >
                   <h4
-                    className="c9"
+                    className="c13"
                   >
                     Title1
                   </h4>
                 </div>
                 <div
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     <span
@@ -352,16 +359,16 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   className=""
                 >
                   <h4
-                    className="c9"
+                    className="c13"
                   >
                     Title2
                   </h4>
                 </div>
                 <div
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     <span
@@ -404,16 +411,18 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
             <div
               className=""
             >
-              <h4
-                className="c9"
-              >
-                左藤二郎
-              </h4>
-              <p
-                className="c10"
-              >
-                76歳 1941年2月13日生
-              </p>
+              <div>
+                <h4
+                  className="c9"
+                >
+                  左藤二郎
+                </h4>
+                <p
+                  className="c10"
+                >
+                  76歳 1941年2月13日生
+                </p>
+              </div>
             </div>
           </a>
           <ul
@@ -444,16 +453,16 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   className=""
                 >
                   <h4
-                    className="c9"
+                    className="c13"
                   >
                     Title1
                   </h4>
                 </div>
                 <div
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     <span
@@ -495,16 +504,16 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   className=""
                 >
                   <h4
-                    className="c9"
+                    className="c13"
                   >
                     Title2
                   </h4>
                 </div>
                 <div
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     <span

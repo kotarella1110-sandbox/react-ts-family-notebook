@@ -107,13 +107,13 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   height: 36px;
 }
 
+.c11 {
+  margin: 0 0 0 auto;
+}
+
 .c10 {
   margin: 0;
   line-height: 1.5em;
-}
-
-.c11 {
-  margin: 0 0 0 auto;
 }
 
 .c6 {

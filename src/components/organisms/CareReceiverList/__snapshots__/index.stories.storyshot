@@ -12,7 +12,7 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
   height: 100%;
 }
 
-.c9 {
+.c10 {
   display: block;
   line-height: 0;
   -webkit-transform: rotateY(180deg);
@@ -20,7 +20,7 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
   transform: rotateY(180deg);
 }
 
-.c9 svg {
+.c10 svg {
   width: 24px;
   height: 24px;
 }
@@ -50,6 +50,15 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
   height: 36px;
 }
 
+.c9 {
+  margin: 0 0 0 auto;
+}
+
+.c8 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
 .c4 {
   margin: 0;
   line-height: 1.5em;
@@ -58,10 +67,6 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
 .c5 {
   margin: 0;
   line-height: 1.5em;
-}
-
-.c8 {
-  margin: 0 0 0 auto;
 }
 
 .c6 {
@@ -110,16 +115,18 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
       <div
         className=""
       >
-        <h4
-          className="c4"
-        >
-          左藤太郎
-        </h4>
-        <p
-          className="c5"
-        >
-          76歳 1941年1月15日生
-        </p>
+        <div>
+          <h4
+            className="c4"
+          >
+            左藤太郎
+          </h4>
+          <p
+            className="c5"
+          >
+            76歳 1941年1月15日生
+          </p>
+        </div>
       </div>
     </a>
     <ul
@@ -150,16 +157,16 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
             className=""
           >
             <h4
-              className="c4"
+              className="c8"
             >
               Title1
             </h4>
           </div>
           <div
-            className="c8"
+            className="c9"
           >
             <a
-              className="c9"
+              className="c10"
               onClick={[Function]}
             >
               <span
@@ -201,16 +208,16 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
             className=""
           >
             <h4
-              className="c4"
+              className="c8"
             >
               Title2
             </h4>
           </div>
           <div
-            className="c8"
+            className="c9"
           >
             <a
-              className="c9"
+              className="c10"
               onClick={[Function]}
             >
               <span
@@ -253,16 +260,18 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
       <div
         className=""
       >
-        <h4
-          className="c4"
-        >
-          左藤二郎
-        </h4>
-        <p
-          className="c5"
-        >
-          76歳 1941年2月13日生
-        </p>
+        <div>
+          <h4
+            className="c4"
+          >
+            左藤二郎
+          </h4>
+          <p
+            className="c5"
+          >
+            76歳 1941年2月13日生
+          </p>
+        </div>
       </div>
     </a>
     <ul
@@ -293,16 +302,16 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
             className=""
           >
             <h4
-              className="c4"
+              className="c8"
             >
               Title1
             </h4>
           </div>
           <div
-            className="c8"
+            className="c9"
           >
             <a
-              className="c9"
+              className="c10"
               onClick={[Function]}
             >
               <span
@@ -344,16 +353,16 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
             className=""
           >
             <h4
-              className="c4"
+              className="c8"
             >
               Title2
             </h4>
           </div>
           <div
-            className="c8"
+            className="c9"
           >
             <a
-              className="c9"
+              className="c10"
               onClick={[Function]}
             >
               <span

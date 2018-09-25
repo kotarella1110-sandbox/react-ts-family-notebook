@@ -50,13 +50,13 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
   height: 36px;
 }
 
+.c6 {
+  margin: 0 0 0 auto;
+}
+
 .c5 {
   margin: 0;
   line-height: 1.5em;
-}
-
-.c6 {
-  margin: 0 0 0 auto;
 }
 
 .c0 {
@@ -231,13 +231,13 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
   height: 36px;
 }
 
+.c6 {
+  margin: 0 0 0 auto;
+}
+
 .c5 {
   margin: 0;
   line-height: 1.5em;
-}
-
-.c6 {
-  margin: 0 0 0 auto;
 }
 
 .c0 {
