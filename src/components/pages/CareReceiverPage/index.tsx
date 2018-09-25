@@ -2,6 +2,8 @@ import * as React from 'react';
 import AppTemplate from '../../templates/AppTemplate';
 import ModalTemplate from '../../templates/ModalTemplate';
 import AddButton from '../../atoms/AddButton';
+import Text from '../../atoms/Text';
+import Content from '../../molecules/Content';
 import Header from '../../organisms/Header';
 import CareReceiverList from '../../organisms/CareReceiverList';
 
@@ -51,12 +53,14 @@ class CareReceiverPage extends React.Component<Props, State> {
           header={
             <Header
               left={<a onClick={this.toggleModal}>キャンセル</a>}
-              right={<AddButton>{'追加'}</AddButton>}
+              right={<AddButton>追加</AddButton>}
               title="タイトルの追加"
             />
           }
           isOpen={this.state.modalIsOpen}>
-          Main
+          <Content label="タイトル">
+            <Text />
+          </Content>
         </ModalTemplate>
       </div>
     );
