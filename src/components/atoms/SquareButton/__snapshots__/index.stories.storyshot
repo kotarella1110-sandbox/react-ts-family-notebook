@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Atoms/SquareButton default 1`] = `
+.c1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 {
+  display: block;
+  text-align: center;
+  font-size: 19px;
+  color: #fff;
+  height: calc(8px * 6);
+  padding: 8px calc(8px * 2);
+  background-color: #007f48;
+  border-radius: 3px;
+}
+
+<button
+  className="c0 c1"
+>
+  SquareButton
+</button>
+`;
+
+exports[`Storyshots Atoms/SquareButton props onClick 1`] = `
+.c1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 {
+  display: block;
+  text-align: center;
+  font-size: 19px;
+  color: #fff;
+  height: calc(8px * 6);
+  padding: 8px calc(8px * 2);
+  background-color: #007f48;
+  border-radius: 3px;
+}
+
+<button
+  className="c0 c1"
+  onClick={[Function]}
+>
+  SquareButton
+</button>
+`;
