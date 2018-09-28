@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { CareReceiver } from 'models';
 import AppTemplate from '../../templates/AppTemplate';
 import ModalTemplate from '../../templates/ModalTemplate';
 import AddButton from '../../atoms/AddButton';
@@ -7,19 +8,51 @@ import Content from '../../molecules/Content';
 import Header from '../../organisms/Header';
 import CareReceiverList from '../../organisms/CareReceiverList';
 
-export interface Props {}
+export interface Props {
+  careReceivers: CareReceiver[];
+  fetchCareReceivers: () => any;
+  addFolder: (
+    payload: {
+      careReceiverId: number;
+      name: string;
+    }
+  ) => any;
+}
 
 export interface State {
-  modalIsOpen: boolean;
+  readonly modalIsOpen: boolean;
+  readonly name: string;
 }
 
 class CareReceiverPage extends React.Component<Props, State> {
-  state = {
+  readonly state: State = {
     modalIsOpen: false,
+    name: '',
   };
+
+  componentDidMount() {
+    this.props.fetchCareReceivers();
+  }
 
   toggleModal = () => {
     this.setState({ modalIsOpen: !this.state.modalIsOpen });
+  };
+
+  handleAddFolder = () => {
+    const careReceiverId = this.props.careReceivers[0].id;
+    const name = this.state.name;
+    if (name.length !== 0) {
+      this.props.addFolder({
+        careReceiverId,
+        name,
+      });
+
+      this.toggleModal();
+    }
+  };
+
+  handleChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ name: e.target.value });
   };
 
   render() {
@@ -32,34 +65,21 @@ class CareReceiverPage extends React.Component<Props, State> {
               title="本人情報"
             />
           }>
-          <CareReceiverList
-            careReceivers={[
-              {
-                id: 0,
-                name: '左藤太郎',
-                birth: '76歳 1941年1月15日生',
-                folders: [{ id: 0, name: 'Title1' }, { id: 1, name: 'Title2' }],
-              },
-              {
-                id: 1,
-                name: '左藤二郎',
-                birth: '76歳 1941年2月13日生',
-                folders: [{ id: 0, name: 'Title1' }, { id: 1, name: 'Title2' }],
-              },
-            ]}
-          />
+          {this.props.careReceivers && (
+            <CareReceiverList careReceivers={this.props.careReceivers} />
+          )}
         </AppTemplate>
         <ModalTemplate
           header={
             <Header
               left={<a onClick={this.toggleModal}>キャンセル</a>}
-              right={<AddButton>追加</AddButton>}
+              right={<AddButton onClick={this.handleAddFolder}>追加</AddButton>}
               title="タイトルの追加"
             />
           }
           isOpen={this.state.modalIsOpen}>
           <Content label="タイトル">
-            <Text />
+            <Text onChange={this.handleChangeText} />
           </Content>
         </ModalTemplate>
       </div>
