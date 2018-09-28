@@ -2,10 +2,16 @@ export interface CareReceiver {
   id: number;
   name: string;
   birth: string;
-  folders: Folder[];
+  folders?: Folder[];
 }
 
 export interface Folder {
   id: number;
+  careReceiverId: number;
   name: string;
+}
+
+export interface State {
+  careReceivers: any;
+  folders: any;
 }

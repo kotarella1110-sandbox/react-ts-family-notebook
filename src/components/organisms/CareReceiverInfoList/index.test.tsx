@@ -4,7 +4,10 @@ import CareReceiverInfoList, { Props } from '.';
 
 const setup = (propOverrides = {}) => {
   const props: Props = {
-    folders: [{ id: 0, name: 'Title1' }, { id: 1, name: 'Title2' }],
+    folders: [
+      { id: 0, careReceiverId: 0, name: 'Title1' },
+      { id: 1, careReceiverId: 0, name: 'Title2' },
+    ],
     ...propOverrides,
   };
 

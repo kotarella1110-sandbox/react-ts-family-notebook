@@ -23,7 +23,10 @@ storiesOf('Organisms/CareReceiverInfoList', module)
     'default',
     withNotes(``)(() => (
       <CareReceiverInfoList
-        folders={[{ id: 0, name: 'Title1' }, { id: 1, name: 'Title2' }]}
+        folders={[
+          { id: 0, careReceiverId: 0, name: 'Title1' },
+          { id: 1, careReceiverId: 0, name: 'Title2' },
+        ]}
       />
     ))
   )
@@ -31,7 +34,10 @@ storiesOf('Organisms/CareReceiverInfoList', module)
     'props onClick',
     withNotes(``)(() => (
       <CareReceiverInfoList
-        folders={[{ id: 0, name: 'Title1' }, { id: 1, name: 'Title2' }]}
+        folders={[
+          { id: 0, careReceiverId: 0, name: 'Title1' },
+          { id: 1, careReceiverId: 0, name: 'Title2' },
+        ]}
         onClick={action('onClick')}
       />
     ))

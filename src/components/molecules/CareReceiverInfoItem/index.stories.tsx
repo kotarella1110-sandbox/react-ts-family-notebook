@@ -20,14 +20,16 @@ storiesOf('Molecules/CareReceiverInfoItem', module)
   .addWithJSX(
     'default',
     withNotes(``)(() => (
-      <CareReceiverInfoItem folder={{ id: 0, name: 'Title' }} />
+      <CareReceiverInfoItem
+        folder={{ id: 0, careReceiverId: 0, name: 'Title' }}
+      />
     ))
   )
   .addWithJSX(
     'props onClick',
     withNotes(``)(() => (
       <CareReceiverInfoItem
-        folder={{ id: 0, name: 'Title' }}
+        folder={{ id: 0, careReceiverId: 0, name: 'Title' }}
         onClick={action('onClick')}
       />
     ))

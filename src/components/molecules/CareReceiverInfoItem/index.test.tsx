@@ -7,6 +7,7 @@ const setup = (propOverrides = {}) => {
   const props: Props = {
     folder: {
       id: 0,
+      careReceiverId: 0,
       name: 'Name',
     },
     ...propOverrides,

@@ -15,10 +15,12 @@ const CareReceiverList: React.SFC<Props> = ({ careReceivers, onClick }) => {
       {careReceivers.map(careReceiver => (
         <Item key={careReceiver.id}>
           <CareReceiverItem careReceiver={careReceiver} />
-          <CareReceiverInfoList
-            folders={careReceiver.folders}
-            onClick={onClick}
-          />
+          {careReceiver.folders && (
+            <CareReceiverInfoList
+              folders={careReceiver.folders}
+              onClick={onClick}
+            />
+          )}
         </Item>
       ))}
     </List>
