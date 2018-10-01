@@ -23,7 +23,7 @@ const careReceivers = reducerWithInitialState(initialState)
       ...state,
       [params.careReceiverId]: {
         ...state[params.careReceiverId],
-        folders: [...state[params.careReceiverId].folders, id],
+        folders: state[params.careReceiverId].folders.concat(id),
       },
     };
   });

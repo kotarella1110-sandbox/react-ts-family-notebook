@@ -1,12 +1,7 @@
-import {
-  Store,
-  Middleware,
-  createStore,
-  applyMiddleware,
-  compose,
-} from 'redux';
+import { Store, createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import config from 'config';
+import middlewares from './middlewares';
 import reducer from './reducer';
 import sagas from './sagas';
 
@@ -16,7 +11,6 @@ const devtools: any =
     : () => (fn: any) => fn;
 
 const configureStore = (initialState: object = {}) => {
-  const middlewares: Middleware[] = [];
   const sagaMiddleware = createSagaMiddleware();
 
   const enhancers = [

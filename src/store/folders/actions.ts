@@ -1,4 +1,5 @@
 import actionCreatorFactory from 'typescript-fsa';
+import * as schemas from '../schemas';
 // import { Folder } from 'models';
 
 const actionCreator = actionCreatorFactory('folders');
@@ -16,7 +17,9 @@ export const fetchFolders = actionCreator.async<
     };
     result: any;
   }
->(FETCH);
+>(FETCH, {
+  schema: [schemas.folder],
+});
 export const addFolder = actionCreator.async<
   {
     careReceiverId: number;

@@ -2,7 +2,7 @@ import { Dispatch, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Action } from 'typescript-fsa';
 import { denormalize } from 'normalizr';
-import * as schema from 'store/schema';
+import * as schemas from 'store/schemas';
 import { mayBeStubbed } from 'react-stubber';
 import CareReceiverPage from 'components/pages/CareReceiverPage';
 import { fetchCareReceivers } from 'store/careReceivers/actions';
@@ -16,7 +16,7 @@ const mapStateToProps = (state: State) => {
   console.log('normalized', state);
   const denormalized = denormalize(
     { careReceivers: [0, 1] },
-    { careReceivers: [schema.careReceiver] },
+    { careReceivers: [schemas.careReceiver] },
     state
   );
   console.log('denormalized', denormalized);

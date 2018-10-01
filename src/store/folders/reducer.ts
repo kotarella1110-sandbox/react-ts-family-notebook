@@ -25,14 +25,23 @@ const folders = reducerWithInitialState(initialState)
       };
     }
   )
-  // .case(actions.editFolder, (state, { id, name }) => {
-  //   return state.map(
-  //     folder => (folder.id === id ? { ...folder, name } : folder)
-  //   );
-  // })
-  // .case(actions.deleteFolder, (state, { id }) => {
-  //   return state.filter(folder => folder.id !== id);
-  // })
+  .case(actions.editFolder, (state, { id, name }) => {
+    return {
+      ...state,
+      [id]: {
+        ...state[id],
+        name,
+      },
+    };
+  })
+  .case(actions.deleteFolder, (state, { id }) => {
+    return Object.keys(state)
+      .filter(folderId => Number(folderId) !== id)
+      .reduce((result, folderId) => {
+        result[folderId] = state[folderId];
+        return result;
+      }, {});
+  })
   .case(careReceiversActions.fetchCareReceivers.done, (state, { result }) => {
     return result.entities.folders || state;
   });

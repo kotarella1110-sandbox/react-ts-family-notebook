@@ -2,9 +2,7 @@ import { SagaIterator } from 'redux-saga';
 import { call, select, takeEvery } from 'redux-saga/effects';
 import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
-import { normalize } from 'normalizr';
 import { State, Folder } from 'models';
-import * as schema from 'store/schema';
 import * as actions from './actions';
 
 const getFolders = (payload: { careReceiverId: number }) =>
@@ -48,8 +46,7 @@ function* fetchFolders({
     bindAsyncAction(actions.fetchFolders, { skipStartedAction: true })(
       function*(payload): SagaIterator {
         const folders: Folder[] = yield call(getFolders, payload);
-        const normalizedFolders = normalize(folders, [schema.folder]);
-        return normalizedFolders;
+        return folders;
       }
     ),
     payload
@@ -66,7 +63,6 @@ function* addFolder({
       const state: { [id: number]: Folder } = yield select(
         ({ folders }: State) => folders
       );
-      console.log(state);
       return {
         ...payload,
         id:

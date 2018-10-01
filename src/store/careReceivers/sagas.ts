@@ -2,9 +2,7 @@ import { SagaIterator } from 'redux-saga';
 import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
-import { normalize } from 'normalizr';
 import { CareReceiver } from 'models';
-import * as schema from 'store/schema';
 import * as actions from './actions';
 import * as folderActions from 'store/folders/actions';
 
@@ -48,10 +46,7 @@ function* fetchCareReceivers({
           getCareReceivers,
           payload
         );
-        const normalizedCareReceivers = normalize(careReceivers, [
-          schema.careReceiver,
-        ]);
-        return normalizedCareReceivers;
+        return careReceivers;
       }
     ),
     payload

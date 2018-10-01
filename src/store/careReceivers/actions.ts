@@ -1,4 +1,5 @@
 import actionCreatorFactory from 'typescript-fsa';
+import * as schemas from '../schemas';
 // import { CareReceiver } from 'models';
 
 const actionCreator = actionCreatorFactory('careRedceivers');
@@ -14,4 +15,6 @@ export const fetchCareReceivers = actionCreator.async<
     };
     result: any;
   }
->(FETCH);
+>(FETCH, {
+  schema: [schemas.careReceiver],
+});
