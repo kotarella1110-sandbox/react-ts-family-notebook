@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { CareReceivers } from 'models';
+import * as actions from 'store/actions';
 import AppTemplate from '../../templates/AppTemplate';
 import ModalTemplate from '../../templates/ModalTemplate';
 import AddButton from '../../atoms/AddButton';
@@ -11,12 +12,7 @@ import CareReceiverList from '../../organisms/CareReceiverList';
 export interface Props {
   careReceivers: CareReceivers;
   fetchCareReceivers: () => any;
-  addFolder: (
-    payload: {
-      careReceiverId: number;
-      name: string;
-    }
-  ) => any;
+  addFolder: (payload: actions.AddFolderPayload) => any;
 }
 
 export interface State {

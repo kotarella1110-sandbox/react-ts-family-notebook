@@ -1,9 +1,10 @@
 import * as React from 'react';
 import styled from 'styled';
+import { Folder } from 'models';
 import CareReceiverInfoItem from 'containers/CareReceiverInfoItem';
 
 export interface Props {
-  folderIds: number[];
+  folderIds: Folder['id'][];
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
