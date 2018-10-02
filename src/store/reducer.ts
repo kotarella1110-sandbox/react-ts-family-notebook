@@ -1,13 +1,6 @@
-import { camelCase } from 'lodash';
 import { combineReducers } from 'redux';
+import entities from './entities/reducer';
 
-const reducers = {};
-
-const req = require.context('.', true, /\.\/.+\/reducer\.ts$/);
-
-req.keys().forEach(key => {
-  const storeName = camelCase(key.replace(/\.\/(.+)\/.+$/, '$1'));
-  reducers[storeName] = req(key).default;
-});
+const reducers = { entities };
 
 export default combineReducers(reducers);

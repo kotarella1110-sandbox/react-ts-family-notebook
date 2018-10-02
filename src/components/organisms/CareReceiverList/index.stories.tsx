@@ -14,7 +14,7 @@ import CareReceiverInfoItemContainer, {
 import CareReceiverInfoItem from 'components/molecules/CareReceiverInfoItem';
 
 stub(CareReceiverInfoItemContainer, ({ folderId }: OwnProps) => (
-  <CareReceiverInfoItem folder={mockStore.folders[folderId]} />
+  <CareReceiverInfoItem folder={mockStore.entities.folders[folderId]} />
 ));
 
 storiesOf('Organisms/CareReceiverList', module)

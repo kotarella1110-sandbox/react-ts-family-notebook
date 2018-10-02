@@ -4,7 +4,7 @@ import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
 import { Folder, Folders } from 'models';
 import { getFolders } from './selectors';
-import * as actions from './actions';
+import * as actions from 'store/actions';
 
 const fetchFolders = (payload: actions.FetchFolderPayload) =>
   new Promise<Folder[]>(resolve =>

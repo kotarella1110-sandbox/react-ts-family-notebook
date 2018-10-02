@@ -19,7 +19,11 @@ export interface Folder {
 
 export interface Folders extends NormalizedObjects<Folder> {}
 
-export interface State {
+export interface Entities {
   careReceivers: CareReceivers;
   folders: Folders;
+}
+
+export interface State {
+  entities: Entities;
 }

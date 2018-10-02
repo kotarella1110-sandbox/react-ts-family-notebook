@@ -1,5 +1,5 @@
 import actionCreatorFactory from 'typescript-fsa';
-import * as schemas from '../schemas';
+import * as schemas from 'store/schemas';
 import { CareReceivers, Folders } from 'models';
 
 const actionCreator = actionCreatorFactory('careRedceivers');

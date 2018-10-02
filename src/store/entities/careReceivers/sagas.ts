@@ -3,8 +3,7 @@ import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
 import { CareReceiver } from 'models';
-import * as actions from './actions';
-import * as folderActions from 'store/folders/actions';
+import * as actions from 'store/actions';
 
 const fetchCareReceivers = (payload: actions.FetchCareReceiversPayload) =>
   new Promise<CareReceiver[]>(resolve =>
@@ -30,7 +29,7 @@ function* fetchFoldersWorker({ payload }: Action<any>): SagaIterator {
   if (!payload.result.entities.folders) {
     yield all(
       payload.result.result.map((careReceiverId: number) =>
-        put(folderActions.fetchFolders.started({ careReceiverId }))
+        put(actions.fetchFolders.started({ careReceiverId }))
       )
     );
   }
