@@ -1,17 +1,27 @@
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
+import { Folders } from 'models';
 import * as actions from './actions';
 import * as careReceiversActions from 'store/careReceivers/actions';
-// import { Folder } from 'models';
 
-const initialState = {};
+const initialState: Folders = {};
 
 const folders = reducerWithInitialState(initialState)
-  .case(actions.fetchFolders.done, (state, { result }) => {
-    return {
-      ...state,
-      ...result.entities.folders,
-    };
-  })
+  .case(
+    actions.fetchFolders.done,
+    (
+      state,
+      {
+        result: {
+          entities: { folders },
+        },
+      }
+    ) => {
+      return {
+        ...state,
+        ...folders,
+      };
+    }
+  )
   .case(
     actions.addFolder.done,
     (state, { result: { id, careReceiverId, name } }) => {
@@ -42,8 +52,18 @@ const folders = reducerWithInitialState(initialState)
         return result;
       }, {});
   })
-  .case(careReceiversActions.fetchCareReceivers.done, (state, { result }) => {
-    return result.entities.folders || state;
-  });
+  .case(
+    careReceiversActions.fetchCareReceivers.done,
+    (
+      state,
+      {
+        result: {
+          entities: { folders },
+        },
+      }
+    ) => {
+      return folders || state;
+    }
+  );
 
 export default folders;

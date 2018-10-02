@@ -6,7 +6,7 @@ import { CareReceiver } from 'models';
 import * as actions from './actions';
 import * as folderActions from 'store/folders/actions';
 
-const getCareReceivers = (payload: { careReceiverId: number }) =>
+const fetchCareReceivers = (payload: actions.FetchCareReceiversPayload) =>
   new Promise<CareReceiver[]>(resolve =>
     setTimeout(
       () =>
@@ -26,7 +26,7 @@ const getCareReceivers = (payload: { careReceiverId: number }) =>
     )
   );
 
-function* fetchFolders({ payload }: Action<any>): SagaIterator {
+function* fetchFoldersWorker({ payload }: Action<any>): SagaIterator {
   if (!payload.result.entities.folders) {
     yield all(
       payload.result.result.map((careReceiverId: number) =>
@@ -36,14 +36,14 @@ function* fetchFolders({ payload }: Action<any>): SagaIterator {
   }
 }
 
-function* fetchCareReceivers({
+function* fetchCareReceiversWorker({
   payload,
-}: Action<{ careReceiverId: number }>): SagaIterator {
+}: Action<actions.FetchCareReceiversPayload>): SagaIterator {
   yield call(
     bindAsyncAction(actions.fetchCareReceivers, { skipStartedAction: true })(
       function*(payload): SagaIterator {
         const careReceivers: CareReceiver[] = yield call(
-          getCareReceivers,
+          fetchCareReceivers,
           payload
         );
         return careReceivers;
@@ -54,6 +54,9 @@ function* fetchCareReceivers({
 }
 
 export default function* watcher(): SagaIterator {
-  yield takeEvery(actions.fetchCareReceivers.started.type, fetchCareReceivers);
-  yield takeEvery(actions.fetchCareReceivers.done.type, fetchFolders);
+  yield takeEvery(
+    actions.fetchCareReceivers.started.type,
+    fetchCareReceiversWorker
+  );
+  yield takeEvery(actions.fetchCareReceivers.done.type, fetchFoldersWorker);
 }

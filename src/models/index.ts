@@ -1,3 +1,7 @@
+interface NormalizedObjects<T> {
+  [id: number]: T;
+}
+
 export interface CareReceiver {
   id: number;
   name: string;
@@ -5,13 +9,17 @@ export interface CareReceiver {
   folders?: number[];
 }
 
+export interface CareReceivers extends NormalizedObjects<CareReceiver> {}
+
 export interface Folder {
   id: number;
   careReceiverId: number;
   name: string;
 }
 
+export interface Folders extends NormalizedObjects<Folder> {}
+
 export interface State {
-  careReceivers: any;
-  folders: any;
+  careReceivers: CareReceivers;
+  folders: Folders;
 }

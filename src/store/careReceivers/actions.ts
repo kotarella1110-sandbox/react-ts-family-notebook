@@ -1,20 +1,23 @@
 import actionCreatorFactory from 'typescript-fsa';
 import * as schemas from '../schemas';
-// import { CareReceiver } from 'models';
+import { CareReceivers, Folders } from 'models';
 
 const actionCreator = actionCreatorFactory('careRedceivers');
 
 export const FETCH: string = 'fetch';
 
+export interface FetchCareReceiversPayload {}
+export interface FetchCareReceiversResult {
+  entities: {
+    careReceivers: CareReceivers;
+    folders?: Folders;
+  };
+  result: number[];
+}
+
 export const fetchCareReceivers = actionCreator.async<
-  {},
-  {
-    entities: {
-      careReceivers: any;
-      folders?: any;
-    };
-    result: any;
-  }
+  FetchCareReceiversPayload,
+  FetchCareReceiversResult
 >(FETCH, {
   schema: [schemas.careReceiver],
 });

@@ -2,10 +2,11 @@ import { SagaIterator } from 'redux-saga';
 import { call, select, takeEvery } from 'redux-saga/effects';
 import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
-import { State, Folder } from 'models';
+import { Folder, Folders } from 'models';
+import { getFolders } from './selectors';
 import * as actions from './actions';
 
-const getFolders = (payload: { careReceiverId: number }) =>
+const fetchFolders = (payload: actions.FetchFolderPayload) =>
   new Promise<Folder[]>(resolve =>
     setTimeout(() => {
       const folders = [
@@ -39,13 +40,13 @@ const getFolders = (payload: { careReceiverId: number }) =>
     }, 10)
   );
 
-function* fetchFolders({
+function* fetchFoldersWorker({
   payload,
-}: Action<{ careReceiverId: number }>): SagaIterator {
+}: Action<actions.FetchFolderPayload>): SagaIterator {
   yield call(
     bindAsyncAction(actions.fetchFolders, { skipStartedAction: true })(
       function*(payload): SagaIterator {
-        const folders: Folder[] = yield call(getFolders, payload);
+        const folders: Folder[] = yield call(fetchFolders, payload);
         return folders;
       }
     ),
@@ -53,16 +54,14 @@ function* fetchFolders({
   );
 }
 
-function* addFolder({
+function* addFolderWorker({
   payload,
 }: Action<{ careReceiverId: number; name: string }>) {
   yield call(
     bindAsyncAction(actions.addFolder, { skipStartedAction: true })(function*(
       payload
     ): SagaIterator {
-      const state: { [id: number]: Folder } = yield select(
-        ({ folders }: State) => folders
-      );
+      const state: Folders = yield select(getFolders);
       return {
         ...payload,
         id:
@@ -77,6 +76,6 @@ function* addFolder({
 }
 
 export default function* watcher(): SagaIterator {
-  yield takeEvery(actions.fetchFolders.started.type, fetchFolders);
-  yield takeEvery(actions.addFolder.started.type, addFolder);
+  yield takeEvery(actions.fetchFolders.started.type, fetchFoldersWorker);
+  yield takeEvery(actions.addFolder.started.type, addFolderWorker);
 }

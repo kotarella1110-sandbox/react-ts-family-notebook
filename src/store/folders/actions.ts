@@ -1,6 +1,6 @@
 import actionCreatorFactory from 'typescript-fsa';
 import * as schemas from '../schemas';
-// import { Folder } from 'models';
+import { Folders } from 'models';
 
 const actionCreator = actionCreatorFactory('folders');
 
@@ -9,34 +9,42 @@ export const ADD: string = 'add';
 export const EDIT: string = 'edit';
 export const DELETE: string = 'delete';
 
-export const fetchFolders = actionCreator.async<
-  { careReceiverId: number },
-  {
-    entities: {
-      folders: any;
-    };
-    result: any;
-  }
->(FETCH, {
-  schema: [schemas.folder],
-});
-export const addFolder = actionCreator.async<
-  {
-    careReceiverId: number;
-    name: string;
-  },
-  {
-    id: number;
-    careReceiverId: number;
-    name: string;
-  }
->(ADD);
-export const editFolder = actionCreator<{
+export interface FetchFolderPayload {
+  careReceiverId: number;
+}
+export interface FetchFolderResult {
+  entities: {
+    folders: Folders;
+  };
+  result: number[];
+}
+export interface AddFolderPayload {
+  careReceiverId: number;
+  name: string;
+}
+export interface AddFolderResult {
   id: number;
   careReceiverId: number;
   name: string;
-}>(EDIT);
-export const deleteFolder = actionCreator<{
+}
+export interface EditFolderPayload {
   id: number;
   careReceiverId: number;
-}>(DELETE);
+  name: string;
+}
+export interface DeleteFolderPayload {
+  id: number;
+  careReceiverId: number;
+}
+
+export const fetchFolders = actionCreator.async<
+  FetchFolderPayload,
+  FetchFolderResult
+>(FETCH, {
+  schema: [schemas.folder],
+});
+export const addFolder = actionCreator.async<AddFolderPayload, AddFolderResult>(
+  ADD
+);
+export const editFolder = actionCreator<EditFolderPayload>(EDIT);
+export const deleteFolder = actionCreator<DeleteFolderPayload>(DELETE);
