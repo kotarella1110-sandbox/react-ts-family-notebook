@@ -5,7 +5,7 @@ import { mayBeStubbed } from 'react-stubber';
 import { State } from 'models';
 import { getCareReceivers } from 'store/selectors';
 import { fetchCareReceivers } from 'store/careReceivers/actions';
-import { addFolder } from 'store/folders/actions';
+import { addFolder } from 'store/actions';
 import CareReceiverPage from 'components/pages/CareReceiverPage';
 
 const mapStateToProps = (state: State) => ({

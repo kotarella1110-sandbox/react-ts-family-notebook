@@ -4,10 +4,10 @@ import { Folders } from 'models';
 
 const actionCreator = actionCreatorFactory('folders');
 
-export const FETCH: string = 'fetch';
-export const ADD: string = 'add';
-export const EDIT: string = 'edit';
-export const DELETE: string = 'delete';
+const FETCH: string = 'fetch';
+const ADD: string = 'add';
+const EDIT: string = 'edit';
+const DELETE: string = 'delete';
 
 export interface FetchFolderPayload {
   careReceiverId: number;

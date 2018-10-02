@@ -1,7 +1,6 @@
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
 import { CareReceivers } from 'models';
-import * as actions from './actions';
-import * as foldersActions from 'store/folders/actions';
+import * as actions from 'store/actions';
 
 const initialState: CareReceivers = {};
 
@@ -20,7 +19,7 @@ const careReceivers = reducerWithInitialState(initialState)
     }
   )
   .case(
-    foldersActions.fetchFolders.done,
+    actions.fetchFolders.done,
     (state, { params: { careReceiverId }, result: { result } }) => {
       return {
         ...state,
@@ -32,7 +31,7 @@ const careReceivers = reducerWithInitialState(initialState)
     }
   )
   .case(
-    foldersActions.addFolder.done,
+    actions.addFolder.done,
     (state, { params: { careReceiverId }, result: { id } }) => {
       const folders = state[careReceiverId].folders || [];
       return {

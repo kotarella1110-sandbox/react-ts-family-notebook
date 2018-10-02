@@ -4,7 +4,7 @@ import { CareReceivers, Folders } from 'models';
 
 const actionCreator = actionCreatorFactory('careRedceivers');
 
-export const FETCH: string = 'fetch';
+const FETCH: string = 'fetch';
 
 export interface FetchCareReceiversPayload {}
 export interface FetchCareReceiversResult {
