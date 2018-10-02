@@ -6,38 +6,40 @@ import { Folder, Folders } from 'models';
 import { getFolders } from './selectors';
 import * as actions from 'store/actions';
 
+const folders: Folder[] = [
+  {
+    id: 0,
+    careReceiverId: 0,
+    name: '病歴やアレルギーなど',
+  },
+  {
+    id: 1,
+    careReceiverId: 0,
+    name: 'お薬情報',
+  },
+  {
+    id: 2,
+    careReceiverId: 1,
+    name: '病歴やアレルギーなど',
+  },
+  {
+    id: 3,
+    careReceiverId: 1,
+    name: 'お薬情報',
+  },
+];
+
 const fetchFolders = (payload: actions.FetchFolderPayload) =>
   new Promise<Folder[]>(resolve =>
-    setTimeout(() => {
-      const folders = [
-        {
-          id: 0,
-          careReceiverId: 0,
-          name: '病歴やアレルギーなど',
-        },
-        {
-          id: 1,
-          careReceiverId: 0,
-          name: 'お薬情報',
-        },
-        {
-          id: 2,
-          careReceiverId: 1,
-          name: '病歴やアレルギーなど',
-        },
-        {
-          id: 3,
-          careReceiverId: 1,
-          name: 'お薬情報',
-        },
-      ];
-
-      return resolve(
-        folders.filter(
-          (folder: Folder) => folder.careReceiverId === payload.careReceiverId
-        )
-      );
-    }, 10)
+    setTimeout(
+      () =>
+        resolve(
+          folders.filter(
+            (folder: Folder) => folder.careReceiverId === payload.careReceiverId
+          )
+        ),
+      10
+    )
   );
 
 function* fetchFoldersWorker({

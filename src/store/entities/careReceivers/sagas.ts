@@ -5,24 +5,22 @@ import { bindAsyncAction } from 'typescript-fsa-redux-saga';
 import { CareReceiver } from 'models';
 import * as actions from 'store/actions';
 
+const careReceivers: CareReceiver[] = [
+  {
+    id: 0,
+    name: '左藤太郎',
+    birth: '76歳 1941年1月15日生',
+  },
+  {
+    id: 1,
+    name: '左藤二郎',
+    birth: '76歳 1941年2月13日生',
+  },
+];
+
 const fetchCareReceivers = (payload: actions.FetchCareReceiversPayload) =>
   new Promise<CareReceiver[]>(resolve =>
-    setTimeout(
-      () =>
-        resolve([
-          {
-            id: 0,
-            name: '左藤太郎',
-            birth: '76歳 1941年1月15日生',
-          },
-          {
-            id: 1,
-            name: '左藤二郎',
-            birth: '76歳 1941年2月13日生',
-          },
-        ]),
-      10
-    )
+    setTimeout(() => resolve(careReceivers), 10)
   );
 
 function* fetchFoldersWorker({ payload }: Action<any>): SagaIterator {
