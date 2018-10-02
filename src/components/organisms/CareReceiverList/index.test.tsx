@@ -9,19 +9,13 @@ const setup = (propOverrides = {}) => {
         id: 0,
         name: '左藤太郎',
         birth: '76歳 1941年1月15日生',
-        folders: [
-          { id: 0, careReceiverId: 0, name: 'Title1' },
-          { id: 1, careReceiverId: 0, name: 'Title2' },
-        ],
+        folders: [0, 1],
       },
       {
         id: 1,
         name: '左藤二郎',
         birth: '76歳 1941年2月13日生',
-        folders: [
-          { id: 0, careReceiverId: 1, name: 'Title1' },
-          { id: 1, careReceiverId: 1, name: 'Title2' },
-        ],
+        folders: [2, 3],
       },
     ],
     ...propOverrides,
@@ -55,7 +49,7 @@ describe('CareReceiverList', () => {
       expect(CareReceiverItem.prop('careReceiver')).toEqual(
         careReceivers[index]
       );
-      expect(CareReceiverInfoList.prop('folders')).toEqual(
+      expect(CareReceiverInfoList.prop('folderIds')).toEqual(
         careReceivers[index].folders
       );
       expect(CareReceiverInfoList.prop('onClick')).toBe(onClick);

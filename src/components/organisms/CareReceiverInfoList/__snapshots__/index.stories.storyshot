@@ -120,7 +120,7 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
         <h4
           className="c5"
         >
-          Title1
+          病歴やアレルギーなど
         </h4>
       </div>
       <div
@@ -171,7 +171,7 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
         <h4
           className="c5"
         >
-          Title2
+          お薬情報
         </h4>
       </div>
       <div
@@ -318,7 +318,7 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
         <h4
           className="c5"
         >
-          Title1
+          病歴やアレルギーなど
         </h4>
       </div>
       <div
@@ -369,7 +369,7 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
         <h4
           className="c5"
         >
-          Title2
+          お薬情報
         </h4>
       </div>
       <div

@@ -12,12 +12,12 @@ export interface Props {
 const CareReceiverList: React.SFC<Props> = ({ careReceivers, onClick }) => {
   return (
     <List>
-      {careReceivers.map(careReceiver => (
+      {Object.values(careReceivers).map(careReceiver => (
         <Item key={careReceiver.id}>
           <CareReceiverItem careReceiver={careReceiver} />
           {careReceiver.folders && (
             <CareReceiverInfoList
-              folders={careReceiver.folders}
+              folderIds={careReceiver.folders}
               onClick={onClick}
             />
           )}

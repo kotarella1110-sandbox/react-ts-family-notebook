@@ -327,7 +327,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   <h4
                     className="c14"
                   >
-                    Title1
+                    病歴やアレルギーなど
                   </h4>
                 </div>
                 <div
@@ -378,7 +378,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   <h4
                     className="c14"
                   >
-                    Title2
+                    お薬情報
                   </h4>
                 </div>
                 <div
@@ -472,7 +472,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   <h4
                     className="c14"
                   >
-                    Title1
+                    病歴やアレルギーなど
                   </h4>
                 </div>
                 <div
@@ -523,7 +523,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   <h4
                     className="c14"
                   >
-                    Title2
+                    お薬情報
                   </h4>
                 </div>
                 <div

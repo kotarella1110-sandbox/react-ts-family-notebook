@@ -5,15 +5,23 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import { withInfo } from '@storybook/addon-info';
+import { stub } from 'react-stubber';
+import mockStore from 'store/mock';
 import CareReceiverInfoList from '.';
+import CareReceiverInfoItemContainer, {
+  OwnProps,
+} from 'containers/CareReceiverInfoItem';
+import CareReceiverInfoItem from 'components/molecules/CareReceiverInfoItem';
+
+stub(CareReceiverInfoItemContainer, ({ folderId }: OwnProps) => (
+  <CareReceiverInfoItem folder={mockStore.folders[folderId]} />
+));
 
 storiesOf('Organisms/CareReceiverInfoList', module)
   .addDecorator((story, context) =>
     withInfo(`
       ~~~js
-      <CareReceiverInfoList
-        folders={[{ id: 0, name: 'Title1' }, { id: 1, name: 'Title2' }]}
-      />
+      <CareReceiverInfoList folderIds={[0, 1]} />
       ~~~
     `)(story)(context)
   )
@@ -21,24 +29,11 @@ storiesOf('Organisms/CareReceiverInfoList', module)
   .addDecorator(withKnobs)
   .addWithJSX(
     'default',
-    withNotes(``)(() => (
-      <CareReceiverInfoList
-        folders={[
-          { id: 0, careReceiverId: 0, name: 'Title1' },
-          { id: 1, careReceiverId: 0, name: 'Title2' },
-        ]}
-      />
-    ))
+    withNotes(``)(() => <CareReceiverInfoList folderIds={[0, 1]} />)
   )
   .addWithJSX(
     'props onClick',
     withNotes(``)(() => (
-      <CareReceiverInfoList
-        folders={[
-          { id: 0, careReceiverId: 0, name: 'Title1' },
-          { id: 1, careReceiverId: 0, name: 'Title2' },
-        ]}
-        onClick={action('onClick')}
-      />
+      <CareReceiverInfoList folderIds={[0, 1]} onClick={action('onClick')} />
     ))
   );

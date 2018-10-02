@@ -287,7 +287,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
             <h4
               className="c11"
             >
-              Title1
+              病歴やアレルギーなど
             </h4>
           </div>
           <div
@@ -338,7 +338,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
             <h4
               className="c11"
             >
-              Title2
+              お薬情報
             </h4>
           </div>
           <div

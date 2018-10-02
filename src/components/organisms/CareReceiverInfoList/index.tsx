@@ -1,19 +1,18 @@
 import * as React from 'react';
-import { Folder } from 'models';
 import styled from 'styled';
-import CareReceiverInfoItem from '../../molecules/CareReceiverInfoItem';
+import CareReceiverInfoItem from 'containers/CareReceiverInfoItem';
 
 export interface Props {
-  folders: Folder[];
+  folderIds: number[];
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const CareReceiverInfoList: React.SFC<Props> = ({ folders, onClick }) => {
+const CareReceiverInfoList: React.SFC<Props> = ({ folderIds, onClick }) => {
   return (
     <List>
-      {folders.map(folder => (
-        <Item key={folder.id}>
-          <CareReceiverInfoItem folder={folder} onClick={onClick} />
+      {folderIds.map(folderId => (
+        <Item key={folderId}>
+          <CareReceiverInfoItem folderId={folderId} onClick={onClick} />
         </Item>
       ))}
     </List>

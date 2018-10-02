@@ -2,7 +2,7 @@ export interface CareReceiver {
   id: number;
   name: string;
   birth: string;
-  folders?: Folder[];
+  folders?: number[];
 }
 
 export interface Folder {

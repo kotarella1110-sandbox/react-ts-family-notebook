@@ -8,7 +8,17 @@ import { withInfo } from '@storybook/addon-info';
 import AppTemplate from '.';
 import Header from '../../organisms/Header';
 import AddButton from '../../atoms/AddButton';
+import { stub } from 'react-stubber';
+import mockStore from 'store/mock';
 import CareReceiverInfoList from '../../organisms/CareReceiverInfoList';
+import CareReceiverInfoItemContainer, {
+  OwnProps,
+} from 'containers/CareReceiverInfoItem';
+import CareReceiverInfoItem from 'components/molecules/CareReceiverInfoItem';
+
+stub(CareReceiverInfoItemContainer, ({ folderId }: OwnProps) => (
+  <CareReceiverInfoItem folder={mockStore.folders[folderId]} />
+));
 
 storiesOf('Templates/AppTemplate', module)
   .addDecorator((story, context) =>
@@ -34,13 +44,7 @@ storiesOf('Templates/AppTemplate', module)
             title="Title"
           />
         }>
-        <CareReceiverInfoList
-          folders={[
-            { id: 0, careReceiverId: 0, name: 'Title1' },
-            { id: 1, careReceiverId: 0, name: 'Title2' },
-          ]}
-          onClick={action('onClick')}
-        />
+        <CareReceiverInfoList folderIds={[0, 1]} onClick={action('onClick')} />
       </AppTemplate>
     ))
   );

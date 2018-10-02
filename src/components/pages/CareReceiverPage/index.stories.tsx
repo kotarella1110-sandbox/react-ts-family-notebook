@@ -5,7 +5,17 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import { withInfo } from '@storybook/addon-info';
+import { stub } from 'react-stubber';
+import mockStore from 'store/mock';
 import CareReceiverPage from '.';
+import CareReceiverInfoItemContainer, {
+  OwnProps,
+} from 'containers/CareReceiverInfoItem';
+import CareReceiverInfoItem from 'components/molecules/CareReceiverInfoItem';
+
+stub(CareReceiverInfoItemContainer, ({ folderId }: OwnProps) => (
+  <CareReceiverInfoItem folder={mockStore.folders[folderId]} />
+));
 
 storiesOf('Pages/CareReceiverPage', module)
   .addDecorator((story, context) =>
@@ -17,19 +27,13 @@ storiesOf('Pages/CareReceiverPage', module)
             id: 0,
             name: '左藤太郎',
             birth: '76歳 1941年1月15日生',
-            folders: [
-              { id: 0, careReceiverId: 0, name: 'Title1' },
-              { id: 1, careReceiverId: 0, name: 'Title2' },
-            ],
+            folders: [0, 1],
           },
           {
             id: 1,
             name: '左藤二郎',
             birth: '76歳 1941年2月13日生',
-            folders: [
-              { id: 0, careReceiverId: 1, name: 'Title1' },
-              { id: 1, careReceiverId: 1, name: 'Title2' },
-            ],
+            folders: [2, 3],
           },
         ]}
         fetchCareReceivers={action('fetchCareReceivers')}
@@ -49,19 +53,13 @@ storiesOf('Pages/CareReceiverPage', module)
             id: 0,
             name: '左藤太郎',
             birth: '76歳 1941年1月15日生',
-            folders: [
-              { id: 0, careReceiverId: 0, name: 'Title1' },
-              { id: 1, careReceiverId: 0, name: 'Title2' },
-            ],
+            folders: [0, 1],
           },
           {
             id: 1,
             name: '左藤二郎',
             birth: '76歳 1941年2月13日生',
-            folders: [
-              { id: 0, careReceiverId: 1, name: 'Title1' },
-              { id: 1, careReceiverId: 1, name: 'Title2' },
-            ],
+            folders: [2, 3],
           },
         ]}
         fetchCareReceivers={action('fetchCareReceivers')}
