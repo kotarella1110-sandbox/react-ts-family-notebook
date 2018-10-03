@@ -1,43 +1,36 @@
 import { SagaIterator } from 'redux-saga';
-import { call, select, takeEvery } from 'redux-saga/effects';
+import { all, call, put, select, takeEvery } from 'redux-saga/effects';
+import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
-import { FolderResources, FoldersEntities } from 'models';
+import { FoldersEntities } from 'models';
 import { getFolders } from './selectors';
 import * as actions from 'store/actions';
+import { folders } from 'store/resources';
 
-const folders: FolderResources[] = [
-  {
-    id: 0,
-    careReceiverId: 0,
-    name: '病歴やアレルギーなど',
+function* fetchFolderContentsWorker({
+  payload: {
+    result: { entities, result },
   },
-  {
-    id: 1,
-    careReceiverId: 0,
-    name: 'お薬情報',
-  },
-  {
-    id: 2,
-    careReceiverId: 1,
-    name: '病歴やアレルギーなど',
-  },
-  {
-    id: 3,
-    careReceiverId: 1,
-    name: 'お薬情報',
-  },
-];
+}: Action<any>): SagaIterator {
+  yield all(
+    result.map((folderId: number) => {
+      if (!entities.folders[folderId].folders) {
+        return put(actions.fetchFolderContents.started({ folderId }));
+      }
+      return null;
+    })
+  );
+}
 
 const fetchFolders = (
   payload: ReturnType<typeof actions.fetchFolders.started>['payload']
 ) =>
-  new Promise<FolderResources[]>(resolve =>
+  new Promise(resolve =>
     setTimeout(
       () =>
         resolve(
           folders.filter(
-            (folder: FolderResources) =>
-              folder.careReceiverId === payload.careReceiverId
+            (folder: any) => folder.careReceiverId === payload.careReceiverId
           )
         ),
       10
@@ -50,7 +43,7 @@ function* fetchFoldersWorker({
   yield call(
     bindAsyncAction(actions.fetchFolders, { skipStartedAction: true })(
       function*(payload): SagaIterator {
-        const folders: FolderResources[] = yield call(fetchFolders, payload);
+        const folders = yield call(fetchFolders, payload);
         return folders;
       }
     ),
@@ -82,4 +75,5 @@ function* addFolderWorker({
 export default function* watcher(): SagaIterator {
   yield takeEvery(actions.fetchFolders.started.type, fetchFoldersWorker);
   yield takeEvery(actions.addFolder.started.type, addFolderWorker);
+  yield takeEvery(actions.fetchFolders.done.type, fetchFolderContentsWorker);
 }

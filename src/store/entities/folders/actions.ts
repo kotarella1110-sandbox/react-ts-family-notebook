@@ -1,18 +1,18 @@
 import actionCreatorFactory from 'typescript-fsa';
 import * as schemas from 'store/schemas';
-import { FoldersEntities } from 'models';
+import { CareReceiverEntities, FolderEntities, FoldersEntities } from 'models';
 
 const actionCreator = actionCreatorFactory('folders');
 
 export const fetchFolders = actionCreator.async<
   {
-    careReceiverId: number;
+    careReceiverId: CareReceiverEntities['id'];
   },
   {
     entities: {
       folders: FoldersEntities;
     };
-    result: number[];
+    result: FolderEntities['id'][];
   }
 >('FETCH', {
   schema: [schemas.folder],
@@ -20,23 +20,23 @@ export const fetchFolders = actionCreator.async<
 
 export const addFolder = actionCreator.async<
   {
-    careReceiverId: number;
-    name: string;
+    careReceiverId: CareReceiverEntities['id'];
+    name: FolderEntities['name'];
   },
   {
-    id: number;
-    careReceiverId: number;
-    name: string;
+    id: FolderEntities['id'];
+    careReceiverId: CareReceiverEntities['id'];
+    name: FolderEntities['name'];
   }
 >('ADD');
 
 export const editFolder = actionCreator<{
-  id: number;
-  careReceiverId: number;
-  name: string;
+  id: FolderEntities['id'];
+  careReceiverId: CareReceiverEntities['id'];
+  name: FolderEntities['name'];
 }>('EDIT');
 
 export const deleteFolder = actionCreator<{
-  id: number;
-  careReceiverId: number;
+  id: FolderEntities['id'];
+  careReceiverId: CareReceiverEntities['id'];
 }>('DELETE');

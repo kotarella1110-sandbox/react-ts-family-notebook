@@ -25,6 +25,7 @@ const mockStore: State = {
         name: 'お薬情報',
       },
     },
+    folderContents: {},
   },
 };
 

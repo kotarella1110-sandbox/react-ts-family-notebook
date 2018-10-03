@@ -46,15 +46,37 @@ const folders = reducerWithInitialState(initialState)
       }, {})
   )
   .case(
-    actions.fetchCareReceivers.done,
-    (
-      state,
-      {
-        result: {
-          entities: { folders },
+    actions.fetchFolderContents.done,
+    (state, { params: { folderId }, result: { result } }) => ({
+      ...state,
+      [folderId]: {
+        ...state[folderId],
+        contents: result,
+      },
+    })
+  )
+  .case(
+    actions.addFolderContent.done,
+    (state, { params: { folderId }, result: { id } }) => {
+      const folderContents = state[folderId].contents || [];
+      return {
+        ...state,
+        [folderId]: {
+          ...state[folderId],
+          contents: folderContents.concat(id),
         },
-      }
-    ) => folders || state
-  );
+      };
+    }
+  )
+  .case(actions.deleteFolderContent, (state, { id, folderId }) => {
+    const folderContents = state[folderId].contents || [];
+    return {
+      ...state,
+      [folderId]: {
+        ...state[folderId],
+        contents: folderContents.filter(folderId => folderId !== id),
+      },
+    };
+  });
 
 export default folders;
