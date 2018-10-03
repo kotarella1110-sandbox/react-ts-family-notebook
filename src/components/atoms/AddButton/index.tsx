@@ -7,14 +7,12 @@ export interface Props {
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const AddButton: React.SFC<Props> = ({ onClick, children }) => {
-  return (
-    <Wrapper onClick={onClick}>
-      <Icon icon="add" />
-      <span>{children}</span>
-    </Wrapper>
-  );
-};
+const AddButton: React.SFC<Props> = ({ onClick, children }) => (
+  <Wrapper onClick={onClick}>
+    <Icon icon="add" />
+    <span>{children}</span>
+  </Wrapper>
+);
 
 AddButton.defaultProps = {
   onClick: e => null,

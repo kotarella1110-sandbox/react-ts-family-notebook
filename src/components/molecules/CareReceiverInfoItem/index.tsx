@@ -6,23 +6,21 @@ import ArrowButton from '../../atoms/ArrowButton';
 import Item from '../Item';
 
 export interface Props {
-  folder: Folder;
+  readonly folder: Folder;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 const CareReceiverInfoItem: React.SFC<Props> = ({
   folder: { name },
   onClick,
-}) => {
-  return (
-    <Item
-      icon={<Icon icon="carereceiver-info" />}
-      right={<ArrowButton isRight={true} />}
-      onClick={onClick}>
-      <Title>{name}</Title>
-    </Item>
-  );
-};
+}) => (
+  <Item
+    icon={<Icon icon="carereceiver-info" />}
+    right={<ArrowButton isRight={true} />}
+    onClick={onClick}>
+    <Title>{name}</Title>
+  </Item>
+);
 
 const Title = styled<{}, 'h4'>('h4')`
   margin: 0;

@@ -2,21 +2,19 @@ import * as React from 'react';
 import styled from 'styled';
 
 export interface Props {
-  icon: JSX.Element;
-  children: React.ReactNode;
-  right?: React.ReactNode;
+  readonly icon: JSX.Element;
+  readonly children: React.ReactNode;
+  readonly right?: React.ReactNode;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const Item: React.SFC<Props> = ({ icon, children, right, onClick }) => {
-  return (
-    <Wrapper onClick={onClick}>
-      <Icon>{icon}</Icon>
-      <Contents>{children}</Contents>
-      {right && <Right>{right}</Right>}
-    </Wrapper>
-  );
-};
+const Item: React.SFC<Props> = ({ icon, children, right, onClick }) => (
+  <Wrapper onClick={onClick}>
+    <Icon>{icon}</Icon>
+    <Contents>{children}</Contents>
+    {right && <Right>{right}</Right>}
+  </Wrapper>
+);
 
 Item.defaultProps = {
   right: null,

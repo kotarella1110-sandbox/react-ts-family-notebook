@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled';
 
 export interface Props {
-  icon: string;
+  readonly icon: string;
 }
 
 const Icon: React.SFC<Props> = ({ icon }) => {

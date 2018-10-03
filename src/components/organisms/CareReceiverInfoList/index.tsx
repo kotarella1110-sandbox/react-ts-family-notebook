@@ -4,7 +4,7 @@ import { Folder } from 'models';
 import CareReceiverInfoItem from 'containers/CareReceiverInfoItem';
 
 export interface Props {
-  folderIds: Folder['id'][];
+  readonly folderIds: Folder['id'][];
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 

@@ -4,18 +4,16 @@ import Button from 'components/atoms/Button';
 import Icon from 'components/atoms/Icon';
 
 export interface Props {
-  isPrimary?: boolean;
-  isRight?: boolean;
+  readonly isPrimary?: boolean;
+  readonly isRight?: boolean;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const ArrowButton: React.SFC<Props> = props => {
-  return (
-    <Wrapper {...props}>
-      <Icon icon="arrow" />
-    </Wrapper>
-  );
-};
+const ArrowButton: React.SFC<Props> = props => (
+  <Wrapper {...props}>
+    <Icon icon="arrow" />
+  </Wrapper>
+);
 
 ArrowButton.defaultProps = {
   isPrimary: false,

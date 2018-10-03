@@ -14,43 +14,37 @@ const folders = reducerWithInitialState(initialState)
           entities: { folders },
         },
       }
-    ) => {
-      return {
-        ...state,
-        ...folders,
-      };
-    }
+    ) => ({
+      ...state,
+      ...folders,
+    })
   )
   .case(
     actions.addFolder.done,
-    (state, { result: { id, careReceiverId, name } }) => {
-      return {
-        ...state,
-        [id]: {
-          id,
-          careReceiverId,
-          name,
-        },
-      };
-    }
-  )
-  .case(actions.editFolder, (state, { id, name }) => {
-    return {
+    (state, { result: { id, careReceiverId, name } }) => ({
       ...state,
       [id]: {
-        ...state[id],
+        id,
+        careReceiverId,
         name,
       },
-    };
-  })
-  .case(actions.deleteFolder, (state, { id }) => {
-    return Object.keys(state)
+    })
+  )
+  .case(actions.editFolder, (state, { id, name }) => ({
+    ...state,
+    [id]: {
+      ...state[id],
+      name,
+    },
+  }))
+  .case(actions.deleteFolder, (state, { id }) =>
+    Object.keys(state)
       .filter(folderId => Number(folderId) !== id)
       .reduce((result, folderId) => {
         result[folderId] = state[folderId];
         return result;
-      }, {});
-  })
+      }, {})
+  )
   .case(
     actions.fetchCareReceivers.done,
     (
@@ -60,9 +54,7 @@ const folders = reducerWithInitialState(initialState)
           entities: { folders },
         },
       }
-    ) => {
-      return folders || state;
-    }
+    ) => folders || state
   );
 
 export default folders;

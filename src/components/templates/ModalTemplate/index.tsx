@@ -5,9 +5,9 @@ import styled, { injectGlobal } from 'styled';
 const ReactModal = require('react-modal');
 
 interface Props extends ReactModal.Props {
-  className?: string;
-  header: React.ReactNode;
-  footer?: React.ReactNode;
+  readonly className?: string;
+  readonly header: React.ReactNode;
+  readonly footer?: React.ReactNode;
 }
 
 const Modal: React.SFC<Props> = ({

@@ -14,21 +14,20 @@ const careReceivers = reducerWithInitialState(initialState)
           entities: { careReceivers },
         },
       }
-    ) => {
-      return careReceivers;
-    }
+    ) => ({
+      ...state,
+      ...careReceivers,
+    })
   )
   .case(
     actions.fetchFolders.done,
-    (state, { params: { careReceiverId }, result: { result } }) => {
-      return {
-        ...state,
-        [careReceiverId]: {
-          ...state[careReceiverId],
-          folders: result,
-        },
-      };
-    }
+    (state, { params: { careReceiverId }, result: { result } }) => ({
+      ...state,
+      [careReceiverId]: {
+        ...state[careReceiverId],
+        folders: result,
+      },
+    })
   )
   .case(
     actions.addFolder.done,

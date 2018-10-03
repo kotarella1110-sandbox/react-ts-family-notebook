@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled';
 
 export interface Props {
-  header: React.ReactNode;
+  readonly header: React.ReactNode;
 }
 
 const AppTemplate: React.SFC<Props> = ({ header, children }) => (

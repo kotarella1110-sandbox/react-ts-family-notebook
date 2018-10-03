@@ -10,7 +10,7 @@ import Header from '../../organisms/Header';
 import CareReceiverList from '../../organisms/CareReceiverList';
 
 export interface Props {
-  careReceivers: CareReceivers;
+  readonly careReceivers: CareReceivers;
   fetchCareReceivers: () => any;
   addFolder: (payload: actions.AddFolderPayload) => any;
 }

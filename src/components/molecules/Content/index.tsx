@@ -2,9 +2,9 @@ import * as React from 'react';
 import styled from 'styled';
 
 export interface Props {
-  label: string;
-  text?: string;
-  children: React.ReactNode;
+  readonly label: string;
+  readonly text?: string;
+  readonly children: React.ReactNode;
 }
 
 const Content: React.SFC<Props> = ({ label, text, children }) => (
