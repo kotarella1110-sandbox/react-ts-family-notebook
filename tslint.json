@@ -16,6 +16,10 @@
       "ban-keywords",
       "check-format",
       "allow-pascal-case"
+    ],
+    "arrow-return-shorthand": [
+      true,
+      "multiline"
     ]
   }
 }

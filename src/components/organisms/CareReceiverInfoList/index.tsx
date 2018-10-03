@@ -8,17 +8,15 @@ export interface Props {
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const CareReceiverInfoList: React.SFC<Props> = ({ folderIds, onClick }) => {
-  return (
-    <List>
-      {folderIds.map(folderId => (
-        <Item key={folderId}>
-          <CareReceiverInfoItem folderId={folderId} onClick={onClick} />
-        </Item>
-      ))}
-    </List>
-  );
-};
+const CareReceiverInfoList: React.SFC<Props> = ({ folderIds, onClick }) => (
+  <List>
+    {folderIds.map(folderId => (
+      <Item key={folderId}>
+        <CareReceiverInfoItem folderId={folderId} onClick={onClick} />
+      </Item>
+    ))}
+  </List>
+);
 
 CareReceiverInfoList.defaultProps = {
   onClick: e => null,
