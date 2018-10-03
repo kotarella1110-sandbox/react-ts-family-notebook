@@ -41,6 +41,16 @@ const careReceivers = reducerWithInitialState(initialState)
         },
       };
     }
-  );
+  )
+  .case(actions.deleteFolder, (state, { id, careReceiverId }) => {
+    const folders = state[careReceiverId].folders || [];
+    return {
+      ...state,
+      [careReceiverId]: {
+        ...state[careReceiverId],
+        folders: folders.filter(folderId => folderId !== id),
+      },
+    };
+  });
 
 export default careReceivers;
