@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { CareReceivers } from 'models';
+import { CareReceiversEntities } from 'models';
 import styled from 'styled';
 import CareReceiverItem from '../../molecules/CareReceiverItem';
 import CareReceiverInfoList from '../CareReceiverInfoList';
 
 export interface Props {
-  readonly careReceivers: CareReceivers;
+  readonly careReceivers: CareReceiversEntities;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 

@@ -6,10 +6,18 @@ export interface CareReceiver {
   id: number;
   name: string;
   birth: string;
-  folders?: number[];
 }
 
-export interface CareReceivers extends NormalizedObjects<CareReceiver> {}
+export interface CareReceiverEntities extends CareReceiver {
+  folders?: Folder['id'][];
+}
+
+export interface CareReceiverResources extends CareReceiver {
+  folders?: Folder[];
+}
+
+export interface CareReceiversEntities
+  extends NormalizedObjects<CareReceiverEntities> {}
 
 export interface Folder {
   id: number;
@@ -17,11 +25,15 @@ export interface Folder {
   name: string;
 }
 
-export interface Folders extends NormalizedObjects<Folder> {}
+export interface FolderEntities extends Folder {}
+
+export interface FolderResources extends Folder {}
+
+export interface FoldersEntities extends NormalizedObjects<FolderEntities> {}
 
 export interface Entities {
-  careReceivers: CareReceivers;
-  folders: Folders;
+  careReceivers: CareReceiversEntities;
+  folders: FoldersEntities;
 }
 
 export interface State {

@@ -2,10 +2,10 @@ import { SagaIterator } from 'redux-saga';
 import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
-import { CareReceiver } from 'models';
+import { CareReceiverResources } from 'models';
 import * as actions from 'store/actions';
 
-const careReceivers: CareReceiver[] = [
+const careReceivers: CareReceiverResources[] = [
   {
     id: 0,
     name: '左藤太郎',
@@ -19,18 +19,23 @@ const careReceivers: CareReceiver[] = [
 ];
 
 const fetchCareReceivers = (payload: actions.FetchCareReceiversPayload) =>
-  new Promise<CareReceiver[]>(resolve =>
+  new Promise<CareReceiverResources[]>(resolve =>
     setTimeout(() => resolve(careReceivers), 10)
   );
 
-function* fetchFoldersWorker({ payload }: Action<any>): SagaIterator {
-  if (!payload.result.entities.folders) {
-    yield all(
-      payload.result.result.map((careReceiverId: number) =>
-        put(actions.fetchFolders.started({ careReceiverId }))
-      )
-    );
-  }
+function* fetchFoldersWorker({
+  payload: {
+    result: { entities, result },
+  },
+}: Action<any>): SagaIterator {
+  yield all(
+    result.map((careReceiverId: number) => {
+      if (!entities.careReceivers[careReceiverId].folders) {
+        return put(actions.fetchFolders.started({ careReceiverId }));
+      }
+      return null;
+    })
+  );
 }
 
 function* fetchCareReceiversWorker({
@@ -39,7 +44,7 @@ function* fetchCareReceiversWorker({
   yield call(
     bindAsyncAction(actions.fetchCareReceivers, { skipStartedAction: true })(
       function*(payload): SagaIterator {
-        const careReceivers: CareReceiver[] = yield call(
+        const careReceivers: CareReceiverResources[] = yield call(
           fetchCareReceivers,
           payload
         );

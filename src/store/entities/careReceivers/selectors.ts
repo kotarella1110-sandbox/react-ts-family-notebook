@@ -1,5 +1,5 @@
-import { State, CareReceivers } from 'models';
+import { State, CareReceiversEntities } from 'models';
 
 export const getCareReceivers = ({
   entities: { careReceivers },
-}: State): CareReceivers => careReceivers;
+}: State): CareReceiversEntities => careReceivers;

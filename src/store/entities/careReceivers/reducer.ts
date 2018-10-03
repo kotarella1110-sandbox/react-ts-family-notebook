@@ -1,8 +1,8 @@
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
-import { CareReceivers } from 'models';
+import { CareReceiversEntities } from 'models';
 import * as actions from 'store/actions';
 
-const initialState: CareReceivers = {};
+const initialState: CareReceiversEntities = {};
 
 const careReceivers = reducerWithInitialState(initialState)
   .case(

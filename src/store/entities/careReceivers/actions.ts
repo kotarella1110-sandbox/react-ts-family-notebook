@@ -1,6 +1,6 @@
 import actionCreatorFactory from 'typescript-fsa';
 import * as schemas from 'store/schemas';
-import { CareReceivers, Folders } from 'models';
+import { CareReceiversEntities, FoldersEntities } from 'models';
 
 const actionCreator = actionCreatorFactory('careRedceivers');
 
@@ -9,8 +9,8 @@ const FETCH: string = 'fetch';
 export interface FetchCareReceiversPayload {}
 export interface FetchCareReceiversResult {
   entities: {
-    careReceivers: CareReceivers;
-    folders?: Folders;
+    careReceivers: CareReceiversEntities;
+    folders?: FoldersEntities;
   };
   result: number[];
 }

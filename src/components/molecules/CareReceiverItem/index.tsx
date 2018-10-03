@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styled from 'styled';
-import { CareReceiver } from 'models';
+import { CareReceiverEntities } from 'models';
 import Icon from '../../atoms/Icon';
 import Item from '../Item';
 
 export interface Props {
-  readonly careReceiver: CareReceiver;
+  readonly careReceiver: CareReceiverEntities;
 }
 
 const CareReceiverItem: React.SFC<Props> = ({

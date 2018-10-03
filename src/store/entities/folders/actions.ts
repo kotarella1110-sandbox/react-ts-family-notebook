@@ -1,6 +1,6 @@
 import actionCreatorFactory from 'typescript-fsa';
 import * as schemas from 'store/schemas';
-import { Folders } from 'models';
+import { FoldersEntities } from 'models';
 
 const actionCreator = actionCreatorFactory('folders');
 
@@ -14,7 +14,7 @@ export interface FetchFolderPayload {
 }
 export interface FetchFolderResult {
   entities: {
-    folders: Folders;
+    folders: FoldersEntities;
   };
   result: number[];
 }

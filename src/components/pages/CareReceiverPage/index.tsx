@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CareReceivers } from 'models';
+import { CareReceiversEntities } from 'models';
 import * as actions from 'store/actions';
 import AppTemplate from '../../templates/AppTemplate';
 import ModalTemplate from '../../templates/ModalTemplate';
@@ -10,7 +10,7 @@ import Header from '../../organisms/Header';
 import CareReceiverList from '../../organisms/CareReceiverList';
 
 export interface Props {
-  readonly careReceivers: CareReceivers;
+  readonly careReceivers: CareReceiversEntities;
   fetchCareReceivers: () => any;
   addFolder: (payload: actions.AddFolderPayload) => any;
 }

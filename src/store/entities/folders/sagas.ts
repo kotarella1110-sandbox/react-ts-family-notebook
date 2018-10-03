@@ -2,11 +2,11 @@ import { SagaIterator } from 'redux-saga';
 import { call, select, takeEvery } from 'redux-saga/effects';
 import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
-import { Folder, Folders } from 'models';
+import { FolderResources, FoldersEntities } from 'models';
 import { getFolders } from './selectors';
 import * as actions from 'store/actions';
 
-const folders: Folder[] = [
+const folders: FolderResources[] = [
   {
     id: 0,
     careReceiverId: 0,
@@ -30,12 +30,13 @@ const folders: Folder[] = [
 ];
 
 const fetchFolders = (payload: actions.FetchFolderPayload) =>
-  new Promise<Folder[]>(resolve =>
+  new Promise<FolderResources[]>(resolve =>
     setTimeout(
       () =>
         resolve(
           folders.filter(
-            (folder: Folder) => folder.careReceiverId === payload.careReceiverId
+            (folder: FolderResources) =>
+              folder.careReceiverId === payload.careReceiverId
           )
         ),
       10
@@ -48,7 +49,7 @@ function* fetchFoldersWorker({
   yield call(
     bindAsyncAction(actions.fetchFolders, { skipStartedAction: true })(
       function*(payload): SagaIterator {
-        const folders: Folder[] = yield call(fetchFolders, payload);
+        const folders: FolderResources[] = yield call(fetchFolders, payload);
         return folders;
       }
     ),
@@ -63,7 +64,7 @@ function* addFolderWorker({
     bindAsyncAction(actions.addFolder, { skipStartedAction: true })(function*(
       payload
     ): SagaIterator {
-      const state: Folders = yield select(getFolders);
+      const state: FoldersEntities = yield select(getFolders);
       return {
         ...payload,
         id:

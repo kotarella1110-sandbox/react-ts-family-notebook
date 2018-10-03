@@ -1,8 +1,8 @@
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
-import { Folders } from 'models';
+import { FoldersEntities } from 'models';
 import * as actions from 'store/actions';
 
-const initialState: Folders = {};
+const initialState: FoldersEntities = {};
 
 const folders = reducerWithInitialState(initialState)
   .case(
