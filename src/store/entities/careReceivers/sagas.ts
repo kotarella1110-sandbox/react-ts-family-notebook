@@ -18,7 +18,9 @@ const careReceivers: CareReceiverResources[] = [
   },
 ];
 
-const fetchCareReceivers = (payload: actions.FetchCareReceiversPayload) =>
+const fetchCareReceivers = (
+  payload: ReturnType<typeof actions.fetchCareReceivers.done>['payload']
+) =>
   new Promise<CareReceiverResources[]>(resolve =>
     setTimeout(() => resolve(careReceivers), 10)
   );
@@ -40,7 +42,7 @@ function* fetchFoldersWorker({
 
 function* fetchCareReceiversWorker({
   payload,
-}: Action<actions.FetchCareReceiversPayload>): SagaIterator {
+}: ReturnType<typeof actions.fetchCareReceivers.done>): SagaIterator {
   yield call(
     bindAsyncAction(actions.fetchCareReceivers, { skipStartedAction: true })(
       function*(payload): SagaIterator {

@@ -1,6 +1,5 @@
 import { SagaIterator } from 'redux-saga';
 import { call, select, takeEvery } from 'redux-saga/effects';
-import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
 import { FolderResources, FoldersEntities } from 'models';
 import { getFolders } from './selectors';
@@ -29,7 +28,9 @@ const folders: FolderResources[] = [
   },
 ];
 
-const fetchFolders = (payload: actions.FetchFolderPayload) =>
+const fetchFolders = (
+  payload: ReturnType<typeof actions.fetchFolders.started>['payload']
+) =>
   new Promise<FolderResources[]>(resolve =>
     setTimeout(
       () =>
@@ -45,7 +46,7 @@ const fetchFolders = (payload: actions.FetchFolderPayload) =>
 
 function* fetchFoldersWorker({
   payload,
-}: Action<actions.FetchFolderPayload>): SagaIterator {
+}: ReturnType<typeof actions.fetchFolders.started>): SagaIterator {
   yield call(
     bindAsyncAction(actions.fetchFolders, { skipStartedAction: true })(
       function*(payload): SagaIterator {
@@ -59,7 +60,7 @@ function* fetchFoldersWorker({
 
 function* addFolderWorker({
   payload,
-}: Action<{ careReceiverId: number; name: string }>) {
+}: ReturnType<typeof actions.addFolder.started>) {
   yield call(
     bindAsyncAction(actions.addFolder, { skipStartedAction: true })(function*(
       payload

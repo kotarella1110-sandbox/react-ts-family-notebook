@@ -12,7 +12,9 @@ import CareReceiverList from '../../organisms/CareReceiverList';
 export interface Props {
   readonly careReceivers: CareReceiversEntities;
   fetchCareReceivers: () => any;
-  addFolder: (payload: actions.AddFolderPayload) => any;
+  addFolder: (
+    payload: ReturnType<typeof actions.addFolder.started>['payload']
+  ) => any;
 }
 
 export interface State {

@@ -4,47 +4,39 @@ import { FoldersEntities } from 'models';
 
 const actionCreator = actionCreatorFactory('folders');
 
-const FETCH: string = 'fetch';
-const ADD: string = 'add';
-const EDIT: string = 'edit';
-const DELETE: string = 'delete';
-
-export interface FetchFolderPayload {
-  careReceiverId: number;
-}
-export interface FetchFolderResult {
-  entities: {
-    folders: FoldersEntities;
-  };
-  result: number[];
-}
-export interface AddFolderPayload {
-  careReceiverId: number;
-  name: string;
-}
-export interface AddFolderResult {
-  id: number;
-  careReceiverId: number;
-  name: string;
-}
-export interface EditFolderPayload {
-  id: number;
-  careReceiverId: number;
-  name: string;
-}
-export interface DeleteFolderPayload {
-  id: number;
-  careReceiverId: number;
-}
-
 export const fetchFolders = actionCreator.async<
-  FetchFolderPayload,
-  FetchFolderResult
->(FETCH, {
+  {
+    careReceiverId: number;
+  },
+  {
+    entities: {
+      folders: FoldersEntities;
+    };
+    result: number[];
+  }
+>('FETCH', {
   schema: [schemas.folder],
 });
-export const addFolder = actionCreator.async<AddFolderPayload, AddFolderResult>(
-  ADD
-);
-export const editFolder = actionCreator<EditFolderPayload>(EDIT);
-export const deleteFolder = actionCreator<DeleteFolderPayload>(DELETE);
+
+export const addFolder = actionCreator.async<
+  {
+    careReceiverId: number;
+    name: string;
+  },
+  {
+    id: number;
+    careReceiverId: number;
+    name: string;
+  }
+>('ADD');
+
+export const editFolder = actionCreator<{
+  id: number;
+  careReceiverId: number;
+  name: string;
+}>('EDIT');
+
+export const deleteFolder = actionCreator<{
+  id: number;
+  careReceiverId: number;
+}>('DELETE');

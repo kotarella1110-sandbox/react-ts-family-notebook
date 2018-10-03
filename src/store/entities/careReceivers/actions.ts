@@ -4,20 +4,15 @@ import { CareReceiversEntities, FoldersEntities } from 'models';
 
 const actionCreator = actionCreatorFactory('careRedceivers');
 
-const FETCH: string = 'fetch';
-
-export interface FetchCareReceiversPayload {}
-export interface FetchCareReceiversResult {
-  entities: {
-    careReceivers: CareReceiversEntities;
-    folders?: FoldersEntities;
-  };
-  result: number[];
-}
-
 export const fetchCareReceivers = actionCreator.async<
-  FetchCareReceiversPayload,
-  FetchCareReceiversResult
->(FETCH, {
+  {},
+  {
+    entities: {
+      careReceivers: CareReceiversEntities;
+      folders?: FoldersEntities;
+    };
+    result: number[];
+  }
+>('FETCH', {
   schema: [schemas.careReceiver],
 });
