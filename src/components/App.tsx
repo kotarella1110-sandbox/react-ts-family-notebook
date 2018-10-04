@@ -8,7 +8,7 @@ globalStyle(theme);
 
 const App: React.SFC = () => (
   <ThemeProvider theme={theme}>
-    <CareReceiverPage />
+    <CareReceiverPage careReceiverId={0} />
   </ThemeProvider>
 );
 

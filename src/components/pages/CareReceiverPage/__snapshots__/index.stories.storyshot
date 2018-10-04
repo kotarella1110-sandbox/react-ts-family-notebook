@@ -37,18 +37,18 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   height: 24px;
 }
 
-.c12 {
+.c11 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c12 > svg {
+.c11 > svg {
   width: 36px;
   height: 36px;
 }
 
-.c20 {
+.c19 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
@@ -57,7 +57,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   transform: scale(-1,1);
 }
 
-.c20 > svg {
+.c19 > svg {
   width: 24px;
   height: 24px;
 }
@@ -103,7 +103,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   line-height: 1em;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -122,23 +122,28 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   background-color: #fff;
 }
 
-.c11 > * {
+.c10 > * {
   margin: 2px;
 }
 
-.c11 > .c13 {
+.c10 > .c12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c19 {
+.c18 {
   margin: 0;
   line-height: 1.5em;
 }
 
-.c18 {
+.c17 {
   cursor: pointer;
+}
+
+.c13 {
+  margin: 0;
+  line-height: 1.5em;
 }
 
 .c14 {
@@ -147,29 +152,18 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
 }
 
 .c15 {
-  margin: 0;
-  line-height: 1.5em;
-}
-
-.c16 {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.c17 {
+.c16 {
   border-top: solid 1px #c8c8c8;
   border-bottom: solid 1px #c8c8c8;
 }
 
-.c17 + .c17 {
+.c16 + .c16 {
   border-top: 0;
-}
-
-.c10 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .c3 {
@@ -288,207 +282,84 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
     <main
       className="c9"
     >
-      <ul
-        className="c10"
+      <div
+        className=""
       >
-        <li
+        <a
           className=""
         >
-          <a
-            className=""
+          <div
+            className="c10"
           >
-            <div
+            <span
               className="c11"
-            >
-              <span
-                className="c12"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": Object {
-                      "default": "test-file-stub",
-                    },
-                  }
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": Object {
+                    "default": "test-file-stub",
+                  },
                 }
-                name="care-receiver"
-                size="36px"
-              />
-              <div
-                className="c13 "
-              >
-                <div>
-                  <h4
-                    className="c14"
-                  >
-                    左藤太郎
-                  </h4>
-                  <p
-                    className="c15"
-                  >
-                    76歳 1941年1月15日生
-                  </p>
-                </div>
+              }
+              name="care-receiver"
+              size="36px"
+            />
+            <div
+              className="c12 "
+            >
+              <div>
+                <h4
+                  className="c13"
+                >
+                  左藤太郎
+                </h4>
+                <p
+                  className="c14"
+                >
+                  76歳 1941年1月15日生
+                </p>
               </div>
             </div>
-          </a>
-          <ul
-            className="c16"
-          >
-            <li
-              className="c17"
-            >
-              <a
-                className="c18"
-                onClick={[Function]}
-              >
-                <div
-                  className="c11"
-                >
-                  <span
-                    className="c12"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": Object {
-                          "default": "test-file-stub",
-                        },
-                      }
-                    }
-                    name="care-receiver-info"
-                    size="36px"
-                  />
-                  <div
-                    className="c13 "
-                  >
-                    <h4
-                      className="c19"
-                    >
-                      病歴やアレルギーなど
-                    </h4>
-                  </div>
-                  <div
-                    className=""
-                  >
-                    <span
-                      className="c20"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": Object {
-                            "default": "test-file-stub",
-                          },
-                        }
-                      }
-                      name="arrow"
-                      size="24px"
-                    />
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li
-              className="c17"
-            >
-              <a
-                className="c18"
-                onClick={[Function]}
-              >
-                <div
-                  className="c11"
-                >
-                  <span
-                    className="c12"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": Object {
-                          "default": "test-file-stub",
-                        },
-                      }
-                    }
-                    name="care-receiver-info"
-                    size="36px"
-                  />
-                  <div
-                    className="c13 "
-                  >
-                    <h4
-                      className="c19"
-                    >
-                      お薬情報
-                    </h4>
-                  </div>
-                  <div
-                    className=""
-                  >
-                    <span
-                      className="c20"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": Object {
-                            "default": "test-file-stub",
-                          },
-                        }
-                      }
-                      name="arrow"
-                      size="24px"
-                    />
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li
-          className=""
+          </div>
+        </a>
+        <ul
+          className="c15"
         >
-          <a
-            className=""
-          >
-            <div
-              className="c11"
-            >
-              <span
-                className="c12"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": Object {
-                      "default": "test-file-stub",
-                    },
-                  }
-                }
-                name="care-receiver"
-                size="36px"
-              />
-              <div
-                className="c13 "
-              >
-                <div>
-                  <h4
-                    className="c14"
-                  >
-                    左藤二郎
-                  </h4>
-                  <p
-                    className="c15"
-                  >
-                    76歳 1941年2月13日生
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-          <ul
+          <li
             className="c16"
           >
-            <li
+            <a
               className="c17"
+              onClick={[Function]}
             >
-              <a
-                className="c18"
-                onClick={[Function]}
+              <div
+                className="c10"
               >
-                <div
+                <span
                   className="c11"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": Object {
+                        "default": "test-file-stub",
+                      },
+                    }
+                  }
+                  name="care-receiver-info"
+                  size="36px"
+                />
+                <div
+                  className="c12 "
+                >
+                  <h4
+                    className="c18"
+                  >
+                    病歴やアレルギーなど
+                  </h4>
+                </div>
+                <div
+                  className=""
                 >
                   <span
-                    className="c12"
+                    className="c19"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": Object {
@@ -496,49 +367,49 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                         },
                       }
                     }
-                    name="care-receiver-info"
-                    size="36px"
+                    name="arrow"
+                    size="24px"
                   />
-                  <div
-                    className="c13 "
-                  >
-                    <h4
-                      className="c19"
-                    >
-                      病歴やアレルギーなど
-                    </h4>
-                  </div>
-                  <div
-                    className=""
-                  >
-                    <span
-                      className="c20"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": Object {
-                            "default": "test-file-stub",
-                          },
-                        }
-                      }
-                      name="arrow"
-                      size="24px"
-                    />
-                  </div>
                 </div>
-              </a>
-            </li>
-            <li
+              </div>
+            </a>
+          </li>
+          <li
+            className="c16"
+          >
+            <a
               className="c17"
+              onClick={[Function]}
             >
-              <a
-                className="c18"
-                onClick={[Function]}
+              <div
+                className="c10"
               >
-                <div
+                <span
                   className="c11"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": Object {
+                        "default": "test-file-stub",
+                      },
+                    }
+                  }
+                  name="care-receiver-info"
+                  size="36px"
+                />
+                <div
+                  className="c12 "
+                >
+                  <h4
+                    className="c18"
+                  >
+                    お薬情報
+                  </h4>
+                </div>
+                <div
+                  className=""
                 >
                   <span
-                    className="c12"
+                    className="c19"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": Object {
@@ -546,40 +417,15 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                         },
                       }
                     }
-                    name="care-receiver-info"
-                    size="36px"
+                    name="arrow"
+                    size="24px"
                   />
-                  <div
-                    className="c13 "
-                  >
-                    <h4
-                      className="c19"
-                    >
-                      お薬情報
-                    </h4>
-                  </div>
-                  <div
-                    className=""
-                  >
-                    <span
-                      className="c20"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": Object {
-                            "default": "test-file-stub",
-                          },
-                        }
-                      }
-                      name="arrow"
-                      size="24px"
-                    />
-                  </div>
                 </div>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </main>
   </div>
 </div>

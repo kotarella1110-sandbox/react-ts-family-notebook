@@ -2,13 +2,17 @@ import { Dispatch, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Action } from 'typescript-fsa';
 import { mayBeStubbed } from 'react-stubber';
-import { State } from 'models';
-import { getCareReceivers } from 'store/selectors';
+import { State, CareReceiverEntities } from 'models';
+import { getCareReceiver } from 'store/selectors';
 import { fetchCareReceivers, addFolder } from 'store/actions';
 import CareReceiverPage from 'components/pages/CareReceiverPage';
 
-const mapStateToProps = (state: State) => ({
-  careReceivers: getCareReceivers(state),
+export interface OwnProps {
+  careReceiverId: CareReceiverEntities['id'];
+}
+
+const mapStateToProps = (state: State, ownProps: OwnProps) => ({
+  careReceiver: getCareReceiver(state, ownProps),
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) =>

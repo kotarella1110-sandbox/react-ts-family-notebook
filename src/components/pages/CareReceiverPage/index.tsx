@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CareReceiversEntities } from 'models';
+import { CareReceiverEntities } from 'models';
 import * as actions from 'store/actions';
 import AppTemplate from '../../templates/AppTemplate';
 import ModalTemplate from '../../templates/ModalTemplate';
@@ -7,10 +7,10 @@ import AddButton from '../../atoms/AddButton';
 import Text from '../../atoms/Text';
 import Content from '../../molecules/Content';
 import Header from '../../organisms/Header';
-import CareReceiverList from '../../organisms/CareReceiverList';
+import CareReceiverInfoMain from '../../organisms/CareReceiverInfoMain';
 
 export interface Props {
-  readonly careReceivers: CareReceiversEntities;
+  readonly careReceiver: CareReceiverEntities;
   fetchCareReceivers: () => any;
   addFolder: (
     payload: ReturnType<typeof actions.addFolder.started>['payload']
@@ -37,7 +37,7 @@ class CareReceiverPage extends React.Component<Props, State> {
   };
 
   handleAddFolder = () => {
-    const careReceiverId = this.props.careReceivers[0].id;
+    const careReceiverId = this.props.careReceiver.id;
     const name = this.state.name;
     if (name.length !== 0) {
       this.props.addFolder({
@@ -63,8 +63,8 @@ class CareReceiverPage extends React.Component<Props, State> {
               title="本人情報"
             />
           }>
-          {this.props.careReceivers && (
-            <CareReceiverList careReceivers={this.props.careReceivers} />
+          {this.props.careReceiver && (
+            <CareReceiverInfoMain careReceiver={this.props.careReceiver} />
           )}
         </AppTemplate>
         <ModalTemplate
