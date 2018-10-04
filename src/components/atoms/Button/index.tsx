@@ -13,6 +13,14 @@ const Button = styled.button`
   appearance: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0;
+  }
 `;
 
 export default Button;

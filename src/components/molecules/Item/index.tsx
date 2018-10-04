@@ -12,7 +12,7 @@ const Item: React.SFC<Props> = ({ icon, children, right, onClick }) => (
   <Wrapper onClick={onClick}>
     <Icon>{icon}</Icon>
     <Contents>{children}</Contents>
-    {right && <Right>{right}</Right>}
+    {right && <Right>{right && right}</Right>}
   </Wrapper>
 );
 
@@ -21,17 +21,7 @@ Item.defaultProps = {
   onClick: e => null,
 };
 
-const Wrapper = styled<{}, 'a'>('a')`
-  display: flex;
-  align-items: center;
-  padding: 12px 16px;
-  color: ${props => props.theme.textColor};
-  min-height: 48px;
-  background-color: ${props => props.theme.white};
-`;
-
-const Icon = styled<{}, 'div'>('div')`
-  margin: 0 8px 0 0;
+const Icon = styled.div`
   svg,
   div {
     width: 36px;
@@ -39,10 +29,27 @@ const Icon = styled<{}, 'div'>('div')`
   }
 `;
 
-const Contents = styled<{}, 'div'>('div')``;
+const Contents = styled.div``;
 
-const Right = styled<{}, 'div'>('div')`
-  margin: 0 0 0 auto;
+const Right = styled.div``;
+
+const Wrapper = styled.a`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 16px;
+  color: ${props => props.theme.textColor};
+  min-height: 48px;
+  background-color: ${props => props.theme.white};
+
+  & > * {
+    margin: 2px;
+  }
+
+  & > ${Contents} {
+    flex: 1;
+  }
 `;
 
 export default Item;

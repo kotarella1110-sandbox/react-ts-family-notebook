@@ -12,11 +12,21 @@ exports[`Storyshots Molecules/Item default 1`] = `
   height: 100%;
 }
 
+.c1 svg,
+.c1 div {
+  width: 36px;
+  height: 36px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -27,14 +37,14 @@ exports[`Storyshots Molecules/Item default 1`] = `
   background-color: #fff;
 }
 
-.c1 {
-  margin: 0 8px 0 0;
+.c0 > * {
+  margin: 2px;
 }
 
-.c1 svg,
-.c1 div {
-  width: 36px;
-  height: 36px;
+.c0 > .c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <a
@@ -56,7 +66,7 @@ exports[`Storyshots Molecules/Item default 1`] = `
     />
   </div>
   <div
-    className=""
+    className="c3 "
   >
     Item
   </div>
@@ -75,11 +85,21 @@ exports[`Storyshots Molecules/Item props onClick 1`] = `
   height: 100%;
 }
 
+.c1 svg,
+.c1 div {
+  width: 36px;
+  height: 36px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -90,14 +110,14 @@ exports[`Storyshots Molecules/Item props onClick 1`] = `
   background-color: #fff;
 }
 
-.c1 {
-  margin: 0 8px 0 0;
+.c0 > * {
+  margin: 2px;
 }
 
-.c1 svg,
-.c1 div {
-  width: 36px;
-  height: 36px;
+.c0 > .c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <a
@@ -119,7 +139,7 @@ exports[`Storyshots Molecules/Item props onClick 1`] = `
     />
   </div>
   <div
-    className=""
+    className="c3 "
   >
     Item
   </div>
@@ -138,11 +158,21 @@ exports[`Storyshots Molecules/Item props right 1`] = `
   height: 100%;
 }
 
+.c1 svg,
+.c1 div {
+  width: 36px;
+  height: 36px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -153,18 +183,14 @@ exports[`Storyshots Molecules/Item props right 1`] = `
   background-color: #fff;
 }
 
-.c1 {
-  margin: 0 8px 0 0;
+.c0 > * {
+  margin: 2px;
 }
 
-.c1 svg,
-.c1 div {
-  width: 36px;
-  height: 36px;
-}
-
-.c3 {
-  margin: 0 0 0 auto;
+.c0 > .c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <a
@@ -186,12 +212,12 @@ exports[`Storyshots Molecules/Item props right 1`] = `
     />
   </div>
   <div
-    className=""
+    className="c3 "
   >
     Item
   </div>
   <div
-    className="c3"
+    className=""
   >
     <p>
       Right
@@ -218,6 +244,14 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c5:hover {
+  cursor: pointer;
+}
+
+.c5:focus {
+  outline: 0;
+}
+
 .c2 {
   display: inline-block;
   margin: 0.1em;
@@ -232,9 +266,9 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
 .c4 {
   display: block;
   line-height: 0;
-  -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
 }
 
 .c4 svg {
@@ -242,11 +276,21 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
   height: 24px;
 }
 
+.c1 svg,
+.c1 div {
+  width: 36px;
+  height: 36px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -257,18 +301,14 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
   background-color: #fff;
 }
 
-.c1 {
-  margin: 0 8px 0 0;
+.c0 > * {
+  margin: 2px;
 }
 
-.c1 svg,
-.c1 div {
-  width: 36px;
-  height: 36px;
-}
-
-.c3 {
-  margin: 0 0 0 auto;
+.c0 > .c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <a
@@ -290,12 +330,12 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
     />
   </div>
   <div
-    className=""
+    className="c3 "
   >
     Item
   </div>
   <div
-    className="c3"
+    className=""
   >
     <button
       className="c4 c5"

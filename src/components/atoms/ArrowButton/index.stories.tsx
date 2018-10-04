@@ -27,10 +27,10 @@ storiesOf('Atoms/ArrowButton', module)
     withNotes(``)(() => <ArrowButton isPrimary={true} />)
   )
   .addWithJSX(
-    'props isRight is true',
-    withNotes(``)(() => <ArrowButton isRight={true} />)
+    'props isReverse is true',
+    withNotes(``)(() => <ArrowButton isReverse={true} />)
   )
   .addWithJSX(
-    'props isPrimary is true and isRight is true',
-    withNotes(``)(() => <ArrowButton isPrimary={true} isRight={true} />)
+    'props isPrimary is true and isReverse is true',
+    withNotes(``)(() => <ArrowButton isPrimary={true} isReverse={true} />)
   );

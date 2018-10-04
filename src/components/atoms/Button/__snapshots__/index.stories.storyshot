@@ -18,6 +18,14 @@ exports[`Storyshots Atoms/Button default 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c0:hover {
+  cursor: pointer;
+}
+
+.c0:focus {
+  outline: 0;
+}
+
 <button
   className="c0"
 >
@@ -41,6 +49,14 @@ exports[`Storyshots Atoms/Button props onClick 1`] = `
   appearance: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c0:focus {
+  outline: 0;
 }
 
 <button

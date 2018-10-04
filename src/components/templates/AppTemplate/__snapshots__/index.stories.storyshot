@@ -1,16 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Templates/AppTemplate default 1`] = `
+.c1 {
+  grid-area: header;
+}
+
+.c2 {
+  grid-area: main;
+  overflow: auto;
+}
+
+.c0 {
+  display: grid;
+  grid-template-areas: 'header' 'main';
+  grid-template-columns: 1fr;
+  grid-template-rows: calc(8px * 6) calc( 100vh - 8px * 6 );
+}
+
 <div
-  className=""
+  className="c0"
 >
   <header
-    className=""
+    className="c1"
   >
     Header
   </header>
   <main
-    className=""
+    className="c2"
   >
     Main
   </main>
@@ -18,7 +34,7 @@ exports[`Storyshots Templates/AppTemplate default 1`] = `
 `;
 
 exports[`Storyshots Templates/AppTemplate props header is Header and main is CareReceiverInfoList 1`] = `
-.c4 {
+.c7 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -35,18 +51,26 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c5 {
+.c7:hover {
+  cursor: pointer;
+}
+
+.c7:focus {
+  outline: 0;
+}
+
+.c8 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c5 > svg {
+.c8 > svg {
   width: 100%;
   height: 100%;
 }
 
-.c3 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,48 +86,59 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   border-radius: 4px;
   background-color: #007f48;
   padding: 8px;
+  width: 100%;
 }
 
-.c3 svg {
+.c6 svg {
   width: 18px;
   height: 18px;
   display: block;
   margin: 0 6px 0 0;
 }
 
-.c3 svg > circle {
+.c6 svg > circle {
   fill: #fff !important;
 }
 
-.c3 svg > line {
+.c6 svg > line {
   stroke: #007f48 !important;
 }
 
-.c3 span {
+.c6 span {
   display: block;
   color: #fff;
   font-weight: bold;
   line-height: 1em;
 }
 
-.c13 {
+.c16 {
   display: block;
   line-height: 0;
-  -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
 }
 
-.c13 svg {
+.c16 svg {
   width: 24px;
   height: 24px;
 }
 
-.c9 {
+.c13 svg,
+.c13 div {
+  width: 36px;
+  height: 36px;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -114,126 +149,129 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   background-color: #fff;
 }
 
-.c10 {
-  margin: 0 8px 0 0;
+.c12 > * {
+  margin: 2px;
 }
 
-.c10 svg,
-.c10 div {
-  width: 36px;
-  height: 36px;
+.c12 > .c14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-.c12 {
-  margin: 0 0 0 auto;
-}
-
-.c11 {
+.c15 {
   margin: 0;
   line-height: 1.5em;
 }
 
-.c7 {
+.c10 {
   list-style: none;
   padding: 0;
 }
 
-.c8 {
+.c11 {
   border-top: solid 1px #c8c8c8;
   border-bottom: solid 1px #c8c8c8;
 }
 
-.c8 + .c8 {
+.c11 + .c11 {
   border-top: 0;
 }
 
-.c6 {
+.c3 {
+  width: calc(8px * 10);
+  display: block;
+  line-height: 1em;
+}
+
+.c4 {
   font-size: 5vw;
   font-weight: bold;
   color: #007f48;
-  overflow: hidden;
   white-space: nowrap;
+  overflow: hidden;
   padding: 0 calc(8px * 2);
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
 }
 
-.c1 {
+.c5 {
   width: calc(8px * 10);
   display: block;
   line-height: 1em;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
 }
 
 .c2 {
-  width: calc(8px * 10);
-  display: block;
-  line-height: 1em;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  text-align: right;
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
-}
-
-.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 calc(8px * 2);
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  z-index: 1000;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #FFFBE8;
-  height: calc(8px * 6);
-  width: 100%;
   border-bottom: solid 2px #babfbd;
+  box-sizing: border-box;
+  height: calc(8px * 6);
+  padding: 0 calc(8px * 2);
 }
 
-.c0 a {
+.c2 a {
   color: #007f48;
   display: inline-block;
 }
 
+.c1 {
+  grid-area: header;
+}
+
+.c9 {
+  grid-area: main;
+  overflow: auto;
+}
+
+.c0 {
+  display: grid;
+  grid-template-areas: 'header' 'main';
+  grid-template-columns: 1fr;
+  grid-template-rows: calc(8px * 6) calc( 100vh - 8px * 6 );
+}
+
 @media (min-width:380px) {
-  .c6 {
+  .c4 {
     font-size: 20px;
   }
 }
 
 <div
-  className=""
+  className="c0"
 >
   <header
-    className=""
+    className="c1"
   >
     <div
-      className="c0"
+      className="c2"
     >
       <div
-        className="c1"
+        className="c3"
       />
+      <h2
+        className="c4"
+      >
+        Title
+      </h2>
       <div
-        className="c2"
+        className="c5"
       >
         <button
-          className="c3 c4"
+          className="c6 c7"
           onClick={[Function]}
         >
           <span
-            className="c5"
+            className="c8"
             dangerouslySetInnerHTML={
               Object {
                 "__html": Object {
@@ -247,31 +285,26 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
           </span>
         </button>
       </div>
-      <h2
-        className="c6"
-      >
-        Title
-      </h2>
     </div>
   </header>
   <main
-    className=""
+    className="c9"
   >
     <ul
-      className="c7"
+      className="c10"
     >
       <li
-        className="c8"
+        className="c11"
       >
         <a
-          className="c9"
+          className="c12"
           onClick={[Function]}
         >
           <div
-            className="c10"
+            className="c13"
           >
             <span
-              className="c5"
+              className="c8"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -282,23 +315,23 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
             />
           </div>
           <div
-            className=""
+            className="c14 "
           >
             <h4
-              className="c11"
+              className="c15"
             >
               病歴やアレルギーなど
             </h4>
           </div>
           <div
-            className="c12"
+            className=""
           >
             <button
-              className="c13 c4"
+              className="c16 c7"
               onClick={[Function]}
             >
               <span
-                className="c5"
+                className="c8"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -312,17 +345,17 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
         </a>
       </li>
       <li
-        className="c8"
+        className="c11"
       >
         <a
-          className="c9"
+          className="c12"
           onClick={[Function]}
         >
           <div
-            className="c10"
+            className="c13"
           >
             <span
-              className="c5"
+              className="c8"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -333,23 +366,23 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
             />
           </div>
           <div
-            className=""
+            className="c14 "
           >
             <h4
-              className="c11"
+              className="c15"
             >
               お薬情報
             </h4>
           </div>
           <div
-            className="c12"
+            className=""
           >
             <button
-              className="c13 c4"
+              className="c16 c7"
               onClick={[Function]}
             >
               <span
-                className="c5"
+                className="c8"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {

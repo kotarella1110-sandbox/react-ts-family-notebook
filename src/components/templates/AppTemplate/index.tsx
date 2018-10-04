@@ -12,10 +12,25 @@ const AppTemplate: React.SFC<Props> = ({ header, children }) => (
   </Wrapper>
 );
 
-const Wrapper = styled.div``;
+const Header = styled.header`
+  grid-area: header;
+`;
 
-const Header = styled.header``;
+const Main = styled.main`
+  grid-area: main;
+  overflow: auto;
+`;
 
-const Main = styled.main``;
+const Wrapper = styled.div`
+  /* stylelint-disable declaration-colon-space-after, indentation */
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main';
+  grid-template-columns: 1fr;
+  grid-template-rows: calc(${props => props.theme.sizeBase} * 6) calc(
+      100vh - ${props => props.theme.sizeBase} * 6
+    );
+`;
 
 export default AppTemplate;

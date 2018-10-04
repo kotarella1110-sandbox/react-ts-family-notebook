@@ -18,6 +18,14 @@ exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c6:hover {
+  cursor: pointer;
+}
+
+.c6:focus {
+  outline: 0;
+}
+
 .c2 {
   display: inline-block;
   margin: 0.1em;
@@ -32,9 +40,9 @@ exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
 .c5 {
   display: block;
   line-height: 0;
-  -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
 }
 
 .c5 svg {
@@ -42,11 +50,21 @@ exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
   height: 24px;
 }
 
+.c1 svg,
+.c1 div {
+  width: 36px;
+  height: 36px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -57,21 +75,17 @@ exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
   background-color: #fff;
 }
 
-.c1 {
-  margin: 0 8px 0 0;
+.c0 > * {
+  margin: 2px;
 }
 
-.c1 svg,
-.c1 div {
-  width: 36px;
-  height: 36px;
+.c0 > .c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .c4 {
-  margin: 0 0 0 auto;
-}
-
-.c3 {
   margin: 0;
   line-height: 1.5em;
 }
@@ -95,16 +109,16 @@ exports[`Storyshots Molecules/CareReceiverInfoItem default 1`] = `
     />
   </div>
   <div
-    className=""
+    className="c3 "
   >
     <h4
-      className="c3"
+      className="c4"
     >
       Title
     </h4>
   </div>
   <div
-    className="c4"
+    className=""
   >
     <button
       className="c5 c6"
@@ -143,6 +157,14 @@ exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c6:hover {
+  cursor: pointer;
+}
+
+.c6:focus {
+  outline: 0;
+}
+
 .c2 {
   display: inline-block;
   margin: 0.1em;
@@ -157,9 +179,9 @@ exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
 .c5 {
   display: block;
   line-height: 0;
-  -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
 }
 
 .c5 svg {
@@ -167,11 +189,21 @@ exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
   height: 24px;
 }
 
+.c1 svg,
+.c1 div {
+  width: 36px;
+  height: 36px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -182,21 +214,17 @@ exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
   background-color: #fff;
 }
 
-.c1 {
-  margin: 0 8px 0 0;
+.c0 > * {
+  margin: 2px;
 }
 
-.c1 svg,
-.c1 div {
-  width: 36px;
-  height: 36px;
+.c0 > .c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .c4 {
-  margin: 0 0 0 auto;
-}
-
-.c3 {
   margin: 0;
   line-height: 1.5em;
 }
@@ -220,16 +248,16 @@ exports[`Storyshots Molecules/CareReceiverInfoItem props onClick 1`] = `
     />
   </div>
   <div
-    className=""
+    className="c3 "
   >
     <h4
-      className="c3"
+      className="c4"
     >
       Title
     </h4>
   </div>
   <div
-    className="c4"
+    className=""
   >
     <button
       className="c5 c6"

@@ -38,11 +38,19 @@ injectGlobal`
   }
 `;
 
-const Header = styled.header``;
+const Header = styled.header`
+  grid-area: header;
+`;
 
-const Main = styled.main``;
+const Main = styled.main`
+  grid-area: main;
+  overflow: auto;
+  -webkitoverflowscrolling: touch;
+`;
 
-const Footer = styled.footer``;
+const Footer = styled.footer`
+  grid-area: main;
+`;
 
 const ModalTemplate = styled(Modal)`
   &__Overlay {
@@ -54,14 +62,28 @@ const ModalTemplate = styled(Modal)`
   }
 
   &__Content {
+    /* stylelint-disable declaration-colon-space-after, indentation */
+    display: grid;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      calc(${props => props.theme.sizeBase} * 6) calc(
+        100vh - ${props => props.theme.sizeBase} * 6 * 2
+      )
+      calc(${props => props.theme.sizeBase} * 6);
+
     position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
     background: #fff;
-    overflow: auto;
-    webkitoverflowscrolling: touch;
+
+    /* overflow: auto;
+    webkitoverflowscrolling: touch; */
   }
 `;
 

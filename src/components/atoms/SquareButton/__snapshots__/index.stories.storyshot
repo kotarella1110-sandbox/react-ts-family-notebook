@@ -18,6 +18,14 @@ exports[`Storyshots Atoms/SquareButton default 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:focus {
+  outline: 0;
+}
+
 .c0 {
   display: block;
   text-align: center;
@@ -52,6 +60,14 @@ exports[`Storyshots Atoms/SquareButton props onClick 1`] = `
   appearance: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:focus {
+  outline: 0;
 }
 
 .c0 {

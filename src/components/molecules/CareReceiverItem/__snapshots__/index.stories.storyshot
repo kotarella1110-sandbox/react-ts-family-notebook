@@ -12,11 +12,21 @@ exports[`Storyshots Molecules/CareReceiverItem default 1`] = `
   height: 100%;
 }
 
+.c1 svg,
+.c1 div {
+  width: 36px;
+  height: 36px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -27,22 +37,22 @@ exports[`Storyshots Molecules/CareReceiverItem default 1`] = `
   background-color: #fff;
 }
 
-.c1 {
-  margin: 0 8px 0 0;
+.c0 > * {
+  margin: 2px;
 }
 
-.c1 svg,
-.c1 div {
-  width: 36px;
-  height: 36px;
+.c0 > .c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-.c3 {
+.c4 {
   margin: 0;
   line-height: 1.5em;
 }
 
-.c4 {
+.c5 {
   margin: 0;
   line-height: 1.5em;
 }
@@ -66,16 +76,16 @@ exports[`Storyshots Molecules/CareReceiverItem default 1`] = `
     />
   </div>
   <div
-    className=""
+    className="c3 "
   >
     <div>
       <h4
-        className="c3"
+        className="c4"
       >
         左藤太郎
       </h4>
       <p
-        className="c4"
+        className="c5"
       >
         76歳 1941年1月15日生
       </p>

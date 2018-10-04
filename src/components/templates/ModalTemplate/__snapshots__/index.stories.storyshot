@@ -2,13 +2,23 @@
 
 exports[`Storyshots Templates/ModalTemplate default 1`] = `
 Array [
-  <header
-    className=""
+  .c0 {
+  grid-area: header;
+}
+
+<header
+    className="c0"
   >
     Header
   </header>,
-  <main
-    className=""
+  .c0 {
+  grid-area: main;
+  overflow: auto;
+  -webkitoverflowscrolling: touch;
+}
+
+<main
+    className="c0"
   >
     Main
   </main>,

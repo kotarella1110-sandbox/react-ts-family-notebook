@@ -5,7 +5,7 @@ import Icon from 'components/atoms/Icon';
 
 export interface Props {
   readonly isPrimary?: boolean;
-  readonly isRight?: boolean;
+  readonly isReverse?: boolean;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -17,7 +17,7 @@ const ArrowButton: React.SFC<Props> = props => (
 
 ArrowButton.defaultProps = {
   isPrimary: false,
-  isRight: false,
+  isReverse: false,
   onClick: e => null,
 };
 
@@ -31,9 +31,9 @@ const Wrapper = styled<Props>(Button)`
   }
 
   ${props =>
-    props.isRight &&
+    props.isReverse &&
     css`
-      transform: rotateY(180deg);
+      transform: scale(-1, 1);
     `};
 
   ${props =>

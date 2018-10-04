@@ -16,7 +16,7 @@ const CareReceiverInfoItem: React.SFC<Props> = ({
 }) => (
   <Item
     icon={<Icon icon="carereceiver-info" />}
-    right={<ArrowButton isRight={true} />}
+    right={<ArrowButton isReverse={true} />}
     onClick={onClick}>
     <Title>{name}</Title>
   </Item>

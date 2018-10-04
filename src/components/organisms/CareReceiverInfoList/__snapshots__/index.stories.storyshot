@@ -18,6 +18,14 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c8:hover {
+  cursor: pointer;
+}
+
+.c8:focus {
+  outline: 0;
+}
+
 .c4 {
   display: inline-block;
   margin: 0.1em;
@@ -32,9 +40,9 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
 .c7 {
   display: block;
   line-height: 0;
-  -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
 }
 
 .c7 svg {
@@ -42,11 +50,21 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
   height: 24px;
 }
 
+.c3 svg,
+.c3 div {
+  width: 36px;
+  height: 36px;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -57,21 +75,17 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
   background-color: #fff;
 }
 
-.c3 {
-  margin: 0 8px 0 0;
+.c2 > * {
+  margin: 2px;
 }
 
-.c3 svg,
-.c3 div {
-  width: 36px;
-  height: 36px;
+.c2 > .c5 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .c6 {
-  margin: 0 0 0 auto;
-}
-
-.c5 {
   margin: 0;
   line-height: 1.5em;
 }
@@ -115,16 +129,16 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
         />
       </div>
       <div
-        className=""
+        className="c5 "
       >
         <h4
-          className="c5"
+          className="c6"
         >
           病歴やアレルギーなど
         </h4>
       </div>
       <div
-        className="c6"
+        className=""
       >
         <button
           className="c7 c8"
@@ -166,16 +180,16 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
         />
       </div>
       <div
-        className=""
+        className="c5 "
       >
         <h4
-          className="c5"
+          className="c6"
         >
           お薬情報
         </h4>
       </div>
       <div
-        className="c6"
+        className=""
       >
         <button
           className="c7 c8"
@@ -216,6 +230,14 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c8:hover {
+  cursor: pointer;
+}
+
+.c8:focus {
+  outline: 0;
+}
+
 .c4 {
   display: inline-block;
   margin: 0.1em;
@@ -230,9 +252,9 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
 .c7 {
   display: block;
   line-height: 0;
-  -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
 }
 
 .c7 svg {
@@ -240,11 +262,21 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
   height: 24px;
 }
 
+.c3 svg,
+.c3 div {
+  width: 36px;
+  height: 36px;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -255,21 +287,17 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
   background-color: #fff;
 }
 
-.c3 {
-  margin: 0 8px 0 0;
+.c2 > * {
+  margin: 2px;
 }
 
-.c3 svg,
-.c3 div {
-  width: 36px;
-  height: 36px;
+.c2 > .c5 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .c6 {
-  margin: 0 0 0 auto;
-}
-
-.c5 {
   margin: 0;
   line-height: 1.5em;
 }
@@ -313,16 +341,16 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
         />
       </div>
       <div
-        className=""
+        className="c5 "
       >
         <h4
-          className="c5"
+          className="c6"
         >
           病歴やアレルギーなど
         </h4>
       </div>
       <div
-        className="c6"
+        className=""
       >
         <button
           className="c7 c8"
@@ -364,16 +392,16 @@ exports[`Storyshots Organisms/CareReceiverInfoList props onClick 1`] = `
         />
       </div>
       <div
-        className=""
+        className="c5 "
       >
         <h4
-          className="c5"
+          className="c6"
         >
           お薬情報
         </h4>
       </div>
       <div
-        className="c6"
+        className=""
       >
         <button
           className="c7 c8"
