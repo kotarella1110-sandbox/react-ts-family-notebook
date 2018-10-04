@@ -15,6 +15,7 @@ Array [
   grid-area: main;
   overflow: auto;
   -webkitoverflowscrolling: touch;
+  background-color: #ededed;
 }
 
 <main

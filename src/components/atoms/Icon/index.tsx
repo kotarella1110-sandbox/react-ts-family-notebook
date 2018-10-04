@@ -1,23 +1,36 @@
 import * as React from 'react';
-import styled from 'styled';
+import styled, { css } from 'styled';
 
 export interface Props {
-  readonly icon: string;
+  readonly name: string;
+  readonly size?: string;
+  readonly reverse?: boolean;
 }
 
-const Icon: React.SFC<Props> = ({ icon }) => {
-  const svg = require(`!raw-loader!./icons/${icon}.svg`);
-  return <Wrapper dangerouslySetInnerHTML={{ __html: svg }} />;
+const Icon: React.SFC<Props> = props => {
+  const svg = require(`!raw-loader!./icons/${props.name}.svg`);
+  return <Wrapper {...props} dangerouslySetInnerHTML={{ __html: svg }} />;
 };
 
-const Wrapper = styled.span`
+Icon.defaultProps = {
+  size: '24px',
+  reverse: false,
+};
+
+const Wrapper = styled<Props, 'span'>('span')`
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 
+  ${props =>
+    props.reverse &&
+    css`
+      transform: scale(-1, 1);
+    `};
+
   & > svg {
-    width: 100%;
-    height: 100%;
+    width: ${props => props.size};
+    height: ${props => props.size};
   }
 `;
 

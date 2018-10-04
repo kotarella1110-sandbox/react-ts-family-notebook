@@ -4,7 +4,7 @@ import Icon from '.';
 
 const setup = () => {
   const props = {
-    icon: 'add',
+    name: 'add',
   };
 
   const wrapper = shallow(<Icon {...props} />);

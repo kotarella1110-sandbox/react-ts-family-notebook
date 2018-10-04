@@ -11,20 +11,27 @@ storiesOf('Atoms/Icon', module)
   .addDecorator((story, context) =>
     withInfo(`
       ~~~jsx
-      <Icon icon="svg" />
+      <Icon name="svg" />
       ~~~
     `)(story)(context)
   )
   .addDecorator(withSmartKnobs)
   .addDecorator(withKnobs)
-  .addWithJSX('add', withNotes(``)(() => <Icon icon="add" />))
-  .addWithJSX('arrow', withNotes(``)(() => <Icon icon="arrow" />))
-  .addWithJSX('carereceiver', withNotes(``)(() => <Icon icon="carereceiver" />))
+  .addWithJSX('add', withNotes(``)(() => <Icon name="add" />))
+  .addWithJSX('arrow', withNotes(``)(() => <Icon name="arrow" />))
   .addWithJSX(
-    'carereceiver-info',
-    withNotes(``)(() => <Icon icon="carereceiver-info" />)
+    'exclamation',
+    withNotes(``)(() => <Icon name="care-receiver-info-detail" />)
   )
   .addWithJSX(
-    'carereceiver-info-detail',
-    withNotes(``)(() => <Icon icon="carereceiver-info-detail" />)
+    'care-receiver',
+    withNotes(``)(() => <Icon name="care-receiver" />)
+  )
+  .addWithJSX(
+    'care-receiver-info',
+    withNotes(``)(() => <Icon name="care-receiver-info" />)
+  )
+  .addWithJSX(
+    'care-receiver-info-detail',
+    withNotes(``)(() => <Icon name="care-receiver-info-detail" />)
   );

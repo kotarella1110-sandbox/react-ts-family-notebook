@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
@@ -13,7 +12,7 @@ storiesOf('Molecules/Item', module)
   .addDecorator((story, context) =>
     withInfo(`
       ~~~js
-      <Item icon={<Icon icon="add" />}>Item</Item>
+      <Item name={<Icon name="add" />}>Item</Item>
       ~~~
     `)(story)(context)
   )
@@ -21,31 +20,20 @@ storiesOf('Molecules/Item', module)
   .addDecorator(withKnobs)
   .addWithJSX(
     'default',
-    withNotes(``)(() => <Item icon={<Icon icon="add" />}>Item</Item>)
+    withNotes(``)(() => <Item icon={<Icon name="add" />}>Item</Item>)
   )
   .addWithJSX(
     'props right',
     withNotes(``)(() => (
-      <Item icon={<Icon icon="add" />} right={<p>Right</p>}>
+      <Item icon={<Icon name="add" />} right={<p>Right</p>}>
         Item
       </Item>
     ))
   )
   .addWithJSX(
-    'props onClick',
+    'props right is ArrowButton',
     withNotes(``)(() => (
-      <Item icon={<Icon icon="add" />} onClick={action('onClick')}>
-        Item
-      </Item>
-    ))
-  )
-  .addWithJSX(
-    'props right is ArrowButton and onClick',
-    withNotes(``)(() => (
-      <Item
-        icon={<Icon icon="add" />}
-        right={<ArrowButton isReverse={true} />}
-        onClick={action('onClick')}>
+      <Item icon={<Icon name="add" />} right={<ArrowButton isReverse={true} />}>
         Item
       </Item>
     ))

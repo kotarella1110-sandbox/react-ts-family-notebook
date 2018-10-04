@@ -33,8 +33,8 @@ exports[`Storyshots Atoms/ArrowButton default 1`] = `
 }
 
 .c2 > svg {
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
 }
 
 .c0 {
@@ -60,6 +60,8 @@ exports[`Storyshots Atoms/ArrowButton default 1`] = `
         },
       }
     }
+    name="arrow"
+    size="24px"
   />
 </button>
 `;
@@ -97,8 +99,8 @@ exports[`Storyshots Atoms/ArrowButton props isPrimary is true 1`] = `
 }
 
 .c2 > svg {
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
 }
 
 .c0 {
@@ -128,6 +130,8 @@ exports[`Storyshots Atoms/ArrowButton props isPrimary is true 1`] = `
         },
       }
     }
+    name="arrow"
+    size="24px"
   />
 </button>
 `;
@@ -165,8 +169,8 @@ exports[`Storyshots Atoms/ArrowButton props isPrimary is true and isReverse is t
 }
 
 .c2 > svg {
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
 }
 
 .c0 {
@@ -199,6 +203,8 @@ exports[`Storyshots Atoms/ArrowButton props isPrimary is true and isReverse is t
         },
       }
     }
+    name="arrow"
+    size="24px"
   />
 </button>
 `;
@@ -236,8 +242,8 @@ exports[`Storyshots Atoms/ArrowButton props isReverse is true 1`] = `
 }
 
 .c2 > svg {
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
 }
 
 .c0 {
@@ -266,6 +272,8 @@ exports[`Storyshots Atoms/ArrowButton props isReverse is true 1`] = `
         },
       }
     }
+    name="arrow"
+    size="24px"
   />
 </button>
 `;
@@ -303,8 +311,8 @@ exports[`Storyshots Atoms/ArrowButton props onClick 1`] = `
 }
 
 .c2 > svg {
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
 }
 
 .c0 {
@@ -330,6 +338,8 @@ exports[`Storyshots Atoms/ArrowButton props onClick 1`] = `
         },
       }
     }
+    name="arrow"
+    size="24px"
   />
 </button>
 `;

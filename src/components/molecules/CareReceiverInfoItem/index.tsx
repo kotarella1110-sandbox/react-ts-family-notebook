@@ -1,12 +1,11 @@
 import * as React from 'react';
 import styled from 'styled';
-import { Folder } from 'models';
+import { FolderEntities } from 'models';
 import Icon from '../../atoms/Icon';
-import ArrowButton from '../../atoms/ArrowButton';
 import Item from '../Item';
 
 export interface Props {
-  readonly folder: Folder;
+  readonly folder: FolderEntities;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
@@ -14,21 +13,26 @@ const CareReceiverInfoItem: React.SFC<Props> = ({
   folder: { name },
   onClick,
 }) => (
-  <Item
-    icon={<Icon icon="carereceiver-info" />}
-    right={<ArrowButton isReverse={true} />}
-    onClick={onClick}>
-    <Title>{name}</Title>
-  </Item>
+  <Wrapper onClick={onClick}>
+    <Item
+      icon={<Icon name="care-receiver-info" size="36px" />}
+      right={<Icon name="arrow" reverse={true} />}>
+      <Title>{name}</Title>
+    </Item>
+  </Wrapper>
 );
-
-const Title = styled<{}, 'h4'>('h4')`
-  margin: 0;
-  line-height: 1.5em;
-`;
 
 CareReceiverInfoItem.defaultProps = {
   onClick: e => null,
 };
+
+const Title = styled.h4`
+  margin: 0;
+  line-height: 1.5em;
+`;
+
+const Wrapper = styled.a`
+  cursor: pointer;
+`;
 
 export default CareReceiverInfoItem;

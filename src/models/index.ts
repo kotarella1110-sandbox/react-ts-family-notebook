@@ -2,7 +2,7 @@ interface NormalizedObjects<T> {
   [id: number]: T;
 }
 
-export interface CareReceiver {
+interface CareReceiver {
   id: number;
   name: string;
   birth: string;
@@ -19,7 +19,7 @@ export interface CareReceiverResources extends CareReceiver {
 export interface CareReceiversEntities
   extends NormalizedObjects<CareReceiverEntities> {}
 
-export interface Folder {
+interface Folder {
   id: number;
   careReceiverId: CareReceiver['id'];
   name: string;

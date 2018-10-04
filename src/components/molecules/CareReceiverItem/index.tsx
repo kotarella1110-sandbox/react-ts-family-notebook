@@ -11,12 +11,14 @@ export interface Props {
 const CareReceiverItem: React.SFC<Props> = ({
   careReceiver: { name, birth },
 }) => (
-  <Item icon={<Icon icon="carereceiver" />}>
-    <div>
-      <Name>{name}</Name>
-      <Birth>{birth}</Birth>
-    </div>
-  </Item>
+  <Wrapper>
+    <Item icon={<Icon name="care-receiver" size="36px" />}>
+      <div>
+        <Name>{name}</Name>
+        <Birth>{birth}</Birth>
+      </div>
+    </Item>
+  </Wrapper>
 );
 
 const Name = styled<{}, 'h4'>('h4')`
@@ -28,5 +30,7 @@ const Birth = styled<{}, 'p'>('p')`
   margin: 0;
   line-height: 1.5em;
 `;
+
+const Wrapper = styled.a``;
 
 export default CareReceiverItem;

@@ -28,7 +28,9 @@ describe('CareReceiverItem', () => {
       props: { careReceiver },
       wrapper,
     } = setup();
-    expect(wrapper.type()).toBe(Item);
+    expect(wrapper.dive().type()).toBe('a');
+
+    expect(wrapper.find('Item').type()).toBe(Item);
 
     const Name = wrapper.find('Name');
     expect(Name.dive().type()).toBe('h4');

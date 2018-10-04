@@ -1,21 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Molecules/Item default 1`] = `
-.c2 {
+.c1 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c2 > svg {
-  width: 100%;
-  height: 100%;
-}
-
-.c1 svg,
-.c1 div {
-  width: 36px;
-  height: 36px;
+.c1 > svg {
+  width: 24px;
+  height: 24px;
 }
 
 .c0 {
@@ -41,127 +35,45 @@ exports[`Storyshots Molecules/Item default 1`] = `
   margin: 2px;
 }
 
-.c0 > .c3 {
+.c0 > .c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-<a
+<div
   className="c0"
-  onClick={[Function]}
 >
-  <div
+  <span
     className="c1"
-  >
-    <span
-      className="c2"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": Object {
-            "default": "test-file-stub",
-          },
-        }
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": Object {
+          "default": "test-file-stub",
+        },
       }
-    />
-  </div>
+    }
+    name="add"
+    size="24px"
+  />
   <div
-    className="c3 "
+    className="c2 "
   >
     Item
   </div>
-</a>
-`;
-
-exports[`Storyshots Molecules/Item props onClick 1`] = `
-.c2 {
-  display: inline-block;
-  margin: 0.1em;
-  box-sizing: border-box;
-}
-
-.c2 > svg {
-  width: 100%;
-  height: 100%;
-}
-
-.c1 svg,
-.c1 div {
-  width: 36px;
-  height: 36px;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 12px 16px;
-  color: $gray-dark;
-  min-height: 48px;
-  background-color: #fff;
-}
-
-.c0 > * {
-  margin: 2px;
-}
-
-.c0 > .c3 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-<a
-  className="c0"
-  onClick={[Function]}
->
-  <div
-    className="c1"
-  >
-    <span
-      className="c2"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": Object {
-            "default": "test-file-stub",
-          },
-        }
-      }
-    />
-  </div>
-  <div
-    className="c3 "
-  >
-    Item
-  </div>
-</a>
+</div>
 `;
 
 exports[`Storyshots Molecules/Item props right 1`] = `
-.c2 {
+.c1 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c2 > svg {
-  width: 100%;
-  height: 100%;
-}
-
-.c1 svg,
-.c1 div {
-  width: 36px;
-  height: 36px;
+.c1 > svg {
+  width: 24px;
+  height: 24px;
 }
 
 .c0 {
@@ -187,32 +99,29 @@ exports[`Storyshots Molecules/Item props right 1`] = `
   margin: 2px;
 }
 
-.c0 > .c3 {
+.c0 > .c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-<a
+<div
   className="c0"
-  onClick={[Function]}
 >
-  <div
+  <span
     className="c1"
-  >
-    <span
-      className="c2"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": Object {
-            "default": "test-file-stub",
-          },
-        }
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": Object {
+          "default": "test-file-stub",
+        },
       }
-    />
-  </div>
+    }
+    name="add"
+    size="24px"
+  />
   <div
-    className="c3 "
+    className="c2 "
   >
     Item
   </div>
@@ -223,11 +132,11 @@ exports[`Storyshots Molecules/Item props right 1`] = `
       Right
     </p>
   </div>
-</a>
+</div>
 `;
 
-exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = `
-.c5 {
+exports[`Storyshots Molecules/Item props right is ArrowButton 1`] = `
+.c4 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -244,26 +153,26 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c5:hover {
+.c4:hover {
   cursor: pointer;
 }
 
-.c5:focus {
+.c4:focus {
   outline: 0;
 }
 
-.c2 {
+.c1 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c2 > svg {
-  width: 100%;
-  height: 100%;
+.c1 > svg {
+  width: 24px;
+  height: 24px;
 }
 
-.c4 {
+.c3 {
   display: block;
   line-height: 0;
   -webkit-transform: scale(-1,1);
@@ -271,15 +180,9 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
   transform: scale(-1,1);
 }
 
-.c4 svg {
+.c3 svg {
   width: 24px;
   height: 24px;
-}
-
-.c1 svg,
-.c1 div {
-  width: 36px;
-  height: 36px;
 }
 
 .c0 {
@@ -305,32 +208,29 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
   margin: 2px;
 }
 
-.c0 > .c3 {
+.c0 > .c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-<a
+<div
   className="c0"
-  onClick={[Function]}
 >
-  <div
+  <span
     className="c1"
-  >
-    <span
-      className="c2"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": Object {
-            "default": "test-file-stub",
-          },
-        }
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": Object {
+          "default": "test-file-stub",
+        },
       }
-    />
-  </div>
+    }
+    name="add"
+    size="24px"
+  />
   <div
-    className="c3 "
+    className="c2 "
   >
     Item
   </div>
@@ -338,11 +238,11 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
     className=""
   >
     <button
-      className="c4 c5"
+      className="c3 c4"
       onClick={[Function]}
     >
       <span
-        className="c2"
+        className="c1"
         dangerouslySetInnerHTML={
           Object {
             "__html": Object {
@@ -350,8 +250,10 @@ exports[`Storyshots Molecules/Item props right is ArrowButton and onClick 1`] = 
             },
           }
         }
+        name="arrow"
+        size="24px"
       />
     </button>
   </div>
-</a>
+</div>
 `;

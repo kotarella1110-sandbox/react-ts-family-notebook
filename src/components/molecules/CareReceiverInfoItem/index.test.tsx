@@ -27,7 +27,9 @@ describe('CareReceiverInfoItem', () => {
       props: { folder },
       wrapper,
     } = setup();
-    expect(wrapper.type()).toBe(Item);
+    expect(wrapper.dive().type()).toBe('a');
+
+    expect(wrapper.find('Item').type()).toBe(Item);
 
     const Title = wrapper.find('Title');
     expect(Title.dive().type()).toBe('h4');

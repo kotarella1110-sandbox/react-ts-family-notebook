@@ -8,6 +8,7 @@ exports[`Storyshots Templates/AppTemplate default 1`] = `
 .c2 {
   grid-area: main;
   overflow: auto;
+  background-color: #ededed;
 }
 
 .c0 {
@@ -66,8 +67,33 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
 }
 
 .c8 > svg {
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.c14 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c14 > svg {
+  width: 36px;
+  height: 36px;
+}
+
+.c17 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
+}
+
+.c17 > svg {
+  width: 24px;
+  height: 24px;
 }
 
 .c6 {
@@ -111,26 +137,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   line-height: 1em;
 }
 
-.c16 {
-  display: block;
-  line-height: 0;
-  -webkit-transform: scale(-1,1);
-  -ms-transform: scale(-1,1);
-  transform: scale(-1,1);
-}
-
-.c16 svg {
-  width: 24px;
-  height: 24px;
-}
-
-.c13 svg,
-.c13 div {
-  width: 36px;
-  height: 36px;
-}
-
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,23 +156,28 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   background-color: #fff;
 }
 
-.c12 > * {
+.c13 > * {
   margin: 2px;
 }
 
-.c12 > .c14 {
+.c13 > .c15 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c15 {
+.c16 {
   margin: 0;
   line-height: 1.5em;
 }
 
+.c12 {
+  cursor: pointer;
+}
+
 .c10 {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -231,6 +243,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
 .c9 {
   grid-area: main;
   overflow: auto;
+  background-color: #ededed;
 }
 
 .c0 {
@@ -279,6 +292,8 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
                 },
               }
             }
+            name="add"
+            size="24px"
           />
           <span>
             追加
@@ -304,7 +319,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
             className="c13"
           >
             <span
-              className="c8"
+              className="c14"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -312,26 +327,23 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
                   },
                 }
               }
+              name="care-receiver-info"
+              size="36px"
             />
-          </div>
-          <div
-            className="c14 "
-          >
-            <h4
-              className="c15"
+            <div
+              className="c15 "
             >
-              病歴やアレルギーなど
-            </h4>
-          </div>
-          <div
-            className=""
-          >
-            <button
-              className="c16 c7"
-              onClick={[Function]}
+              <h4
+                className="c16"
+              >
+                病歴やアレルギーなど
+              </h4>
+            </div>
+            <div
+              className=""
             >
               <span
-                className="c8"
+                className="c17"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -339,8 +351,10 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
                     },
                   }
                 }
+                name="arrow"
+                size="24px"
               />
-            </button>
+            </div>
           </div>
         </a>
       </li>
@@ -355,7 +369,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
             className="c13"
           >
             <span
-              className="c8"
+              className="c14"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -363,26 +377,23 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
                   },
                 }
               }
+              name="care-receiver-info"
+              size="36px"
             />
-          </div>
-          <div
-            className="c14 "
-          >
-            <h4
-              className="c15"
+            <div
+              className="c15 "
             >
-              お薬情報
-            </h4>
-          </div>
-          <div
-            className=""
-          >
-            <button
-              className="c16 c7"
-              onClick={[Function]}
+              <h4
+                className="c16"
+              >
+                お薬情報
+              </h4>
+            </div>
+            <div
+              className=""
             >
               <span
-                className="c8"
+                className="c17"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -390,8 +401,10 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
                     },
                   }
                 }
+                name="arrow"
+                size="24px"
               />
-            </button>
+            </div>
           </div>
         </a>
       </li>

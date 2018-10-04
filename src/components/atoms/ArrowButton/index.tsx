@@ -11,7 +11,7 @@ export interface Props {
 
 const ArrowButton: React.SFC<Props> = props => (
   <Wrapper {...props}>
-    <Icon icon="arrow" />
+    <Icon name="arrow" />
   </Wrapper>
 );
 

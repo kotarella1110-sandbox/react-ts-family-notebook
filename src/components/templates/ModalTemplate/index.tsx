@@ -46,6 +46,7 @@ const Main = styled.main`
   grid-area: main;
   overflow: auto;
   -webkitoverflowscrolling: touch;
+  background-color: ${props => props.theme.grayLighter};
 `;
 
 const Footer = styled.footer`

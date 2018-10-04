@@ -19,6 +19,7 @@ const Header = styled.header`
 const Main = styled.main`
   grid-area: main;
   overflow: auto;
+  background-color: ${props => props.theme.grayLighter};
 `;
 
 const Wrapper = styled.div`

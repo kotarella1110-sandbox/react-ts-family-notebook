@@ -1,59 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Organisms/CareReceiverList default 1`] = `
-.c11 {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-size: 100%;
-  vertical-align: baseline;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.c11:hover {
-  cursor: pointer;
-}
-
-.c11:focus {
-  outline: 0;
-}
-
-.c3 {
+.c2 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c3 > svg {
-  width: 100%;
-  height: 100%;
+.c2 > svg {
+  width: 36px;
+  height: 36px;
 }
 
 .c10 {
-  display: block;
-  line-height: 0;
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
   -webkit-transform: scale(-1,1);
   -ms-transform: scale(-1,1);
   transform: scale(-1,1);
 }
 
-.c10 svg {
+.c10 > svg {
   width: 24px;
   height: 24px;
-}
-
-.c2 svg,
-.c2 div {
-  width: 36px;
-  height: 36px;
 }
 
 .c1 {
@@ -79,7 +49,7 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
   margin: 2px;
 }
 
-.c1 > .c4 {
+.c1 > .c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -90,32 +60,38 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
   line-height: 1.5em;
 }
 
+.c8 {
+  cursor: pointer;
+}
+
+.c4 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
 .c5 {
   margin: 0;
   line-height: 1.5em;
 }
 
 .c6 {
-  margin: 0;
-  line-height: 1.5em;
-}
-
-.c7 {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-.c8 {
+.c7 {
   border-top: solid 1px #c8c8c8;
   border-bottom: solid 1px #c8c8c8;
 }
 
-.c8 + .c8 {
+.c7 + .c7 {
   border-top: 0;
 }
 
 .c0 {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -126,14 +102,13 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
     className=""
   >
     <a
-      className="c1"
-      onClick={[Function]}
+      className=""
     >
       <div
-        className="c2"
+        className="c1"
       >
         <span
-          className="c3"
+          className="c2"
           dangerouslySetInnerHTML={
             Object {
               "__html": Object {
@@ -141,40 +116,42 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
               },
             }
           }
+          name="care-receiver"
+          size="36px"
         />
-      </div>
-      <div
-        className="c4 "
-      >
-        <div>
-          <h4
-            className="c5"
-          >
-            左藤太郎
-          </h4>
-          <p
-            className="c6"
-          >
-            76歳 1941年1月15日生
-          </p>
+        <div
+          className="c3 "
+        >
+          <div>
+            <h4
+              className="c4"
+            >
+              左藤太郎
+            </h4>
+            <p
+              className="c5"
+            >
+              76歳 1941年1月15日生
+            </p>
+          </div>
         </div>
       </div>
     </a>
     <ul
-      className="c7"
+      className="c6"
     >
       <li
-        className="c8"
+        className="c7"
       >
         <a
-          className="c1"
+          className="c8"
           onClick={[Function]}
         >
           <div
-            className="c2"
+            className="c1"
           >
             <span
-              className="c3"
+              className="c2"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -182,26 +159,23 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                   },
                 }
               }
+              name="care-receiver-info"
+              size="36px"
             />
-          </div>
-          <div
-            className="c4 "
-          >
-            <h4
-              className="c9"
+            <div
+              className="c3 "
             >
-              病歴やアレルギーなど
-            </h4>
-          </div>
-          <div
-            className=""
-          >
-            <button
-              className="c10 c11"
-              onClick={[Function]}
+              <h4
+                className="c9"
+              >
+                病歴やアレルギーなど
+              </h4>
+            </div>
+            <div
+              className=""
             >
               <span
-                className="c3"
+                className="c10"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -209,23 +183,25 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                     },
                   }
                 }
+                name="arrow"
+                size="24px"
               />
-            </button>
+            </div>
           </div>
         </a>
       </li>
       <li
-        className="c8"
+        className="c7"
       >
         <a
-          className="c1"
+          className="c8"
           onClick={[Function]}
         >
           <div
-            className="c2"
+            className="c1"
           >
             <span
-              className="c3"
+              className="c2"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -233,26 +209,23 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                   },
                 }
               }
+              name="care-receiver-info"
+              size="36px"
             />
-          </div>
-          <div
-            className="c4 "
-          >
-            <h4
-              className="c9"
+            <div
+              className="c3 "
             >
-              お薬情報
-            </h4>
-          </div>
-          <div
-            className=""
-          >
-            <button
-              className="c10 c11"
-              onClick={[Function]}
+              <h4
+                className="c9"
+              >
+                お薬情報
+              </h4>
+            </div>
+            <div
+              className=""
             >
               <span
-                className="c3"
+                className="c10"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -260,8 +233,10 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                     },
                   }
                 }
+                name="arrow"
+                size="24px"
               />
-            </button>
+            </div>
           </div>
         </a>
       </li>
@@ -271,14 +246,13 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
     className=""
   >
     <a
-      className="c1"
-      onClick={[Function]}
+      className=""
     >
       <div
-        className="c2"
+        className="c1"
       >
         <span
-          className="c3"
+          className="c2"
           dangerouslySetInnerHTML={
             Object {
               "__html": Object {
@@ -286,40 +260,42 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
               },
             }
           }
+          name="care-receiver"
+          size="36px"
         />
-      </div>
-      <div
-        className="c4 "
-      >
-        <div>
-          <h4
-            className="c5"
-          >
-            左藤二郎
-          </h4>
-          <p
-            className="c6"
-          >
-            76歳 1941年2月13日生
-          </p>
+        <div
+          className="c3 "
+        >
+          <div>
+            <h4
+              className="c4"
+            >
+              左藤二郎
+            </h4>
+            <p
+              className="c5"
+            >
+              76歳 1941年2月13日生
+            </p>
+          </div>
         </div>
       </div>
     </a>
     <ul
-      className="c7"
+      className="c6"
     >
       <li
-        className="c8"
+        className="c7"
       >
         <a
-          className="c1"
+          className="c8"
           onClick={[Function]}
         >
           <div
-            className="c2"
+            className="c1"
           >
             <span
-              className="c3"
+              className="c2"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -327,26 +303,23 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                   },
                 }
               }
+              name="care-receiver-info"
+              size="36px"
             />
-          </div>
-          <div
-            className="c4 "
-          >
-            <h4
-              className="c9"
+            <div
+              className="c3 "
             >
-              病歴やアレルギーなど
-            </h4>
-          </div>
-          <div
-            className=""
-          >
-            <button
-              className="c10 c11"
-              onClick={[Function]}
+              <h4
+                className="c9"
+              >
+                病歴やアレルギーなど
+              </h4>
+            </div>
+            <div
+              className=""
             >
               <span
-                className="c3"
+                className="c10"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -354,23 +327,25 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                     },
                   }
                 }
+                name="arrow"
+                size="24px"
               />
-            </button>
+            </div>
           </div>
         </a>
       </li>
       <li
-        className="c8"
+        className="c7"
       >
         <a
-          className="c1"
+          className="c8"
           onClick={[Function]}
         >
           <div
-            className="c2"
+            className="c1"
           >
             <span
-              className="c3"
+              className="c2"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -378,26 +353,23 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                   },
                 }
               }
+              name="care-receiver-info"
+              size="36px"
             />
-          </div>
-          <div
-            className="c4 "
-          >
-            <h4
-              className="c9"
+            <div
+              className="c3 "
             >
-              お薬情報
-            </h4>
-          </div>
-          <div
-            className=""
-          >
-            <button
-              className="c10 c11"
-              onClick={[Function]}
+              <h4
+                className="c9"
+              >
+                お薬情報
+              </h4>
+            </div>
+            <div
+              className=""
             >
               <span
-                className="c3"
+                className="c10"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -405,8 +377,10 @@ exports[`Storyshots Organisms/CareReceiverList default 1`] = `
                     },
                   }
                 }
+                name="arrow"
+                size="24px"
               />
-            </button>
+            </div>
           </div>
         </a>
       </li>

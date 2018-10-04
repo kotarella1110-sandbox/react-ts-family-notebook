@@ -6,7 +6,7 @@ import Icon from '../../atoms/Icon';
 const setup = (propOverrides = {}) => {
   const props: Props = {
     children: 'Title',
-    icon: <Icon icon="add" />,
+    icon: <Icon name="add" />,
     ...propOverrides,
   };
 
@@ -21,7 +21,7 @@ const setup = (propOverrides = {}) => {
 describe('Item', () => {
   it('コンポーネントがレンダリングされていること', () => {
     const { wrapper } = setup();
-    expect(wrapper.dive().type()).toBe('a');
+    expect(wrapper.dive().type()).toBe('div');
 
     const Contents = wrapper.find('Contents');
     expect(Contents.dive().type()).toBe('div');
@@ -39,14 +39,5 @@ describe('Item', () => {
     const Right = wrapper.find('Right');
     expect(Right.dive().type()).toBe('div');
     expect(Right.dive().contains(<p>Right</p>)).toBeTruthy();
-  });
-
-  it('Wrapper コンポーネントの click で props.onClick が呼ばれること', () => {
-    const {
-      props: { onClick },
-      wrapper,
-    } = setup({ onClick: jest.fn() });
-    wrapper.simulate('click');
-    expect(onClick).toHaveBeenCalledTimes(1);
   });
 });

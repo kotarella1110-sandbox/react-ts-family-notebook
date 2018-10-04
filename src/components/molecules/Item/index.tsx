@@ -5,12 +5,11 @@ export interface Props {
   readonly icon: JSX.Element;
   readonly children: React.ReactNode;
   readonly right?: React.ReactNode;
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const Item: React.SFC<Props> = ({ icon, children, right, onClick }) => (
-  <Wrapper onClick={onClick}>
-    <Icon>{icon}</Icon>
+const Item: React.SFC<Props> = ({ icon, children, right }) => (
+  <Wrapper>
+    {icon}
     <Contents>{children}</Contents>
     {right && <Right>{right && right}</Right>}
   </Wrapper>
@@ -18,22 +17,13 @@ const Item: React.SFC<Props> = ({ icon, children, right, onClick }) => (
 
 Item.defaultProps = {
   right: null,
-  onClick: e => null,
 };
-
-const Icon = styled.div`
-  svg,
-  div {
-    width: 36px;
-    height: 36px;
-  }
-`;
 
 const Contents = styled.div``;
 
 const Right = styled.div``;
 
-const Wrapper = styled.a`
+const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

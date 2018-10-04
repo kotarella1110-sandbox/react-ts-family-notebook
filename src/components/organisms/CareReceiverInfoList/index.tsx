@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styled from 'styled';
-import { Folder } from 'models';
+import { FolderEntities } from 'models';
 import CareReceiverInfoItem from 'containers/CareReceiverInfoItem';
 
 export interface Props {
-  readonly folderIds: Folder['id'][];
+  readonly folderIds: FolderEntities['id'][];
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
@@ -24,6 +24,7 @@ CareReceiverInfoList.defaultProps = {
 
 const List = styled<{}, 'ul'>('ul')`
   list-style: none;
+  margin: 0;
   padding: 0;
 `;
 

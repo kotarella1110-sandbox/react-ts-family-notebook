@@ -9,7 +9,7 @@ export interface Props {
 
 const AddButton: React.SFC<Props> = ({ onClick, children }) => (
   <Wrapper onClick={onClick}>
-    <Icon icon="add" />
+    <Icon name="add" />
     <span>{children}</span>
   </Wrapper>
 );
