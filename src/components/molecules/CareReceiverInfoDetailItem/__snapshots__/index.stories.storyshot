@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Molecules/CareReceiverInfoDetailItem default 1`] = `
+.c1 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c1 > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 16px;
+  color: $gray-dark;
+  min-height: 48px;
+  background-color: #fff;
+}
+
+.c0 > * {
+  margin: 2px;
+}
+
+.c0 > .c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.c4 .c5 {
+  margin: 4px;
+}
+
+.c4 p {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: $gray;
+  word-break: break-all;
+}
+
+<a
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className="c0"
+  >
+    <span
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+      name="care-receiver-info-detail"
+      size="24px"
+    />
+    <div
+      className="c2 "
+    >
+      <h4
+        className="c3"
+      >
+        Title
+      </h4>
+    </div>
+    <div
+      className=""
+    >
+      <p>
+        編集
+      </p>
+    </div>
+  </div>
+  <div
+    className="c4"
+  >
+    <span
+      className="c5 c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+      name="exclamation"
+      size="24px"
+    />
+    <p>
+      Content
+    </p>
+  </div>
+</a>
+`;
+
+exports[`Storyshots Molecules/CareReceiverInfoDetailItem props onClick 1`] = `
+.c1 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c1 > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 16px;
+  color: $gray-dark;
+  min-height: 48px;
+  background-color: #fff;
+}
+
+.c0 > * {
+  margin: 2px;
+}
+
+.c0 > .c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.c4 .c5 {
+  margin: 4px;
+}
+
+.c4 p {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: $gray;
+  word-break: break-all;
+}
+
+<a
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className="c0"
+  >
+    <span
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+      name="care-receiver-info-detail"
+      size="24px"
+    />
+    <div
+      className="c2 "
+    >
+      <h4
+        className="c3"
+      >
+        Title
+      </h4>
+    </div>
+    <div
+      className=""
+    >
+      <p>
+        編集
+      </p>
+    </div>
+  </div>
+  <div
+    className="c4"
+  >
+    <span
+      className="c5 c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": Object {
+            "default": "test-file-stub",
+          },
+        }
+      }
+      name="exclamation"
+      size="24px"
+    />
+    <p>
+      Content
+    </p>
+  </div>
+</a>
+`;
