@@ -1,3 +1,5 @@
+import { RouterState } from 'connected-react-router';
+
 interface NormalizedObjects<T> {
   [id: number]: T;
 }
@@ -57,4 +59,5 @@ export interface Entities {
 
 export interface State {
   entities: Entities;
+  router?: RouterState;
 }
