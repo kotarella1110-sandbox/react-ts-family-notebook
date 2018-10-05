@@ -1,0 +1,519 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Pages/CareReceiverInfoDetailPage default 1`] = `
+.c8 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c8:hover {
+  cursor: pointer;
+}
+
+.c8:focus {
+  outline: 0;
+}
+
+.c9 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c9 > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.c19 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c19 > svg {
+  width: 34px;
+  height: 34px;
+}
+
+.c12 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c12 > svg {
+  width: 36px;
+  height: 36px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #007f48;
+  padding: 8px;
+  width: 100%;
+}
+
+.c7 svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  margin: 0 6px 0 0;
+}
+
+.c7 svg > circle {
+  fill: #fff !important;
+}
+
+.c7 svg > line {
+  stroke: #007f48 !important;
+}
+
+.c7 span {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 16px;
+  color: $gray-dark;
+  min-height: 48px;
+  background-color: #fff;
+}
+
+.c11 > * {
+  margin: 2px;
+}
+
+.c11 > .c13 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c20 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.c21 .c22 {
+  margin: 4px;
+}
+
+.c21 p {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: $gray;
+  word-break: break-all;
+}
+
+.c14 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c15 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c17 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c18 {
+  border-top: solid 1px #c8c8c8;
+  border-bottom: solid 1px #c8c8c8;
+}
+
+.c18 + .c18 {
+  border-top: 0;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.c16 > h4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0;
+}
+
+.c3 {
+  width: calc(8px * 10);
+  display: block;
+  line-height: 1em;
+}
+
+.c5 {
+  font-size: 5vw;
+  font-weight: bold;
+  color: #007f48;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 calc(8px * 2);
+  text-align: center;
+}
+
+.c6 {
+  width: calc(8px * 10);
+  display: block;
+  line-height: 1em;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #FFFBE8;
+  border-bottom: solid 2px #babfbd;
+  box-sizing: border-box;
+  height: calc(8px * 6);
+  padding: 0 calc(8px * 2);
+}
+
+.c2 a {
+  color: #007f48;
+  display: inline-block;
+}
+
+.c2 > .c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  grid-area: header;
+}
+
+.c10 {
+  grid-area: main;
+  overflow: auto;
+  background-color: #ededed;
+}
+
+.c0 {
+  display: grid;
+  grid-template-areas: 'header' 'main';
+  grid-template-columns: 1fr;
+  grid-template-rows: calc(8px * 6) calc( 100vh - 8px * 6 );
+}
+
+@media (min-width:380px) {
+  .c5 {
+    font-size: 20px;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <header
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        />
+        <h2
+          className="c4 c5"
+        >
+          本人情報詳細
+        </h2>
+        <div
+          className="c6"
+        >
+          <button
+            className="c7 c8"
+            onClick={[Function]}
+          >
+            <span
+              className="c9"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": Object {
+                    "default": "test-file-stub",
+                  },
+                }
+              }
+              name="add"
+              size="24px"
+            />
+            <span>
+              追加
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main
+      className="c10"
+    >
+      <div
+        className=""
+      >
+        <a
+          className=""
+        >
+          <div
+            className="c11"
+          >
+            <span
+              className="c12"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": Object {
+                    "default": "test-file-stub",
+                  },
+                }
+              }
+              name="care-receiver"
+              size="36px"
+            />
+            <div
+              className="c13 "
+            >
+              <div>
+                <h4
+                  className="c14"
+                >
+                  左藤太郎
+                </h4>
+                <p
+                  className="c15"
+                >
+                  76歳 1941年1月15日生
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div
+          className="c16"
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+        >
+          <h4>
+            病歴やアレルギーなど
+          </h4>
+          <p>
+            編集
+          </p>
+        </div>
+        <ul
+          className="c17"
+        >
+          <li
+            className="c18"
+          >
+            <a
+              className=""
+              onClick={[Function]}
+            >
+              <div
+                className="c11"
+              >
+                <span
+                  className="c19"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": Object {
+                        "default": "test-file-stub",
+                      },
+                    }
+                  }
+                  name="care-receiver-info-detail"
+                  size="34px"
+                />
+                <div
+                  className="c13 "
+                >
+                  <h4
+                    className="c20"
+                  >
+                    アレルギー
+                  </h4>
+                </div>
+                <div
+                  className=""
+                >
+                  <p>
+                    編集
+                  </p>
+                </div>
+              </div>
+              <div
+                className="c21"
+              >
+                <span
+                  className="c22 c9"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": Object {
+                        "default": "test-file-stub",
+                      },
+                    }
+                  }
+                  name="exclamation"
+                  size="24px"
+                />
+                <p>
+                  カニ、エビ
+                </p>
+              </div>
+            </a>
+          </li>
+          <li
+            className="c18"
+          >
+            <a
+              className=""
+              onClick={[Function]}
+            >
+              <div
+                className="c11"
+              >
+                <span
+                  className="c19"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": Object {
+                        "default": "test-file-stub",
+                      },
+                    }
+                  }
+                  name="care-receiver-info-detail"
+                  size="34px"
+                />
+                <div
+                  className="c13 "
+                >
+                  <h4
+                    className="c20"
+                  >
+                    病歴
+                  </h4>
+                </div>
+                <div
+                  className=""
+                >
+                  <p>
+                    編集
+                  </p>
+                </div>
+              </div>
+              <div
+                className="c21"
+              >
+                <span
+                  className="c22 c9"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": Object {
+                        "default": "test-file-stub",
+                      },
+                    }
+                  }
+                  name="exclamation"
+                  size="24px"
+                />
+                <p>
+                  脳梗塞（２００８年９月）
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </div>
+</div>
+`;
