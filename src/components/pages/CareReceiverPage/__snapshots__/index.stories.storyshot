@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Pages/CareReceiverPage default 1`] = `
-.c7 {
+.c8 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -18,37 +18,26 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c7:hover {
+.c8:hover {
   cursor: pointer;
 }
 
-.c7:focus {
+.c8:focus {
   outline: 0;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c8 > svg {
+.c9 > svg {
   width: 24px;
   height: 24px;
 }
 
-.c11 {
-  display: inline-block;
-  margin: 0.1em;
-  box-sizing: border-box;
-}
-
-.c11 > svg {
-  width: 36px;
-  height: 36px;
-}
-
-.c19 {
+.c20 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
@@ -57,12 +46,23 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   transform: scale(-1,1);
 }
 
-.c19 > svg {
+.c20 > svg {
   width: 24px;
   height: 24px;
 }
 
-.c6 {
+.c12 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c12 > svg {
+  width: 36px;
+  height: 36px;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,29 +81,29 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   width: 100%;
 }
 
-.c6 svg {
+.c7 svg {
   width: 18px;
   height: 18px;
   display: block;
   margin: 0 6px 0 0;
 }
 
-.c6 svg > circle {
+.c7 svg > circle {
   fill: #fff !important;
 }
 
-.c6 svg > line {
+.c7 svg > line {
   stroke: #007f48 !important;
 }
 
-.c6 span {
+.c7 span {
   display: block;
   color: #fff;
   font-weight: bold;
   line-height: 1em;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -122,28 +122,23 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   background-color: #fff;
 }
 
-.c10 > * {
+.c11 > * {
   margin: 2px;
 }
 
-.c10 > .c12 {
+.c11 > .c13 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
+.c19 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
 .c18 {
-  margin: 0;
-  line-height: 1.5em;
-}
-
-.c17 {
   cursor: pointer;
-}
-
-.c13 {
-  margin: 0;
-  line-height: 1.5em;
 }
 
 .c14 {
@@ -152,17 +147,22 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
 }
 
 .c15 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c16 {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.c16 {
+.c17 {
   border-top: solid 1px #c8c8c8;
   border-bottom: solid 1px #c8c8c8;
 }
 
-.c16 + .c16 {
+.c17 + .c17 {
   border-top: 0;
 }
 
@@ -172,16 +172,17 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   line-height: 1em;
 }
 
-.c4 {
+.c5 {
   font-size: 5vw;
   font-weight: bold;
   color: #007f48;
   white-space: nowrap;
   overflow: hidden;
   padding: 0 calc(8px * 2);
+  text-align: center;
 }
 
-.c5 {
+.c6 {
   width: calc(8px * 10);
   display: block;
   line-height: 1em;
@@ -212,11 +213,17 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   display: inline-block;
 }
 
+.c2 > .c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .c1 {
   grid-area: header;
 }
 
-.c9 {
+.c10 {
   grid-area: main;
   overflow: auto;
   background-color: #ededed;
@@ -230,7 +237,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
 }
 
 @media (min-width:380px) {
-  .c4 {
+  .c5 {
     font-size: 20px;
   }
 }
@@ -249,19 +256,19 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
           className="c3"
         />
         <h2
-          className="c4"
+          className="c4 c5"
         >
           本人情報
         </h2>
         <div
-          className="c5"
+          className="c6"
         >
           <button
-            className="c6 c7"
+            className="c7 c8"
             onClick={[Function]}
           >
             <span
-              className="c8"
+              className="c9"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -280,7 +287,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
       </div>
     </header>
     <main
-      className="c9"
+      className="c10"
     >
       <div
         className=""
@@ -289,10 +296,10 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
           className=""
         >
           <div
-            className="c10"
+            className="c11"
           >
             <span
-              className="c11"
+              className="c12"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -304,16 +311,16 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
               size="36px"
             />
             <div
-              className="c12 "
+              className="c13 "
             >
               <div>
                 <h4
-                  className="c13"
+                  className="c14"
                 >
                   左藤太郎
                 </h4>
                 <p
-                  className="c14"
+                  className="c15"
                 >
                   76歳 1941年1月15日生
                 </p>
@@ -322,20 +329,20 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
           </div>
         </a>
         <ul
-          className="c15"
+          className="c16"
         >
           <li
-            className="c16"
+            className="c17"
           >
             <a
-              className="c17"
+              className="c18"
               onClick={[Function]}
             >
               <div
-                className="c10"
+                className="c11"
               >
                 <span
-                  className="c11"
+                  className="c12"
                   dangerouslySetInnerHTML={
                     Object {
                       "__html": Object {
@@ -347,10 +354,10 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   size="36px"
                 />
                 <div
-                  className="c12 "
+                  className="c13 "
                 >
                   <h4
-                    className="c18"
+                    className="c19"
                   >
                     病歴やアレルギーなど
                   </h4>
@@ -359,7 +366,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   className=""
                 >
                   <span
-                    className="c19"
+                    className="c20"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": Object {
@@ -375,17 +382,17 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
             </a>
           </li>
           <li
-            className="c16"
+            className="c17"
           >
             <a
-              className="c17"
+              className="c18"
               onClick={[Function]}
             >
               <div
-                className="c10"
+                className="c11"
               >
                 <span
-                  className="c11"
+                  className="c12"
                   dangerouslySetInnerHTML={
                     Object {
                       "__html": Object {
@@ -397,10 +404,10 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   size="36px"
                 />
                 <div
-                  className="c12 "
+                  className="c13 "
                 >
                   <h4
-                    className="c18"
+                    className="c19"
                   >
                     お薬情報
                   </h4>
@@ -409,7 +416,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
                   className=""
                 >
                   <span
-                    className="c19"
+                    className="c20"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": Object {

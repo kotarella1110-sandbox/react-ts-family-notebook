@@ -4,20 +4,20 @@ import Button from 'components/atoms/Button';
 import Icon from 'components/atoms/Icon';
 
 export interface Props {
-  readonly isPrimary?: boolean;
-  readonly isReverse?: boolean;
+  readonly primary?: boolean;
+  readonly reverse?: boolean;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const ArrowButton: React.SFC<Props> = props => (
   <Wrapper {...props}>
-    <Icon name="arrow" />
+    <Icon name="arrow" reverse={props.reverse} />
   </Wrapper>
 );
 
 ArrowButton.defaultProps = {
-  isPrimary: false,
-  isReverse: false,
+  primary: false,
+  reverse: false,
   onClick: e => null,
 };
 
@@ -25,19 +25,8 @@ const Wrapper = styled<Props>(Button)`
   display: block;
   line-height: 0;
 
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-
   ${props =>
-    props.isReverse &&
-    css`
-      transform: scale(-1, 1);
-    `};
-
-  ${props =>
-    props.isPrimary &&
+    props.primary &&
     css`
       svg path {
         fill: ${props => props.theme.brandPrimary} !important;

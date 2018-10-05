@@ -42,223 +42,6 @@ exports[`Storyshots Atoms/ArrowButton default 1`] = `
   line-height: 0;
 }
 
-.c0 svg {
-  width: 24px;
-  height: 24px;
-}
-
-<button
-  className="c0 c1"
-  onClick={[Function]}
->
-  <span
-    className="c2"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": Object {
-          "default": "test-file-stub",
-        },
-      }
-    }
-    name="arrow"
-    size="24px"
-  />
-</button>
-`;
-
-exports[`Storyshots Atoms/ArrowButton props isPrimary is true 1`] = `
-.c1 {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-size: 100%;
-  vertical-align: baseline;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.c1:hover {
-  cursor: pointer;
-}
-
-.c1:focus {
-  outline: 0;
-}
-
-.c2 {
-  display: inline-block;
-  margin: 0.1em;
-  box-sizing: border-box;
-}
-
-.c2 > svg {
-  width: 24px;
-  height: 24px;
-}
-
-.c0 {
-  display: block;
-  line-height: 0;
-}
-
-.c0 svg {
-  width: 24px;
-  height: 24px;
-}
-
-.c0 svg path {
-  fill: #007f48 !important;
-}
-
-<button
-  className="c0 c1"
-  onClick={[Function]}
->
-  <span
-    className="c2"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": Object {
-          "default": "test-file-stub",
-        },
-      }
-    }
-    name="arrow"
-    size="24px"
-  />
-</button>
-`;
-
-exports[`Storyshots Atoms/ArrowButton props isPrimary is true and isReverse is true 1`] = `
-.c1 {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-size: 100%;
-  vertical-align: baseline;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.c1:hover {
-  cursor: pointer;
-}
-
-.c1:focus {
-  outline: 0;
-}
-
-.c2 {
-  display: inline-block;
-  margin: 0.1em;
-  box-sizing: border-box;
-}
-
-.c2 > svg {
-  width: 24px;
-  height: 24px;
-}
-
-.c0 {
-  display: block;
-  line-height: 0;
-  -webkit-transform: scale(-1,1);
-  -ms-transform: scale(-1,1);
-  transform: scale(-1,1);
-}
-
-.c0 svg {
-  width: 24px;
-  height: 24px;
-}
-
-.c0 svg path {
-  fill: #007f48 !important;
-}
-
-<button
-  className="c0 c1"
-  onClick={[Function]}
->
-  <span
-    className="c2"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": Object {
-          "default": "test-file-stub",
-        },
-      }
-    }
-    name="arrow"
-    size="24px"
-  />
-</button>
-`;
-
-exports[`Storyshots Atoms/ArrowButton props isReverse is true 1`] = `
-.c1 {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-size: 100%;
-  vertical-align: baseline;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.c1:hover {
-  cursor: pointer;
-}
-
-.c1:focus {
-  outline: 0;
-}
-
-.c2 {
-  display: inline-block;
-  margin: 0.1em;
-  box-sizing: border-box;
-}
-
-.c2 > svg {
-  width: 24px;
-  height: 24px;
-}
-
-.c0 {
-  display: block;
-  line-height: 0;
-  -webkit-transform: scale(-1,1);
-  -ms-transform: scale(-1,1);
-  transform: scale(-1,1);
-}
-
-.c0 svg {
-  width: 24px;
-  height: 24px;
-}
-
 <button
   className="c0 c1"
   onClick={[Function]}
@@ -320,9 +103,201 @@ exports[`Storyshots Atoms/ArrowButton props onClick 1`] = `
   line-height: 0;
 }
 
-.c0 svg {
+<button
+  className="c0 c1"
+  onClick={[Function]}
+>
+  <span
+    className="c2"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": Object {
+          "default": "test-file-stub",
+        },
+      }
+    }
+    name="arrow"
+    size="24px"
+  />
+</button>
+`;
+
+exports[`Storyshots Atoms/ArrowButton props primary is true 1`] = `
+.c1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:focus {
+  outline: 0;
+}
+
+.c2 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c2 > svg {
   width: 24px;
   height: 24px;
+}
+
+.c0 {
+  display: block;
+  line-height: 0;
+}
+
+.c0 svg path {
+  fill: #007f48 !important;
+}
+
+<button
+  className="c0 c1"
+  onClick={[Function]}
+>
+  <span
+    className="c2"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": Object {
+          "default": "test-file-stub",
+        },
+      }
+    }
+    name="arrow"
+    size="24px"
+  />
+</button>
+`;
+
+exports[`Storyshots Atoms/ArrowButton props primary is true and reverse is true 1`] = `
+.c1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:focus {
+  outline: 0;
+}
+
+.c2 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
+}
+
+.c2 > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.c0 {
+  display: block;
+  line-height: 0;
+}
+
+.c0 svg path {
+  fill: #007f48 !important;
+}
+
+<button
+  className="c0 c1"
+  onClick={[Function]}
+>
+  <span
+    className="c2"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": Object {
+          "default": "test-file-stub",
+        },
+      }
+    }
+    name="arrow"
+    size="24px"
+  />
+</button>
+`;
+
+exports[`Storyshots Atoms/ArrowButton props reverse is true 1`] = `
+.c1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:focus {
+  outline: 0;
+}
+
+.c2 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
+}
+
+.c2 > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.c0 {
+  display: block;
+  line-height: 0;
 }
 
 <button

@@ -42,7 +42,7 @@ storiesOf('Organisms/Header', module)
     'props left is ArrowBtton and right is AddButton',
     withNotes(``)(() => (
       <Header
-        left={<ArrowBtton isPrimary={true} onClick={action('onClick')} />}
+        left={<ArrowBtton primary={true} onClick={action('onClick')} />}
         right={<AddButton onClick={action('onClick')}>追加</AddButton>}
         title="Title"
       />

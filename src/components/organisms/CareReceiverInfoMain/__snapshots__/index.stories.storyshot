@@ -1,17 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Organisms/CareReceiverInfoMain default 1`] = `
-.c1 {
-  display: inline-block;
-  margin: 0.1em;
-  box-sizing: border-box;
-}
-
-.c1 > svg {
-  width: 36px;
-  height: 36px;
-}
-
 .c9 {
   display: inline-block;
   margin: 0.1em;
@@ -24,6 +13,17 @@ exports[`Storyshots Organisms/CareReceiverInfoMain default 1`] = `
 .c9 > svg {
   width: 24px;
   height: 24px;
+}
+
+.c1 {
+  display: inline-block;
+  margin: 0.1em;
+  box-sizing: border-box;
+}
+
+.c1 > svg {
+  width: 36px;
+  height: 36px;
 }
 
 .c0 {

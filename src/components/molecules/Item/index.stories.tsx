@@ -33,7 +33,7 @@ storiesOf('Molecules/Item', module)
   .addWithJSX(
     'props right is ArrowButton',
     withNotes(``)(() => (
-      <Item icon={<Icon name="add" />} right={<ArrowButton isReverse={true} />}>
+      <Item icon={<Icon name="add" />} right={<ArrowButton reverse={true} />}>
         Item
       </Item>
     ))

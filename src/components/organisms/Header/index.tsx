@@ -36,6 +36,7 @@ const Title = styled.h2`
   white-space: nowrap;
   overflow: hidden;
   padding: 0 calc(${props => props.theme.sizeBase} * 2);
+  text-align: center;
 
   @media (min-width: 380px) {
     font-size: ${props => props.theme.fontSizeHuge};
@@ -61,6 +62,10 @@ const Wrapper = styled.div`
   a {
     color: ${props => props.theme.brandPrimary};
     display: inline-block;
+  }
+
+  & > ${Title} {
+    flex: 1;
   }
 `;
 
