@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   grid-template-areas:
     'header'
     'main';
-  grid-template-columns: 1fr;
+  grid-template-columns: 100vw;
   grid-template-rows: calc(${props => props.theme.sizeBase} * 6) calc(
       100vh - ${props => props.theme.sizeBase} * 6
     );
