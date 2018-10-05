@@ -25,7 +25,8 @@ export const fetchFolderContents = actionCreator.async<
 export const addFolderContent = actionCreator.async<
   {
     folderId: FolderEntities['id'];
-    name: string;
+    title: FolderContentEntities['title'];
+    content: FolderContentEntities['content'];
   },
   {
     id: FolderContentEntities['id'];
