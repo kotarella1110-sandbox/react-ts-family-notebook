@@ -6,7 +6,7 @@ exports[`Storyshots Atoms/Button default 1`] = `
   padding: 0;
   border: 0;
   background: none;
-  font-size: 100%;
+  font-size: 1em;
   vertical-align: baseline;
   font-family: inherit;
   font-weight: inherit;
@@ -14,6 +14,7 @@ exports[`Storyshots Atoms/Button default 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,7 +40,7 @@ exports[`Storyshots Atoms/Button props onClick 1`] = `
   padding: 0;
   border: 0;
   background: none;
-  font-size: 100%;
+  font-size: 1em;
   vertical-align: baseline;
   font-family: inherit;
   font-weight: inherit;
@@ -47,6 +48,7 @@ exports[`Storyshots Atoms/Button props onClick 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -172,7 +172,7 @@ exports[`Storyshots Organisms/Header props left is ArrowBtton and right is AddBu
   padding: 0;
   border: 0;
   background: none;
-  font-size: 100%;
+  font-size: 1em;
   vertical-align: baseline;
   font-family: inherit;
   font-weight: inherit;
@@ -180,6 +180,7 @@ exports[`Storyshots Organisms/Header props left is ArrowBtton and right is AddBu
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -219,7 +220,6 @@ exports[`Storyshots Organisms/Header props left is ArrowBtton and right is AddBu
   border-radius: 4px;
   background-color: #007f48;
   padding: 8px;
-  width: 100%;
 }
 
 .c8 svg {
@@ -374,7 +374,7 @@ exports[`Storyshots Organisms/Header props right is AddButton 1`] = `
   padding: 0;
   border: 0;
   background: none;
-  font-size: 100%;
+  font-size: 1em;
   vertical-align: baseline;
   font-family: inherit;
   font-weight: inherit;
@@ -382,6 +382,7 @@ exports[`Storyshots Organisms/Header props right is AddButton 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -421,7 +422,6 @@ exports[`Storyshots Organisms/Header props right is AddButton 1`] = `
   border-radius: 4px;
   background-color: #007f48;
   padding: 8px;
-  width: 100%;
 }
 
 .c5 svg {

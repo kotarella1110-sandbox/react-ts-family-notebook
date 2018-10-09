@@ -40,7 +40,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   padding: 0;
   border: 0;
   background: none;
-  font-size: 100%;
+  font-size: 1em;
   vertical-align: baseline;
   font-family: inherit;
   font-weight: inherit;
@@ -48,6 +48,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -112,7 +113,6 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   border-radius: 4px;
   background-color: #007f48;
   padding: 8px;
-  width: 100%;
 }
 
 .c7 svg {

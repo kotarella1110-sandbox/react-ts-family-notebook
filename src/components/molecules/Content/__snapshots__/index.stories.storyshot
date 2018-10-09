@@ -25,13 +25,14 @@ exports[`Storyshots Molecules/Content default 1`] = `
 exports[`Storyshots Molecules/Content props children is Text 1`] = `
 .c0 {
   display: block;
+  margin: 0;
+  padding: 0;
   border: solid 1px #d9d9d9;
   border-radius: 4px;
   font-size: 20px;
   color: $gray;
   line-height: 1em;
-  border-top: 0;
-  border-radius: 0 0 4px 4px;
+  width: 100%;
 }
 
 <div

@@ -25,7 +25,6 @@ const Wrapper = styled(Button)`
   border-radius: 4px;
   background-color: ${props => props.theme.brandPrimary};
   padding: ${props => props.theme.sizeBase};
-  width: 100%;
 
   svg {
     width: 18px;

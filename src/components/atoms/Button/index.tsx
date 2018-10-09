@@ -5,12 +5,13 @@ const Button = styled.button`
   padding: 0;
   border: 0;
   background: none;
-  font-size: 100%;
+  font-size: 1em;
   vertical-align: baseline;
   font-family: inherit;
   font-weight: inherit;
   color: inherit;
   appearance: none;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
