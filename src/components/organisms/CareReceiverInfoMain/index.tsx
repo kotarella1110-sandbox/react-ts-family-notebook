@@ -6,24 +6,19 @@ import CareReceiverInfoList from '../CareReceiverInfoList';
 
 export interface Props {
   readonly careReceiver: CareReceiverEntities;
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const CareReceiverInfoMain: React.SFC<Props> = ({ careReceiver, onClick }) => (
+const CareReceiverInfoMain: React.SFC<Props> = ({ careReceiver }) => (
   <Wrapper>
     <CareReceiverItem careReceiver={careReceiver} />
     {careReceiver.folders && (
       <CareReceiverInfoList
+        careReceiverId={careReceiver.id}
         folderIds={careReceiver.folders}
-        onClick={onClick}
       />
     )}
   </Wrapper>
 );
-
-CareReceiverInfoMain.defaultProps = {
-  onClick: e => null,
-};
 
 const Wrapper = styled.div``;
 

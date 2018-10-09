@@ -26,6 +26,12 @@ exports[`Storyshots Organisms/CareReceiverInfoMain default 1`] = `
   height: 36px;
 }
 
+.c7 {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -58,10 +64,6 @@ exports[`Storyshots Organisms/CareReceiverInfoMain default 1`] = `
 .c8 {
   margin: 0;
   line-height: 1.5em;
-}
-
-.c7 {
-  cursor: pointer;
 }
 
 .c3 {
@@ -136,6 +138,7 @@ exports[`Storyshots Organisms/CareReceiverInfoMain default 1`] = `
     >
       <a
         className="c7"
+        href="/careReceivers/0/info/0"
         onClick={[Function]}
       >
         <div
@@ -186,6 +189,7 @@ exports[`Storyshots Organisms/CareReceiverInfoMain default 1`] = `
     >
       <a
         className="c7"
+        href="/careReceivers/0/info/1"
         onClick={[Function]}
       >
         <div

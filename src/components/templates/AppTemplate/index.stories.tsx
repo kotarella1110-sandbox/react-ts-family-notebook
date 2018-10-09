@@ -44,7 +44,7 @@ storiesOf('Templates/AppTemplate', module)
             title="Title"
           />
         }>
-        <CareReceiverInfoList folderIds={[0, 1]} onClick={action('onClick')} />
+        <CareReceiverInfoList careReceiverId={1} folderIds={[0, 1]} />
       </AppTemplate>
     ))
   );

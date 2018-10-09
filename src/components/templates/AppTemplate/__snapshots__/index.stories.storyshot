@@ -14,7 +14,7 @@ exports[`Storyshots Templates/AppTemplate default 1`] = `
 .c0 {
   display: grid;
   grid-template-areas: 'header' 'main';
-  grid-template-columns: 1fr;
+  grid-template-columns: 100vw;
   grid-template-rows: calc(8px * 6) calc( 100vh - 8px * 6 );
 }
 
@@ -137,6 +137,12 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   line-height: 1em;
 }
 
+.c13 {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c14 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -169,10 +175,6 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
 .c17 {
   margin: 0;
   line-height: 1.5em;
-}
-
-.c13 {
-  cursor: pointer;
 }
 
 .c11 {
@@ -256,7 +258,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
 .c0 {
   display: grid;
   grid-template-areas: 'header' 'main';
-  grid-template-columns: 1fr;
+  grid-template-columns: 100vw;
   grid-template-rows: calc(8px * 6) calc( 100vh - 8px * 6 );
 }
 
@@ -320,6 +322,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
       >
         <a
           className="c13"
+          href="/careReceivers/1/info/0"
           onClick={[Function]}
         >
           <div
@@ -370,6 +373,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
       >
         <a
           className="c13"
+          href="/careReceivers/1/info/1"
           onClick={[Function]}
         >
           <div

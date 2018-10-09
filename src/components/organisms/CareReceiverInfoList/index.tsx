@@ -1,26 +1,28 @@
 import * as React from 'react';
 import styled from 'styled';
-import { FolderEntities } from 'models';
+import { CareReceiverEntities, FolderEntities } from 'models';
+import Link from 'components/atoms/Link';
 import CareReceiverInfoItem from 'containers/CareReceiverInfoItem';
 
 export interface Props {
+  readonly careReceiverId: CareReceiverEntities['id'];
   readonly folderIds: FolderEntities['id'][];
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const CareReceiverInfoList: React.SFC<Props> = ({ folderIds, onClick }) => (
+const CareReceiverInfoList: React.SFC<Props> = ({
+  careReceiverId,
+  folderIds,
+}) => (
   <List>
     {folderIds.map(folderId => (
       <Item key={folderId}>
-        <CareReceiverInfoItem folderId={folderId} onClick={onClick} />
+        <Link to={`/careReceivers/${careReceiverId}/info/${folderId}`}>
+          <CareReceiverInfoItem folderId={folderId} />
+        </Link>
       </Item>
     ))}
   </List>
 );
-
-CareReceiverInfoList.defaultProps = {
-  onClick: e => null,
-};
 
 const List = styled<{}, 'ul'>('ul')`
   list-style: none;

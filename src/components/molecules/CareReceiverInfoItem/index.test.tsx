@@ -27,21 +27,10 @@ describe('CareReceiverInfoItem', () => {
       props: { folder },
       wrapper,
     } = setup();
-    expect(wrapper.dive().type()).toBe('a');
-
-    expect(wrapper.find('Item').type()).toBe(Item);
+    expect(wrapper.type()).toBe(Item);
 
     const Title = wrapper.find('Title');
     expect(Title.dive().type()).toBe('h4');
     expect(Title.dive().text()).toBe(folder.name);
-  });
-
-  it('Item コンポーネントの click で props.onClick が呼ばれること', () => {
-    const {
-      props: { onClick },
-      wrapper,
-    } = setup({ onClick: jest.fn() });
-    wrapper.props().onClick();
-    expect(onClick).toHaveBeenCalledTimes(1);
   });
 });

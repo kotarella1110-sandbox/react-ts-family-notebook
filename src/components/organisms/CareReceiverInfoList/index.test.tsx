@@ -4,6 +4,7 @@ import CareReceiverInfoList, { Props } from '.';
 
 const setup = (propOverrides = {}) => {
   const props: Props = {
+    careReceiverId: 0,
     folderIds: [0, 1],
     ...propOverrides,
   };
@@ -24,7 +25,7 @@ describe('CareReceiverInfoList', () => {
 
   it('LI、CareReceiverInfoItem コンポーネントがレンダリングされていること', () => {
     const {
-      props: { folderIds, onClick },
+      props: { folderIds },
       wrapper,
     } = setup({ onClick: jest.fn() });
     expect(wrapper.children().length).toBe(2);
@@ -33,7 +34,6 @@ describe('CareReceiverInfoList', () => {
       const CareReceiverInfoItem = LI.find('Connect(CareReceiverInfoItem)');
       expect(Number(LI.key())).toBe(folderIds[index]);
       expect(CareReceiverInfoItem.prop('folderId')).toEqual(folderIds[index]);
-      expect(CareReceiverInfoItem.prop('onClick')).toBe(onClick);
     });
   });
 });

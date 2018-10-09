@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
@@ -29,11 +28,7 @@ storiesOf('Organisms/CareReceiverInfoList', module)
   .addDecorator(withKnobs)
   .addWithJSX(
     'default',
-    withNotes(``)(() => <CareReceiverInfoList folderIds={[0, 1]} />)
-  )
-  .addWithJSX(
-    'props onClick',
     withNotes(``)(() => (
-      <CareReceiverInfoList folderIds={[0, 1]} onClick={action('onClick')} />
+      <CareReceiverInfoList careReceiverId={0} folderIds={[0, 1]} />
     ))
   );

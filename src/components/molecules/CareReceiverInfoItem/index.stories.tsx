@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+// import { action } from '@storybook/addon-actions';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
@@ -22,15 +22,6 @@ storiesOf('Molecules/CareReceiverInfoItem', module)
     withNotes(``)(() => (
       <CareReceiverInfoItem
         folder={{ id: 0, careReceiverId: 0, name: 'Title' }}
-      />
-    ))
-  )
-  .addWithJSX(
-    'props onClick',
-    withNotes(``)(() => (
-      <CareReceiverInfoItem
-        folder={{ id: 0, careReceiverId: 0, name: 'Title' }}
-        onClick={action('onClick')}
       />
     ))
   );

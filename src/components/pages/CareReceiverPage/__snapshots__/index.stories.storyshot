@@ -103,6 +103,12 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
   line-height: 1em;
 }
 
+.c18 {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c11 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -135,10 +141,6 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
 .c19 {
   margin: 0;
   line-height: 1.5em;
-}
-
-.c18 {
-  cursor: pointer;
 }
 
 .c14 {
@@ -232,7 +234,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
 .c0 {
   display: grid;
   grid-template-areas: 'header' 'main';
-  grid-template-columns: 1fr;
+  grid-template-columns: 100vw;
   grid-template-rows: calc(8px * 6) calc( 100vh - 8px * 6 );
 }
 
@@ -336,6 +338,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
           >
             <a
               className="c18"
+              href="/careReceivers/0/info/0"
               onClick={[Function]}
             >
               <div
@@ -386,6 +389,7 @@ exports[`Storyshots Pages/CareReceiverPage default 1`] = `
           >
             <a
               className="c18"
+              href="/careReceivers/0/info/1"
               onClick={[Function]}
             >
               <div

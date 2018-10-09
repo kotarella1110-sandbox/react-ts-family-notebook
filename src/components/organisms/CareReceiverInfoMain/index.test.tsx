@@ -10,7 +10,6 @@ const setup = (propOverrides = {}) => {
       birth: '76歳 1941年1月15日生',
       folders: [0, 1],
     },
-    onClick: jest.fn(),
     ...propOverrides,
   };
 
@@ -25,7 +24,7 @@ const setup = (propOverrides = {}) => {
 describe('CareReceiverInfoMain', () => {
   it('コンポーネントがレンダリングされていること', () => {
     const {
-      props: { careReceiver, onClick },
+      props: { careReceiver },
       wrapper,
     } = setup();
     expect(wrapper.dive().type()).toBe('div');
@@ -37,6 +36,5 @@ describe('CareReceiverInfoMain', () => {
     expect(CareReceiverInfoList.prop('folderIds')).toEqual(
       careReceiver.folders
     );
-    expect(CareReceiverInfoList.prop('onClick')).toBe(onClick);
   });
 });

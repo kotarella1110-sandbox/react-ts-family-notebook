@@ -7,6 +7,7 @@ import {
 import * as actions from 'store/actions';
 import AppTemplate from '../../templates/AppTemplate';
 import ModalTemplate from '../../templates/ModalTemplate';
+import ArrowButton from '../../atoms/ArrowButton';
 import AddButton from '../../atoms/AddButton';
 import Text from '../../atoms/Text';
 import Content from '../../molecules/Content';
@@ -20,6 +21,7 @@ export interface Props {
   addFolderContent: (
     payload: ReturnType<typeof actions.addFolderContent.started>['payload']
   ) => any;
+  history?: any;
 }
 
 export interface State {
@@ -71,6 +73,8 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
         <AppTemplate
           header={
             <Header
+              // tslint:disable-next-line:jsx-no-lambda
+              left={<ArrowButton onClick={() => this.props.history.goBack()} />}
               right={<AddButton onClick={this.toggleModal}>追加</AddButton>}
               title="本人情報詳細"
             />
