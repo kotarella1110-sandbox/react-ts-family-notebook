@@ -28,8 +28,16 @@ storiesOf('Pages/CareReceiverInfoDetailPage', module)
           birth: '76歳 1941年1月15日生',
           folders: [0, 1],
         }}
+        folder={{
+          id: 0,
+          careReceiverId: 0,
+          name: '病歴やアレルギーなど',
+          contents: [0, 1],
+        }}
         fetchCareReceivers={action('fetchCareReceivers')}
-        addFolder={action('addFolder')}
+        editFolder={action('editFolder')}
+        deleteFolder={action('deleteFolder')}
+        addFolderContent={action('addFolderContent')}
       />
       ~~~
     `)(story)(context)
@@ -53,6 +61,8 @@ storiesOf('Pages/CareReceiverInfoDetailPage', module)
           contents: [0, 1],
         }}
         fetchCareReceivers={action('fetchCareReceivers')}
+        editFolder={action('editFolder')}
+        deleteFolder={action('deleteFolder')}
         addFolderContent={action('addFolderContent')}
       />
     ))

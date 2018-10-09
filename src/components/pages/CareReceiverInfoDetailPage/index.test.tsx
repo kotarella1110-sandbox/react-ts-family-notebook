@@ -19,6 +19,8 @@ const setup = () => {
       contents: [0, 1],
     },
     fetchCareReceivers: jest.fn(),
+    editFolder: jest.fn(),
+    deleteFolder: jest.fn(),
     addFolderContent: jest.fn(),
   };
 
@@ -32,6 +34,17 @@ describe('CareReceiverInfoDetailPage', () => {
     const { wrapper } = setup();
     expect(wrapper.type()).toBe('div');
     expect(wrapper.find('AppTemplate').type()).toBe(AppTemplate);
-    expect(wrapper.find('ModalTemplate').type()).toBe(ModalTemplate);
+    expect(
+      wrapper
+        .find('ModalTemplate')
+        .at(0)
+        .type()
+    ).toBe(ModalTemplate);
+    expect(
+      wrapper
+        .find('ModalTemplate')
+        .at(1)
+        .type()
+    ).toBe(ModalTemplate);
   });
 });

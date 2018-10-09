@@ -16,7 +16,7 @@ const setup = (propOverrides = {}) => {
       name: '病歴やアレルギーなど',
       contents: [0, 1],
     },
-    onClick: jest.fn(),
+    toggleFolderModal: jest.fn(),
     ...propOverrides,
   };
 
@@ -31,7 +31,7 @@ const setup = (propOverrides = {}) => {
 describe('CareReceiverInfoDetailMain', () => {
   it('コンポーネントがレンダリングされていること', () => {
     const {
-      props: { careReceiver, folder, onClick },
+      props: { careReceiver, folder },
       wrapper,
     } = setup();
     expect(wrapper.dive().type()).toBe('div');
@@ -45,6 +45,5 @@ describe('CareReceiverInfoDetailMain', () => {
     expect(CareReceiverInfoDetailList.prop('folderContentIds')).toEqual(
       folder.contents
     );
-    expect(CareReceiverInfoDetailList.prop('onClick')).toBe(onClick);
   });
 });

@@ -7,31 +7,28 @@ import CareReceiverInfoDetailList from '../CareReceiverInfoDetailList';
 export interface Props {
   readonly careReceiver: CareReceiverEntities;
   readonly folder: FolderEntities;
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  toggleFolderModal?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 const CareReceiverInfoDetailMain: React.SFC<Props> = ({
   careReceiver,
   folder,
-  onClick,
+  toggleFolderModal,
 }) => (
   <Wrapper>
     <CareReceiverItem careReceiver={careReceiver} />
     <FolderTitle style={{ display: 'flex' }}>
       <h4>{folder.name}</h4>
-      <p>編集</p>
+      <a onClick={toggleFolderModal}>編集</a>
     </FolderTitle>
     {folder.contents && (
-      <CareReceiverInfoDetailList
-        folderContentIds={folder.contents}
-        onClick={onClick}
-      />
+      <CareReceiverInfoDetailList folderContentIds={folder.contents} />
     )}
   </Wrapper>
 );
 
 CareReceiverInfoDetailMain.defaultProps = {
-  onClick: e => null,
+  toggleFolderModal: e => null,
 };
 
 const FolderTitle = styled.div`
@@ -39,7 +36,7 @@ const FolderTitle = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 16px;
+  padding: 16px;
 
   & > h4 {
     flex: 1;
