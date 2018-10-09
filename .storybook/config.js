@@ -4,6 +4,7 @@ import { configure, setAddon, addDecorator } from '@storybook/react';
 import '@storybook/addon-console';
 import { setOptions } from '@storybook/addon-options/preview';
 import JSXAddon from 'storybook-addon-jsx';
+import StoryRouter from 'storybook-react-router';
 import { ThemeProvider } from 'styled';
 import globalStyle from 'components/globalStyle';
 import theme from 'components/theme';
@@ -21,6 +22,7 @@ globalStyle(theme);
 addDecorator(story => (
   <ThemeProvider theme={theme}>{story()}</ThemeProvider>
 ));
+addDecorator(StoryRouter());
 
 const req = require.context('../src', true, /.stories.tsx$/);
 function loadStories() {
