@@ -35,8 +35,7 @@ const Title = styled.h2`
   color: ${props => props.theme.brandPrimary};
   white-space: nowrap;
   overflow: hidden;
-  padding: 0 calc(${props => props.theme.sizeBase} * 2);
-  text-align: center;
+  margin: 0;
 
   @media (min-width: 380px) {
     font-size: ${props => props.theme.fontSizeHuge};
@@ -50,7 +49,7 @@ const Right = styled.div`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 
   background-color: ${props => props.theme.headerColor};
   border-bottom: solid 2px #babfbd;
@@ -64,8 +63,22 @@ const Wrapper = styled.div`
     display: inline-block;
   }
 
+  & > * {
+    display: flex;
+    align-items: center;
+  }
+
+  & > ${Left} {
+    justify-content: flex-start;
+  }
+
   & > ${Title} {
     flex: 1;
+    justify-content: center;
+  }
+
+  & > ${Right} {
+    justify-content: flex-end;
   }
 `;
 

@@ -22,7 +22,8 @@ ArrowButton.defaultProps = {
 };
 
 const Wrapper = styled<Props>(Button)`
-  display: block;
+  display: inline;
+  text-align: start;
   line-height: 0;
 
   ${props =>
