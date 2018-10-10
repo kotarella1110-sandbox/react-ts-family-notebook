@@ -27,20 +27,7 @@ storiesOf('Molecules/CareReceiverInfoDetailItem', module)
           title: 'Title',
           content: 'Content',
         }}
-      />
-    ))
-  )
-  .addWithJSX(
-    'props onClick',
-    withNotes(``)(() => (
-      <CareReceiverInfoDetailItem
-        folderContent={{
-          id: 0,
-          folderId: 0,
-          title: 'Title',
-          content: 'Content',
-        }}
-        onClick={action('onClick')}
+        toggleFolderContentModal={action('toggleFolderContentModal')}
       />
     ))
   );

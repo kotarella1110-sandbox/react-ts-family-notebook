@@ -16,6 +16,8 @@ import CareReceiverInfoDetailItem from 'components/molecules/CareReceiverInfoDet
 stub(CareReceiverInfoDetailItemContainer, ({ folderContentId }: OwnProps) => (
   <CareReceiverInfoDetailItem
     folderContent={mockStore.entities.folderContents[folderContentId]}
+    // tslint:disable-next-line:jsx-no-lambda
+    toggleFolderContentModal={() => null}
   />
 ));
 
@@ -32,15 +34,9 @@ storiesOf('Organisms/CareReceiverInfoDetailList', module)
   .addWithJSX(
     'default',
     withNotes(``)(() => (
-      <CareReceiverInfoDetailList folderContentIds={[0, 1]} />
-    ))
-  )
-  .addWithJSX(
-    'props onClick',
-    withNotes(``)(() => (
       <CareReceiverInfoDetailList
         folderContentIds={[0, 1]}
-        onClick={action('onClick')}
+        toggleFolderContentModal={action('toggleFolderContentModal')}
       />
     ))
   );

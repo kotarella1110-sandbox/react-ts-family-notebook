@@ -5,6 +5,7 @@ import CareReceiverInfoDetailList, { Props } from '.';
 const setup = (propOverrides = {}) => {
   const props: Props = {
     folderContentIds: [0, 1],
+    toggleFolderContentModal: jest.fn()
     ...propOverrides,
   };
 
@@ -24,9 +25,9 @@ describe('CareReceiverInfoDetailList', () => {
 
   it('LI、CareReceiverInfoDetailItem コンポーネントがレンダリングされていること', () => {
     const {
-      props: { folderContentIds, onClick },
+      props: { folderContentIds, toggleFolderContentModal },
       wrapper,
-    } = setup({ onClick: jest.fn() });
+    } = setup();
     expect(wrapper.children().length).toBe(2);
 
     wrapper.children().forEach((LI, index) => {
@@ -37,7 +38,9 @@ describe('CareReceiverInfoDetailList', () => {
       expect(CareReceiverInfoDetailItem.prop('folderContentId')).toEqual(
         folderContentIds[index]
       );
-      expect(CareReceiverInfoDetailItem.prop('onClick')).toBe(onClick);
+      expect(CareReceiverInfoDetailItem.prop('toggleFolderContentModal')).toBe(
+        toggleFolderContentModal
+      );
     });
   });
 });

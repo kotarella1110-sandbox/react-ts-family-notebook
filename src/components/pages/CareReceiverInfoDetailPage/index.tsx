@@ -28,6 +28,12 @@ export interface Props {
   addFolderContent: (
     payload: ReturnType<typeof actions.addFolderContent.started>['payload']
   ) => any;
+  editFolderContent: (
+    payload: ReturnType<typeof actions.editFolderContent>['payload']
+  ) => any;
+  deleteFolderContent: (
+    payload: ReturnType<typeof actions.deleteFolderContent>['payload']
+  ) => any;
   history?: any;
 }
 
@@ -38,6 +44,8 @@ export interface State {
   };
   readonly folderContent: {
     readonly modalIsOpen: boolean;
+    readonly editing: boolean;
+    readonly id: FolderContentEntities['id'];
     readonly title: FolderContentEntities['title'];
     readonly content: FolderContentEntities['content'];
   };
@@ -47,10 +55,12 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
   readonly state: State = {
     folder: {
       modalIsOpen: false,
-      name: this.props.folder.name,
+      name: this.props.folder && this.props.folder.name,
     },
     folderContent: {
       modalIsOpen: false,
+      editing: false,
+      id: -1,
       title: '',
       content: '',
     },
@@ -70,14 +80,29 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     });
   };
 
-  toggleFolderContentModal = () => {
-    this.setState({
-      ...this.state,
-      folderContent: {
-        ...this.state.folderContent,
-        modalIsOpen: !this.state.folderContent.modalIsOpen,
-      },
-    });
+  toggleFolderContentModal = (folderContent?: FolderContentEntities) => {
+    if (!!folderContent) {
+      this.setState({
+        ...this.state,
+        folderContent: {
+          ...this.state.folderContent,
+          modalIsOpen: !this.state.folderContent.modalIsOpen,
+          editing: true,
+          id: folderContent.id,
+          title: folderContent.title,
+          content: folderContent.content,
+        },
+      });
+    } else {
+      this.setState({
+        ...this.state,
+        folderContent: {
+          ...this.state.folderContent,
+          modalIsOpen: !this.state.folderContent.modalIsOpen,
+          editing: false,
+        },
+      });
+    }
   };
 
   handleDeleteFolder = () => {
@@ -87,6 +112,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
       careReceiverId,
       id: folderId,
     });
+    this.toggleFolderModal();
   };
 
   handleEditFolder = () => {
@@ -104,15 +130,13 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
         name,
         id: folderId,
       });
-
-      this.toggleFolderModal();
     }
+    this.toggleFolderModal();
   };
 
   handleAddFolderContent = () => {
     const folderId = this.props.folder.id;
-    const title = this.state.folderContent.title;
-    const content = this.state.folderContent.content;
+    const { title, content } = this.state.folderContent;
     if (title.length !== 0) {
       this.props.addFolderContent({
         folderId,
@@ -121,6 +145,35 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
       });
       this.toggleFolderContentModal();
     }
+  };
+
+  handleDeleteFolderContent = () => {
+    const id = this.state.folderContent.id;
+    const folderId = this.props.folder.id;
+    this.props.deleteFolderContent({
+      id,
+      folderId,
+    });
+    this.toggleFolderContentModal();
+  };
+
+  handleEditFolderContent = () => {
+    const folderId = this.props.folder.id;
+    const { id, title, content } = this.state.folderContent;
+    if (title.length === 0) {
+      this.props.deleteFolderContent({
+        folderId,
+        id,
+      });
+    } else {
+      this.props.editFolderContent({
+        folderId,
+        id,
+        title,
+        content,
+      });
+    }
+    this.toggleFolderContentModal();
   };
 
   handleChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -162,7 +215,11 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
               // tslint:disable-next-line:jsx-no-lambda
               left={<ArrowButton onClick={() => this.props.history.goBack()} />}
               right={
-                <AddButton onClick={this.toggleFolderContentModal}>
+                <AddButton
+                  // tslint:disable-next-line:jsx-no-lambda
+                  onClick={() => {
+                    this.toggleFolderContentModal();
+                  }}>
                   追加
                 </AddButton>
               }
@@ -174,6 +231,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
               careReceiver={this.props.careReceiver}
               folder={this.props.folder}
               toggleFolderModal={this.toggleFolderModal}
+              toggleFolderContentModal={this.toggleFolderContentModal}
             />
           )}
         </AppTemplate>
@@ -199,21 +257,48 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
         <ModalTemplate
           header={
             <Header
-              left={<a onClick={this.toggleFolderContentModal}>キャンセル</a>}
-              right={
-                <AddButton onClick={this.handleAddFolderContent}>
-                  追加
-                </AddButton>
+              left={
+                <a
+                  // tslint:disable-next-line:jsx-no-lambda
+                  onClick={() => {
+                    this.toggleFolderContentModal();
+                  }}>
+                  キャンセル
+                </a>
               }
-              title="タイトルの追加"
+              right={
+                this.state.folderContent.editing ? (
+                  <a onClick={this.handleEditFolderContent}>編集</a>
+                ) : (
+                  <AddButton onClick={this.handleAddFolderContent}>
+                    追加
+                  </AddButton>
+                )
+              }
+              title={`項目の${
+                this.state.folderContent.editing ? '編集' : '追加'
+              }`}
             />
           }
+          footer={
+            this.state.folderContent.editing ? (
+              <SquareButton onClick={this.handleDeleteFolderContent}>
+                削除
+              </SquareButton>
+            ) : null
+          }
           isOpen={this.state.folderContent.modalIsOpen}>
-          <Content label="タイトル">
-            <Text onChange={this.handleChangeTitle} />
+          <Content label="項目名">
+            <Text
+              onChange={this.handleChangeTitle}
+              value={this.state.folderContent.title}
+            />
           </Content>
           <Content label="内容">
-            <Text onChange={this.handleChangeContent} />
+            <Text
+              onChange={this.handleChangeContent}
+              value={this.state.folderContent.content}
+            />
           </Content>
         </ModalTemplate>
       </div>

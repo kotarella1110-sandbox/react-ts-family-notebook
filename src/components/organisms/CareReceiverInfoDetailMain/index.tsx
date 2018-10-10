@@ -1,5 +1,9 @@
 import * as React from 'react';
-import { CareReceiverEntities, FolderEntities } from 'models';
+import {
+  CareReceiverEntities,
+  FolderEntities,
+  FolderContentEntities,
+} from 'models';
 import styled from 'styled';
 import CareReceiverItem from '../../molecules/CareReceiverItem';
 import CareReceiverInfoDetailList from '../CareReceiverInfoDetailList';
@@ -7,29 +11,36 @@ import CareReceiverInfoDetailList from '../CareReceiverInfoDetailList';
 export interface Props {
   readonly careReceiver: CareReceiverEntities;
   readonly folder: FolderEntities;
-  toggleFolderModal?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  toggleFolderModal: () => void;
+  toggleFolderContentModal: (fonderContent: FolderContentEntities) => void;
 }
 
 const CareReceiverInfoDetailMain: React.SFC<Props> = ({
   careReceiver,
   folder,
   toggleFolderModal,
+  toggleFolderContentModal,
 }) => (
   <Wrapper>
     <CareReceiverItem careReceiver={careReceiver} />
     <FolderTitle style={{ display: 'flex' }}>
       <h4>{folder.name}</h4>
-      <a onClick={toggleFolderModal}>編集</a>
+      <a
+        // tslint:disable-next-line:jsx-no-lambda
+        onClick={() => {
+          toggleFolderModal();
+        }}>
+        編集
+      </a>
     </FolderTitle>
     {folder.contents && (
-      <CareReceiverInfoDetailList folderContentIds={folder.contents} />
+      <CareReceiverInfoDetailList
+        folderContentIds={folder.contents}
+        toggleFolderContentModal={toggleFolderContentModal}
+      />
     )}
   </Wrapper>
 );
-
-CareReceiverInfoDetailMain.defaultProps = {
-  toggleFolderModal: e => null,
-};
 
 const FolderTitle = styled.div`
   display: flex;

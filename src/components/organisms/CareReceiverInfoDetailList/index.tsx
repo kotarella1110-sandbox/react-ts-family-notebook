@@ -1,32 +1,28 @@
 import * as React from 'react';
 import styled from 'styled';
-import { FolderEntities } from 'models';
+import { FolderEntities, FolderContentEntities } from 'models';
 import CareReceiverInfoDetailItem from 'containers/CareReceiverInfoDetailItem';
 
 export interface Props {
   readonly folderContentIds: FolderEntities['id'][];
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  toggleFolderContentModal: (fonderContent: FolderContentEntities) => void;
 }
 
 const CareReceiverInfoDetailList: React.SFC<Props> = ({
   folderContentIds,
-  onClick,
+  toggleFolderContentModal,
 }) => (
   <List>
     {folderContentIds.map(folderContentId => (
       <Item key={folderContentId}>
         <CareReceiverInfoDetailItem
           folderContentId={folderContentId}
-          onClick={onClick}
+          toggleFolderContentModal={toggleFolderContentModal}
         />
       </Item>
     ))}
   </List>
 );
-
-CareReceiverInfoDetailList.defaultProps = {
-  onClick: e => null,
-};
 
 const List = styled<{}, 'ul'>('ul')`
   list-style: none;

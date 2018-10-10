@@ -24,8 +24,6 @@ const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) =>
       editFolder: actions.editFolder,
       deleteFolder: actions.deleteFolder,
       addFolderContent: actions.addFolderContent.started,
-      editFolderContent: actions.editFolderContent,
-      deleteFolderContent: actions.deleteFolderContent,
     },
     dispatch
   );

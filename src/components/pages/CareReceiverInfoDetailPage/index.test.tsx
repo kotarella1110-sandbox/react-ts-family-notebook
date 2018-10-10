@@ -22,6 +22,8 @@ const setup = () => {
     editFolder: jest.fn(),
     deleteFolder: jest.fn(),
     addFolderContent: jest.fn(),
+    editFolderContent: jest.fn(),
+    deleteFolderContent: jest.fn(),
   };
 
   const wrapper = shallow(<CareReceiverInfoDetailPage {...props} />);

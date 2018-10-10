@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-// import { action } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
@@ -50,6 +50,8 @@ storiesOf('Organisms/CareReceiverInfoDetailMain', module)
           name: '病歴やアレルギーなど',
           contents: [0, 1],
         }}
+        toggleFolderModal={action('toggleFolderModal')}
+        toggleFolderContentModal={action('toggleFolderContentModal')}
       />
     ))
   );

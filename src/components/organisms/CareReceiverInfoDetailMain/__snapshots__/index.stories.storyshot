@@ -207,9 +207,8 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
     <li
       className="c7"
     >
-      <a
+      <div
         className=""
-        onClick={[Function]}
       >
         <div
           className="c0"
@@ -238,9 +237,11 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
           <div
             className=""
           >
-            <p>
+            <a
+              onClick={[Function]}
+            >
               編集
-            </p>
+            </a>
           </div>
         </div>
         <div
@@ -262,14 +263,13 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
             カニ、エビ
           </p>
         </div>
-      </a>
+      </div>
     </li>
     <li
       className="c7"
     >
-      <a
+      <div
         className=""
-        onClick={[Function]}
       >
         <div
           className="c0"
@@ -298,9 +298,11 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
           <div
             className=""
           >
-            <p>
+            <a
+              onClick={[Function]}
+            >
               編集
-            </p>
+            </a>
           </div>
         </div>
         <div
@@ -322,7 +324,7 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
             脳梗塞（２００８年９月）
           </p>
         </div>
-      </a>
+      </div>
     </li>
   </ul>
 </div>

@@ -17,6 +17,7 @@ const setup = (propOverrides = {}) => {
       contents: [0, 1],
     },
     toggleFolderModal: jest.fn(),
+    toggleFolderContentModal: jest.fn(),
     ...propOverrides,
   };
 

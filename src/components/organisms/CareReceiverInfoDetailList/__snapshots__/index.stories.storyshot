@@ -107,9 +107,8 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailList default 1`] = `
   <li
     className="c1"
   >
-    <a
+    <div
       className=""
-      onClick={[Function]}
     >
       <div
         className="c2"
@@ -138,9 +137,11 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailList default 1`] = `
         <div
           className=""
         >
-          <p>
+          <a
+            onClick={[Function]}
+          >
             編集
-          </p>
+          </a>
         </div>
       </div>
       <div
@@ -162,14 +163,13 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailList default 1`] = `
           カニ、エビ
         </p>
       </div>
-    </a>
+    </div>
   </li>
   <li
     className="c1"
   >
-    <a
+    <div
       className=""
-      onClick={[Function]}
     >
       <div
         className="c2"
@@ -198,9 +198,11 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailList default 1`] = `
         <div
           className=""
         >
-          <p>
+          <a
+            onClick={[Function]}
+          >
             編集
-          </p>
+          </a>
         </div>
       </div>
       <div
@@ -222,234 +224,7 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailList default 1`] = `
           脳梗塞（２００８年９月）
         </p>
       </div>
-    </a>
-  </li>
-</ul>
-`;
-
-exports[`Storyshots Organisms/CareReceiverInfoDetailList props onClick 1`] = `
-.c8 {
-  display: inline-block;
-  margin: 0.1em;
-  box-sizing: border-box;
-}
-
-.c8 > svg {
-  width: 24px;
-  height: 24px;
-}
-
-.c3 {
-  display: inline-block;
-  margin: 0.1em;
-  box-sizing: border-box;
-}
-
-.c3 > svg {
-  width: 34px;
-  height: 34px;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 12px 16px;
-  color: $gray-dark;
-  min-height: 48px;
-  background-color: #fff;
-}
-
-.c2 > * {
-  margin: 2px;
-}
-
-.c2 > .c4 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c5 {
-  margin: 0;
-  line-height: 1.5em;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 16px;
-  font-size: 16px;
-}
-
-.c6 .c7 {
-  margin: 4px;
-}
-
-.c6 p {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  color: $gray;
-  word-break: break-all;
-}
-
-.c0 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c1 {
-  border-top: solid 1px #c8c8c8;
-  border-bottom: solid 1px #c8c8c8;
-}
-
-.c1 + .c1 {
-  border-top: 0;
-}
-
-<ul
-  className="c0"
->
-  <li
-    className="c1"
-  >
-    <a
-      className=""
-      onClick={[Function]}
-    >
-      <div
-        className="c2"
-      >
-        <span
-          className="c3"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": Object {
-                "default": "test-file-stub",
-              },
-            }
-          }
-          name="care-receiver-info-detail"
-          size="34px"
-        />
-        <div
-          className="c4 "
-        >
-          <h4
-            className="c5"
-          >
-            アレルギー
-          </h4>
-        </div>
-        <div
-          className=""
-        >
-          <p>
-            編集
-          </p>
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <span
-          className="c7 c8"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": Object {
-                "default": "test-file-stub",
-              },
-            }
-          }
-          name="exclamation"
-          size="24px"
-        />
-        <p>
-          カニ、エビ
-        </p>
-      </div>
-    </a>
-  </li>
-  <li
-    className="c1"
-  >
-    <a
-      className=""
-      onClick={[Function]}
-    >
-      <div
-        className="c2"
-      >
-        <span
-          className="c3"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": Object {
-                "default": "test-file-stub",
-              },
-            }
-          }
-          name="care-receiver-info-detail"
-          size="34px"
-        />
-        <div
-          className="c4 "
-        >
-          <h4
-            className="c5"
-          >
-            病歴
-          </h4>
-        </div>
-        <div
-          className=""
-        >
-          <p>
-            編集
-          </p>
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <span
-          className="c7 c8"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": Object {
-                "default": "test-file-stub",
-              },
-            }
-          }
-          name="exclamation"
-          size="24px"
-        />
-        <p>
-          脳梗塞（２００８年９月）
-        </p>
-      </div>
-    </a>
+    </div>
   </li>
 </ul>
 `;

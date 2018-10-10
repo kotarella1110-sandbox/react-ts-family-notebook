@@ -64,6 +64,8 @@ storiesOf('Pages/CareReceiverInfoDetailPage', module)
         editFolder={action('editFolder')}
         deleteFolder={action('deleteFolder')}
         addFolderContent={action('addFolderContent')}
+        editFolderContent={action('editFolderContent')}
+        deleteFolderContent={action('deleteFolderContent')}
       />
     ))
   );

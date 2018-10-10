@@ -6,28 +6,36 @@ import Item from '../Item';
 
 export interface Props {
   readonly folderContent: FolderContentEntities;
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  toggleFolderContentModal: (folderContent: FolderContentEntities) => void;
 }
 
 const CareReceiverInfoDetailItem: React.SFC<Props> = ({
-  folderContent: { title, content },
-  onClick,
+  folderContent,
+  toggleFolderContentModal,
 }) => (
-  <Wrapper onClick={onClick}>
+  <Wrapper>
     <Item
       icon={<Icon name="care-receiver-info-detail" size="34px" />}
-      right={<p>編集</p>}>
-      <Title>{title}</Title>
+      right={
+        <a
+          // tslint:disable-next-line:jsx-no-lambda
+          onClick={() => {
+            toggleFolderContentModal(folderContent);
+          }}>
+          編集
+        </a>
+      }>
+      <Title>{folderContent.title}</Title>
     </Item>
     <Contents>
       <StyledIcon name="exclamation" />
-      <p>{content}</p>
+      <p>{folderContent.content}</p>
     </Contents>
   </Wrapper>
 );
 
 CareReceiverInfoDetailItem.defaultProps = {
-  onClick: e => null,
+  toggleFolderContentModal: e => null,
 };
 
 const Title = styled<{}, 'h4'>('h4')`
@@ -56,6 +64,6 @@ const Contents = styled.div`
   }
 `;
 
-const Wrapper = styled.a``;
+const Wrapper = styled.div``;
 
 export default CareReceiverInfoDetailItem;
