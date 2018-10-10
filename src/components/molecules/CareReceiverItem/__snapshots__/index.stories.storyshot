@@ -12,19 +12,23 @@ exports[`Storyshots Molecules/CareReceiverItem default 1`] = `
   height: 36px;
 }
 
+.c3 {
+  padding: 0 8px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 12px 16px;
   color: $gray-dark;
   min-height: 48px;
@@ -32,7 +36,14 @@ exports[`Storyshots Molecules/CareReceiverItem default 1`] = `
 }
 
 .c0 > * {
-  margin: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c0 > .c2 {
@@ -41,12 +52,12 @@ exports[`Storyshots Molecules/CareReceiverItem default 1`] = `
   flex: 1;
 }
 
-.c3 {
+.c4 {
   margin: 0;
   line-height: 1.5em;
 }
 
-.c4 {
+.c5 {
   margin: 0;
   line-height: 1.5em;
 }
@@ -70,16 +81,16 @@ exports[`Storyshots Molecules/CareReceiverItem default 1`] = `
       size="36px"
     />
     <div
-      className="c2 "
+      className="c2 c3"
     >
       <div>
         <h4
-          className="c3"
+          className="c4"
         >
           左藤太郎
         </h4>
         <p
-          className="c4"
+          className="c5"
         >
           76歳 1941年1月15日生
         </p>

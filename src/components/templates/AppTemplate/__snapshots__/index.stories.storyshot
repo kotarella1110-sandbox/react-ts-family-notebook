@@ -8,7 +8,6 @@ exports[`Storyshots Templates/AppTemplate default 1`] = `
 .c2 {
   grid-area: main;
   overflow: auto;
-  background-color: #ededed;
 }
 
 .c0 {
@@ -16,6 +15,7 @@ exports[`Storyshots Templates/AppTemplate default 1`] = `
   grid-template-areas: 'header' 'main';
   grid-template-columns: 100vw;
   grid-template-rows: calc(8px * 6) calc( 100vh - 8px * 6 );
+  background-color: #ededed;
 }
 
 <div
@@ -35,7 +35,7 @@ exports[`Storyshots Templates/AppTemplate default 1`] = `
 `;
 
 exports[`Storyshots Templates/AppTemplate props header is Header and main is CareReceiverInfoList 1`] = `
-.c8 {
+.c10 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -53,26 +53,26 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c8:hover {
+.c10:hover {
   cursor: pointer;
 }
 
-.c8:focus {
+.c10:focus {
   outline: 0;
 }
 
-.c9 {
+.c11 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c9 > svg {
+.c11 > svg {
   width: 24px;
   height: 24px;
 }
 
-.c18 {
+.c21 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
@@ -81,23 +81,23 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   transform: scale(-1,1);
 }
 
-.c18 > svg {
+.c21 > svg {
   width: 24px;
   height: 24px;
 }
 
-.c15 {
+.c17 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c15 > svg {
+.c17 > svg {
   width: 36px;
   height: 36px;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -115,100 +115,110 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   padding: 8px;
 }
 
-.c7 svg {
+.c9 svg {
   width: 18px;
   height: 18px;
   display: block;
   margin: 0 6px 0 0;
 }
 
-.c7 svg > circle {
+.c9 svg > circle {
   fill: #fff !important;
 }
 
-.c7 svg > line {
+.c9 svg > line {
   stroke: #007f48 !important;
 }
 
-.c7 span {
+.c9 span {
   display: block;
   color: #fff;
   font-weight: bold;
   line-height: 1em;
 }
 
-.c13 {
+.c15 {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c14 {
+.c19 {
+  padding: 0 8px;
+}
+
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 12px 16px;
   color: $gray-dark;
   min-height: 48px;
   background-color: #fff;
 }
 
-.c14 > * {
-  margin: 2px;
+.c16 > * {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c14 > .c16 {
+.c16 > .c18 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c17 {
+.c20 {
   margin: 0;
   line-height: 1.5em;
 }
 
-.c11 {
+.c13 {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.c12 {
+.c14 {
   border-top: solid 1px #c8c8c8;
   border-bottom: solid 1px #c8c8c8;
 }
 
-.c12 + .c12 {
+.c14 + .c14 {
   border-top: 0;
 }
 
-.c3 {
+.c4 {
   width: calc(8px * 10);
   display: block;
   line-height: 1em;
 }
 
-.c5 {
+.c6 {
   font-size: 5vw;
   font-weight: bold;
   color: #007f48;
   white-space: nowrap;
   overflow: hidden;
-  padding: 0 calc(8px * 2);
-  text-align: center;
+  margin: 0;
 }
 
-.c6 {
+.c8 {
   width: calc(8px * 10);
   display: block;
   line-height: 1em;
@@ -223,10 +233,10 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   background-color: #FFFBE8;
   border-bottom: solid 2px #babfbd;
   box-sizing: border-box;
@@ -239,20 +249,48 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   display: inline-block;
 }
 
-.c2 > .c4 {
+.c2 > * {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 > .c3 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c2 > .c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 > .c7 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .c1 {
   grid-area: header;
 }
 
-.c10 {
+.c12 {
   grid-area: main;
   overflow: auto;
-  background-color: #ededed;
 }
 
 .c0 {
@@ -260,10 +298,11 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
   grid-template-areas: 'header' 'main';
   grid-template-columns: 100vw;
   grid-template-rows: calc(8px * 6) calc( 100vh - 8px * 6 );
+  background-color: #ededed;
 }
 
 @media (min-width:380px) {
-  .c5 {
+  .c6 {
     font-size: 20px;
   }
 }
@@ -278,22 +317,22 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
       className="c2"
     >
       <div
-        className="c3"
+        className="c3 c4"
       />
       <h2
-        className="c4 c5"
+        className="c5 c6"
       >
         Title
       </h2>
       <div
-        className="c6"
+        className="c7 c8"
       >
         <button
-          className="c7 c8"
+          className="c9 c10"
           onClick={[Function]}
         >
           <span
-            className="c9"
+            className="c11"
             dangerouslySetInnerHTML={
               Object {
                 "__html": Object {
@@ -312,24 +351,24 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
     </div>
   </header>
   <main
-    className="c10"
+    className="c12"
   >
     <ul
-      className="c11"
+      className="c13"
     >
       <li
-        className="c12"
+        className="c14"
       >
         <a
-          className="c13"
+          className="c15"
           href="/careReceivers/1/info/0"
           onClick={[Function]}
         >
           <div
-            className="c14"
+            className="c16"
           >
             <span
-              className="c15"
+              className="c17"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -341,10 +380,10 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
               size="36px"
             />
             <div
-              className="c16 "
+              className="c18 c19"
             >
               <h4
-                className="c17"
+                className="c20"
               >
                 病歴やアレルギーなど
               </h4>
@@ -353,7 +392,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
               className=""
             >
               <span
-                className="c18"
+                className="c21"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {
@@ -369,18 +408,18 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
         </a>
       </li>
       <li
-        className="c12"
+        className="c14"
       >
         <a
-          className="c13"
+          className="c15"
           href="/careReceivers/1/info/1"
           onClick={[Function]}
         >
           <div
-            className="c14"
+            className="c16"
           >
             <span
-              className="c15"
+              className="c17"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -392,10 +431,10 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
               size="36px"
             />
             <div
-              className="c16 "
+              className="c18 c19"
             >
               <h4
-                className="c17"
+                className="c20"
               >
                 お薬情報
               </h4>
@@ -404,7 +443,7 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
               className=""
             >
               <span
-                className="c18"
+                className="c21"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": Object {

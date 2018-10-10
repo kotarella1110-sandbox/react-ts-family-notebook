@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
-.c8 {
+.c10 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -19,26 +19,26 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c8:hover {
+.c10:hover {
   cursor: pointer;
 }
 
-.c8:focus {
+.c10:focus {
   outline: 0;
 }
 
-.c9 {
+.c11 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c9 > svg {
+.c11 > svg {
   width: 24px;
   height: 24px;
 }
 
-.c20 {
+.c23 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
@@ -47,23 +47,23 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
   transform: scale(-1,1);
 }
 
-.c20 > svg {
+.c23 > svg {
   width: 24px;
   height: 24px;
 }
 
-.c12 {
+.c14 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c12 > svg {
+.c14 > svg {
   width: 36px;
   height: 36px;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,110 +81,120 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
   padding: 8px;
 }
 
-.c7 svg {
+.c9 svg {
   width: 18px;
   height: 18px;
   display: block;
   margin: 0 6px 0 0;
 }
 
-.c7 svg > circle {
+.c9 svg > circle {
   fill: #fff !important;
 }
 
-.c7 svg > line {
+.c9 svg > line {
   stroke: #007f48 !important;
 }
 
-.c7 span {
+.c9 span {
   display: block;
   color: #fff;
   font-weight: bold;
   line-height: 1em;
 }
 
-.c18 {
+.c21 {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c11 {
+.c16 {
+  padding: 0 8px;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 12px 16px;
   color: $gray-dark;
   min-height: 48px;
   background-color: #fff;
 }
 
-.c11 > * {
-  margin: 2px;
+.c13 > * {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c11 > .c13 {
+.c13 > .c15 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
+.c22 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c17 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.c18 {
+  margin: 0;
+  line-height: 1.5em;
+}
+
 .c19 {
-  margin: 0;
-  line-height: 1.5em;
-}
-
-.c14 {
-  margin: 0;
-  line-height: 1.5em;
-}
-
-.c15 {
-  margin: 0;
-  line-height: 1.5em;
-}
-
-.c16 {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.c17 {
+.c20 {
   border-top: solid 1px #c8c8c8;
   border-bottom: solid 1px #c8c8c8;
 }
 
-.c17 + .c17 {
+.c20 + .c20 {
   border-top: 0;
 }
 
-.c3 {
+.c4 {
   width: calc(8px * 10);
   display: block;
   line-height: 1em;
 }
 
-.c5 {
+.c6 {
   font-size: 5vw;
   font-weight: bold;
   color: #007f48;
   white-space: nowrap;
   overflow: hidden;
-  padding: 0 calc(8px * 2);
-  text-align: center;
+  margin: 0;
 }
 
-.c6 {
+.c8 {
   width: calc(8px * 10);
   display: block;
   line-height: 1em;
@@ -199,10 +209,10 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   background-color: #FFFBE8;
   border-bottom: solid 2px #babfbd;
   box-sizing: border-box;
@@ -215,20 +225,48 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
   display: inline-block;
 }
 
-.c2 > .c4 {
+.c2 > * {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 > .c3 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c2 > .c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 > .c7 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .c1 {
   grid-area: header;
 }
 
-.c10 {
+.c12 {
   grid-area: main;
   overflow: auto;
-  background-color: #ededed;
 }
 
 .c0 {
@@ -236,10 +274,11 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
   grid-template-areas: 'header' 'main';
   grid-template-columns: 100vw;
   grid-template-rows: calc(8px * 6) calc( 100vh - 8px * 6 );
+  background-color: #ededed;
 }
 
 @media (min-width:380px) {
-  .c5 {
+  .c6 {
     font-size: 20px;
   }
 }
@@ -255,22 +294,22 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
         className="c2"
       >
         <div
-          className="c3"
+          className="c3 c4"
         />
         <h2
-          className="c4 c5"
+          className="c5 c6"
         >
           本人情報
         </h2>
         <div
-          className="c6"
+          className="c7 c8"
         >
           <button
-            className="c7 c8"
+            className="c9 c10"
             onClick={[Function]}
           >
             <span
-              className="c9"
+              className="c11"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -289,7 +328,7 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
       </div>
     </header>
     <main
-      className="c10"
+      className="c12"
     >
       <div
         className=""
@@ -298,10 +337,10 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
           className=""
         >
           <div
-            className="c11"
+            className="c13"
           >
             <span
-              className="c12"
+              className="c14"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": Object {
@@ -313,16 +352,16 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
               size="36px"
             />
             <div
-              className="c13 "
+              className="c15 c16"
             >
               <div>
                 <h4
-                  className="c14"
+                  className="c17"
                 >
                   左藤太郎
                 </h4>
                 <p
-                  className="c15"
+                  className="c18"
                 >
                   76歳 1941年1月15日生
                 </p>
@@ -331,21 +370,21 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
           </div>
         </a>
         <ul
-          className="c16"
+          className="c19"
         >
           <li
-            className="c17"
+            className="c20"
           >
             <a
-              className="c18"
+              className="c21"
               href="/careReceivers/0/info/0"
               onClick={[Function]}
             >
               <div
-                className="c11"
+                className="c13"
               >
                 <span
-                  className="c12"
+                  className="c14"
                   dangerouslySetInnerHTML={
                     Object {
                       "__html": Object {
@@ -357,10 +396,10 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
                   size="36px"
                 />
                 <div
-                  className="c13 "
+                  className="c15 c16"
                 >
                   <h4
-                    className="c19"
+                    className="c22"
                   >
                     病歴やアレルギーなど
                   </h4>
@@ -369,7 +408,7 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
                   className=""
                 >
                   <span
-                    className="c20"
+                    className="c23"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": Object {
@@ -385,18 +424,18 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
             </a>
           </li>
           <li
-            className="c17"
+            className="c20"
           >
             <a
-              className="c18"
+              className="c21"
               href="/careReceivers/0/info/1"
               onClick={[Function]}
             >
               <div
-                className="c11"
+                className="c13"
               >
                 <span
-                  className="c12"
+                  className="c14"
                   dangerouslySetInnerHTML={
                     Object {
                       "__html": Object {
@@ -408,10 +447,10 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
                   size="36px"
                 />
                 <div
-                  className="c13 "
+                  className="c15 c16"
                 >
                   <h4
-                    className="c19"
+                    className="c22"
                   >
                     お薬情報
                   </h4>
@@ -420,7 +459,7 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
                   className=""
                 >
                   <span
-                    className="c20"
+                    className="c23"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": Object {

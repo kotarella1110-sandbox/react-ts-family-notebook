@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Molecules/CareReceiverInfoDetailItem default 1`] = `
-.c6 {
+.c7 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
 }
 
-.c6 > svg {
+.c7 > svg {
   width: 24px;
   height: 24px;
 }
@@ -23,19 +23,23 @@ exports[`Storyshots Molecules/CareReceiverInfoDetailItem default 1`] = `
   height: 34px;
 }
 
+.c3 {
+  padding: 0 8px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 12px 16px;
   color: $gray-dark;
   min-height: 48px;
@@ -43,7 +47,14 @@ exports[`Storyshots Molecules/CareReceiverInfoDetailItem default 1`] = `
 }
 
 .c0 > * {
-  margin: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c0 > .c2 {
@@ -52,12 +63,12 @@ exports[`Storyshots Molecules/CareReceiverInfoDetailItem default 1`] = `
   flex: 1;
 }
 
-.c3 {
+.c4 {
   margin: 0;
   line-height: 1.5em;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -74,11 +85,11 @@ exports[`Storyshots Molecules/CareReceiverInfoDetailItem default 1`] = `
   font-size: 16px;
 }
 
-.c4 .c5 {
+.c5 .c6 {
   margin: 4px;
 }
 
-.c4 p {
+.c5 p {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -105,10 +116,10 @@ exports[`Storyshots Molecules/CareReceiverInfoDetailItem default 1`] = `
       size="34px"
     />
     <div
-      className="c2 "
+      className="c2 c3"
     >
       <h4
-        className="c3"
+        className="c4"
       >
         Title
       </h4>
@@ -124,10 +135,10 @@ exports[`Storyshots Molecules/CareReceiverInfoDetailItem default 1`] = `
     </div>
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <span
-      className="c5 c6"
+      className="c6 c7"
       dangerouslySetInnerHTML={
         Object {
           "__html": Object {

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
-.c7 {
+.c8 {
   display: inline-block;
   margin: 0.1em;
   box-sizing: border-box;
@@ -10,7 +10,7 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
   transform: scale(-1,1);
 }
 
-.c7 > svg {
+.c8 > svg {
   width: 24px;
   height: 24px;
 }
@@ -32,19 +32,23 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
   text-decoration: none;
 }
 
+.c6 {
+  padding: 0 8px;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 12px 16px;
   color: $gray-dark;
   min-height: 48px;
@@ -52,7 +56,14 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
 }
 
 .c3 > * {
-  margin: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c3 > .c5 {
@@ -61,7 +72,7 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
   flex: 1;
 }
 
-.c6 {
+.c7 {
   margin: 0;
   line-height: 1.5em;
 }
@@ -108,10 +119,10 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
           size="36px"
         />
         <div
-          className="c5 "
+          className="c5 c6"
         >
           <h4
-            className="c6"
+            className="c7"
           >
             病歴やアレルギーなど
           </h4>
@@ -120,7 +131,7 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
           className=""
         >
           <span
-            className="c7"
+            className="c8"
             dangerouslySetInnerHTML={
               Object {
                 "__html": Object {
@@ -159,10 +170,10 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
           size="36px"
         />
         <div
-          className="c5 "
+          className="c5 c6"
         >
           <h4
-            className="c6"
+            className="c7"
           >
             お薬情報
           </h4>
@@ -171,7 +182,7 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
           className=""
         >
           <span
-            className="c7"
+            className="c8"
             dangerouslySetInnerHTML={
               Object {
                 "__html": Object {
