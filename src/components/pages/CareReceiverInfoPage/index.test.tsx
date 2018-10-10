@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import CareReceiverPage, { Props } from '.';
+import CareReceiverInfoPage, { Props } from '.';
 import AppTemplate from '../../templates/AppTemplate';
 import ModalTemplate from '../../templates/ModalTemplate';
 
@@ -16,12 +16,12 @@ const setup = () => {
     addFolder: jest.fn(),
   };
 
-  const wrapper = shallow(<CareReceiverPage {...props} />);
+  const wrapper = shallow(<CareReceiverInfoPage {...props} />);
 
   return { props, wrapper };
 };
 
-describe('CareReceiverPage', () => {
+describe('CareReceiverInfoPage', () => {
   it('コンポーネントがレンダリングされていること', () => {
     const { wrapper } = setup();
     expect(wrapper.type()).toBe('div');

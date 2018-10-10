@@ -5,7 +5,7 @@ import { RouteComponentProps } from 'react-router-dom';
 import globalStyle from './globalStyle';
 import theme from './theme';
 // import { CareReceiverEntities, FolderEntities } from 'models';
-import CareReceiverPage from 'containers/CareReceiverPage';
+import CareReceiverInfoPage from 'containers/CareReceiverInfoPage';
 import CareReceiverInfoDetailPage from 'containers/CareReceiverInfoDetailPage';
 
 globalStyle(theme);
@@ -16,7 +16,9 @@ const App: React.SFC = () => {
     ...props
   }: RouteComponentProps<{
     careReceiverId: string;
-  }>) => <CareReceiverPage {...props} careReceiverId={params.careReceiverId} />;
+  }>) => (
+    <CareReceiverInfoPage {...props} careReceiverId={params.careReceiverId} />
+  );
 
   const renderCareReceiverInfoDetailPage = ({
     match: { params },

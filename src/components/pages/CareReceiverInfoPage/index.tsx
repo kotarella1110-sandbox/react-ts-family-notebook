@@ -22,7 +22,7 @@ export interface State {
   readonly name: string;
 }
 
-class CareReceiverPage extends React.Component<Props, State> {
+class CareReceiverInfoPage extends React.Component<Props, State> {
   readonly state: State = {
     modalIsOpen: false,
     name: '',
@@ -85,4 +85,4 @@ class CareReceiverPage extends React.Component<Props, State> {
   }
 }
 
-export default CareReceiverPage;
+export default CareReceiverInfoPage;

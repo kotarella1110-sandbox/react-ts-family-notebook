@@ -1,5 +1,5 @@
 import { State, CareReceiversEntities, CareReceiverEntities } from 'models';
-import { OwnProps } from 'containers/CareReceiverPage';
+import { OwnProps } from 'containers/CareReceiverInfoPage';
 
 export const getCareReceivers = ({
   entities: { careReceivers },

@@ -5,7 +5,7 @@ import { mayBeStubbed } from 'react-stubber';
 import { State, CareReceiverEntities } from 'models';
 import { getCareReceiver } from 'store/selectors';
 import { fetchCareReceivers, addFolder } from 'store/actions';
-import CareReceiverPage from 'components/pages/CareReceiverPage';
+import CareReceiverInfoPage from 'components/pages/CareReceiverInfoPage';
 
 export interface OwnProps {
   careReceiverId: CareReceiverEntities['id'];
@@ -27,6 +27,6 @@ const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) =>
 const CareReceiverPageContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(CareReceiverPage);
+)(CareReceiverInfoPage);
 
 export default mayBeStubbed(CareReceiverPageContainer);

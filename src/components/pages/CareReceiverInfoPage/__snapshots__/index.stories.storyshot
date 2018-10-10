@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Pages/CareReceiverPage default 1`] = `
+exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
 .c8 {
   margin: 0;
   padding: 0;
