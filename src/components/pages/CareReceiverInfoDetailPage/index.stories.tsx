@@ -60,7 +60,6 @@ storiesOf('Pages/CareReceiverInfoDetailPage', module)
           name: '病歴やアレルギーなど',
           contents: [0, 1],
         }}
-        fetchCareReceivers={action('fetchCareReceivers')}
         editFolder={action('editFolder')}
         deleteFolder={action('deleteFolder')}
         addFolderContent={action('addFolderContent')}

@@ -18,7 +18,6 @@ import CareReceiverInfoDetailMain from '../../organisms/CareReceiverInfoDetailMa
 export interface Props {
   readonly careReceiver: CareReceiverEntities;
   readonly folder: FolderEntities;
-  fetchCareReceivers: () => any;
   editFolder: (
     payload: ReturnType<typeof actions.editFolder>['payload']
   ) => any;
@@ -65,10 +64,6 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
       content: '',
     },
   };
-
-  componentDidMount() {
-    this.props.fetchCareReceivers();
-  }
 
   toggleFolderModal = () => {
     this.setState({

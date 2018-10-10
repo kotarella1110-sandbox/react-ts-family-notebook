@@ -20,7 +20,6 @@ const mapStateToProps = (state: State, ownProps: OwnProps) => ({
 const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) =>
   bindActionCreators<any, any>(
     {
-      fetchCareReceivers: actions.fetchCareReceivers.started,
       editFolder: actions.editFolder,
       deleteFolder: actions.deleteFolder,
       addFolderContent: actions.addFolderContent.started,

@@ -5,7 +5,7 @@ import CareReceiverInfoDetailList, { Props } from '.';
 const setup = (propOverrides = {}) => {
   const props: Props = {
     folderContentIds: [0, 1],
-    toggleFolderContentModal: jest.fn()
+    toggleFolderContentModal: jest.fn(),
     ...propOverrides,
   };
 

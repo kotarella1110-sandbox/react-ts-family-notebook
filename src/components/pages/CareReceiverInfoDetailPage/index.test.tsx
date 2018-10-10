@@ -18,7 +18,6 @@ const setup = () => {
       name: '病歴やアレルギーなど',
       contents: [0, 1],
     },
-    fetchCareReceivers: jest.fn(),
     editFolder: jest.fn(),
     deleteFolder: jest.fn(),
     addFolderContent: jest.fn(),

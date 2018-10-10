@@ -1,4 +1,6 @@
 import { Store, createStore, applyMiddleware, compose } from 'redux';
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 import { History } from 'history';
 import { routerMiddleware, connectRouter } from 'connected-react-router';
 import createSagaMiddleware from 'redux-saga';
@@ -12,6 +14,12 @@ const devtools: any =
     ? (window as any).devToolsExtension
     : () => (fn: any) => fn;
 
+const persistConfig = {
+  storage,
+  key: 'root',
+  whitelist: ['entities'],
+};
+
 const configureStore = (initialState: object = {}, history: History) => {
   const sagaMiddleware = createSagaMiddleware();
 
@@ -20,8 +28,10 @@ const configureStore = (initialState: object = {}, history: History) => {
     devtools(),
   ];
 
+  const persistedReducer = persistReducer(persistConfig, reducer);
+
   const store: Store = createStore(
-    connectRouter(history)(reducer),
+    connectRouter(history)(persistedReducer),
     initialState,
     compose(...enhancers)
   );
