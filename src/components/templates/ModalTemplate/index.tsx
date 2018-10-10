@@ -46,11 +46,10 @@ const Main = styled.main`
   grid-area: main;
   overflow: auto;
   -webkitoverflowscrolling: touch;
-  background-color: ${props => props.theme.grayLighter};
 `;
 
 const Footer = styled.footer`
-  grid-area: main;
+  grid-area: footer;
 `;
 
 const ModalTemplate = styled(Modal)`
@@ -81,7 +80,7 @@ const ModalTemplate = styled(Modal)`
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background: #fff;
+    background: ${props => props.theme.grayLighter};
 
     /* overflow: auto;
     webkitoverflowscrolling: touch; */
