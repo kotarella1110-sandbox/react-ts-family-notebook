@@ -19,14 +19,16 @@ Item.defaultProps = {
   right: null,
 };
 
-const Contents = styled.div``;
+const Contents = styled.div`
+  padding: 0 8px;
+`;
 
 const Right = styled.div``;
 
 const Wrapper = styled.div`
   display: flex;
+  align-items: stretch;
   justify-content: space-between;
-  align-items: center;
 
   padding: 12px 16px;
   color: ${props => props.theme.textColor};
@@ -34,7 +36,8 @@ const Wrapper = styled.div`
   background-color: ${props => props.theme.white};
 
   & > * {
-    margin: 2px;
+    display: flex;
+    align-items: center;
   }
 
   & > ${Contents} {
