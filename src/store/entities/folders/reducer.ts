@@ -30,16 +30,16 @@ const folders = reducerWithInitialState(initialState)
       },
     })
   )
-  .case(actions.editFolder, (state, { id, name }) => ({
+  .case(actions.editFolder.done, (state, { result: { id, name } }) => ({
     ...state,
     [id]: {
       ...state[id],
       name,
     },
   }))
-  .case(actions.deleteFolder, (state, { id }) =>
+  .case(actions.deleteFolder.done, (state, { result: { id } }) =>
     Object.keys(state)
-      .filter(folderId => Number(folderId) !== id)
+      .filter(folderId => folderId !== id)
       .reduce((result, folderId) => {
         result[folderId] = state[folderId];
         return result;
@@ -68,15 +68,18 @@ const folders = reducerWithInitialState(initialState)
       };
     }
   )
-  .case(actions.deleteFolderContent, (state, { id, folderId }) => {
-    const folderContents = state[folderId].contents || [];
-    return {
-      ...state,
-      [folderId]: {
-        ...state[folderId],
-        contents: folderContents.filter(folderId => folderId !== id),
-      },
-    };
-  });
+  .case(
+    actions.deleteFolderContent.done,
+    (state, { result: { id, folderId } }) => {
+      const folderContents = state[folderId].contents || [];
+      return {
+        ...state,
+        [folderId]: {
+          ...state[folderId],
+          contents: folderContents.filter(folderId => folderId !== id),
+        },
+      };
+    }
+  );
 
 export default folders;

@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import { mayBeStubbed } from 'react-stubber';
-import { State } from 'models';
+import { State, FolderEntities } from 'models';
 import { getFolder } from 'store/selectors';
 import CareReceiverInfoItem from 'components/molecules/CareReceiverInfoItem';
 
 export interface OwnProps {
-  folderId: number;
+  folderId: FolderEntities['id'];
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 

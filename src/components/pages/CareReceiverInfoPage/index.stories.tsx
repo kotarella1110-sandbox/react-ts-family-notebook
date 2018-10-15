@@ -23,10 +23,13 @@ storiesOf('Pages/CareReceiverInfoPage', module)
       ~~~jsx
       <CareReceiverInfoPage
         careReceiver={{
-          id: 0,
+          id: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
           name: '左藤太郎',
           birth: '76歳 1941年1月15日生',
-          folders: [0, 1],
+          folders: [
+            'c430c8ef-868f-4189-9e53-c64151882e40',
+            '71f24b4d-8816-4563-8526-a257f0bed1a2',
+          ],
         }}
         fetchCareReceivers={action('fetchCareReceivers')}
         addFolder={action('addFolder')}
@@ -41,10 +44,13 @@ storiesOf('Pages/CareReceiverInfoPage', module)
     withNotes(``)(() => (
       <CareReceiverInfoPage
         careReceiver={{
-          id: 0,
+          id: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
           name: '左藤太郎',
           birth: '76歳 1941年1月15日生',
-          folders: [0, 1],
+          folders: [
+            'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+            '71f24b4d-8816-4563-8526-a257f0bed1a2',
+          ],
         }}
         fetchCareReceivers={action('fetchCareReceivers')}
         addFolder={action('addFolder')}

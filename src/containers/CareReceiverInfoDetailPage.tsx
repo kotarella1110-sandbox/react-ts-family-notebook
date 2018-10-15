@@ -20,11 +20,11 @@ const mapStateToProps = (state: State, ownProps: OwnProps) => ({
 const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) =>
   bindActionCreators<any, any>(
     {
-      editFolder: actions.editFolder,
-      deleteFolder: actions.deleteFolder,
+      editFolder: actions.editFolder.started,
+      deleteFolder: actions.deleteFolder.started,
       addFolderContent: actions.addFolderContent.started,
-      editFolderContent: actions.editFolderContent,
-      deleteFolderContent: actions.deleteFolderContent,
+      editFolderContent: actions.editFolderContent.started,
+      deleteFolderContent: actions.deleteFolderContent.started,
     },
     dispatch
   );

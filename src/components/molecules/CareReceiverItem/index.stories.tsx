@@ -12,7 +12,7 @@ storiesOf('Molecules/CareReceiverItem', module)
       ~~~js
       <CareReceiverItem
         careReceiver={{
-          id: 0,
+          id: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
           name: '左藤太郎',
           birth: '76歳 1941年1月15日生',
         }}
@@ -27,7 +27,7 @@ storiesOf('Molecules/CareReceiverItem', module)
     withNotes(``)(() => (
       <CareReceiverItem
         careReceiver={{
-          id: 0,
+          id: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
           name: '左藤太郎',
           birth: '76歳 1941年1月15日生',
           folders: [],

@@ -6,8 +6,8 @@ import Item from '../Item';
 const setup = (propOverrides = {}) => {
   const props: Props = {
     folder: {
-      id: 0,
-      careReceiverId: 0,
+      id: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+      careReceiverId: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
       name: 'Name',
     },
     ...propOverrides,

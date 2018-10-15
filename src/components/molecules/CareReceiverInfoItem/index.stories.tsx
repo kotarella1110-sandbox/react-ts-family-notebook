@@ -11,7 +11,13 @@ storiesOf('Molecules/CareReceiverInfoItem', module)
   .addDecorator((story, context) =>
     withInfo(`
       ~~~js
-      <CareReceiverInfoItem folder={{ id: 0, name: 'Title' }} />
+      <CareReceiverInfoItem
+        folder={{
+          id: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+          careReceiverId: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
+          name: 'Title',
+        }}
+      />
       ~~~
     `)(story)(context)
   )
@@ -21,7 +27,11 @@ storiesOf('Molecules/CareReceiverInfoItem', module)
     'default',
     withNotes(``)(() => (
       <CareReceiverInfoItem
-        folder={{ id: 0, careReceiverId: 0, name: 'Title' }}
+        folder={{
+          id: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+          careReceiverId: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
+          name: 'Title',
+        }}
       />
     ))
   );

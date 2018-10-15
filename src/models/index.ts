@@ -1,11 +1,11 @@
 import { RouterState } from 'connected-react-router';
 
 interface NormalizedObjects<T> {
-  [id: number]: T;
+  [id: string]: T;
 }
 
 interface CareReceiver {
-  id: number;
+  id: string;
   name: string;
   birth: string;
 }
@@ -22,7 +22,7 @@ export interface CareReceiversEntities
   extends NormalizedObjects<CareReceiverEntities> {}
 
 interface Folder {
-  id: number;
+  id: string;
   careReceiverId: CareReceiver['id'];
   name: string;
 }
@@ -38,7 +38,7 @@ export interface FolderResources extends Folder {
 export interface FoldersEntities extends NormalizedObjects<FolderEntities> {}
 
 interface FolderContent {
-  id: number;
+  id: string;
   folderId: Folder['id'];
   title: string;
   content: string;

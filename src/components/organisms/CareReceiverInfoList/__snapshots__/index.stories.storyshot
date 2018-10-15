@@ -100,7 +100,7 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
   >
     <a
       className="c2"
-      href="/careReceivers/0/info/0"
+      href="/careReceivers/8e3900e8-58a3-45d9-92e5-10d894016bd7/info/a0d45fb9-ea6d-48df-af7b-9f5af2329f39"
       onClick={[Function]}
     >
       <div
@@ -151,7 +151,7 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
   >
     <a
       className="c2"
-      href="/careReceivers/0/info/1"
+      href="/careReceivers/8e3900e8-58a3-45d9-92e5-10d894016bd7/info/71f24b4d-8816-4563-8526-a257f0bed1a2"
       onClick={[Function]}
     >
       <div

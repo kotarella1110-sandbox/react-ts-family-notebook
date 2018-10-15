@@ -36,14 +36,28 @@ export const addFolderContent = actionCreator.async<
   }
 >('ADD');
 
-export const editFolderContent = actionCreator<{
-  id: FolderContentEntities['id'];
-  folderId: FolderEntities['id'];
-  title: FolderContentEntities['title'];
-  content: FolderContentEntities['content'];
-}>('EDIT');
+export const editFolderContent = actionCreator.async<
+  {
+    id: FolderContentEntities['id'];
+    folderId: FolderEntities['id'];
+    title: FolderContentEntities['title'];
+    content: FolderContentEntities['content'];
+  },
+  {
+    id: FolderContentEntities['id'];
+    folderId: FolderEntities['id'];
+    title: FolderContentEntities['title'];
+    content: FolderContentEntities['content'];
+  }
+>('EDIT');
 
-export const deleteFolderContent = actionCreator<{
-  id: FolderContentEntities['id'];
-  folderId: FolderEntities['id'];
-}>('DELETE');
+export const deleteFolderContent = actionCreator.async<
+  {
+    id: FolderContentEntities['id'];
+    folderId: FolderEntities['id'];
+  },
+  {
+    id: FolderContentEntities['id'];
+    folderId: FolderEntities['id'];
+  }
+>('DELETE');

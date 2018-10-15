@@ -4,7 +4,10 @@ import CareReceiverInfoDetailList, { Props } from '.';
 
 const setup = (propOverrides = {}) => {
   const props: Props = {
-    folderContentIds: [0, 1],
+    folderContentIds: [
+      'c430c8ef-868f-4189-9e53-c64151882e40',
+      '7145db67-df4d-4df2-9747-8ffbcf4dff68',
+    ],
     toggleFolderContentModal: jest.fn(),
     ...propOverrides,
   };
@@ -34,7 +37,7 @@ describe('CareReceiverInfoDetailList', () => {
       const CareReceiverInfoDetailItem = LI.find(
         'Connect(CareReceiverInfoDetailItem)'
       );
-      expect(Number(LI.key())).toBe(folderContentIds[index]);
+      expect(LI.key()).toBe(folderContentIds[index]);
       expect(CareReceiverInfoDetailItem.prop('folderContentId')).toEqual(
         folderContentIds[index]
       );

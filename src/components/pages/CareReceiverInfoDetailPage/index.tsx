@@ -19,19 +19,19 @@ export interface Props {
   readonly careReceiver: CareReceiverEntities;
   readonly folder: FolderEntities;
   editFolder: (
-    payload: ReturnType<typeof actions.editFolder>['payload']
+    payload: ReturnType<typeof actions.editFolder.started>['payload']
   ) => any;
   deleteFolder: (
-    payload: ReturnType<typeof actions.deleteFolder>['payload']
+    payload: ReturnType<typeof actions.deleteFolder.started>['payload']
   ) => any;
   addFolderContent: (
     payload: ReturnType<typeof actions.addFolderContent.started>['payload']
   ) => any;
   editFolderContent: (
-    payload: ReturnType<typeof actions.editFolderContent>['payload']
+    payload: ReturnType<typeof actions.editFolderContent.started>['payload']
   ) => any;
   deleteFolderContent: (
-    payload: ReturnType<typeof actions.deleteFolderContent>['payload']
+    payload: ReturnType<typeof actions.deleteFolderContent.started>['payload']
   ) => any;
   history?: any;
 }
@@ -59,7 +59,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     folderContent: {
       modalIsOpen: false,
       editing: false,
-      id: -1,
+      id: '',
       title: '',
       content: '',
     },

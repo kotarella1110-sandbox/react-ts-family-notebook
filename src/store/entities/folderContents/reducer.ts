@@ -32,8 +32,8 @@ const folderContents = reducerWithInitialState(initialState)
     })
   )
   .case(
-    actions.editFolderContent,
-    (state, { id, title, content }) =>
+    actions.editFolderContent.done,
+    (state, { result: { id, title, content } }) =>
       state[id]
         ? {
             ...state,
@@ -45,9 +45,9 @@ const folderContents = reducerWithInitialState(initialState)
           }
         : state
   )
-  .case(actions.deleteFolderContent, (state, { id }) =>
+  .case(actions.deleteFolderContent.done, (state, { result: { id } }) =>
     Object.keys(state)
-      .filter(folderContentId => Number(folderContentId) !== id)
+      .filter(folderContentId => folderContentId !== id)
       .reduce((result, folderContentId) => {
         result[folderContentId] = state[folderContentId];
         return result;

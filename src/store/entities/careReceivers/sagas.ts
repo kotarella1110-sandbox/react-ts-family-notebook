@@ -2,12 +2,9 @@ import { SagaIterator } from 'redux-saga';
 import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
+import { CareReceiverEntities } from 'models';
 import * as actions from 'store/actions';
-import { careReceivers } from 'store/resources';
-
-const fetchCareReceivers = (
-  payload: ReturnType<typeof actions.fetchCareReceivers.done>['payload']
-) => new Promise(resolve => setTimeout(() => resolve(careReceivers), 10));
+import { fetchCareReceivers } from 'services/api';
 
 function* fetchFoldersWorker({
   payload: {
@@ -15,7 +12,7 @@ function* fetchFoldersWorker({
   },
 }: Action<any>): SagaIterator {
   yield all(
-    result.map((careReceiverId: number) => {
+    result.map((careReceiverId: CareReceiverEntities['id']) => {
       if (!entities.careReceivers[careReceiverId].folders) {
         return put(actions.fetchFolders.started({ careReceiverId }));
       }
@@ -30,8 +27,8 @@ function* fetchCareReceiversWorker({
   yield call(
     bindAsyncAction(actions.fetchCareReceivers, { skipStartedAction: true })(
       function*(payload): SagaIterator {
-        const careReceivers = yield call(fetchCareReceivers, payload);
-        return careReceivers;
+        const result = yield call(fetchCareReceivers, payload);
+        return result;
       }
     ),
     payload

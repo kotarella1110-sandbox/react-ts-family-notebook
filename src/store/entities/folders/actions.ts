@@ -30,13 +30,26 @@ export const addFolder = actionCreator.async<
   }
 >('ADD');
 
-export const editFolder = actionCreator<{
-  id: FolderEntities['id'];
-  careReceiverId: CareReceiverEntities['id'];
-  name: FolderEntities['name'];
-}>('EDIT');
+export const editFolder = actionCreator.async<
+  {
+    id: FolderEntities['id'];
+    careReceiverId: CareReceiverEntities['id'];
+    name: FolderEntities['name'];
+  },
+  {
+    id: FolderEntities['id'];
+    careReceiverId: CareReceiverEntities['id'];
+    name: FolderEntities['name'];
+  }
+>('EDIT');
 
-export const deleteFolder = actionCreator<{
-  id: FolderEntities['id'];
-  careReceiverId: CareReceiverEntities['id'];
-}>('DELETE');
+export const deleteFolder = actionCreator.async<
+  {
+    id: FolderEntities['id'];
+    careReceiverId: CareReceiverEntities['id'];
+  },
+  {
+    id: FolderEntities['id'];
+    careReceiverId: CareReceiverEntities['id'];
+  }
+>('DELETE');

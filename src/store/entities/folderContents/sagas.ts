@@ -1,25 +1,8 @@
 import { SagaIterator } from 'redux-saga';
-import { call, select, takeEvery } from 'redux-saga/effects';
+import { call, takeEvery } from 'redux-saga/effects';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
-import { FolderContentsEntities } from 'models';
-import { getFolderContents } from './selectors';
 import * as actions from 'store/actions';
-import { folderContents } from 'store/resources';
-
-const fetchFolderContents = (
-  payload: ReturnType<typeof actions.fetchFolderContents.started>['payload']
-) =>
-  new Promise(resolve =>
-    setTimeout(
-      () =>
-        resolve(
-          folderContents.filter(
-            folderContent => folderContent.folderId === payload.folderId
-          )
-        ),
-      10
-    )
-  );
+import * as api from 'services/api';
 
 function* fetchFolderContentsWorker({
   payload,
@@ -27,7 +10,7 @@ function* fetchFolderContentsWorker({
   yield call(
     bindAsyncAction(actions.fetchFolderContents, { skipStartedAction: true })(
       function*(payload): SagaIterator {
-        const folderContents = yield call(fetchFolderContents, payload);
+        const folderContents = yield call(api.fetchFolderContents, payload);
         return folderContents;
       }
     ),
@@ -41,15 +24,36 @@ function* addFolderContentWorker({
   yield call(
     bindAsyncAction(actions.addFolderContent, { skipStartedAction: true })(
       function*(payload): SagaIterator {
-        const state: FolderContentsEntities = yield select(getFolderContents);
-        return {
-          ...payload,
-          id:
-            Object.keys(state).reduce(
-              (maxId, id) => Math.max(Number(id), maxId),
-              -1
-            ) + 1,
-        };
+        const result = yield call(api.addFolderContent, payload);
+        return result;
+      }
+    ),
+    payload
+  );
+}
+
+function* editFolderContentWorker({
+  payload,
+}: ReturnType<typeof actions.editFolderContent.started>) {
+  yield call(
+    bindAsyncAction(actions.editFolderContent, { skipStartedAction: true })(
+      function*(payload): SagaIterator {
+        const result = yield call(api.editFolderContent, payload);
+        return result;
+      }
+    ),
+    payload
+  );
+}
+
+function* deleteFolderContentWorker({
+  payload,
+}: ReturnType<typeof actions.deleteFolderContent.started>) {
+  yield call(
+    bindAsyncAction(actions.deleteFolderContent, { skipStartedAction: true })(
+      function*(payload): SagaIterator {
+        const result = yield call(api.deleteFolderContent, payload);
+        return result;
       }
     ),
     payload
@@ -64,5 +68,13 @@ export default function* watcher(): SagaIterator {
   yield takeEvery(
     actions.addFolderContent.started.type,
     addFolderContentWorker
+  );
+  yield takeEvery(
+    actions.editFolderContent.started.type,
+    editFolderContentWorker
+  );
+  yield takeEvery(
+    actions.deleteFolderContent.started.type,
+    deleteFolderContentWorker
   );
 }

@@ -44,7 +44,13 @@ storiesOf('Templates/AppTemplate', module)
             title="Title"
           />
         }>
-        <CareReceiverInfoList careReceiverId={1} folderIds={[0, 1]} />
+        <CareReceiverInfoList
+          careReceiverId="8e3900e8-58a3-45d9-92e5-10d894016bd7"
+          folderIds={[
+            'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+            '71f24b4d-8816-4563-8526-a257f0bed1a2',
+          ]}
+        />
       </AppTemplate>
     ))
   );

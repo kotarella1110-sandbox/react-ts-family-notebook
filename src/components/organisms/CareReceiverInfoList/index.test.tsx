@@ -4,8 +4,11 @@ import CareReceiverInfoList, { Props } from '.';
 
 const setup = (propOverrides = {}) => {
   const props: Props = {
-    careReceiverId: 0,
-    folderIds: [0, 1],
+    careReceiverId: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
+    folderIds: [
+      'c430c8ef-868f-4189-9e53-c64151882e40',
+      '71f24b4d-8816-4563-8526-a257f0bed1a2',
+    ],
     ...propOverrides,
   };
 
@@ -32,7 +35,7 @@ describe('CareReceiverInfoList', () => {
 
     wrapper.children().forEach((LI, index) => {
       const CareReceiverInfoItem = LI.find('Connect(CareReceiverInfoItem)');
-      expect(Number(LI.key())).toBe(folderIds[index]);
+      expect(LI.key()).toBe(folderIds[index]);
       expect(CareReceiverInfoItem.prop('folderId')).toEqual(folderIds[index]);
     });
   });

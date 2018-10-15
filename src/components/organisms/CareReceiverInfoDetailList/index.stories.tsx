@@ -25,7 +25,13 @@ storiesOf('Organisms/CareReceiverInfoDetailList', module)
   .addDecorator((story, context) =>
     withInfo(`
       ~~~js
-      <CareReceiverInfoDetailList folderContentIds={[0, 1]} />
+      <CareReceiverInfoDetailList
+        folderContentIds={[
+          'c430c8ef-868f-4189-9e53-c64151882e40',
+          '7145db67-df4d-4df2-9747-8ffbcf4dff68',
+        ]}
+        toggleFolderContentModal={action('toggleFolderContentModal')}
+      />
       ~~~
     `)(story)(context)
   )
@@ -35,7 +41,10 @@ storiesOf('Organisms/CareReceiverInfoDetailList', module)
     'default',
     withNotes(``)(() => (
       <CareReceiverInfoDetailList
-        folderContentIds={[0, 1]}
+        folderContentIds={[
+          'c430c8ef-868f-4189-9e53-c64151882e40',
+          '7145db67-df4d-4df2-9747-8ffbcf4dff68',
+        ]}
         toggleFolderContentModal={action('toggleFolderContentModal')}
       />
     ))

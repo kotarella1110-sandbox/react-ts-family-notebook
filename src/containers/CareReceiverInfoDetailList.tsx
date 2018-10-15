@@ -21,8 +21,8 @@ const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) =>
   bindActionCreators<any, any>(
     {
       fetchCareReceivers: actions.fetchCareReceivers.started,
-      editFolder: actions.editFolder,
-      deleteFolder: actions.deleteFolder,
+      editFolder: actions.editFolder.started,
+      deleteFolder: actions.deleteFolder.started,
       addFolderContent: actions.addFolderContent.started,
     },
     dispatch
