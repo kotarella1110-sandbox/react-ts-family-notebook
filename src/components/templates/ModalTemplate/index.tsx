@@ -49,7 +49,12 @@ const Main = styled.main`
 `;
 
 const Footer = styled.footer`
-  grid-area: footer;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 16px;
 `;
 
 const ModalTemplate = styled(Modal)`
@@ -66,14 +71,11 @@ const ModalTemplate = styled(Modal)`
     display: grid;
     grid-template-areas:
       'header'
-      'main'
-      'footer';
+      'main';
     grid-template-columns: 1fr;
     grid-template-rows:
-      calc(${props => props.theme.sizeBase} * 6) calc(
-        100vh - ${props => props.theme.sizeBase} * 6 * 2
-      )
-      calc(${props => props.theme.sizeBase} * 6);
+      calc(${props => props.theme.sizeBase} * 6)
+      calc(100vh - ${props => props.theme.sizeBase} * 6);
 
     position: absolute;
     top: 0px;
