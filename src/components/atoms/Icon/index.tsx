@@ -20,7 +20,6 @@ Icon.defaultProps = {
 
 const Wrapper = styled<Props, 'span'>('span')`
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 
   ${props =>
