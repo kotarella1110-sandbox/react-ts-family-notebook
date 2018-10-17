@@ -1,3 +1,4 @@
+import { OptimisticState } from 'redux-optimistic-ui';
 import { RouterState } from 'connected-react-router';
 
 interface NormalizedObjects<T> {
@@ -58,6 +59,6 @@ export interface Entities {
 }
 
 export interface State {
-  entities: Entities;
+  entities: OptimisticState<Entities>;
   router?: RouterState;
 }

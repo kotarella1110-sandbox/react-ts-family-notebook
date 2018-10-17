@@ -1,11 +1,11 @@
-import { State, CareReceiversEntities, CareReceiverEntities } from 'models';
+import { ensureState } from 'redux-optimistic-ui';
+import { State, CareReceiversEntities } from 'models';
 import { OwnProps } from 'containers/CareReceiverInfoPage';
 
-export const getCareReceivers = ({
-  entities: { careReceivers },
-}: State): CareReceiversEntities => careReceivers;
+export const getCareReceivers = ({ entities }: State): CareReceiversEntities =>
+  ensureState(entities).careReceivers;
 
 export const getCareReceiver = (
-  { entities: { careReceivers } }: State,
+  { entities }: State,
   { careReceiverId }: OwnProps
-): CareReceiverEntities => careReceivers[careReceiverId];
+) => ensureState(entities).careReceivers[careReceiverId];

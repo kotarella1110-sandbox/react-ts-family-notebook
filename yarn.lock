@@ -772,6 +772,13 @@
   dependencies:
     redux "^3.6.0"
 
+"@types/redux-optimistic-ui@^0.4.10":
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/@types/redux-optimistic-ui/-/redux-optimistic-ui-0.4.10.tgz#150c6d6ff7a622fc37576b4f80a3162f5717f29e"
+  integrity sha512-Yt9EOiEYywilK0xS0oEyxJid7YRNxqckACjbVnSJHNDukP8EjK8ik+EjLlzVM8f6ONa4gO3LbCZ5XLmRRjOhpg==
+  dependencies:
+    redux "^3.6.0"
+
 "@types/redux-saga@^0.10.5":
   version "0.10.5"
   resolved "https://registry.yarnpkg.com/@types/redux-saga/-/redux-saga-0.10.5.tgz#80bf21078379ebc97387dbe56e44467b5677fa85"
@@ -11329,6 +11336,11 @@ reduce-reducers@^0.4.3:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/reduce-reducers/-/reduce-reducers-0.4.3.tgz#8e052618801cd8fc2714b4915adaa8937eb6d66c"
   integrity sha512-+CNMnI8QhgVMtAt54uQs3kUxC3Sybpa7Y63HR14uGLgI9/QR5ggHvpxwhGGe3wmx5V91YwqQIblN9k5lspAmGw==
+
+redux-optimistic-ui@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/redux-optimistic-ui/-/redux-optimistic-ui-3.1.0.tgz#efd07bb8483185db221b50f3d0ea42ce93b12d6d"
+  integrity sha512-TYYre7+3GUKhQvzRInzJfP4sRnH6G8N7QtDoEnTMTifAkUg7iP3EtqDaKvYHBfP+dnny5c81IsLzqtbCDw6c0A==
 
 redux-persist@^5.10.0:
   version "5.10.0"

@@ -1,10 +1,12 @@
+import { ensureState } from 'redux-optimistic-ui';
 import { State, FolderContentsEntities, FolderContentEntities } from 'models';
 
 export const getFolderContents = ({
-  entities: { folderContents },
-}: State): FolderContentsEntities => folderContents;
+  entities,
+}: State): FolderContentsEntities => ensureState(entities).folderContents;
 
 export const getFolderContent = (
-  { entities: { folderContents } }: State,
+  { entities }: State,
   { folderContentId }: { folderContentId: FolderContentEntities['id'] }
-): FolderContentEntities => folderContents[folderContentId];
+): FolderContentEntities =>
+  ensureState(entities).folderContents[folderContentId] || {};

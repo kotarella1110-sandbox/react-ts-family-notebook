@@ -42,7 +42,7 @@ export const addFolder = (
   payload: ReturnType<typeof actions.addFolder.started>['payload']
 ) =>
   delay(500).then(() => {
-    if (Math.random() > 1) {
+    if (Math.random() > 0.7) {
       throw new Error();
     }
     return {
@@ -55,7 +55,7 @@ export const editFolder = (
   payload: ReturnType<typeof actions.editFolder.started>['payload']
 ) =>
   delay(500).then(() => {
-    if (Math.random() > 1) {
+    if (Math.random() > 0.7) {
       throw new Error();
     }
     return payload;
@@ -65,7 +65,7 @@ export const deleteFolder = (
   payload: ReturnType<typeof actions.deleteFolder.started>['payload']
 ) =>
   delay(500).then(() => {
-    if (Math.random() > 1) {
+    if (Math.random() > 0.7) {
       throw new Error();
     }
     return payload;

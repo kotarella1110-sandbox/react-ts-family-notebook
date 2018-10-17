@@ -16,7 +16,7 @@ const devtools: any =
 
 const persistConfig = {
   storage,
-  key: 'root',
+  key: 'entities',
   whitelist: ['entities'],
 };
 

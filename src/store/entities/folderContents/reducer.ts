@@ -45,13 +45,9 @@ const folderContents = reducerWithInitialState(initialState)
           }
         : state
   )
-  .case(actions.deleteFolderContent.done, (state, { result: { id } }) =>
-    Object.keys(state)
-      .filter(folderContentId => folderContentId !== id)
-      .reduce((result, folderContentId) => {
-        result[folderContentId] = state[folderContentId];
-        return result;
-      }, {})
-  );
+  .case(actions.deleteFolderContent.done, (state, { result: { id } }) => {
+    const { [id]: _, ...newState } = state;
+    return newState;
+  });
 
 export default folderContents;

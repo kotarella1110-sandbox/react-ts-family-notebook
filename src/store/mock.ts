@@ -1,6 +1,4 @@
-import { State } from 'models';
-
-const mockStore: State = {
+const mockStore = {
   entities: {
     careReceivers: {
       '8e3900e8-58a3-45d9-92e5-10d894016bd7': {
