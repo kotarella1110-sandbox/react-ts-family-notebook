@@ -12,6 +12,7 @@ const Icon: React.SFC<Props> = props => {
   return <Wrapper {...props} dangerouslySetInnerHTML={{ __html: svg }} />;
 };
 
+// tslint:disable-next-line:no-object-mutation
 Icon.defaultProps = {
   size: '24px',
   reverse: false,

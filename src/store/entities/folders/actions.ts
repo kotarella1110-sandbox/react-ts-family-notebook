@@ -6,13 +6,13 @@ const actionCreator = actionCreatorFactory('folders');
 
 export const fetchFolders = actionCreator.async<
   {
-    careReceiverId: CareReceiverEntities['id'];
+    readonly careReceiverId: CareReceiverEntities['id'];
   },
   {
-    entities: {
-      folders: FoldersEntities;
+    readonly entities: {
+      readonly folders: FoldersEntities;
     };
-    result: FolderEntities['id'][];
+    readonly result: ReadonlyArray<FolderEntities['id']>;
   }
 >('FETCH', {
   schema: [schemas.folder],
@@ -20,36 +20,36 @@ export const fetchFolders = actionCreator.async<
 
 export const addFolder = actionCreator.async<
   {
-    careReceiverId: CareReceiverEntities['id'];
-    name: FolderEntities['name'];
+    readonly careReceiverId: CareReceiverEntities['id'];
+    readonly name: FolderEntities['name'];
   },
   {
-    id: FolderEntities['id'];
-    careReceiverId: CareReceiverEntities['id'];
-    name: FolderEntities['name'];
+    readonly id: FolderEntities['id'];
+    readonly careReceiverId: CareReceiverEntities['id'];
+    readonly name: FolderEntities['name'];
   }
 >('ADD');
 
 export const editFolder = actionCreator.async<
   {
-    id: FolderEntities['id'];
-    careReceiverId: CareReceiverEntities['id'];
-    name: FolderEntities['name'];
+    readonly id: FolderEntities['id'];
+    readonly careReceiverId: CareReceiverEntities['id'];
+    readonly name: FolderEntities['name'];
   },
   {
-    id: FolderEntities['id'];
-    careReceiverId: CareReceiverEntities['id'];
-    name: FolderEntities['name'];
+    readonly id: FolderEntities['id'];
+    readonly careReceiverId: CareReceiverEntities['id'];
+    readonly name: FolderEntities['name'];
   }
 >('EDIT');
 
 export const deleteFolder = actionCreator.async<
   {
-    id: FolderEntities['id'];
-    careReceiverId: CareReceiverEntities['id'];
+    readonly id: FolderEntities['id'];
+    readonly careReceiverId: CareReceiverEntities['id'];
   },
   {
-    id: FolderEntities['id'];
-    careReceiverId: CareReceiverEntities['id'];
+    readonly id: FolderEntities['id'];
+    readonly careReceiverId: CareReceiverEntities['id'];
   }
 >('DELETE');

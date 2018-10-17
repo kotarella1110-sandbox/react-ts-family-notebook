@@ -7,11 +7,11 @@ const actionCreator = actionCreatorFactory('careRedceivers');
 export const fetchCareReceivers = actionCreator.async<
   {},
   {
-    entities: {
-      careReceivers: CareReceiversEntities;
-      folders?: FoldersEntities;
+    readonly entities: {
+      readonly careReceivers: CareReceiversEntities;
+      readonly folders?: FoldersEntities;
     };
-    result: number[];
+    readonly result: ReadonlyArray<number>;
   }
 >('FETCH', {
   schema: [schemas.careReceiver],

@@ -6,7 +6,7 @@ import CareReceiverInfoItem from 'containers/CareReceiverInfoItem';
 
 export interface Props {
   readonly careReceiverId: CareReceiverEntities['id'];
-  readonly folderIds: FolderEntities['id'][];
+  readonly folderIds: ReadonlyArray<FolderEntities['id']>;
 }
 
 const CareReceiverInfoList: React.SFC<Props> = ({

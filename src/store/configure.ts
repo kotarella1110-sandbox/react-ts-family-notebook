@@ -23,7 +23,7 @@ const persistConfig = {
 const configureStore = (initialState: object = {}, history: History) => {
   const sagaMiddleware = createSagaMiddleware();
 
-  const enhancers = [
+  const enhancers: ReadonlyArray<any> = [
     applyMiddleware(...middlewares, sagaMiddleware, routerMiddleware(history)),
     devtools(),
   ];
@@ -36,6 +36,7 @@ const configureStore = (initialState: object = {}, history: History) => {
     compose(...enhancers)
   );
 
+  // tslint:disable-next-line:no-expression-statement
   sagaMiddleware.run(sagas);
 
   return store;

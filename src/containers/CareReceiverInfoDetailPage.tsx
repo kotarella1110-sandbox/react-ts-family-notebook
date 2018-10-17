@@ -8,8 +8,8 @@ import * as actions from 'store/actions';
 import CareReceiverInfoDetailPage from 'components/pages/CareReceiverInfoDetailPage';
 
 export interface OwnProps {
-  careReceiverId: CareReceiverEntities['id'];
-  folderId: FolderEntities['id'];
+  readonly careReceiverId: CareReceiverEntities['id'];
+  readonly folderId: FolderEntities['id'];
 }
 
 const mapStateToProps = (state: State, ownProps: OwnProps) => ({

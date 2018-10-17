@@ -4,7 +4,7 @@ import Button from 'components/atoms/Button';
 import Icon from 'components/atoms/Icon';
 
 export interface Props {
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  readonly onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const AddButton: React.SFC<Props> = ({ onClick, children }) => (
@@ -14,6 +14,7 @@ const AddButton: React.SFC<Props> = ({ onClick, children }) => (
   </Wrapper>
 );
 
+// tslint:disable-next-line:no-object-mutation
 AddButton.defaultProps = {
   onClick: e => null,
 };

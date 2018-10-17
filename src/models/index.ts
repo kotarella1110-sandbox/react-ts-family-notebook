@@ -2,47 +2,47 @@ import { OptimisticState } from 'redux-optimistic-ui';
 import { RouterState } from 'connected-react-router';
 
 interface NormalizedObjects<T> {
-  [id: string]: T;
+  readonly [id: string]: T;
 }
 
 interface CareReceiver {
-  id: string;
-  name: string;
-  birth: string;
+  readonly id: string;
+  readonly name: string;
+  readonly birth: string;
 }
 
 export interface CareReceiverEntities extends CareReceiver {
-  folders?: Folder['id'][];
+  readonly folders?: ReadonlyArray<Folder['id']>;
 }
 
 export interface CareReceiverResources extends CareReceiver {
-  folders?: Folder[];
+  readonly folders?: ReadonlyArray<Folder>;
 }
 
 export interface CareReceiversEntities
   extends NormalizedObjects<CareReceiverEntities> {}
 
 interface Folder {
-  id: string;
-  careReceiverId: CareReceiver['id'];
-  name: string;
+  readonly id: string;
+  readonly careReceiverId: CareReceiver['id'];
+  readonly name: string;
 }
 
 export interface FolderEntities extends Folder {
-  contents?: FolderContentEntities['id'][];
+  readonly contents?: ReadonlyArray<FolderContentEntities['id']>;
 }
 
 export interface FolderResources extends Folder {
-  contents?: FolderContent[];
+  readonly contents?: ReadonlyArray<FolderContent>;
 }
 
 export interface FoldersEntities extends NormalizedObjects<FolderEntities> {}
 
 interface FolderContent {
-  id: string;
-  folderId: Folder['id'];
-  title: string;
-  content: string;
+  readonly id: string;
+  readonly folderId: Folder['id'];
+  readonly title: string;
+  readonly content: string;
 }
 
 export interface FolderContentEntities extends FolderContent {}
@@ -53,12 +53,12 @@ export interface FolderContentsEntities
   extends NormalizedObjects<FolderContentEntities> {}
 
 export interface Entities {
-  careReceivers: CareReceiversEntities;
-  folders: FoldersEntities;
-  folderContents: FolderContentsEntities;
+  readonly careReceivers: CareReceiversEntities;
+  readonly folders: FoldersEntities;
+  readonly folderContents: FolderContentsEntities;
 }
 
 export interface State {
-  entities: OptimisticState<Entities>;
-  router?: RouterState;
+  readonly entities: OptimisticState<Entities>;
+  readonly router?: RouterState;
 }

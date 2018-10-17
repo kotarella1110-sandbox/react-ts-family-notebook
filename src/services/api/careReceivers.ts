@@ -2,7 +2,7 @@ import { CareReceiverResources } from 'models';
 import * as actions from 'store/actions';
 import { delay } from '.';
 
-const careReceivers: CareReceiverResources[] = [
+const careReceivers: ReadonlyArray<CareReceiverResources> = [
   {
     id: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
     name: '左藤太郎',

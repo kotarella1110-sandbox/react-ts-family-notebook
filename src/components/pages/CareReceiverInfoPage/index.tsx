@@ -11,8 +11,8 @@ import CareReceiverInfoMain from '../../organisms/CareReceiverInfoMain';
 
 export interface Props {
   readonly careReceiver: CareReceiverEntities;
-  fetchCareReceivers: () => any;
-  addFolder: (
+  readonly fetchCareReceivers: () => any;
+  readonly addFolder: (
     payload: ReturnType<typeof actions.addFolder.started>['payload']
   ) => any;
 }
@@ -28,15 +28,15 @@ class CareReceiverInfoPage extends React.Component<Props, State> {
     name: '',
   };
 
-  componentDidMount() {
+  componentDidMount(): void {
     this.props.fetchCareReceivers();
   }
 
-  toggleModal = () => {
+  readonly toggleModal = () => {
     this.setState({ modalIsOpen: !this.state.modalIsOpen });
   };
 
-  handleAddFolder = () => {
+  readonly handleAddFolder = () => {
     const careReceiverId = this.props.careReceiver.id;
     const name = this.state.name;
     if (name.length !== 0) {
@@ -49,11 +49,11 @@ class CareReceiverInfoPage extends React.Component<Props, State> {
     }
   };
 
-  handleChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
+  readonly handleChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ name: e.target.value });
   };
 
-  render() {
+  render(): JSX.Element {
     return (
       <div>
         <AppTemplate

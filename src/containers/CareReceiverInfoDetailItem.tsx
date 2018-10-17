@@ -5,8 +5,8 @@ import { getFolderContent } from 'store/selectors';
 import CareReceiverInfoDetailItem from 'components/molecules/CareReceiverInfoDetailItem';
 
 export interface OwnProps {
-  folderContentId: FolderContentEntities['id'];
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  readonly folderContentId: FolderContentEntities['id'];
+  readonly onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 const mapStateToProps = (state: State, ownProps: OwnProps) => ({

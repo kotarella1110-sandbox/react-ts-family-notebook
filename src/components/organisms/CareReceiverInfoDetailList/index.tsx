@@ -4,8 +4,10 @@ import { FolderEntities, FolderContentEntities } from 'models';
 import CareReceiverInfoDetailItem from 'containers/CareReceiverInfoDetailItem';
 
 export interface Props {
-  readonly folderContentIds: FolderEntities['id'][];
-  toggleFolderContentModal: (fonderContent: FolderContentEntities) => void;
+  readonly folderContentIds: ReadonlyArray<FolderEntities['id']>;
+  readonly toggleFolderContentModal: (
+    fonderContent: FolderContentEntities
+  ) => void;
 }
 
 const CareReceiverInfoDetailList: React.SFC<Props> = ({

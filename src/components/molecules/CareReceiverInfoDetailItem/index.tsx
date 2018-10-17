@@ -6,7 +6,9 @@ import Item from '../Item';
 
 export interface Props {
   readonly folderContent: FolderContentEntities;
-  toggleFolderContentModal: (folderContent: FolderContentEntities) => void;
+  readonly toggleFolderContentModal: (
+    folderContent: FolderContentEntities
+  ) => void;
 }
 
 const CareReceiverInfoDetailItem: React.SFC<Props> = ({
@@ -34,6 +36,7 @@ const CareReceiverInfoDetailItem: React.SFC<Props> = ({
   </Wrapper>
 );
 
+// tslint:disable-next-line:no-object-mutation
 CareReceiverInfoDetailItem.defaultProps = {
   toggleFolderContentModal: e => null,
 };

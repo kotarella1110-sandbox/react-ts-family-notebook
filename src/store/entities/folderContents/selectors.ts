@@ -7,6 +7,6 @@ export const getFolderContents = ({
 
 export const getFolderContent = (
   { entities }: State,
-  { folderContentId }: { folderContentId: FolderContentEntities['id'] }
+  { folderContentId }: { readonly folderContentId: FolderContentEntities['id'] }
 ): FolderContentEntities =>
   ensureState(entities).folderContents[folderContentId] || {};

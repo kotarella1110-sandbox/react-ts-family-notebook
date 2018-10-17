@@ -10,13 +10,13 @@ const actionCreator = actionCreatorFactory('folderContents');
 
 export const fetchFolderContents = actionCreator.async<
   {
-    folderId: FolderEntities['id'];
+    readonly folderId: FolderEntities['id'];
   },
   {
-    entities: {
-      folderContents: FolderContentsEntities;
+    readonly entities: {
+      readonly folderContents: FolderContentsEntities;
     };
-    result: FolderContentEntities['id'][];
+    readonly result: ReadonlyArray<FolderContentEntities['id']>;
   }
 >('FETCH', {
   schema: [schemas.folderContent],
@@ -24,40 +24,40 @@ export const fetchFolderContents = actionCreator.async<
 
 export const addFolderContent = actionCreator.async<
   {
-    folderId: FolderEntities['id'];
-    title: FolderContentEntities['title'];
-    content: FolderContentEntities['content'];
+    readonly folderId: FolderEntities['id'];
+    readonly title: FolderContentEntities['title'];
+    readonly content: FolderContentEntities['content'];
   },
   {
-    id: FolderContentEntities['id'];
-    folderId: FolderEntities['id'];
-    title: FolderContentEntities['title'];
-    content: FolderContentEntities['content'];
+    readonly id: FolderContentEntities['id'];
+    readonly folderId: FolderEntities['id'];
+    readonly title: FolderContentEntities['title'];
+    readonly content: FolderContentEntities['content'];
   }
 >('ADD');
 
 export const editFolderContent = actionCreator.async<
   {
-    id: FolderContentEntities['id'];
-    folderId: FolderEntities['id'];
-    title: FolderContentEntities['title'];
-    content: FolderContentEntities['content'];
+    readonly id: FolderContentEntities['id'];
+    readonly folderId: FolderEntities['id'];
+    readonly title: FolderContentEntities['title'];
+    readonly content: FolderContentEntities['content'];
   },
   {
-    id: FolderContentEntities['id'];
-    folderId: FolderEntities['id'];
-    title: FolderContentEntities['title'];
-    content: FolderContentEntities['content'];
+    readonly id: FolderContentEntities['id'];
+    readonly folderId: FolderEntities['id'];
+    readonly title: FolderContentEntities['title'];
+    readonly content: FolderContentEntities['content'];
   }
 >('EDIT');
 
 export const deleteFolderContent = actionCreator.async<
   {
-    id: FolderContentEntities['id'];
-    folderId: FolderEntities['id'];
+    readonly id: FolderContentEntities['id'];
+    readonly folderId: FolderEntities['id'];
   },
   {
-    id: FolderContentEntities['id'];
-    folderId: FolderEntities['id'];
+    readonly id: FolderContentEntities['id'];
+    readonly folderId: FolderEntities['id'];
   }
 >('DELETE');

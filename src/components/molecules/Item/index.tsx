@@ -15,6 +15,7 @@ const Item: React.SFC<Props> = ({ icon, children, right }) => (
   </Wrapper>
 );
 
+// tslint:disable-next-line:no-object-mutation
 Item.defaultProps = {
   right: null,
 };

@@ -11,8 +11,10 @@ import CareReceiverInfoDetailList from '../CareReceiverInfoDetailList';
 export interface Props {
   readonly careReceiver: CareReceiverEntities;
   readonly folder: FolderEntities;
-  toggleFolderModal: () => void;
-  toggleFolderContentModal: (fonderContent: FolderContentEntities) => void;
+  readonly toggleFolderModal: () => void;
+  readonly toggleFolderContentModal: (
+    fonderContent: FolderContentEntities
+  ) => void;
 }
 
 const CareReceiverInfoDetailMain: React.SFC<Props> = ({

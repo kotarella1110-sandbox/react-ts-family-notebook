@@ -28,18 +28,18 @@ function* fetchFolderContentsWorker({
   },
 }: Action<any>): SagaIterator {
   yield all(
-    result.map((folderId: FolderEntities['id']) => {
-      if (!entities.folders[folderId].folders) {
-        return put(actions.fetchFolderContents.started({ folderId }));
-      }
-      return null;
-    })
+    result.map(
+      (folderId: FolderEntities['id']) =>
+        entities.folders[folderId].folders
+          ? null
+          : put(actions.fetchFolderContents.started({ folderId }))
+    )
   );
 }
 
 function* addFolderWorker({
   payload,
-}: ReturnType<typeof actions.addFolder.started>) {
+}: ReturnType<typeof actions.addFolder.started>): SagaIterator {
   // Optimistic updates
   const optimisticTransactionId = uuid();
   const tmpId = uuid();

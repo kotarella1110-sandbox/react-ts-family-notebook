@@ -6,7 +6,7 @@ import Icon from 'components/atoms/Icon';
 export interface Props {
   readonly primary?: boolean;
   readonly reverse?: boolean;
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  readonly onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const ArrowButton: React.SFC<Props> = props => (
@@ -15,6 +15,7 @@ const ArrowButton: React.SFC<Props> = props => (
   </Wrapper>
 );
 
+// tslint:disable-next-line:no-object-mutation
 ArrowButton.defaultProps = {
   primary: false,
   reverse: false,

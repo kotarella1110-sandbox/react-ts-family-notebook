@@ -8,6 +8,7 @@ import theme from './theme';
 import CareReceiverInfoPage from 'containers/CareReceiverInfoPage';
 import CareReceiverInfoDetailPage from 'containers/CareReceiverInfoDetailPage';
 
+// tslint:disable-next-line:no-expression-statement
 globalStyle(theme);
 
 const App: React.SFC = () => {
@@ -15,7 +16,7 @@ const App: React.SFC = () => {
     match: { params },
     ...props
   }: RouteComponentProps<{
-    careReceiverId: string;
+    readonly careReceiverId: string;
   }>) => (
     <CareReceiverInfoPage {...props} careReceiverId={params.careReceiverId} />
   );
@@ -24,8 +25,8 @@ const App: React.SFC = () => {
     match: { params },
     ...props
   }: RouteComponentProps<{
-    careReceiverId: string;
-    folderId: string;
+    readonly careReceiverId: string;
+    readonly folderId: string;
   }>) => (
     <CareReceiverInfoDetailPage
       {...props}

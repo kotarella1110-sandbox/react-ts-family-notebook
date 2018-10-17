@@ -8,7 +8,7 @@ import { fetchCareReceivers, addFolder } from 'store/actions';
 import CareReceiverInfoPage from 'components/pages/CareReceiverInfoPage';
 
 export interface OwnProps {
-  careReceiverId: CareReceiverEntities['id'];
+  readonly careReceiverId: CareReceiverEntities['id'];
 }
 
 const mapStateToProps = (state: State, ownProps: OwnProps) => ({

@@ -18,22 +18,22 @@ import CareReceiverInfoDetailMain from '../../organisms/CareReceiverInfoDetailMa
 export interface Props {
   readonly careReceiver: CareReceiverEntities;
   readonly folder: FolderEntities;
-  editFolder: (
+  readonly editFolder: (
     payload: ReturnType<typeof actions.editFolder.started>['payload']
   ) => any;
-  deleteFolder: (
+  readonly deleteFolder: (
     payload: ReturnType<typeof actions.deleteFolder.started>['payload']
   ) => any;
-  addFolderContent: (
+  readonly addFolderContent: (
     payload: ReturnType<typeof actions.addFolderContent.started>['payload']
   ) => any;
-  editFolderContent: (
+  readonly editFolderContent: (
     payload: ReturnType<typeof actions.editFolderContent.started>['payload']
   ) => any;
-  deleteFolderContent: (
+  readonly deleteFolderContent: (
     payload: ReturnType<typeof actions.deleteFolderContent.started>['payload']
   ) => any;
-  history?: any;
+  readonly history?: any;
 }
 
 export interface State {
@@ -65,7 +65,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     },
   };
 
-  toggleFolderModal = () => {
+  readonly toggleFolderModal = () => {
     this.setState({
       ...this.state,
       folder: {
@@ -75,7 +75,9 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     });
   };
 
-  toggleFolderContentModal = (folderContent?: FolderContentEntities) => {
+  readonly toggleFolderContentModal = (
+    folderContent?: FolderContentEntities
+  ) => {
     if (!!folderContent) {
       this.setState({
         ...this.state,
@@ -100,7 +102,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     }
   };
 
-  handleDeleteFolder = () => {
+  readonly handleDeleteFolder = () => {
     const careReceiverId = this.props.careReceiver.id;
     const folderId = this.props.folder.id;
     this.props.deleteFolder({
@@ -110,7 +112,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     this.toggleFolderModal();
   };
 
-  handleEditFolder = () => {
+  readonly handleEditFolder = () => {
     const careReceiverId = this.props.careReceiver.id;
     const folderId = this.props.folder.id;
     const name = this.state.folder.name;
@@ -129,7 +131,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     this.toggleFolderModal();
   };
 
-  handleAddFolderContent = () => {
+  readonly handleAddFolderContent = () => {
     const folderId = this.props.folder.id;
     const { title, content } = this.state.folderContent;
     if (title.length !== 0) {
@@ -142,7 +144,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     }
   };
 
-  handleDeleteFolderContent = () => {
+  readonly handleDeleteFolderContent = () => {
     const id = this.state.folderContent.id;
     const folderId = this.props.folder.id;
     this.props.deleteFolderContent({
@@ -152,7 +154,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     this.toggleFolderContentModal();
   };
 
-  handleEditFolderContent = () => {
+  readonly handleEditFolderContent = () => {
     const folderId = this.props.folder.id;
     const { id, title, content } = this.state.folderContent;
     if (title.length === 0) {
@@ -171,7 +173,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     this.toggleFolderContentModal();
   };
 
-  handleChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
+  readonly handleChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({
       ...this.state,
       folder: {
@@ -181,7 +183,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     });
   };
 
-  handleChangeTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
+  readonly handleChangeTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({
       ...this.state,
       folderContent: {
@@ -191,7 +193,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     });
   };
 
-  handleChangeContent = (e: React.ChangeEvent<HTMLInputElement>) => {
+  readonly handleChangeContent = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({
       ...this.state,
       folderContent: {
@@ -201,7 +203,7 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     });
   };
 
-  render() {
+  render(): JSX.Element {
     return (
       <div>
         <AppTemplate

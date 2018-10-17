@@ -2,9 +2,9 @@ import * as React from 'react';
 import styled, { css } from 'styled';
 
 export interface Props {
-  left?: React.ReactNode;
-  right: React.ReactNode;
-  title: string;
+  readonly left?: React.ReactNode;
+  readonly right: React.ReactNode;
+  readonly title: string;
 }
 
 const Header: React.SFC<Props> = ({ left, right, title }) => (
@@ -15,6 +15,7 @@ const Header: React.SFC<Props> = ({ left, right, title }) => (
   </Wrapper>
 );
 
+// tslint:disable-next-line:no-object-mutation
 Header.defaultProps = {
   left: null,
 };
@@ -25,7 +26,7 @@ const mixin = css`
   line-height: 1em;
 `;
 
-const Left = styled<{ isCancel?: boolean }, 'div'>('div')`
+const Left = styled<{ readonly isCancel?: boolean }, 'div'>('div')`
   ${mixin};
 `;
 

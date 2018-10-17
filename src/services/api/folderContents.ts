@@ -3,7 +3,7 @@ import { FolderContentResources } from 'models';
 import * as actions from 'store/actions';
 import { delay } from '.';
 
-export const folderContents: FolderContentResources[] = [
+export const folderContents: ReadonlyArray<FolderContentResources> = [
   {
     id: 'c430c8ef-868f-4189-9e53-c64151882e40',
     folderId: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',

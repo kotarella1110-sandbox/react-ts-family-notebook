@@ -20,7 +20,7 @@ function* fetchFolderContentsWorker({
 
 function* addFolderContentWorker({
   payload,
-}: ReturnType<typeof actions.addFolderContent.started>) {
+}: ReturnType<typeof actions.addFolderContent.started>): SagaIterator {
   yield call(
     bindAsyncAction(actions.addFolderContent, { skipStartedAction: true })(
       function*(payload): SagaIterator {
@@ -34,7 +34,7 @@ function* addFolderContentWorker({
 
 function* editFolderContentWorker({
   payload,
-}: ReturnType<typeof actions.editFolderContent.started>) {
+}: ReturnType<typeof actions.editFolderContent.started>): SagaIterator {
   yield call(
     bindAsyncAction(actions.editFolderContent, { skipStartedAction: true })(
       function*(payload): SagaIterator {
@@ -48,7 +48,7 @@ function* editFolderContentWorker({
 
 function* deleteFolderContentWorker({
   payload,
-}: ReturnType<typeof actions.deleteFolderContent.started>) {
+}: ReturnType<typeof actions.deleteFolderContent.started>): SagaIterator {
   yield call(
     bindAsyncAction(actions.deleteFolderContent, { skipStartedAction: true })(
       function*(payload): SagaIterator {

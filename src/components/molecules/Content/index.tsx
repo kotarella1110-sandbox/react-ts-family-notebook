@@ -15,6 +15,7 @@ const Content: React.SFC<Props> = ({ label, text, children }) => (
   </Wrapper>
 );
 
+// tslint:disable-next-line:no-object-mutation
 Content.defaultProps = {
   text: undefined,
 };

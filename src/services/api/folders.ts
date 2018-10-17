@@ -3,7 +3,7 @@ import { FolderResources } from 'models';
 import * as actions from 'store/actions';
 import { delay } from '.';
 
-export const folders: FolderResources[] = [
+export const folders: ReadonlyArray<FolderResources> = [
   {
     id: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
     careReceiverId: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
