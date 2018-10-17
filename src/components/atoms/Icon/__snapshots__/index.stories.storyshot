@@ -3,7 +3,6 @@
 exports[`Storyshots Atoms/Icon add 1`] = `
 .c0 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -29,7 +28,6 @@ exports[`Storyshots Atoms/Icon add 1`] = `
 exports[`Storyshots Atoms/Icon arrow 1`] = `
 .c0 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -55,7 +53,6 @@ exports[`Storyshots Atoms/Icon arrow 1`] = `
 exports[`Storyshots Atoms/Icon care-receiver 1`] = `
 .c0 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -81,7 +78,6 @@ exports[`Storyshots Atoms/Icon care-receiver 1`] = `
 exports[`Storyshots Atoms/Icon care-receiver-info 1`] = `
 .c0 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -107,7 +103,6 @@ exports[`Storyshots Atoms/Icon care-receiver-info 1`] = `
 exports[`Storyshots Atoms/Icon care-receiver-info-detail 1`] = `
 .c0 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -133,7 +128,6 @@ exports[`Storyshots Atoms/Icon care-receiver-info-detail 1`] = `
 exports[`Storyshots Atoms/Icon exclamation 1`] = `
 .c0 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 

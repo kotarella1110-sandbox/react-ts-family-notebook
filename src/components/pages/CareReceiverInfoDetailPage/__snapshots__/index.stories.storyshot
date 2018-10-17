@@ -29,7 +29,6 @@ exports[`Storyshots Pages/CareReceiverInfoDetailPage default 1`] = `
 
 .c7 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -40,7 +39,6 @@ exports[`Storyshots Pages/CareReceiverInfoDetailPage default 1`] = `
 
 .c23 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -51,7 +49,6 @@ exports[`Storyshots Pages/CareReceiverInfoDetailPage default 1`] = `
 
 .c15 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 

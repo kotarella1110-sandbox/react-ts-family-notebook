@@ -17,23 +17,13 @@ const setup = (propOverrides = {}) => {
   };
 };
 
-describe('Content', () => {
+describe('FormContent', () => {
   it('コンポーネントがレンダリングされていること', () => {
     const { wrapper } = setup();
     expect(wrapper.dive().type()).toBe('div');
 
-    const Contents = wrapper.find('Contents');
+    const Contents = wrapper.find('Content');
     expect(Contents.dive().type()).toBe('div');
     expect(Contents.dive().contains('Content')).toBeTruthy();
-
-    const Text = wrapper.find('Text');
-    expect(Text.exists()).toBeFalsy();
-  });
-
-  it('props.text を渡した際に Text コンポーネントがレンダリングされていること', () => {
-    const { wrapper } = setup({ text: 'Text' });
-    const Text = wrapper.find('Text');
-    expect(Text.dive().type()).toBe('p');
-    expect(Text.dive().contains('Text')).toBeTruthy();
   });
 });

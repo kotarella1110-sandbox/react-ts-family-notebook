@@ -29,7 +29,6 @@ exports[`Storyshots Atoms/ArrowButton default 1`] = `
 
 .c2 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -92,7 +91,6 @@ exports[`Storyshots Atoms/ArrowButton props onClick 1`] = `
 
 .c2 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -155,7 +153,6 @@ exports[`Storyshots Atoms/ArrowButton props primary is true 1`] = `
 
 .c2 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -222,7 +219,6 @@ exports[`Storyshots Atoms/ArrowButton props primary is true and reverse is true 
 
 .c2 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
   -webkit-transform: scale(-1,1);
   -ms-transform: scale(-1,1);
@@ -292,7 +288,6 @@ exports[`Storyshots Atoms/ArrowButton props reverse is true 1`] = `
 
 .c2 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
   -webkit-transform: scale(-1,1);
   -ms-transform: scale(-1,1);

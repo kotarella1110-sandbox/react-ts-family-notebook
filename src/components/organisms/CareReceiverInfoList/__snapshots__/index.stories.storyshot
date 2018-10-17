@@ -3,7 +3,6 @@
 exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
 .c8 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
   -webkit-transform: scale(-1,1);
   -ms-transform: scale(-1,1);
@@ -17,7 +16,6 @@ exports[`Storyshots Organisms/CareReceiverInfoList default 1`] = `
 
 .c4 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 

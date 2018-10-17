@@ -3,7 +3,6 @@
 exports[`Storyshots Molecules/Item default 1`] = `
 .c1 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -78,7 +77,6 @@ exports[`Storyshots Molecules/Item default 1`] = `
 exports[`Storyshots Molecules/Item props right 1`] = `
 .c1 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -186,7 +184,6 @@ exports[`Storyshots Molecules/Item props right is ArrowButton 1`] = `
 
 .c1 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -197,7 +194,6 @@ exports[`Storyshots Molecules/Item props right is ArrowButton 1`] = `
 
 .c6 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
   -webkit-transform: scale(-1,1);
   -ms-transform: scale(-1,1);

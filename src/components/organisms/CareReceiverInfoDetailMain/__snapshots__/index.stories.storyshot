@@ -3,7 +3,6 @@
 exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
 .c13 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -14,7 +13,6 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
 
 .c9 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -25,7 +23,6 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
 
 .c1 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 

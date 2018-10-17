@@ -3,7 +3,6 @@
 exports[`Storyshots Molecules/CareReceiverItem default 1`] = `
 .c1 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 

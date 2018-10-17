@@ -251,7 +251,6 @@ exports[`Storyshots Organisms/Header props left is ArrowBtton and right is AddBu
 
 .c5 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -482,7 +481,6 @@ exports[`Storyshots Organisms/Header props right is AddButton 1`] = `
 
 .c9 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 

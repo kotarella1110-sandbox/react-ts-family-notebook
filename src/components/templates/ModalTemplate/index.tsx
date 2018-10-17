@@ -46,6 +46,7 @@ const Main = styled.main`
   grid-area: main;
   overflow: auto;
   -webkitoverflowscrolling: touch;
+  padding: 16px;
 `;
 
 const Footer = styled.footer`

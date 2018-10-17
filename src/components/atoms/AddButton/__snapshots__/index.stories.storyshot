@@ -29,7 +29,6 @@ exports[`Storyshots Atoms/AddButton default 1`] = `
 
 .c2 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -129,7 +128,6 @@ exports[`Storyshots Atoms/AddButton props onClick 1`] = `
 
 .c2 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 

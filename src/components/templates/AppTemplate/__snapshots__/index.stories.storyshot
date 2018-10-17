@@ -63,7 +63,6 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
 
 .c11 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 
@@ -74,7 +73,6 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
 
 .c21 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
   -webkit-transform: scale(-1,1);
   -ms-transform: scale(-1,1);
@@ -88,7 +86,6 @@ exports[`Storyshots Templates/AppTemplate props header is Header and main is Car
 
 .c17 {
   display: inline-block;
-  margin: 0.1em;
   box-sizing: border-box;
 }
 

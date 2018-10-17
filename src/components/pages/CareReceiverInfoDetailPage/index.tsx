@@ -11,7 +11,8 @@ import ArrowButton from '../../atoms/ArrowButton';
 import AddButton from '../../atoms/AddButton';
 import SquareButton from '../../atoms/SquareButton';
 import Text from '../../atoms/Text';
-import Content from '../../molecules/Content';
+import TextArea from '../../atoms/TextArea';
+import FormContent from '../../molecules/FormContent';
 import Header from '../../organisms/Header';
 import CareReceiverInfoDetailMain from '../../organisms/CareReceiverInfoDetailMain';
 
@@ -193,7 +194,9 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
     });
   };
 
-  readonly handleChangeContent = (e: React.ChangeEvent<HTMLInputElement>) => {
+  readonly handleChangeContent = (
+    e: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     this.setState({
       ...this.state,
       folderContent: {
@@ -236,7 +239,9 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
           header={
             <Header
               left={<a onClick={this.toggleFolderModal}>キャンセル</a>}
-              right={<a onClick={this.handleEditFolder}>編集</a>}
+              right={
+                <AddButton onClick={this.handleEditFolder}>投稿</AddButton>
+              }
               title="タイトルの編集"
             />
           }
@@ -244,12 +249,12 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
             <SquareButton onClick={this.handleDeleteFolder}>削除</SquareButton>
           }
           isOpen={this.state.folder.modalIsOpen}>
-          <Content label="タイトル">
+          <FormContent label="タイトル">
             <Text
               onChange={this.handleChangeText}
               value={this.state.folder.name}
             />
-          </Content>
+          </FormContent>
         </ModalTemplate>
         <ModalTemplate
           header={
@@ -265,7 +270,9 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
               }
               right={
                 this.state.folderContent.editing ? (
-                  <a onClick={this.handleEditFolderContent}>編集</a>
+                  <AddButton onClick={this.handleEditFolderContent}>
+                    投稿
+                  </AddButton>
                 ) : (
                   <AddButton onClick={this.handleAddFolderContent}>
                     追加
@@ -285,18 +292,16 @@ class CareReceiverInfoDetailPage extends React.Component<Props, State> {
             ) : null
           }
           isOpen={this.state.folderContent.modalIsOpen}>
-          <Content label="項目名">
+          <FormContent label="項目名と内容">
             <Text
               onChange={this.handleChangeTitle}
               value={this.state.folderContent.title}
             />
-          </Content>
-          <Content label="内容">
-            <Text
+            <TextArea
               onChange={this.handleChangeContent}
               value={this.state.folderContent.content}
             />
-          </Content>
+          </FormContent>
         </ModalTemplate>
       </div>
     );

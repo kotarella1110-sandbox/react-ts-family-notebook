@@ -5,7 +5,7 @@ import AppTemplate from '../../templates/AppTemplate';
 import ModalTemplate from '../../templates/ModalTemplate';
 import AddButton from '../../atoms/AddButton';
 import Text from '../../atoms/Text';
-import Content from '../../molecules/Content';
+import Content from '../../molecules/FormContent';
 import Header from '../../organisms/Header';
 import CareReceiverInfoMain from '../../organisms/CareReceiverInfoMain';
 
