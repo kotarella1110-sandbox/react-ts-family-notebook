@@ -15,7 +15,6 @@ const setup = () => {
         '71f24b4d-8816-4563-8526-a257f0bed1a2',
       ],
     },
-    fetchCareReceivers: jest.fn(),
     addFolder: jest.fn(),
   };
 

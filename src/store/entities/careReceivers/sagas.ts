@@ -1,25 +1,8 @@
 import { SagaIterator } from 'redux-saga';
-import { all, call, put, takeEvery } from 'redux-saga/effects';
-import { Action } from 'typescript-fsa';
+import { call, takeEvery } from 'redux-saga/effects';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
-import { CareReceiverEntities } from 'models';
 import * as actions from 'store/actions';
 import { fetchCareReceivers } from 'services/api';
-
-function* fetchFoldersWorker({
-  payload: {
-    result: { entities, result },
-  },
-}: Action<any>): SagaIterator {
-  yield all(
-    result.map((careReceiverId: CareReceiverEntities['id']) => {
-      if (!entities.careReceivers[careReceiverId].folders) {
-        return put(actions.fetchFolders.started({ careReceiverId }));
-      }
-      return null;
-    })
-  );
-}
 
 function* fetchCareReceiversWorker({
   payload,
@@ -40,5 +23,4 @@ export default function* watcher(): SagaIterator {
     actions.fetchCareReceivers.started.type,
     fetchCareReceiversWorker
   );
-  yield takeEvery(actions.fetchCareReceivers.done.type, fetchFoldersWorker);
 }

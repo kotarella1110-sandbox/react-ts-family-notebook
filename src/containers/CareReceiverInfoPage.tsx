@@ -1,32 +1,67 @@
+import * as React from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 import { Dispatch, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Action } from 'typescript-fsa';
 import { mayBeStubbed } from 'react-stubber';
 import { State, CareReceiverEntities } from 'models';
 import { getCareReceiver } from 'store/selectors';
-import { fetchCareReceivers, addFolder } from 'store/actions';
-import CareReceiverInfoPage from 'components/pages/CareReceiverInfoPage';
+import * as actions from 'store/actions';
+import CareReceiverInfoPage, {
+  Props as CareReceiverInfoPageProps,
+} from 'components/pages/CareReceiverInfoPage';
+
+export interface Props extends CareReceiverInfoPageProps {
+  readonly fetchCareReceivers: (
+    payload: ReturnType<typeof actions.fetchCareReceivers.started>['payload']
+  ) => any;
+  readonly fetchFolders: (
+    payload: ReturnType<typeof actions.fetchFolders.started>['payload']
+  ) => any;
+}
+
+class CareReceiverInfoPageContainer extends React.Component<Props> {
+  componentDidMount(): void {
+    const { careReceiver, fetchCareReceivers, fetchFolders } = this.props;
+    fetchCareReceivers({});
+    fetchFolders({ careReceiverId: careReceiver.id });
+  }
+
+  render(): JSX.Element {
+    const { fetchCareReceivers, fetchFolders, ...props } = this.props;
+    return <CareReceiverInfoPage {...props} />;
+  }
+}
 
 export interface OwnProps {
   readonly careReceiverId: CareReceiverEntities['id'];
 }
 
-const mapStateToProps = (state: State, ownProps: OwnProps) => ({
-  careReceiver: getCareReceiver(state, ownProps),
-});
+const mapStateToProps = (
+  state: State,
+  { match: { params } }: RouteComponentProps<OwnProps>
+) => {
+  const props = {
+    careReceiverId: params.careReceiverId,
+  };
+  return {
+    careReceiver: getCareReceiver(state, props),
+  };
+};
 
 const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) =>
   bindActionCreators<any, any>(
     {
-      fetchCareReceivers: fetchCareReceivers.started,
-      addFolder: addFolder.started,
+      fetchCareReceivers: actions.fetchCareReceivers.started,
+      fetchFolders: actions.fetchFolders.started,
+      addFolder: actions.addFolder.started,
     },
     dispatch
   );
 
-const CareReceiverPageContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CareReceiverInfoPage);
-
-export default mayBeStubbed(CareReceiverPageContainer);
+export default mayBeStubbed(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(CareReceiverInfoPageContainer)
+);

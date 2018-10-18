@@ -11,7 +11,6 @@ import CareReceiverInfoMain from '../../organisms/CareReceiverInfoMain';
 
 export interface Props {
   readonly careReceiver: CareReceiverEntities;
-  readonly fetchCareReceivers: () => any;
   readonly addFolder: (
     payload: ReturnType<typeof actions.addFolder.started>['payload']
   ) => any;
@@ -27,10 +26,6 @@ class CareReceiverInfoPage extends React.Component<Props, State> {
     modalIsOpen: false,
     name: '',
   };
-
-  componentDidMount(): void {
-    this.props.fetchCareReceivers();
-  }
 
   readonly toggleModal = () => {
     this.setState({ modalIsOpen: !this.state.modalIsOpen });

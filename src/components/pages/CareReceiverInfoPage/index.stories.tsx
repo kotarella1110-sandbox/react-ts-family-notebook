@@ -31,7 +31,6 @@ storiesOf('Pages/CareReceiverInfoPage', module)
             '71f24b4d-8816-4563-8526-a257f0bed1a2',
           ],
         }}
-        fetchCareReceivers={action('fetchCareReceivers')}
         addFolder={action('addFolder')}
       />
       ~~~
@@ -52,7 +51,6 @@ storiesOf('Pages/CareReceiverInfoPage', module)
             '71f24b4d-8816-4563-8526-a257f0bed1a2',
           ],
         }}
-        fetchCareReceivers={action('fetchCareReceivers')}
         addFolder={action('addFolder')}
       />
     ))

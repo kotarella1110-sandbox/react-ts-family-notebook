@@ -8,7 +8,4 @@ export const getFolders = ({ entities }: State) /*: FoldersEntities['byId']*/ =>
 export const getFolder = (
   { entities }: State,
   { folderId }: OwnProps
-): FolderEntities => {
-  console.log(ensureState(entities).folders);
-  return ensureState(entities).folders.byId[folderId];
-};
+): FolderEntities => ensureState(entities).folders.byId[folderId];

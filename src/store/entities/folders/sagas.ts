@@ -1,11 +1,9 @@
 import { v4 as uuid } from 'uuid';
 import { SagaIterator, delay } from 'redux-saga';
-import { all, race, call, put, cancelled, takeEvery } from 'redux-saga/effects';
+import { race, call, put, cancelled, takeEvery } from 'redux-saga/effects';
 import { BEGIN, COMMIT, REVERT } from 'redux-optimistic-ui';
 import { replace } from 'connected-react-router';
-import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
-import { FolderEntities } from 'models';
 import * as actions from 'store/actions';
 import * as api from 'services/api';
 
@@ -20,21 +18,6 @@ function* fetchFoldersWorker({
       }
     ),
     payload
-  );
-}
-
-function* fetchFolderContentsWorker({
-  payload: {
-    result: { entities, result },
-  },
-}: Action<any>): SagaIterator {
-  yield all(
-    result.map(
-      (folderId: FolderEntities['id']) =>
-        entities.folders[folderId].folders
-          ? null
-          : put(actions.fetchFolderContents.started({ folderId }))
-    )
   );
 }
 
@@ -253,7 +236,6 @@ function* deleteFolderWorker({
 
 export default function* watcher(): SagaIterator {
   yield takeEvery(actions.fetchFolders.started.type, fetchFoldersWorker);
-  yield takeEvery(actions.fetchFolders.done.type, fetchFolderContentsWorker);
   yield takeEvery(actions.addFolder.started.type, addFolderWorker);
   yield takeEvery(actions.editFolder.started.type, editFolderWorker);
   yield takeEvery(actions.deleteFolder.started.type, deleteFolderWorker);
