@@ -9,4 +9,4 @@ export const getFolderContent = (
   { entities }: State,
   { folderContentId }: { readonly folderContentId: FolderContentEntities['id'] }
 ): FolderContentEntities =>
-  ensureState(entities).folderContents[folderContentId] || {};
+  ensureState(entities).folderContents[folderContentId];
