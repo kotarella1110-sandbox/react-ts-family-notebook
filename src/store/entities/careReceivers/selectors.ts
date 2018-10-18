@@ -1,13 +1,15 @@
 import { ensureState } from 'redux-optimistic-ui';
-import { State, CareReceiversEntities } from 'models';
-import { OwnProps } from 'containers/CareReceiverInfoPage';
+import { State, CareReceiverEntities } from 'models';
 
 export const getCareReceivers = ({
   entities,
-}: State): CareReceiversEntities['byId'] =>
-  ensureState(entities).careReceivers.byId;
+}: State): ReadonlyArray<CareReceiverEntities> => {
+  const allIds = ensureState(entities).careReceivers.allIds;
+  const byId = ensureState(entities).careReceivers.byId;
+  return allIds.map(id => byId[id]);
+};
 
 export const getCareReceiver = (
   { entities }: State,
-  { careReceiverId }: OwnProps
+  { careReceiverId }: { readonly careReceiverId: CareReceiverEntities['id'] }
 ) => ensureState(entities).careReceivers.byId[careReceiverId];
