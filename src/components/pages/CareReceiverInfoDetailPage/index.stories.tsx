@@ -5,17 +5,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import { withInfo } from '@storybook/addon-info';
-import { stub } from 'react-stubber';
-import mockStore from 'store/mock';
 import CareReceiverInfoDetailPage from '.';
-import CareReceiverInfoItemContainer, {
-  OwnProps,
-} from 'containers/CareReceiverInfoItem';
-import CareReceiverInfoItem from 'components/molecules/CareReceiverInfoItem';
-
-stub(CareReceiverInfoItemContainer, ({ folderId }: OwnProps) => (
-  <CareReceiverInfoItem folder={mockStore.entities.folders[folderId]} />
-));
 
 storiesOf('Pages/CareReceiverInfoDetailPage', module)
   .addDecorator((story, context) =>

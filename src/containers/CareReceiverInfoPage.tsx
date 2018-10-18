@@ -24,7 +24,9 @@ class CareReceiverInfoPageContainer extends React.Component<Props> {
   componentDidMount(): void {
     const { careReceiver, fetchCareReceivers, fetchFolders } = this.props;
     fetchCareReceivers({});
-    fetchFolders({ careReceiverId: careReceiver.id });
+    if (!!careReceiver) {
+      fetchFolders({ careReceiverId: careReceiver.id });
+    }
   }
 
   render(): JSX.Element {

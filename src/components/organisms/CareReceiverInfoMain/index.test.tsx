@@ -34,10 +34,5 @@ describe('CareReceiverInfoMain', () => {
 
     const CareReceiverItem = wrapper.find('CareReceiverItem');
     expect(CareReceiverItem.prop('careReceiver')).toEqual(careReceiver);
-
-    const CareReceiverInfoList = wrapper.find('CareReceiverInfoList');
-    expect(CareReceiverInfoList.prop('folderIds')).toEqual(
-      careReceiver.folders
-    );
   });
 });

@@ -8,17 +8,7 @@ import { withInfo } from '@storybook/addon-info';
 import AppTemplate from '.';
 import Header from '../../organisms/Header';
 import AddButton from '../../atoms/AddButton';
-import { stub } from 'react-stubber';
-import mockStore from 'store/mock';
 import CareReceiverInfoList from '../../organisms/CareReceiverInfoList';
-import CareReceiverInfoItemContainer, {
-  OwnProps,
-} from 'containers/CareReceiverInfoItem';
-import CareReceiverInfoItem from 'components/molecules/CareReceiverInfoItem';
-
-stub(CareReceiverInfoItemContainer, ({ folderId }: OwnProps) => (
-  <CareReceiverInfoItem folder={mockStore.entities.folders[folderId]} />
-));
 
 storiesOf('Templates/AppTemplate', module)
   .addDecorator((story, context) =>
@@ -46,9 +36,17 @@ storiesOf('Templates/AppTemplate', module)
         }>
         <CareReceiverInfoList
           careReceiverId="8e3900e8-58a3-45d9-92e5-10d894016bd7"
-          folderIds={[
-            'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
-            '71f24b4d-8816-4563-8526-a257f0bed1a2',
+          folders={[
+            {
+              id: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+              careReceiverId: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
+              name: '病歴やアレルギーなど',
+            },
+            {
+              id: '71f24b4d-8816-4563-8526-a257f0bed1a2',
+              careReceiverId: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
+              name: 'お薬情報',
+            },
           ]}
         />
       </AppTemplate>

@@ -5,9 +5,17 @@ import CareReceiverInfoList, { Props } from '.';
 const setup = (propOverrides = {}) => {
   const props: Props = {
     careReceiverId: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
-    folderIds: [
-      'c430c8ef-868f-4189-9e53-c64151882e40',
-      '71f24b4d-8816-4563-8526-a257f0bed1a2',
+    folders: [
+      {
+        id: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+        careReceiverId: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
+        name: '病歴やアレルギーなど',
+      },
+      {
+        id: '71f24b4d-8816-4563-8526-a257f0bed1a2',
+        careReceiverId: '8e3900e8-58a3-45d9-92e5-10d894016bd7',
+        name: 'お薬情報',
+      },
     ],
     ...propOverrides,
   };
@@ -28,15 +36,15 @@ describe('CareReceiverInfoList', () => {
 
   it('LI、CareReceiverInfoItem コンポーネントがレンダリングされていること', () => {
     const {
-      props: { folderIds },
+      props: { folders },
       wrapper,
     } = setup({ onClick: jest.fn() });
     expect(wrapper.children().length).toBe(2);
 
     wrapper.children().forEach((LI, index) => {
-      const CareReceiverInfoItem = LI.find('Connect(CareReceiverInfoItem)');
-      expect(LI.key()).toBe(folderIds[index]);
-      expect(CareReceiverInfoItem.prop('folderId')).toEqual(folderIds[index]);
+      const CareReceiverInfoItem = LI.find('CareReceiverInfoItem');
+      expect(LI.key()).toBe(folders[index].id);
+      expect(CareReceiverInfoItem.prop('folder')).toEqual(folders[index]);
     });
   });
 });

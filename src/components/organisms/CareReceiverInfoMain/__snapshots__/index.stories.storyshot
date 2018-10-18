@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Organisms/CareReceiverInfoMain default 1`] = `
-.c10 {
-  display: inline-block;
-  box-sizing: border-box;
-  -webkit-transform: scale(-1,1);
-  -ms-transform: scale(-1,1);
-  transform: scale(-1,1);
-}
-
-.c10 > svg {
-  width: 24px;
-  height: 24px;
-}
-
 .c1 {
   display: inline-block;
   box-sizing: border-box;
@@ -22,12 +9,6 @@ exports[`Storyshots Organisms/CareReceiverInfoMain default 1`] = `
 .c1 > svg {
   width: 36px;
   height: 36px;
-}
-
-.c8 {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c3 {
@@ -70,11 +51,6 @@ exports[`Storyshots Organisms/CareReceiverInfoMain default 1`] = `
   flex: 1;
 }
 
-.c9 {
-  margin: 0;
-  line-height: 1.5em;
-}
-
 .c4 {
   margin: 0;
   line-height: 1.5em;
@@ -83,21 +59,6 @@ exports[`Storyshots Organisms/CareReceiverInfoMain default 1`] = `
 .c5 {
   margin: 0;
   line-height: 1.5em;
-}
-
-.c6 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c7 {
-  border-top: solid 1px #c8c8c8;
-  border-bottom: solid 1px #c8c8c8;
-}
-
-.c7 + .c7 {
-  border-top: 0;
 }
 
 <div
@@ -139,111 +100,8 @@ exports[`Storyshots Organisms/CareReceiverInfoMain default 1`] = `
       </div>
     </div>
   </a>
-  <ul
-    className="c6"
-  >
-    <li
-      className="c7"
-    >
-      <a
-        className="c8"
-        href="/careReceivers/8e3900e8-58a3-45d9-92e5-10d894016bd7/info/a0d45fb9-ea6d-48df-af7b-9f5af2329f39"
-        onClick={[Function]}
-      >
-        <div
-          className="c0"
-        >
-          <span
-            className="c1"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": Object {
-                  "default": "test-file-stub",
-                },
-              }
-            }
-            name="care-receiver-info"
-            size="36px"
-          />
-          <div
-            className="c2 c3"
-          >
-            <h4
-              className="c9"
-            >
-              病歴やアレルギーなど
-            </h4>
-          </div>
-          <div
-            className=""
-          >
-            <span
-              className="c10"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": Object {
-                    "default": "test-file-stub",
-                  },
-                }
-              }
-              name="arrow"
-              size="24px"
-            />
-          </div>
-        </div>
-      </a>
-    </li>
-    <li
-      className="c7"
-    >
-      <a
-        className="c8"
-        href="/careReceivers/8e3900e8-58a3-45d9-92e5-10d894016bd7/info/71f24b4d-8816-4563-8526-a257f0bed1a2"
-        onClick={[Function]}
-      >
-        <div
-          className="c0"
-        >
-          <span
-            className="c1"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": Object {
-                  "default": "test-file-stub",
-                },
-              }
-            }
-            name="care-receiver-info"
-            size="36px"
-          />
-          <div
-            className="c2 c3"
-          >
-            <h4
-              className="c9"
-            >
-              お薬情報
-            </h4>
-          </div>
-          <div
-            className=""
-          >
-            <span
-              className="c10"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": Object {
-                    "default": "test-file-stub",
-                  },
-                }
-              }
-              name="arrow"
-              size="24px"
-            />
-          </div>
-        </div>
-      </a>
-    </li>
-  </ul>
+  <span>
+    &lt;Connect(CareReceiverInfoListContainer)/&gt;
+  </span>
 </div>
 `;

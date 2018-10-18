@@ -37,19 +37,6 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
   height: 24px;
 }
 
-.c23 {
-  display: inline-block;
-  box-sizing: border-box;
-  -webkit-transform: scale(-1,1);
-  -ms-transform: scale(-1,1);
-  transform: scale(-1,1);
-}
-
-.c23 > svg {
-  width: 24px;
-  height: 24px;
-}
-
 .c14 {
   display: inline-block;
   box-sizing: border-box;
@@ -100,12 +87,6 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
   line-height: 1em;
 }
 
-.c21 {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 .c16 {
   padding: 0 8px;
 }
@@ -146,11 +127,6 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
   flex: 1;
 }
 
-.c22 {
-  margin: 0;
-  line-height: 1.5em;
-}
-
 .c17 {
   margin: 0;
   line-height: 1.5em;
@@ -159,21 +135,6 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
 .c18 {
   margin: 0;
   line-height: 1.5em;
-}
-
-.c19 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c20 {
-  border-top: solid 1px #c8c8c8;
-  border-bottom: solid 1px #c8c8c8;
-}
-
-.c20 + .c20 {
-  border-top: 0;
 }
 
 .c4 {
@@ -366,112 +327,9 @@ exports[`Storyshots Pages/CareReceiverInfoPage default 1`] = `
             </div>
           </div>
         </a>
-        <ul
-          className="c19"
-        >
-          <li
-            className="c20"
-          >
-            <a
-              className="c21"
-              href="/careReceivers/8e3900e8-58a3-45d9-92e5-10d894016bd7/info/a0d45fb9-ea6d-48df-af7b-9f5af2329f39"
-              onClick={[Function]}
-            >
-              <div
-                className="c13"
-              >
-                <span
-                  className="c14"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": Object {
-                        "default": "test-file-stub",
-                      },
-                    }
-                  }
-                  name="care-receiver-info"
-                  size="36px"
-                />
-                <div
-                  className="c15 c16"
-                >
-                  <h4
-                    className="c22"
-                  >
-                    病歴やアレルギーなど
-                  </h4>
-                </div>
-                <div
-                  className=""
-                >
-                  <span
-                    className="c23"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": Object {
-                          "default": "test-file-stub",
-                        },
-                      }
-                    }
-                    name="arrow"
-                    size="24px"
-                  />
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            className="c20"
-          >
-            <a
-              className="c21"
-              href="/careReceivers/8e3900e8-58a3-45d9-92e5-10d894016bd7/info/71f24b4d-8816-4563-8526-a257f0bed1a2"
-              onClick={[Function]}
-            >
-              <div
-                className="c13"
-              >
-                <span
-                  className="c14"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": Object {
-                        "default": "test-file-stub",
-                      },
-                    }
-                  }
-                  name="care-receiver-info"
-                  size="36px"
-                />
-                <div
-                  className="c15 c16"
-                >
-                  <h4
-                    className="c22"
-                  >
-                    お薬情報
-                  </h4>
-                </div>
-                <div
-                  className=""
-                >
-                  <span
-                    className="c23"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": Object {
-                          "default": "test-file-stub",
-                        },
-                      }
-                    }
-                    name="arrow"
-                    size="24px"
-                  />
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
+        <span>
+          &lt;Connect(CareReceiverInfoListContainer)/&gt;
+        </span>
       </div>
     </main>
   </div>

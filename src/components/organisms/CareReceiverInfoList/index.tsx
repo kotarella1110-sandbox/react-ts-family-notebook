@@ -2,22 +2,22 @@ import * as React from 'react';
 import styled from 'styled';
 import { CareReceiverEntities, FolderEntities } from 'models';
 import Link from 'components/atoms/Link';
-import CareReceiverInfoItem from 'containers/CareReceiverInfoItem';
+import CareReceiverInfoItem from 'components/molecules/CareReceiverInfoItem';
 
 export interface Props {
   readonly careReceiverId: CareReceiverEntities['id'];
-  readonly folderIds: ReadonlyArray<FolderEntities['id']>;
+  readonly folders: ReadonlyArray<FolderEntities>;
 }
 
 const CareReceiverInfoList: React.SFC<Props> = ({
   careReceiverId,
-  folderIds,
+  folders,
 }) => (
   <List>
-    {folderIds.map(folderId => (
-      <Item key={folderId}>
-        <Link to={`/careReceivers/${careReceiverId}/info/${folderId}`}>
-          <CareReceiverInfoItem folderId={folderId} />
+    {folders.map(folder => (
+      <Item key={folder.id}>
+        <Link to={`/careReceivers/${careReceiverId}/info/${folder.id}`}>
+          <CareReceiverInfoItem folder={folder} />
         </Link>
       </Item>
     ))}
