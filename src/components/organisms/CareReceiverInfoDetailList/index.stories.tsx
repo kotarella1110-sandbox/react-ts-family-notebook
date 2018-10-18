@@ -5,30 +5,26 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withSmartKnobs } from 'storybook-addon-smart-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import { withInfo } from '@storybook/addon-info';
-import { stub } from 'react-stubber';
-import mockStore from 'store/mock';
 import CareReceiverInfoDetailList from '.';
-import CareReceiverInfoDetailItemContainer, {
-  OwnProps,
-} from 'containers/CareReceiverInfoDetailItem';
-import CareReceiverInfoDetailItem from 'components/molecules/CareReceiverInfoDetailItem';
-
-stub(CareReceiverInfoDetailItemContainer, ({ folderContentId }: OwnProps) => (
-  <CareReceiverInfoDetailItem
-    folderContent={mockStore.entities.folderContents[folderContentId]}
-    // tslint:disable-next-line:jsx-no-lambda
-    toggleFolderContentModal={() => null}
-  />
-));
 
 storiesOf('Organisms/CareReceiverInfoDetailList', module)
   .addDecorator((story, context) =>
     withInfo(`
       ~~~js
       <CareReceiverInfoDetailList
-        folderContentIds={[
-          'c430c8ef-868f-4189-9e53-c64151882e40',
-          '7145db67-df4d-4df2-9747-8ffbcf4dff68',
+        folderContents={[
+          {
+            id: 'c430c8ef-868f-4189-9e53-c64151882e40',
+            folderId: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+            title: 'アレルギー',
+            content: 'カニ、エビ',
+          },
+          {
+            id: '7145db67-df4d-4df2-9747-8ffbcf4dff68',
+            folderId: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+            title: '病歴',
+            content: '脳梗塞（２００８年９月）',
+          },
         ]}
         toggleFolderContentModal={action('toggleFolderContentModal')}
       />
@@ -41,9 +37,19 @@ storiesOf('Organisms/CareReceiverInfoDetailList', module)
     'default',
     withNotes(``)(() => (
       <CareReceiverInfoDetailList
-        folderContentIds={[
-          'c430c8ef-868f-4189-9e53-c64151882e40',
-          '7145db67-df4d-4df2-9747-8ffbcf4dff68',
+        folderContents={[
+          {
+            id: 'c430c8ef-868f-4189-9e53-c64151882e40',
+            folderId: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+            title: 'アレルギー',
+            content: 'カニ、エビ',
+          },
+          {
+            id: '7145db67-df4d-4df2-9747-8ffbcf4dff68',
+            folderId: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+            title: '病歴',
+            content: '脳梗塞（２００８年９月）',
+          },
         ]}
         toggleFolderContentModal={action('toggleFolderContentModal')}
       />

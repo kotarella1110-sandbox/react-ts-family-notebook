@@ -1,24 +1,24 @@
 import * as React from 'react';
 import styled from 'styled';
-import { FolderEntities, FolderContentEntities } from 'models';
-import CareReceiverInfoDetailItem from 'containers/CareReceiverInfoDetailItem';
+import { FolderContentEntities } from 'models';
+import CareReceiverInfoDetailItem from 'components/molecules/CareReceiverInfoDetailItem';
 
 export interface Props {
-  readonly folderContentIds: ReadonlyArray<FolderEntities['id']>;
+  readonly folderContents: ReadonlyArray<FolderContentEntities>;
   readonly toggleFolderContentModal: (
-    fonderContent: FolderContentEntities
+    fonderContents: FolderContentEntities
   ) => void;
 }
 
 const CareReceiverInfoDetailList: React.SFC<Props> = ({
-  folderContentIds,
+  folderContents,
   toggleFolderContentModal,
 }) => (
   <List>
-    {folderContentIds.map(folderContentId => (
-      <Item key={folderContentId}>
+    {folderContents.map(folderContent => (
+      <Item key={folderContent.id}>
         <CareReceiverInfoDetailItem
-          folderContentId={folderContentId}
+          folderContent={folderContent}
           toggleFolderContentModal={toggleFolderContentModal}
         />
       </Item>

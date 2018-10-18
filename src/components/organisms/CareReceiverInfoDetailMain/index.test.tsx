@@ -38,19 +38,12 @@ const setup = (propOverrides = {}) => {
 describe('CareReceiverInfoDetailMain', () => {
   it('コンポーネントがレンダリングされていること', () => {
     const {
-      props: { careReceiver, folder },
+      props: { careReceiver },
       wrapper,
     } = setup();
     expect(wrapper.dive().type()).toBe('div');
 
     const CareReceiverItem = wrapper.find('CareReceiverItem');
     expect(CareReceiverItem.prop('careReceiver')).toEqual(careReceiver);
-
-    const CareReceiverInfoDetailList = wrapper.find(
-      'CareReceiverInfoDetailList'
-    );
-    expect(CareReceiverInfoDetailList.prop('folderContentIds')).toEqual(
-      folder.contents
-    );
   });
 });

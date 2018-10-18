@@ -4,9 +4,19 @@ import CareReceiverInfoDetailList, { Props } from '.';
 
 const setup = (propOverrides = {}) => {
   const props: Props = {
-    folderContentIds: [
-      'c430c8ef-868f-4189-9e53-c64151882e40',
-      '7145db67-df4d-4df2-9747-8ffbcf4dff68',
+    folderContents: [
+      {
+        id: 'c430c8ef-868f-4189-9e53-c64151882e40',
+        folderId: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+        title: 'アレルギー',
+        content: 'カニ、エビ',
+      },
+      {
+        id: '7145db67-df4d-4df2-9747-8ffbcf4dff68',
+        folderId: 'a0d45fb9-ea6d-48df-af7b-9f5af2329f39',
+        title: '病歴',
+        content: '脳梗塞（２００８年９月）',
+      },
     ],
     toggleFolderContentModal: jest.fn(),
     ...propOverrides,
@@ -28,18 +38,16 @@ describe('CareReceiverInfoDetailList', () => {
 
   it('LI、CareReceiverInfoDetailItem コンポーネントがレンダリングされていること', () => {
     const {
-      props: { folderContentIds, toggleFolderContentModal },
+      props: { folderContents, toggleFolderContentModal },
       wrapper,
     } = setup();
     expect(wrapper.children().length).toBe(2);
 
     wrapper.children().forEach((LI, index) => {
-      const CareReceiverInfoDetailItem = LI.find(
-        'Connect(CareReceiverInfoDetailItem)'
-      );
-      expect(LI.key()).toBe(folderContentIds[index]);
-      expect(CareReceiverInfoDetailItem.prop('folderContentId')).toEqual(
-        folderContentIds[index]
+      const CareReceiverInfoDetailItem = LI.find('CareReceiverInfoDetailItem');
+      expect(LI.key()).toBe(folderContents[index].id);
+      expect(CareReceiverInfoDetailItem.prop('folderContent')).toEqual(
+        folderContents[index]
       );
       expect(CareReceiverInfoDetailItem.prop('toggleFolderContentModal')).toBe(
         toggleFolderContentModal

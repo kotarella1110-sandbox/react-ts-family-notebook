@@ -6,7 +6,7 @@ import {
 } from 'models';
 import styled from 'styled';
 import CareReceiverItem from '../../molecules/CareReceiverItem';
-import CareReceiverInfoDetailList from '../CareReceiverInfoDetailList';
+import CareReceiverInfoDetailList from 'containers/CareReceiverInfoDetailList';
 
 export interface Props {
   readonly careReceiver: CareReceiverEntities;
@@ -37,7 +37,7 @@ const CareReceiverInfoDetailMain: React.SFC<Props> = ({
     </FolderTitle>
     {folder.contents && (
       <CareReceiverInfoDetailList
-        folderContentIds={folder.contents}
+        folderId={folder.id}
         toggleFolderContentModal={toggleFolderContentModal}
       />
     )}

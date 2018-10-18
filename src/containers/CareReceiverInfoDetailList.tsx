@@ -1,20 +1,27 @@
+import * as React from 'react';
 import { Dispatch, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Action } from 'typescript-fsa';
 import { mayBeStubbed } from 'react-stubber';
-import { State, CareReceiverEntities, FolderEntities } from 'models';
-import { getCareReceiver, getFolder } from 'store/selectors';
+import { State, CareReceiverEntities } from 'models';
+import { getFolderContents } from 'store/selectors';
 import * as actions from 'store/actions';
-import CareReceiverInfoDetailPage from 'components/pages/CareReceiverInfoDetailPage';
+import CareReceiverInfoDetailList, {
+  Props as CareReceiverInfoDetailListProps,
+} from 'components/organisms/CareReceiverInfoDetailList';
+
+export interface Props extends CareReceiverInfoDetailListProps {}
+
+const CareReceiverInfoDetailListContainer: React.SFC<Props> = props => (
+  <CareReceiverInfoDetailList {...props} />
+);
 
 export interface OwnProps {
-  readonly careReceiverId: CareReceiverEntities['id'];
-  readonly folderId: FolderEntities['id'];
+  readonly folderId: CareReceiverEntities['id'];
 }
 
 const mapStateToProps = (state: State, ownProps: OwnProps) => ({
-  careReceiver: getCareReceiver(state, ownProps),
-  folder: getFolder(state, ownProps),
+  folderContents: getFolderContents(state, ownProps),
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) =>
@@ -28,9 +35,9 @@ const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) =>
     dispatch
   );
 
-const CareReceiverInfoDetailPageContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CareReceiverInfoDetailPage);
-
-export default mayBeStubbed(CareReceiverInfoDetailPageContainer);
+export default mayBeStubbed(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(CareReceiverInfoDetailListContainer)
+);

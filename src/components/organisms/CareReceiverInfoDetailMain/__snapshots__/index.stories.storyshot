@@ -1,26 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
-.c13 {
-  display: inline-block;
-  box-sizing: border-box;
-}
-
-.c13 > svg {
-  width: 24px;
-  height: 24px;
-}
-
-.c9 {
-  display: inline-block;
-  box-sizing: border-box;
-}
-
-.c9 > svg {
-  width: 34px;
-  height: 34px;
-}
-
 .c1 {
   display: inline-block;
   box-sizing: border-box;
@@ -71,40 +51,6 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
   flex: 1;
 }
 
-.c10 {
-  margin: 0;
-  line-height: 1.5em;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 16px;
-  font-size: 16px;
-}
-
-.c11 .c12 {
-  margin: 4px;
-}
-
-.c11 p {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  color: $gray;
-  word-break: break-all;
-}
-
 .c4 {
   margin: 0;
   line-height: 1.5em;
@@ -113,21 +59,6 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
 .c5 {
   margin: 0;
   line-height: 1.5em;
-}
-
-.c7 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c8 {
-  border-top: solid 1px #c8c8c8;
-  border-bottom: solid 1px #c8c8c8;
-}
-
-.c8 + .c8 {
-  border-top: 0;
 }
 
 .c6 {
@@ -209,131 +140,8 @@ exports[`Storyshots Organisms/CareReceiverInfoDetailMain default 1`] = `
       編集
     </a>
   </div>
-  <ul
-    className="c7"
-  >
-    <li
-      className="c8"
-    >
-      <div
-        className=""
-      >
-        <div
-          className="c0"
-        >
-          <span
-            className="c9"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": Object {
-                  "default": "test-file-stub",
-                },
-              }
-            }
-            name="care-receiver-info-detail"
-            size="34px"
-          />
-          <div
-            className="c2 c3"
-          >
-            <h4
-              className="c10"
-            >
-              アレルギー
-            </h4>
-          </div>
-          <div
-            className=""
-          >
-            <a
-              onClick={[Function]}
-            >
-              編集
-            </a>
-          </div>
-        </div>
-        <div
-          className="c11"
-        >
-          <span
-            className="c12 c13"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": Object {
-                  "default": "test-file-stub",
-                },
-              }
-            }
-            name="exclamation"
-            size="24px"
-          />
-          <p>
-            カニ、エビ
-          </p>
-        </div>
-      </div>
-    </li>
-    <li
-      className="c8"
-    >
-      <div
-        className=""
-      >
-        <div
-          className="c0"
-        >
-          <span
-            className="c9"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": Object {
-                  "default": "test-file-stub",
-                },
-              }
-            }
-            name="care-receiver-info-detail"
-            size="34px"
-          />
-          <div
-            className="c2 c3"
-          >
-            <h4
-              className="c10"
-            >
-              病歴
-            </h4>
-          </div>
-          <div
-            className=""
-          >
-            <a
-              onClick={[Function]}
-            >
-              編集
-            </a>
-          </div>
-        </div>
-        <div
-          className="c11"
-        >
-          <span
-            className="c12 c13"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": Object {
-                  "default": "test-file-stub",
-                },
-              }
-            }
-            name="exclamation"
-            size="24px"
-          />
-          <p>
-            脳梗塞（２００８年９月）
-          </p>
-        </div>
-      </div>
-    </li>
-  </ul>
+  <span>
+    &lt;Connect(CareReceiverInfoDetailListContainer)/&gt;
+  </span>
 </div>
 `;
