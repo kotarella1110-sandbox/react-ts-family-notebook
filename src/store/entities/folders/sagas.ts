@@ -2,6 +2,7 @@ import { v4 as uuid } from 'uuid';
 import { SagaIterator, delay } from 'redux-saga';
 import { all, race, call, put, cancelled, takeEvery } from 'redux-saga/effects';
 import { BEGIN, COMMIT, REVERT } from 'redux-optimistic-ui';
+import { replace } from 'connected-react-router';
 import { Action } from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
 import { FolderEntities } from 'models';
@@ -196,6 +197,8 @@ function* deleteFolderWorker({
       }
     )
   );
+
+  yield put(replace(`/careReceivers/${payload.careReceiverId}/info`));
 
   try {
     const { result, timeout } = yield race({
