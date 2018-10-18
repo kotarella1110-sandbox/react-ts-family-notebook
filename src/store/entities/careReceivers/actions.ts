@@ -1,6 +1,6 @@
 import actionCreatorFactory from 'typescript-fsa';
 import * as schemas from 'store/schemas';
-import { CareReceiversEntities, FoldersEntities } from 'models';
+import { CareReceiversEntities } from 'models';
 
 const actionCreator = actionCreatorFactory('careRedceivers');
 
@@ -8,10 +8,9 @@ export const fetchCareReceivers = actionCreator.async<
   {},
   {
     readonly entities: {
-      readonly careReceivers: CareReceiversEntities;
-      readonly folders?: FoldersEntities;
+      readonly careReceivers: CareReceiversEntities['byId'];
     };
-    readonly result: ReadonlyArray<number>;
+    readonly result: CareReceiversEntities['allIds'];
   }
 >('FETCH', {
   schema: [schemas.careReceiver],

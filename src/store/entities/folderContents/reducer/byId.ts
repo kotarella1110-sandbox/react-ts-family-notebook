@@ -2,7 +2,7 @@ import { reducerWithInitialState } from 'typescript-fsa-reducers';
 import { FolderContentsEntities } from 'models';
 import * as actions from 'store/actions';
 
-const initialState: FolderContentsEntities = {};
+const initialState: FolderContentsEntities['byId'] = {};
 
 const folderContents = reducerWithInitialState(initialState)
   .case(

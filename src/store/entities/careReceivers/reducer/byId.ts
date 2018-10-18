@@ -2,9 +2,9 @@ import { reducerWithInitialState } from 'typescript-fsa-reducers';
 import { CareReceiversEntities } from 'models';
 import * as actions from 'store/actions';
 
-const initialState: CareReceiversEntities = {};
+const initialState: CareReceiversEntities['byId'] = {};
 
-const careReceivers = reducerWithInitialState(initialState)
+const byId = reducerWithInitialState(initialState)
   .case(
     actions.fetchCareReceivers.done,
     (
@@ -56,4 +56,4 @@ const careReceivers = reducerWithInitialState(initialState)
     }
   );
 
-export default careReceivers;
+export default byId;

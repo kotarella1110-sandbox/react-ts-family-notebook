@@ -2,7 +2,8 @@ import { OptimisticState } from 'redux-optimistic-ui';
 import { RouterState } from 'connected-react-router';
 
 interface NormalizedObjects<T> {
-  readonly [id: string]: T;
+  readonly byId: { readonly [id: string]: T };
+  readonly allIds: ReadonlyArray<string>;
 }
 
 interface CareReceiver {

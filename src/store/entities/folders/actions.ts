@@ -10,9 +10,9 @@ export const fetchFolders = actionCreator.async<
   },
   {
     readonly entities: {
-      readonly folders: FoldersEntities;
+      readonly folders: FoldersEntities['byId'];
     };
-    readonly result: ReadonlyArray<FolderEntities['id']>;
+    readonly result: FoldersEntities['allIds'];
   }
 >('FETCH', {
   schema: [schemas.folder],

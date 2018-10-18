@@ -14,9 +14,9 @@ export const fetchFolderContents = actionCreator.async<
   },
   {
     readonly entities: {
-      readonly folderContents: FolderContentsEntities;
+      readonly folderContents: FolderContentsEntities['byId'];
     };
-    readonly result: ReadonlyArray<FolderContentEntities['id']>;
+    readonly result: FolderContentsEntities['allIds'];
   }
 >('FETCH', {
   schema: [schemas.folderContent],

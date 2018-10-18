@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import reduceReducers from 'reduce-reducers';
-import { reducerWithInitialState } from 'typescript-fsa-reducers';
+import { reducerWithoutInitialState } from 'typescript-fsa-reducers';
 import careReceivers from './careReceivers/reducer';
 import folders from './folders/reducer';
 import folderContents from './folderContents/reducer';
@@ -9,12 +9,6 @@ import { Entities } from 'models';
 
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-
-const initialState: Entities = {
-  careReceivers: {},
-  folders: {},
-  folderContents: {},
-};
 
 const entities = reduceReducers(
   combineReducers({
@@ -41,7 +35,7 @@ const entities = reduceReducers(
     ),
   }),
   // cross-cutting concerns because here `state` is the whole state tree
-  reducerWithInitialState(initialState)
+  reducerWithoutInitialState<Entities>()
 );
 
 export default entities;

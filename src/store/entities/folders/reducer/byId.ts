@@ -2,9 +2,9 @@ import { reducerWithInitialState } from 'typescript-fsa-reducers';
 import { FoldersEntities } from 'models';
 import * as actions from 'store/actions';
 
-const initialState: FoldersEntities = {};
+const initialState: FoldersEntities['byId'] = {};
 
-const folders = reducerWithInitialState(initialState)
+const byId = reducerWithInitialState(initialState)
   .case(
     actions.fetchFolders.done,
     (
@@ -78,4 +78,4 @@ const folders = reducerWithInitialState(initialState)
     }
   );
 
-export default folders;
+export default byId;
