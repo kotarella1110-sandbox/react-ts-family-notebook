@@ -11,23 +11,11 @@ import CareReceiverInfoDetailPage, {
   Props as CareReceiverInfoDetailPageProps,
 } from 'components/pages/CareReceiverInfoDetailPage';
 
-export interface Props extends CareReceiverInfoDetailPageProps {
-  readonly fetchFolderContents: (
-    payload: ReturnType<typeof actions.fetchFolderContents.started>['payload']
-  ) => any;
-}
+export interface Props extends CareReceiverInfoDetailPageProps {}
 
-class CareReceiverInfoDetailPageContainer extends React.Component<Props> {
-  componentDidMount(): void {
-    const { folder, fetchFolderContents } = this.props;
-    fetchFolderContents({ folderId: folder.id });
-  }
-
-  render(): JSX.Element {
-    const { fetchFolderContents, ...props } = this.props;
-    return <CareReceiverInfoDetailPage {...props} />;
-  }
-}
+const CareReceiverInfoDetailPageContainer: React.SFC<Props> = props => (
+  <CareReceiverInfoDetailPage {...props} />
+);
 
 export interface OwnProps {
   readonly careReceiverId: CareReceiverEntities['id'];

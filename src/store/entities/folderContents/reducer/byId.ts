@@ -1,4 +1,5 @@
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
+import { merge } from 'lodash';
 import { FolderContentsEntities } from 'models';
 import * as actions from 'store/actions';
 
@@ -14,10 +15,7 @@ const folderContents = reducerWithInitialState(initialState)
           entities: { folderContents },
         },
       }
-    ) => ({
-      ...state,
-      ...folderContents,
-    })
+    ) => merge({}, state, folderContents)
   )
   .case(
     actions.addFolderContent.done,

@@ -15,22 +15,16 @@ export interface Props extends CareReceiverInfoPageProps {
   readonly fetchCareReceivers: (
     payload: ReturnType<typeof actions.fetchCareReceivers.started>['payload']
   ) => any;
-  readonly fetchFolders: (
-    payload: ReturnType<typeof actions.fetchFolders.started>['payload']
-  ) => any;
 }
 
 class CareReceiverInfoPageContainer extends React.Component<Props> {
   componentDidMount(): void {
-    const { careReceiver, fetchCareReceivers, fetchFolders } = this.props;
+    const { fetchCareReceivers } = this.props;
     fetchCareReceivers({});
-    if (!!careReceiver) {
-      fetchFolders({ careReceiverId: careReceiver.id });
-    }
   }
 
   render(): JSX.Element {
-    const { fetchCareReceivers, fetchFolders, ...props } = this.props;
+    const { fetchCareReceivers, ...props } = this.props;
     return <CareReceiverInfoPage {...props} />;
   }
 }

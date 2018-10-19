@@ -1,4 +1,5 @@
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
+import { merge } from 'lodash';
 import { CareReceiversEntities } from 'models';
 import * as actions from 'store/actions';
 
@@ -14,10 +15,7 @@ const byId = reducerWithInitialState(initialState)
           entities: { careReceivers },
         },
       }
-    ) => ({
-      ...state,
-      ...careReceivers,
-    })
+    ) => merge({}, state, careReceivers) // careReceiver.folders も deepmerge したいため
   )
   .case(
     actions.fetchFolders.done,
