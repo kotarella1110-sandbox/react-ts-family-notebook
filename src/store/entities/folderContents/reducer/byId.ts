@@ -7,6 +7,7 @@ const initialState: FolderContentsEntities['byId'] = {};
 
 const folderContents = reducerWithInitialState(initialState)
   .case(
+    // TODO: 全 folderContents の id ではなく folderId ごとの id のため、修正する必要あり
     actions.fetchFolderContents.done,
     (
       state,
