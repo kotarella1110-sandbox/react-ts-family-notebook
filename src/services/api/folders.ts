@@ -37,7 +37,7 @@ export const editFolder = (
     if (Math.random() > 0.7) {
       throw new Error();
     }
-    const index = fakeDatabase.folderContents.findIndex(
+    const index = fakeDatabase.folders.findIndex(
       folder => folder.id === payload.id
     );
     // tslint:disable-next-line:no-object-mutation
@@ -55,7 +55,7 @@ export const deleteFolder = (
     if (Math.random() > 0.7) {
       throw new Error();
     }
-    const index = fakeDatabase.folderContents.findIndex(
+    const index = fakeDatabase.folders.findIndex(
       folder => folder.id === payload.id
     );
     // tslint:disable-next-line:no-object-mutation no-delete
