@@ -12,6 +12,7 @@ const history = createBrowserHistory();
 
 const store = configureStore({}, history);
 const persistor = persistStore(store);
+// persistor.purge(); // リロード時にローカルストレージの State を初期化
 
 const renderApp = () => (
   <Provider store={store}>
